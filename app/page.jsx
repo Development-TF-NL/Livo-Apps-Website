@@ -1,59 +1,9 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, Heart, Brain, Shield, Zap } from 'lucide-react';
+import { ArrowRight, Heart, Brain, Shield, Zap } from 'lucide-react';
 
 export default function LivoAppsWebsite() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div className="bg-[#0B1D33] text-white font-sans">
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0B1D33] shadow-lg' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 relative">
-              <svg viewBox="0 0 40 40" fill="none" className="w-full h-full">
-                <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontSize="28" fontWeight="bold" fill="white" fontFamily="serif">L</text>
-                <path d="M 20 18 Q 25 22 22 28" stroke="#7AC143" strokeWidth="3" fill="none" strokeLinecap="round" />
-              </svg>
-            </div>
-            <span className="text-xl font-bold tracking-wider">LIVO APPS</span>
-          </div>
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#product" className="hover:text-[#7AC143] transition">Product</a>
-            <a href="#solutions" className="hover:text-[#7AC143] transition">Solutions</a>
-            <a href="#pricing" className="hover:text-[#7AC143] transition">Pricing</a>
-            <a href="#about" className="hover:text-[#7AC143] transition">About</a>
-          </div>
-          <div className="hidden md:flex items-center gap-4">
-            <button className="text-sm hover:text-[#7AC143] transition">Log in</button>
-            <button className="bg-[#7AC143] text-[#0B1D33] px-6 py-2 rounded hover:bg-[#6AB030] transition font-semibold text-sm">Book a Demo</button>
-          </div>
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-        {isMenuOpen && (
-          <div className="md:hidden bg-[#0B1D33] border-t border-[#1A2F47] p-6">
-            <div className="flex flex-col gap-4">
-              <a href="#product" className="hover:text-[#7AC143]">Product</a>
-              <a href="#solutions" className="hover:text-[#7AC143]">Solutions</a>
-              <a href="#pricing" className="hover:text-[#7AC143]">Pricing</a>
-              <a href="#about" className="hover:text-[#7AC143]">About</a>
-              <button className="bg-[#7AC143] text-[#0B1D33] px-6 py-2 rounded font-semibold mt-4">Book a Demo</button>
-            </div>
-          </div>
-        )}
-      </nav>
-
-      <section className="pt-32 pb-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <section className="pt-20 pb-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
           <div className="text-[#7AC143] text-sm font-semibold mb-4 tracking-wide">SOFTWARE THAT LIGHTENS</div>
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">Software that <span className="text-[#7AC143]">lightens</span> the workflow.</h1>

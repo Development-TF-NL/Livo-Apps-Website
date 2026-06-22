@@ -20,6 +20,8 @@
  *        back gracefully to the system font.
  */
 
+import Breadcrumb from "../components/Breadcrumb";
+
 const DEMO_URL = "#"; // TODO: your Cal.com booking link
 const CONTACT_EMAIL = "hello@livoapps.software";
 
@@ -182,6 +184,14 @@ export default function LivoPpwrOverview() {
   return (
     <section className="lp-root">
       <style dangerouslySetInnerHTML={{ __html: css }} />
+
+      <Breadcrumb
+        items={[
+          { label: "Livo Apps", href: "/" },
+          { label: "Products", href: "/#product" },
+          { label: "LIVO PPWR" },
+        ]}
+      />
 
       {/* ---------- Hero ---------- */}
       <header className="lp-hero">
