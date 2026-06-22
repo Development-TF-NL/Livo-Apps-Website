@@ -24,7 +24,7 @@ export default function LivoAppsWebsite() {
                 <path d="M 20 18 Q 25 22 22 28" stroke="#7AC143" strokeWidth="3" fill="none" strokeLinecap="round" />
               </svg>
             </div>
-            <span className="text-xl font-bold tracking-wider">LIVO</span>
+            <span className="text-xl font-bold tracking-wider">LIVO APPS</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#product" className="hover:text-[#7AC143] transition">Product</a>
