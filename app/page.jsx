@@ -154,7 +154,7 @@ export default function LivoAppsWebsite() {
                     <path d="M 20 18 Q 25 22 22 28" stroke="#7AC143" strokeWidth="3" fill="none" strokeLinecap="round" />
                   </svg>
                 </div>
-                <span className="text-lg font-bold tracking-wider">LIVO</span>
+                <span className="text-lg font-bold tracking-wider">LIVO APPS</span>
               </div>
               <p className="text-gray-400 text-sm">Software that lightens the workflow.</p>
             </div>
