@@ -122,16 +122,9 @@ export default function LivoAppsWebsite() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-[#0B1D33]">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-gray-400 mb-8 text-sm tracking-wide">TRUSTED BY FORWARD-THINKING BRANDS</p>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-center">
-            <div className="text-2xl font-bold text-gray-500">Mars</div>
-            <div className="text-2xl font-bold text-gray-500">Danone</div>
-            <div className="text-2xl font-bold text-gray-500">Coca-Cola</div>
-            <div className="text-2xl font-bold text-gray-500">L'Oreal</div>
-            <div className="text-2xl font-bold text-gray-500">AFC Ajax</div>
-          </div>
+      <section className="py-16 px-6 bg-[#0B1D33] border-t border-[#1A2F47]">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-gray-400 text-sm tracking-wide">Trusted by forward-thinking teams in packaging and compliance.</p>
         </div>
       </section>
 
