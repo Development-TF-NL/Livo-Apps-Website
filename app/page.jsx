@@ -152,12 +152,12 @@ export default function LivoAppsWebsite() {
               <p className="text-gray-400 text-sm">Software that lightens the workflow.</p>
             </div>
             <div><h4 className="font-bold mb-4 text-sm tracking-wide">PRODUCT</h4><ul className="space-y-3 text-sm text-gray-400"><li><a href="#" className="hover:text-[#7AC143]">PPWR Dashboard</a></li><li><a href="#" className="hover:text-[#7AC143]">Features</a></li><li><a href="#" className="hover:text-[#7AC143]">Pricing</a></li></ul></div>
-            <div><h4 className="font-bold mb-4 text-sm tracking-wide">COMPANY</h4><ul className="space-y-3 text-sm text-gray-400"><li><a href="#" className="hover:text-[#7AC143]">About Us</a></li><li><a href="#" className="hover:text-[#7AC143]">Careers</a></li><li><a href="#" className="hover:text-[#7AC143]">Contact</a></li></ul></div>
+            <div><h4 className="font-bold mb-4 text-sm tracking-wide">COMPANY</h4><ul className="space-y-3 text-sm text-gray-400"><li><a href="#" className="hover:text-[#7AC143]">About Us</a></li><li><a href="#" className="hover:text-[#7AC143]">Careers</a></li><li><a href="mailto:hello@livoapps.software" className="hover:text-[#7AC143]">Contact</a></li></ul></div>
             <div><h4 className="font-bold mb-4 text-sm tracking-wide">LEGAL</h4><ul className="space-y-3 text-sm text-gray-400"><li><a href="#" className="hover:text-[#7AC143]">Privacy Policy</a></li><li><a href="#" className="hover:text-[#7AC143]">Terms</a></li></ul></div>
           </div>
           <div className="border-t border-[#1A2F47] pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
             <p>&copy; 2026 Livo Apps. All rights reserved.</p>
-            <div className="flex gap-6 mt-4 md:mt-0"><a href="#" className="hover:text-[#7AC143]">LinkedIn</a><a href="#" className="hover:text-[#7AC143]">Twitter</a><a href="#" className="hover:text-[#7AC143]">Email</a></div>
+            <div className="flex gap-6 mt-4 md:mt-0"><a href="#" className="hover:text-[#7AC143]">LinkedIn</a><a href="#" className="hover:text-[#7AC143]">Twitter</a><a href="mailto:hello@livoapps.software" className="hover:text-[#7AC143]">hello@livoapps.software</a></div>
           </div>
         </div>
       </footer>
