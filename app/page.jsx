@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ArrowRight, Heart, Brain, Shield, Zap } from 'lucide-react';
 
 export default function LivoAppsWebsite() {
@@ -10,7 +11,7 @@ export default function LivoAppsWebsite() {
           <p className="text-lg text-gray-300 mb-8 leading-relaxed">Not just by automating tasks. But by reducing friction. Making complexity understandable. And creating calm in busy organizations.</p>
           <div className="flex gap-4 flex-wrap">
             <button className="bg-[#7AC143] text-[#0B1D33] px-8 py-3 rounded hover:bg-[#6AB030] transition font-semibold flex items-center gap-2">Book a Demo <ArrowRight size={18} /></button>
-            <button className="border border-gray-500 px-8 py-3 rounded hover:border-[#7AC143] transition font-semibold">Explore the Product</button>
+            <Link href="/ppwr" className="border border-gray-500 px-8 py-3 rounded hover:border-[#7AC143] transition font-semibold inline-flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7AC143]">Explore the Product</Link>
           </div>
         </div>
         <div className="hidden md:block">
@@ -68,6 +69,11 @@ export default function LivoAppsWebsite() {
               <div className="flex gap-4"><div className="w-6 h-6 rounded-full bg-[#7AC143] flex-shrink-0 flex items-center justify-center mt-1"><span className="text-[#0B1D33] text-xs font-bold">&#10003;</span></div><div><h4 className="font-bold text-lg mb-2">Automated reporting</h4><p className="text-gray-600">Generate PPWR-compliant reports in minutes, not days.</p></div></div>
               <div className="flex gap-4"><div className="w-6 h-6 rounded-full bg-[#7AC143] flex-shrink-0 flex items-center justify-center mt-1"><span className="text-[#0B1D33] text-xs font-bold">&#10003;</span></div><div><h4 className="font-bold text-lg mb-2">Collaborate with suppliers</h4><p className="text-gray-600">Share data securely. Work together. No friction.</p></div></div>
             </div>
+          </div>
+          <div className="mt-12">
+            <Link href="/ppwr" className="inline-flex items-center gap-2 bg-[#0B1D33] text-white px-8 py-3 rounded font-semibold transition-colors duration-200 hover:bg-[#13294A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7AC143]">
+              Explore PPWR Dashboard <ArrowRight size={18} />
+            </Link>
           </div>
         </div>
       </section>
