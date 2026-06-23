@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "products": "Products",
+    "solutions": "Solutions",
+    "pricing": "Pricing",
+    "about": "About",
+    "login": "Log in",
+    "bookDemo": "Book a Demo",
+    "language": "Language"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "SOFTWARE THAT LIGHTENS",
+      "titleBefore": "Software that ",
+      "titleHighlight": "lightens",
+      "titleAfter": " the workflow.",
+      "lead": "Not just by automating tasks. But by reducing friction. Making complexity understandable. And creating calm in busy organizations.",
+      "ctaPrimary": "Book a Demo",
+      "ctaSecondary": "Explore the Product",
+      "previewTitle": "PPWR Dashboard Preview",
+      "previewSubtitle": "Compliance. Simplified."
+    },
+    "brand": {
+      "eyebrow": "01 OUR BRAND",
+      "whoTitle": "Who we are",
+      "whoBody1": "Livo Apps develops elegant software that removes complexity from everyday business processes.",
+      "whoBody2": "We believe software should not overwhelm people. Software should create clarity. Software should feel light.",
+      "promiseTitle": "Our promise",
+      "promiseLead": "Software that lightens the workflow.",
+      "promiseBody": "Not just by automating tasks. But by reducing friction. Making complexity understandable. And creating calm in busy organizations."
+    },
+    "personality": {
+      "eyebrow": "02 BRAND PERSONALITY",
+      "traits": [
+        { "title": "Elegant", "sub": "Never noisy." },
+        { "title": "Intelligent", "sub": "Never arrogant." },
+        { "title": "Human", "sub": "Never bureaucratic." },
+        { "title": "Confident", "sub": "Never aggressive." }
+      ]
+    },
+    "product": {
+      "eyebrow": "03 OUR FIRST PRODUCT",
+      "title": "PPWR Dashboard",
+      "subtitle": "Transform packaging regulations into clear actions.",
+      "statValue": "92%",
+      "statLabel": "Compliance Score",
+      "features": [
+        { "title": "Monitor compliance in real time", "body": "All your packaging data in one place. Always audit-ready." },
+        { "title": "Automated reporting", "body": "Generate PPWR-compliant reports in minutes, not days." },
+        { "title": "Collaborate with suppliers", "body": "Share data securely. Work together. No friction." }
+      ],
+      "cta": "Explore PPWR Dashboard"
+    },
+    "trusted": "Trusted by forward-thinking teams in packaging and compliance.",
+    "finalCta": {
+      "titleBefore": "Ready to ",
+      "titleHighlight": "lighten",
+      "titleAfter": " the workflow?",
+      "body": "Book a personalized demo and see how Livo can transform your compliance process.",
+      "cta": "Book a Demo"
+    },
+    "footer": {
+      "tagline": "Software that lightens the workflow.",
+      "columns": {
+        "product": { "title": "PRODUCT", "items": ["PPWR Dashboard", "Features", "Pricing"] },
+        "company": { "title": "COMPANY", "items": ["About Us", "Careers", "Contact"] },
+        "legal": { "title": "LEGAL", "items": ["Privacy Policy", "Terms"] }
+      },
+      "copyright": "© 2026 Livo Apps. All rights reserved.",
+      "social": ["LinkedIn", "Twitter"]
+    }
+  },
+  "ppwr": {
+    "breadcrumb": ["Livo Apps", "Products", "LIVO PPWR"],
+    "hero": {
+      "eyebrow": "LIVO PPWR · Packaging compliance",
+      "titleLine1": "Complex rules.",
+      "titleLine2": "Effortless compliance.",
+      "lead": "The EU Packaging and Packaging Waste Regulation applies from 12 August 2026. LIVO PPWR keeps every packaging type, obligation and document in one calm place — so your team stays compliant without the stress.",
+      "ctaPrimary": "Book a demo",
+      "ctaSecondary": "See how it works"
+    },
+    "card": {
+      "title": "Packaging obligations",
+      "updated": "Updated just now",
+      "progressLabel": "Compliant packaging",
+      "progressValue": "12 / 18",
+      "rows": [
+        { "name": "PET bottle 0.5 L", "sub": "DoC complete · 30% recycled", "status": "Compliant", "tone": "ok" },
+        { "name": "Folding carton", "sub": "Awaiting supplier data", "status": "In review", "tone": "warn" },
+        { "name": "E-commerce parcel", "sub": "Empty space over 40%", "status": "Needs attention", "tone": "risk" },
+        { "name": "Glass jar 250 ml", "sub": "DoC complete", "status": "Compliant", "tone": "ok" }
+      ],
+      "footer": "Next deadline · 12 Aug 2026"
+    },
+    "whyNow": {
+      "eyebrow": "Why now",
+      "title": "One regulation. A lot of new obligations.",
+      "body": "PPWR (Regulation (EU) 2025/40) applies directly across the EU and replaces the old Packaging Directive. It reaches every company that places packaging on the EU market — whatever its size.",
+      "cards": [
+        { "title": "Prove conformity", "body": "Each packaging type needs an EU Declaration of Conformity and technical documentation, kept on file for years." },
+        { "title": "Meet design rules", "body": "Recyclability, recycled content, packaging minimisation and PFAS limits all carry their own thresholds and dates." },
+        { "title": "Avoid the fallout", "body": "Gaps can mean fines, recalls or losing a retail listing. The work is real — the stress doesn't have to be." }
+      ],
+      "datePrefix": "Binding from",
+      "date": "12 August 2026"
+    },
+    "what": {
+      "eyebrow": "What LIVO PPWR does",
+      "title": "Your whole packaging compliance, in one place.",
+      "body": "Register, obligations, documents, suppliers and deadlines — connected, so nothing falls through the cracks.",
+      "features": [
+        { "title": "Packaging register", "body": "Every packaging type you place on the market, in one list — material, weight, format and owner, found in seconds." },
+        { "title": "Obligations matrix", "body": "See at a glance which rules apply to each packaging type, and exactly where you still need to act." },
+        { "title": "Documents & Declarations of Conformity", "body": "Keep every DoC and technical file with its packaging. Upload once, and it's always where you expect it." },
+        { "title": "Suppliers", "body": "Collect the data and proof you need from suppliers, with the right owner set for you automatically." },
+        { "title": "Timeline & deadlines", "body": "PPWR phases in through 2030 and beyond. LIVO keeps the dates that matter to your packaging in view." },
+        { "title": "Compliance status", "body": "A calm, honest picture of where you stand today — and a clear next step, never a wall of red." }
+      ]
+    },
+    "principles": {
+      "eyebrow": "Built to lighten the work",
+      "title": "The software shouldn't add to the complexity.",
+      "body": "PPWR is demanding enough. Every screen in LIVO PPWR follows the same principles — the ones that make work feel lighter.",
+      "items": [
+        { "n": "01", "title": "Simplicity over features", "body": "One primary action per screen. Everything you need to stay compliant, nothing you don't." },
+        { "n": "02", "title": "Errors that help", "body": "No raw system messages. Not {code}, but “That file is a little large — try one under 15 MB.”", "code": "ERROR 413" },
+        { "n": "03", "title": "Calm by design", "body": "Generous whitespace and progressive disclosure keep dense pages quiet. Detail appears when you ask for it." },
+        { "n": "04", "title": "Smart defaults", "body": "A document is named after its file. The supplier owner is set for you. Less typing, fewer mistakes." },
+        { "n": "05", "title": "Validation as you go", "body": "Fields are checked while you work, so you never complete a whole form only to hit a wall at the end." },
+        { "n": "06", "title": "Human in the loop", "body": "You stay in control. The software suggests and prepares; you decide and confirm." }
+      ]
+    },
+    "closing": {
+      "eyebrow": "LIVO PPWR",
+      "title": "Ready to make compliance effortless?",
+      "leadBefore": "See LIVO PPWR with your own packaging in a 20-minute demo — or email ",
+      "leadAfter": ".",
+      "cta": "Book a demo"
+    },
+    "footer": {
+      "brand": "LIVO PPWR",
+      "line1After": " is part of LIVO APPS · Software that lightens the workflow.",
+      "line2": "This overview is not legal advice; it describes what the product does. Compliance obligations follow from the regulation itself."
+    }
+  }
+}

@@ -1,26 +1,17 @@
 /**
  * LIVO PPWR — Product overview
- * Drop-in section/page for the LIVO APPS website (Next.js).
+ * Drop-in page for the LIVO APPS website (Next.js, App Router, /[lang]/ppwr).
  *
  * Voice: Simple. Human. Clear. Direct.
- * Visual identity follows the LIVO APPS Brand Bible:
- *   deep navy carries, lime accents sparingly, white cards on a light canvas,
- *   flat surfaces (no shadows/gradients), line-based icons, Satoshi + Inter.
+ * Visual identity follows the LIVO APPS Brand Bible: deep navy carries, lime
+ * accents sparingly, white cards on a light canvas, flat surfaces, line icons.
  *
- * Self-contained: all colour tokens and styles live in this file (scoped under
- * .lp-root), so it works in any Next.js project without a Tailwind config.
- *
- * Where to put it:
- *   - As its own page  -> app/ppwr/page.jsx  (route: livoapps.software/ppwr)
- *   - Or import it      -> import LivoPpwrOverview from "@/components/LivoPpwrOverview"
- *
- * Wire the CTA: set DEMO_URL to your Cal.com link (see the website plan of aanpak).
- * Fonts: to load Satoshi + Inter for real, add the links in app/layout.jsx
- *        (Inter via Google Fonts, Satoshi via Fontshare). Until then it falls
- *        back gracefully to the system font.
+ * All visible copy lives in the locale dictionaries (app/dictionaries/{en,nl}.json);
+ * this file only holds layout, scoped styles and icons.
  */
 
-import Breadcrumb from "../components/Breadcrumb";
+import Breadcrumb from "../../components/Breadcrumb";
+import { getDictionary } from "../../get-dictionary";
 
 const DEMO_URL = "#"; // TODO: your Cal.com booking link
 const CONTACT_EMAIL = "hello@livoapps.software";
@@ -162,85 +153,70 @@ const Icon = {
   status: (<svg viewBox="0 0 24 24" {...stroke}><path d="M4 18V9M10 18V5M16 18v-6M22 18H2" /></svg>),
 };
 
-const features = [
-  { icon: Icon.register, title: "Packaging register", body: "Every packaging type you place on the market, in one list — material, weight, format and owner, found in seconds." },
-  { icon: Icon.matrix, title: "Obligations matrix", body: "See at a glance which rules apply to each packaging type, and exactly where you still need to act." },
-  { icon: Icon.docs, title: "Documents & Declarations of Conformity", body: "Keep every DoC and technical file with its packaging. Upload once, and it's always where you expect it." },
-  { icon: Icon.suppliers, title: "Suppliers", body: "Collect the data and proof you need from suppliers, with the right owner set for you automatically." },
-  { icon: Icon.timeline, title: "Timeline & deadlines", body: "PPWR phases in through 2030 and beyond. LIVO keeps the dates that matter to your packaging in view." },
-  { icon: Icon.status, title: "Compliance status", body: "A calm, honest picture of where you stand today — and a clear next step, never a wall of red." },
-];
+// Icons stay in code, zipped with the dictionary's feature copy by index.
+const whatIcons = [Icon.register, Icon.matrix, Icon.docs, Icon.suppliers, Icon.timeline, Icon.status];
 
-const principles = [
-  { n: "01", title: "Simplicity over features", body: "One primary action per screen. Everything you need to stay compliant, nothing you don't." },
-  { n: "02", title: "Errors that help", body: <>No raw system messages. Not <code>ERROR 413</code>, but “That file is a little large — try one under 15 MB.”</> },
-  { n: "03", title: "Calm by design", body: "Generous whitespace and progressive disclosure keep dense pages quiet. Detail appears when you ask for it." },
-  { n: "04", title: "Smart defaults", body: "A document is named after its file. The supplier owner is set for you. Less typing, fewer mistakes." },
-  { n: "05", title: "Validation as you go", body: "Fields are checked while you work, so you never complete a whole form only to hit a wall at the end." },
-  { n: "06", title: "Human in the loop", body: "You stay in control. The software suggests and prepares; you decide and confirm." },
-];
+// Pill tone (from the dictionary) → existing CSS class.
+const pillClass = { ok: "lp-pill-ok", warn: "lp-pill-warn", risk: "lp-pill-risk" };
 
-export default function LivoPpwrOverview() {
+// Splice principle 02's "{code}" placeholder back into a monospace <code>.
+function renderPrincipleBody(item) {
+  if (!item.code) return item.body;
+  const [before, after] = item.body.split("{code}");
+  return (<>{before}<code>{item.code}</code>{after}</>);
+}
+
+export default async function LivoPpwrOverview({ params }) {
+  const { lang } = params;
+  const dict = await getDictionary(lang);
+  const t = dict.ppwr;
+
+  const breadcrumbItems = [
+    { label: t.breadcrumb[0], href: `/${lang}` },
+    { label: t.breadcrumb[1], href: `/${lang}#product` },
+    { label: t.breadcrumb[2] }, // current page — no link
+  ];
+
   return (
     <section className="lp-root">
       <style dangerouslySetInnerHTML={{ __html: css }} />
 
-      <Breadcrumb
-        items={[
-          { label: "Livo Apps", href: "/" },
-          { label: "Products", href: "/#product" },
-          { label: "LIVO PPWR" },
-        ]}
-      />
+      <Breadcrumb items={breadcrumbItems} />
 
       {/* ---------- Hero ---------- */}
       <header className="lp-hero">
         <div className="lp-wrap lp-hero-grid">
           <div>
-            <span className="lp-eyebrow">LIVO PPWR · Packaging compliance</span>
-            <h1>Complex rules.<br />Effortless compliance.</h1>
-            <p className="lp-lead">
-              The EU Packaging and Packaging Waste Regulation applies from 12 August 2026.
-              LIVO PPWR keeps every packaging type, obligation and document in one calm
-              place — so your team stays compliant without the stress.
-            </p>
+            <span className="lp-eyebrow">{t.hero.eyebrow}</span>
+            <h1>{t.hero.titleLine1}<br />{t.hero.titleLine2}</h1>
+            <p className="lp-lead">{t.hero.lead}</p>
             <div className="lp-cta-row">
-              <a className="lp-btn lp-btn-primary" href={DEMO_URL}>Book a demo</a>
-              <a className="lp-btn lp-btn-ghost" href="#how-it-works">See how it works</a>
+              <a className="lp-btn lp-btn-primary" href={DEMO_URL}>{t.hero.ctaPrimary}</a>
+              <a className="lp-btn lp-btn-ghost" href="#how-it-works">{t.hero.ctaSecondary}</a>
             </div>
           </div>
 
           {/* Signature: the calm obligations overview */}
-          <div className="lp-card lp-obl" aria-label="Example: packaging obligations overview">
+          <div className="lp-card lp-obl" aria-label={t.card.title}>
             <div className="lp-obl-head">
-              <span className="lp-obl-title">Packaging obligations</span>
-              <span className="lp-obl-meta">Updated just now</span>
+              <span className="lp-obl-title">{t.card.title}</span>
+              <span className="lp-obl-meta">{t.card.updated}</span>
             </div>
             <div className="lp-progress">
-              <div className="lp-progress-label"><span>Compliant packaging</span><span>12 / 18</span></div>
+              <div className="lp-progress-label"><span>{t.card.progressLabel}</span><span>{t.card.progressValue}</span></div>
               <div className="lp-progress-track"><div className="lp-progress-fill" /></div>
             </div>
             <div className="lp-rows">
-              <div className="lp-row">
-                <div><div className="lp-row-name">PET bottle 0.5 L</div><div className="lp-row-sub">DoC complete · 30% recycled</div></div>
-                <span className="lp-pill lp-pill-ok">Compliant</span>
-              </div>
-              <div className="lp-row">
-                <div><div className="lp-row-name">Folding carton</div><div className="lp-row-sub">Awaiting supplier data</div></div>
-                <span className="lp-pill lp-pill-warn">In review</span>
-              </div>
-              <div className="lp-row">
-                <div><div className="lp-row-name">E-commerce parcel</div><div className="lp-row-sub">Empty space over 40%</div></div>
-                <span className="lp-pill lp-pill-risk">Needs attention</span>
-              </div>
-              <div className="lp-row">
-                <div><div className="lp-row-name">Glass jar 250 ml</div><div className="lp-row-sub">DoC complete</div></div>
-                <span className="lp-pill lp-pill-ok">Compliant</span>
-              </div>
+              {t.card.rows.map((row) => (
+                <div className="lp-row" key={row.name}>
+                  <div><div className="lp-row-name">{row.name}</div><div className="lp-row-sub">{row.sub}</div></div>
+                  <span className={`lp-pill ${pillClass[row.tone]}`}>{row.status}</span>
+                </div>
+              ))}
             </div>
             <div className="lp-obl-foot">
               <svg viewBox="0 0 24 24" width="14" height="14" {...stroke}><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
-              Next deadline · 12 Aug 2026
+              {t.card.footer}
             </div>
           </div>
         </div>
@@ -250,32 +226,22 @@ export default function LivoPpwrOverview() {
       <div className="lp-section">
         <div className="lp-wrap">
           <div className="lp-section-head">
-            <span className="lp-eyebrow">Why now</span>
-            <h2>One regulation. A lot of new obligations.</h2>
-            <p>
-              PPWR (Regulation (EU) 2025/40) applies directly across the EU and replaces the
-              old Packaging Directive. It reaches every company that places packaging on the
-              EU market — whatever its size.
-            </p>
+            <span className="lp-eyebrow">{t.whyNow.eyebrow}</span>
+            <h2>{t.whyNow.title}</h2>
+            <p>{t.whyNow.body}</p>
           </div>
           <div className="lp-why">
-            <div className="lp-card lp-why-item">
-              <h3>Prove conformity</h3>
-              <p>Each packaging type needs an EU Declaration of Conformity and technical documentation, kept on file for years.</p>
-            </div>
-            <div className="lp-card lp-why-item">
-              <h3>Meet design rules</h3>
-              <p>Recyclability, recycled content, packaging minimisation and PFAS limits all carry their own thresholds and dates.</p>
-            </div>
-            <div className="lp-card lp-why-item">
-              <h3>Avoid the fallout</h3>
-              <p>Gaps can mean fines, recalls or losing a retail listing. The work is real — the stress doesn't have to be.</p>
-            </div>
+            {t.whyNow.cards.map((card) => (
+              <div className="lp-card lp-why-item" key={card.title}>
+                <h3>{card.title}</h3>
+                <p>{card.body}</p>
+              </div>
+            ))}
           </div>
           <div style={{ marginTop: 28 }}>
             <span className="lp-date">
               <svg viewBox="0 0 24 24" width="16" height="16" {...stroke}><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M3 9h18M8 2v4M16 2v4" /></svg>
-              Binding from <b>&nbsp;12 August 2026</b>
+              {t.whyNow.datePrefix} <b>&nbsp;{t.whyNow.date}</b>
             </span>
           </div>
         </div>
@@ -285,14 +251,14 @@ export default function LivoPpwrOverview() {
       <div className="lp-section" id="how-it-works" style={{ background: "var(--surface)", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
         <div className="lp-wrap">
           <div className="lp-section-head">
-            <span className="lp-eyebrow">What LIVO PPWR does</span>
-            <h2>Your whole packaging compliance, in one place.</h2>
-            <p>Register, obligations, documents, suppliers and deadlines — connected, so nothing falls through the cracks.</p>
+            <span className="lp-eyebrow">{t.what.eyebrow}</span>
+            <h2>{t.what.title}</h2>
+            <p>{t.what.body}</p>
           </div>
           <div className="lp-features">
-            {features.map((f) => (
+            {t.what.features.map((f, i) => (
               <div className="lp-card lp-feature" key={f.title}>
-                <div className="lp-ico">{f.icon}</div>
+                <div className="lp-ico">{whatIcons[i]}</div>
                 <h3>{f.title}</h3>
                 <p>{f.body}</p>
               </div>
@@ -305,16 +271,16 @@ export default function LivoPpwrOverview() {
       <div className="lp-section lp-principles">
         <div className="lp-wrap">
           <div className="lp-section-head">
-            <span className="lp-eyebrow">Built to lighten the work</span>
-            <h2>The software shouldn't add to the complexity.</h2>
-            <p>PPWR is demanding enough. Every screen in LIVO PPWR follows the same principles — the ones that make work feel lighter.</p>
+            <span className="lp-eyebrow">{t.principles.eyebrow}</span>
+            <h2>{t.principles.title}</h2>
+            <p>{t.principles.body}</p>
           </div>
           <div className="lp-prin-grid">
-            {principles.map((p) => (
+            {t.principles.items.map((p) => (
               <div className="lp-prin" key={p.n}>
                 <span className="lp-num">{p.n}</span>
                 <h3>{p.title}</h3>
-                <p>{p.body}</p>
+                <p>{renderPrincipleBody(p)}</p>
               </div>
             ))}
           </div>
@@ -324,21 +290,22 @@ export default function LivoPpwrOverview() {
       {/* ---------- Closing CTA ---------- */}
       <div className="lp-cta">
         <div className="lp-wrap">
-          <span className="lp-eyebrow">LIVO PPWR</span>
-          <h2>Ready to make compliance effortless?</h2>
+          <span className="lp-eyebrow">{t.closing.eyebrow}</span>
+          <h2>{t.closing.title}</h2>
           <p>
-            See LIVO PPWR with your own packaging in a 20-minute demo —{" "}
-            or email <a className="lp-link" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+            {t.closing.leadBefore}
+            <a className="lp-link" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+            {t.closing.leadAfter}
           </p>
-          <a className="lp-btn lp-btn-primary" href={DEMO_URL}>Book a demo</a>
+          <a className="lp-btn lp-btn-primary" href={DEMO_URL}>{t.closing.cta}</a>
         </div>
       </div>
 
       {/* ---------- Footer line ---------- */}
       <div className="lp-foot">
         <div className="lp-wrap">
-          <p><span className="lp-brand">LIVO PPWR</span> is part of LIVO APPS · Software that lightens the workflow.</p>
-          <p style={{ marginTop: 8 }}>This overview is not legal advice; it describes what the product does. Compliance obligations follow from the regulation itself.</p>
+          <p><span className="lp-brand">{t.footer.brand}</span>{t.footer.line1After}</p>
+          <p style={{ marginTop: 8 }}>{t.footer.line2}</p>
         </div>
       </div>
     </section>
