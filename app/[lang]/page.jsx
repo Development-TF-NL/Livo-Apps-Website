@@ -94,9 +94,14 @@ export default async function LivoAppsWebsite({ params }) {
       </section>
 
       <section className="py-16 px-6 bg-[#0B1D33] border-t border-[#1A2F47]">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-gray-400 text-sm tracking-wide">{t.trusted}</p>
-        </div>
+        <ul className="max-w-5xl mx-auto grid gap-8 md:grid-cols-3 text-center">
+          {t.whyLight.map((line) => (
+            <li key={line} className="flex items-start justify-center gap-2 text-gray-400 text-sm leading-relaxed">
+              <span aria-hidden="true" className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#7AC143]" />
+              {line}
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="py-20 px-6 bg-white text-[#0B1D33]">

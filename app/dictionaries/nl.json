@@ -51,7 +51,11 @@
       ],
       "cta": "Bekijk PPWR Dashboard"
     },
-    "trusted": "Gebouwd voor teams die met verpakkingen en PPWR-compliance werken.",
+    "whyLight": [
+      "Het systeem stelt voor, jij bevestigt.",
+      "Al je compliance in één rustig overzicht — geen overvolle schermen.",
+      "Snel ingericht, zonder gedoe."
+    ],
     "finalCta": {
       "titleBefore": "Klaar om je werk ",
       "titleHighlight": "lichter",

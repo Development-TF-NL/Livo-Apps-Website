@@ -51,7 +51,11 @@
       ],
       "cta": "Explore PPWR Dashboard"
     },
-    "trusted": "Built for teams working on packaging and PPWR compliance.",
+    "whyLight": [
+      "The system proposes, you confirm.",
+      "All your compliance in one calm overview — no cluttered screens.",
+      "Set up quickly, without the hassle."
+    ],
     "finalCta": {
       "titleBefore": "Ready to ",
       "titleHighlight": "lighten",
