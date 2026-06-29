@@ -17,8 +17,8 @@
       "lead": "Not just by automating tasks. But by reducing friction. Making complexity understandable. And creating calm in busy organizations.",
       "ctaPrimary": "Book a Demo",
       "ctaSecondary": "Explore the Product",
-      "previewTitle": "PPWR Dashboard Preview",
-      "previewSubtitle": "Compliance. Simplified."
+      "previewTitle": "PPWR Dashboard",
+      "previewSubtitle": "See it live in a demo."
     },
     "brand": {
       "eyebrow": "01 OUR BRAND",
@@ -42,16 +42,16 @@
       "eyebrow": "03 OUR FIRST PRODUCT",
       "title": "PPWR Dashboard",
       "subtitle": "Transform packaging regulations into clear actions.",
-      "statValue": "92%",
-      "statLabel": "Compliance Score",
+      "previewLabel": "PPWR Dashboard",
+      "previewNote": "Illustration — one clear status per packaging type.",
       "features": [
-        { "title": "Monitor compliance in real time", "body": "All your packaging data in one place. Always audit-ready." },
-        { "title": "Automated reporting", "body": "Generate PPWR-compliant reports in minutes, not days." },
+        { "title": "Keep compliance in view", "body": "All your packaging data in one place, so you're ready when an audit comes." },
+        { "title": "Automated reporting", "body": "Generate PPWR reports without rebuilding them by hand." },
         { "title": "Collaborate with suppliers", "body": "Share data securely. Work together. No friction." }
       ],
       "cta": "Explore PPWR Dashboard"
     },
-    "trusted": "Trusted by forward-thinking teams in packaging and compliance.",
+    "trusted": "Built for teams working on packaging and PPWR compliance.",
     "finalCta": {
       "titleBefore": "Ready to ",
       "titleHighlight": "lighten",

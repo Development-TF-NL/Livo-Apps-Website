@@ -12,8 +12,8 @@
 
 import Breadcrumb from "../../components/Breadcrumb";
 import { getDictionary } from "../../get-dictionary";
+import { BOOKINGS_URL as DEMO_URL, bookingLinkProps } from "../../booking";
 
-const DEMO_URL = "#"; // TODO: your Cal.com booking link
 const CONTACT_EMAIL = "hello@livoapps.software";
 
 /* ---------- Brand tokens (Brand Bible) ---------- */
@@ -173,7 +173,7 @@ export default async function LivoPpwrOverview({ params }) {
 
   const breadcrumbItems = [
     { label: t.breadcrumb[0], href: `/${lang}` },
-    { label: t.breadcrumb[1], href: `/${lang}#product` },
+    { label: t.breadcrumb[1], href: `/${lang}/ppwr` },
     { label: t.breadcrumb[2] }, // current page — no link
   ];
 
@@ -191,7 +191,7 @@ export default async function LivoPpwrOverview({ params }) {
             <h1>{t.hero.titleLine1}<br />{t.hero.titleLine2}</h1>
             <p className="lp-lead">{t.hero.lead}</p>
             <div className="lp-cta-row">
-              <a className="lp-btn lp-btn-primary" href={DEMO_URL}>{t.hero.ctaPrimary}</a>
+              <a className="lp-btn lp-btn-primary" href={DEMO_URL} {...bookingLinkProps}>{t.hero.ctaPrimary}</a>
               <a className="lp-btn lp-btn-ghost" href="#how-it-works">{t.hero.ctaSecondary}</a>
             </div>
           </div>
@@ -297,7 +297,7 @@ export default async function LivoPpwrOverview({ params }) {
             <a className="lp-link" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
             {t.closing.leadAfter}
           </p>
-          <a className="lp-btn lp-btn-primary" href={DEMO_URL}>{t.closing.cta}</a>
+          <a className="lp-btn lp-btn-primary" href={DEMO_URL} {...bookingLinkProps}>{t.closing.cta}</a>
         </div>
       </div>
 

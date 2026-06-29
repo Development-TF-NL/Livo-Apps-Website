@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
+import { BOOKINGS_URL, bookingLinkProps } from '../booking';
 
 // Visible keyboard focus, flat (outline, not a shadow/ring)
 const focusRing =
@@ -89,9 +90,9 @@ export default function Nav({ lang, dict }) {
           <Link href={`/${lang}/login`} className={`text-sm text-[#0B1D33] transition-colors duration-200 hover:text-[#69AD36] ${focusRing}`}>
             {dict.login}
           </Link>
-          <Link href={`/${lang}#demo`} className={`rounded-md bg-[#7AC143] px-5 py-2 text-sm font-semibold text-[#0B1D33] transition-colors duration-200 hover:bg-[#69AD36] ${focusRing}`}>
+          <a href={BOOKINGS_URL} {...bookingLinkProps} className={`rounded-md bg-[#7AC143] px-5 py-2 text-sm font-semibold text-[#0B1D33] transition-colors duration-200 hover:bg-[#69AD36] ${focusRing}`}>
             {dict.bookDemo}
-          </Link>
+          </a>
         </div>
 
         {/* Mobile hamburger */}
@@ -125,9 +126,9 @@ export default function Nav({ lang, dict }) {
             </Link>
             {langSwitch}
           </div>
-          <Link href={`/${lang}#demo`} onClick={close} className={`mt-4 block rounded-md bg-[#7AC143] px-5 py-2.5 text-center text-sm font-semibold text-[#0B1D33] transition-colors duration-200 hover:bg-[#69AD36] ${focusRing}`}>
+          <a href={BOOKINGS_URL} {...bookingLinkProps} onClick={close} className={`mt-4 block rounded-md bg-[#7AC143] px-5 py-2.5 text-center text-sm font-semibold text-[#0B1D33] transition-colors duration-200 hover:bg-[#69AD36] ${focusRing}`}>
             {dict.bookDemo}
-          </Link>
+          </a>
         </div>
       )}
     </header>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight, Heart, Brain, Shield, Zap } from 'lucide-react';
 import { getDictionary } from '../get-dictionary';
+import { BOOKINGS_URL, bookingLinkProps } from '../booking';
 
 // Icons stay in code (non-text), matched to traits by index.
 const traitIcons = [Heart, Brain, Heart, Shield];
@@ -18,7 +19,7 @@ export default async function LivoAppsWebsite({ params }) {
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">{t.hero.titleBefore}<span className="text-[#7AC143]">{t.hero.titleHighlight}</span>{t.hero.titleAfter}</h1>
           <p className="text-lg text-gray-300 mb-8 leading-relaxed">{t.hero.lead}</p>
           <div className="flex gap-4 flex-wrap">
-            <button className="bg-[#7AC143] text-[#0B1D33] px-8 py-3 rounded hover:bg-[#6AB030] transition font-semibold flex items-center gap-2">{t.hero.ctaPrimary} <ArrowRight size={18} /></button>
+            <a href={BOOKINGS_URL} {...bookingLinkProps} className="bg-[#7AC143] text-[#0B1D33] px-8 py-3 rounded hover:bg-[#6AB030] transition font-semibold flex items-center gap-2">{t.hero.ctaPrimary} <ArrowRight size={18} /></a>
             <Link href={`/${lang}/ppwr`} className="border border-gray-500 px-8 py-3 rounded hover:border-[#7AC143] transition font-semibold inline-flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7AC143]">{t.hero.ctaSecondary}</Link>
           </div>
         </div>
@@ -76,7 +77,7 @@ export default async function LivoAppsWebsite({ params }) {
           <p className="text-lg text-gray-700 mb-12">{t.product.subtitle}</p>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="bg-[#0B1D33] rounded-lg p-8 aspect-video flex items-center justify-center border border-[#2A3F57]">
-              <div className="text-center"><div className="text-4xl font-bold text-[#7AC143] mb-2">{t.product.statValue}</div><p className="text-gray-400 text-sm">{t.product.statLabel}</p></div>
+              <div className="text-center"><p className="text-lg font-bold text-[#7AC143] mb-2">{t.product.previewLabel}</p><p className="text-gray-400 text-sm">{t.product.previewNote}</p></div>
             </div>
             <div className="space-y-6">
               {t.product.features.map((f) => (
@@ -102,7 +103,7 @@ export default async function LivoAppsWebsite({ params }) {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">{t.finalCta.titleBefore}<span className="text-[#7AC143]">{t.finalCta.titleHighlight}</span>{t.finalCta.titleAfter}</h2>
           <p className="text-lg text-gray-700 mb-8">{t.finalCta.body}</p>
-          <button className="bg-[#7AC143] text-[#0B1D33] px-8 py-4 rounded hover:bg-[#6AB030] transition font-semibold flex items-center gap-2 mx-auto text-lg">{t.finalCta.cta} <ArrowRight size={20} /></button>
+          <a href={BOOKINGS_URL} {...bookingLinkProps} className="bg-[#7AC143] text-[#0B1D33] px-8 py-4 rounded hover:bg-[#6AB030] transition font-semibold flex items-center gap-2 mx-auto text-lg">{t.finalCta.cta} <ArrowRight size={20} /></a>
         </div>
       </section>
 
