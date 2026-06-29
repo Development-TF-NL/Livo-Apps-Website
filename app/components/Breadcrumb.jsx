@@ -14,11 +14,11 @@ export default function Breadcrumb({ items = [] }) {
           return (
             <li key={item.label} className="flex items-center gap-2">
               {item.href && !isLast ? (
-                <Link href={item.href} className={`text-[#5B6B72] transition-colors duration-200 hover:text-[#0B1D33] ${focusRing}`}>
+                <Link href={item.href} className={`text-[#5B6B72] transition-colors duration-200 hover:text-[#081D33] ${focusRing}`}>
                   {item.label}
                 </Link>
               ) : (
-                <span className={isLast ? 'font-medium text-[#0B1D33]' : 'text-[#5B6B72]'} aria-current={isLast ? 'page' : undefined}>
+                <span className={isLast ? 'font-medium text-[#081D33]' : 'text-[#5B6B72]'} aria-current={isLast ? 'page' : undefined}>
                   {item.label}
                 </span>
               )}
