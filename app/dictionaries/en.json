@@ -67,7 +67,7 @@
       "tagline": "Software that lightens the workflow.",
       "columns": {
         "product": { "title": "PRODUCT", "items": ["PPWR Dashboard", "Features", "Pricing"] },
-        "company": { "title": "COMPANY", "items": ["About Us", "Careers", "Contact"] },
+        "company": { "title": "COMPANY", "items": ["About Us", "Careers", { "label": "Contact", "href": "mailto:hello@livoapps.software" }] },
         "legal": { "title": "LEGAL", "items": ["Privacy Policy", "Terms"] }
       },
       "copyright": "© 2026 Livo Apps. All rights reserved.",

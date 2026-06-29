@@ -131,9 +131,12 @@ export default async function LivoAppsWebsite({ params }) {
               <div key={col.title}>
                 <h4 className="font-bold mb-4 text-sm tracking-wide">{col.title}</h4>
                 <ul className="space-y-3 text-sm text-gray-400">
-                  {col.items.map((item) => (
-                    <li key={item}><a href="#" className="hover:text-[#7AC143]">{item}</a></li>
-                  ))}
+                  {col.items.map((item) => {
+                    const { label, href } = typeof item === 'string' ? { label: item, href: '#' } : item;
+                    return (
+                      <li key={label}><a href={href} className="hover:text-[#7AC143]">{label}</a></li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}

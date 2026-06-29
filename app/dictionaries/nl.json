@@ -67,7 +67,7 @@
       "tagline": "Software die je werk lichter maakt.",
       "columns": {
         "product": { "title": "PRODUCT", "items": ["PPWR Dashboard", "Functies", "Prijzen"] },
-        "company": { "title": "BEDRIJF", "items": ["Over ons", "Vacatures", "Contact"] },
+        "company": { "title": "BEDRIJF", "items": ["Over ons", "Vacatures", { "label": "Contact", "href": "mailto:hello@livoapps.software" }] },
         "legal": { "title": "JURIDISCH", "items": ["Privacybeleid", "Voorwaarden"] }
       },
       "copyright": "© 2026 Livo Apps. Alle rechten voorbehouden.",
