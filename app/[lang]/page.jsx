@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, Heart, Brain, Shield, Zap, CheckSquare, LayoutDashboard } from 'lucide-react';
 import { getDictionary } from '../get-dictionary';
 import { BOOKINGS_URL, bookingLinkProps } from '../booking';
-import Logo from '../components/Logo';
+import Footer from '../components/Footer';
 import { socialMetadata } from '../seo';
 
 export async function generateMetadata({ params }) {
@@ -130,44 +130,7 @@ export default async function LivoAppsWebsite({ params }) {
         </div>
       </section>
 
-      <footer className="bg-navy border-t border-white/10 px-6 py-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
-            <div>
-              <div className="flex items-center gap-2 mb-6">
-                <Logo variant="inverse" />
-                <span className="text-lg font-display font-bold tracking-wider">LIVO APPS</span>
-              </div>
-              <p className="text-white/60 text-sm">{t.footer.tagline}</p>
-            </div>
-            {[t.footer.columns.product, t.footer.columns.company].map((col) => (
-              <div key={col.title}>
-                <h4 className="font-display font-bold mb-4 text-sm tracking-wide">{col.title}</h4>
-                <ul className="space-y-3 text-sm text-white/60">
-                  {col.items.map(({ label, href }) => (
-                    // Interne links in de dictionary staan zonder taalprefix.
-                    <li key={label}>
-                      <a href={href.startsWith('/') || href.startsWith('#') ? `/${lang}${href}` : href} className="hover:text-accent">
-                        {label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <p className="text-xs text-white/50 mb-8">{t.footer.disclaimer}</p>
-          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/60">
-            <p>{t.footer.copyright}</p>
-            <div className="flex gap-6 mt-4 md:mt-0">
-              {t.footer.social.map(({ label, href }) => (
-                <a href={href} target="_blank" rel="noopener noreferrer" className="hover:text-accent" key={label}>{label}</a>
-              ))}
-              <a href="mailto:hello@livoapps.software" className="hover:text-accent">hello@livoapps.software</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer lang={lang} dict={t.footer} />
     </div>
   );
 }

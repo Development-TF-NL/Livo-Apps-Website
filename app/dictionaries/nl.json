@@ -200,5 +200,143 @@
       "back": "Terug naar de homepage"
     },
     "disclaimer": "Deze pagina en de whitepaper zijn geen juridisch advies. Compliance-verplichtingen volgen uit de regelgeving zelf."
+  },
+  "pricing": {
+    "meta": {
+      "title": "Prijzen · Geprijsd op SKU's, niet op complexiteit",
+      "description": "EU PPWR-verpakkingscompliance. Eén getal bepaalt je prijs: hoeveel producten je zelf op de markt brengt."
+    },
+    "banner": {
+      "lead": "🌱 Word deel van onze launching community.",
+      "body": "LIVO PPWR is beschikbaar vanaf 1 september 2026, en elk plan is gratis tot 1 november 2026. Geen betaalgegevens nodig, en we factureren nooit automatisch. Op 1 november maak je een actieve keuze; doe je dat niet, dan ga je verder op de gratis laag en behoud je je data."
+    },
+    "hero": {
+      "eyebrow": "PRIJZEN",
+      "titleLine1": "EU PPWR-verpakkingscompliance.",
+      "titleLine2": "Geprijsd op SKU's, niet op complexiteit.",
+      "lead": "Compliancesoftware wordt meestal per project verkocht: een scopinggesprek, implementatiekosten, een offerte die je met niemand kunt vergelijken. Livo werkt anders. Eén getal bepaalt je prijs: hoeveel producten je zelf op de markt brengt. Al het andere zit erbij in.",
+      "bullets": ["Geen implementatiekosten", "Altijd opzegbaar", "Starten zonder betaalgegevens"],
+      "ctaPrimary": "Start gratis",
+      "ctaSecondary": "Praat met iemand die PPWR kent"
+    },
+    "card": {
+      "title": "Elk betaald plan",
+      "price": "€99–1.199 /maand",
+      "note": "Eén product, zes maten. Vind de jouwe hieronder.",
+      "bullets": [
+        "Alle 27 EU-markten, nooit per markt geprijsd",
+        "Onbeperkt gebruikers en rollen",
+        "Alles wat je doorverkoopt is gratis en onbeperkt",
+        "Conformiteitsverklaring gegenereerd uit je eigen data"
+      ]
+    },
+    "plans": {
+      "eyebrow": "01 · Plannen",
+      "title": "Tel wat van jou is. Dat is je plan.",
+      "body": "Je prijs volgt de producten die je zelf op de EU-markt brengt: je eigen merken en je import. Elk betaald plan is hetzelfde product: meer SKU's, nooit meer functies. Per maand of per jaar, en je stapt op wanneer je wilt.",
+      "freeTitle": "Gratis: tot 25 SKU's, zo lang je wilt.",
+      "freeBody": "Begin met echte producten, niet met een demo. Geen betaalgegevens nodig.",
+      "yearlyNote": "Jaarfacturatie scheelt 15%. Prijzen zijn exclusief btw.",
+      "items": [
+        { "audience": "Importeurs met één merk", "name": "Starter", "limit": "Tot 250 eigen-merk- of import-SKU's", "monthly": "€99", "yearly": "€84/mnd bij jaarfacturatie" },
+        { "audience": "Eigen-merk-producenten", "name": "Core", "limit": "Tot 1.000 eigen-merk- of import-SKU's", "monthly": "€249", "yearly": "€212/mnd bij jaarfacturatie" },
+        { "audience": "Middelgrote groothandels", "name": "Growth", "limit": "Tot 2.500 eigen-merk- of import-SKU's", "monthly": "€549", "yearly": "€467/mnd bij jaarfacturatie" },
+        { "audience": "Groothandels & importeurs", "name": "Scale", "limit": "Tot 5.000 eigen-merk- of import-SKU's", "monthly": "€899", "yearly": "€764/mnd bij jaarfacturatie" },
+        { "audience": "Hogere middenmarkt & grote importeurs", "name": "Enterprise", "limit": "Tot 10.000 eigen-merk- of import-SKU's", "monthly": "€1.199", "yearly": "€1.019/mnd bij jaarfacturatie" }
+      ],
+      "perMonth": "/maand",
+      "customTitle": "Meer dan 10.000 SKU's? Laten we het samen bekijken.",
+      "customBody": "Op die schaal hangt het eerlijke antwoord af van je assortiment, dus kijken we liever samen mee dan dat we een getal afdrukken.",
+      "customCta": "Bespreek het met ons"
+    },
+    "get": {
+      "eyebrow": "02 · Wat je echt krijgt",
+      "title": "Van een rommelig leveranciersbestand naar een verklaring die je durft te ondertekenen.",
+      "body": "Die keten is het product. Elke stap hieronder werkt vandaag, in elk betaald plan.",
+      "items": [
+        { "n": "1", "title": "Importeer elke Excel, geen star sjabloon", "body": "Upload je eigen data-exports of wat een leverancier ook stuurt. Livo leest de structuur (fles, doos, omdoos, pallet), laat zien wat het vond en vraagt door als het twijfelt. Jij bevestigt in plaats van overtypt, en dezelfde bestandsvorm wordt de volgende keer herkend. Geen vast format om eerst mee te vechten.", "status": "Live", "live": true },
+        { "n": "2", "title": "Vraag leveranciers uit via portal en taken, niet via mailwisselingen", "body": "Vraag precies wat er ontbreekt: je leverancier krijgt een link met vragen in gewone taal en taken, juridisch getoetste toelichting per veld, en een plek voor hun PDF's. Geen mailbox vol half ingevulde spreadsheets, en niets wat een leverancier stuurt overschrijft ooit wat je al had.", "status": "Live · multi-leveranciersbeheer in ontwikkeling", "live": true },
+        { "n": "3", "title": "Altijd weten waar je staat", "body": "Eén live overzicht van je verplichtingen, deadlines en gereedheid: per product, per rol, per markt, tot 2040. En het blijft eerlijk: verlopen bewijs telt automatisch niet meer mee, dus de status die je ziet is de status die vandaag waar is.", "status": "Live", "live": true },
+        { "n": "4", "title": "Het complete compliancedossier, per product", "body": "Conformiteitsverklaring, technisch dossier, testdocumenten en een append-only attestatiespoor, gegenereerd uit je eigen data en per product bij elkaar gehouden. Livo wacht tot het vereiste bewijs er is, en ondertekenen is een apart recht. Als iemand vraagt hoe je het weet, laat je het zien.", "status": "Live", "live": true }
+      ]
+    },
+    "replaces": {
+      "eyebrow": "03 · Wat het vervangt",
+      "title": "Vergelijk de hele rekening, niet de licentieregel.",
+      "body": "Traditionele compliancesoftware is zelden alleen een licentie. Het getal dat telt is wat er in een jaar van je rekening af gaat, en hoe goed je dat vooraf kon voorspellen.",
+      "left": {
+        "title": "Een traditioneel PPWR-project",
+        "rows": [
+          { "label": "Implementatie", "value": "€5.000 – 50.000" },
+          { "label": "Consultancy", "value": "€150 – 250 / uur" },
+          { "label": "Licentie", "value": "€6.000 – 40.000 / jaar" },
+          { "label": "Extra gebruikers, API, rapportages", "value": "los bij te kopen" }
+        ],
+        "totalLabel": "Jaar één",
+        "totalValue": "€15.000 – 60.000"
+      },
+      "right": {
+        "title": "Livo, 1.000 SKU's",
+        "rows": [
+          { "label": "Implementatie", "value": "€0" },
+          { "label": "Consultancy", "value": "€0" },
+          { "label": "Licentie", "value": "€2.540 / jaar" },
+          { "label": "Extra gebruikers, API, rapportages", "value": "inbegrepen" }
+        ],
+        "totalLabel": "Jaar één",
+        "totalValue": "€2.540"
+      },
+      "footnote": "De bedragen voor traditionele leveranciers zijn de bandbreedtes die wij in deze markt geoffreerd zien; jouw situatie kan afwijken. Het punt is niet dat we goedkoop zijn. Het punt is dat je je totale kosten kunt uitrekenen voordat je tekent, en dat dat zo blijft."
+    },
+    "everyPlan": {
+      "eyebrow": "04 · In elk plan",
+      "title": "We begrenzen één ding: voor hoeveel SKU's jij verantwoordelijk bent.",
+      "body": "Elk betaald plan is hetzelfde product. Geen prijs per gebruiker, geen prijs per markt, geen functie-niveaus.",
+      "items": [
+        "Alle 27 EU-markten",
+        "Onbeperkt gebruikers, rollen en verpakkingsniveaus",
+        "Excel-import en -export met live validatie",
+        "Leveranciersportal",
+        "Verplichtingentijdlijn per rol × markt, tot 2040",
+        "Bewijskluis met vervaldatum-bewaking",
+        "Conformiteitsverklaring + technisch dossier",
+        "Append-only attestatiespoor",
+        "Gescheiden rechten: invoeren · bevestigen · ondertekenen"
+      ],
+      "freeNote": "Gratis is het enige plan met grenzen: het stopt bij 25 SKU's en laat ondertekende verklaring-downloads en integraties weg. Al het andere is identiek.",
+      "onboarding": "Aan de slag: er zijn geen implementatiekosten en geen implementatietraject. We richten je omgeving samen met je in (markten, gebruikers en rollen), meestal binnen een dag. Daarna is hij van jou. Self-service onboarding wordt nog gebouwd; tot die er is doen we die stap liever samen met je dan te doen alsof het al een knop is."
+    },
+    "integrations": {
+      "eyebrow": "05 · Integraties",
+      "title": "Integraties zijn er nog niet. Zodra ze er zijn, zitten ze in je plan.",
+      "body": "Alleen Excel-import en -export bestaan vandaag, en die dragen de hele workflow. De koppelingen hieronder moeten nog gebouwd worden. We noemen ze zodat je weet wat eraan komt en, belangrijker, dat ze gewoon onderdeel van je plan zijn zodra ze er zijn.",
+      "items": [
+        { "title": "Excel-import & -export", "body": "Upload het leverancierssjabloon, controleer wat we herkenden, bevestig. Opnieuw importeren werkt bij in plaats van te dupliceren.", "status": "Live", "live": true },
+        { "title": "Native ERP-connectors", "body": "Exact Online eerst. Dynamics 365 BC, SAP Business One en Odoo volgen waar klanten erom vragen.", "status": "Coming soon", "live": false },
+        { "title": "REST API + integratiebouwer", "body": "Koppel zelf je PIM of elk ander systeem: wijs de velden aan in de app, zonder code.", "status": "Coming soon", "live": false },
+        { "title": "GS1/GDSN-publicatie", "body": "Publiceer verpakkings- en PPWR-attributen rechtstreeks naar de datapool, met codelijst-mappings als kant-en-klaar sjabloon.", "status": "Coming soon", "live": false }
+      ],
+      "custom": "Een eigen systeem? Een legacy- of niche-integratie is maatwerk: een eenmalig ontwikkeltarief, vooraf geoffreerd, plus een maandelijks beheertarief vanaf €199."
+    },
+    "faq": {
+      "eyebrow": "06 · Vragen",
+      "title": "De dingen die mensen echt vragen.",
+      "items": [
+        { "q": "Wat telt precies als SKU?", "a": "Eén verkoopbaar product dat je zelf op de EU-markt brengt: onder je eigen merk (private label meegerekend) of als importeur. Verpakkingsniveaus, componenten en materialen tellen nooit mee, hoeveel je er ook hebt. Alles wat je als distributeur doorverkoopt is gratis en onbeperkt, en gearchiveerde producten tellen ook niet mee." },
+        { "q": "Wat als ik iets over mijn plan heen ga?", "a": "Er gebeurt niets. We kijken naar een voortschrijdend driemaandsgemiddelde, dus een seizoenspiek gaat ongemerkt voorbij. Is je portfolio structureel groter, dan nemen we contact op en schuif je een trede omhoog. Je komt er nooit achter via een geblokkeerd scherm of een verrassingsfactuur." },
+        { "q": "Mijn leveranciers zijn traag. Blokkeert dat mij?", "a": "Het is de meest voorkomende bottleneck, dus het product is eromheen gebouwd: stuur een portal-link of exporteer precies wat er ontbreekt, en een half ingevulde retour laat intact wat je al had. Jij werkt door aan al het andere, en je ziet per product op wie je wacht." },
+        { "q": "Zijn er setup- of implementatiekosten?", "a": "Nee. Connectors, de API en GS1-publicatie zitten in de betaalde plannen zodra ze er zijn. De ene uitzondering is een volledig maatwerk-integratie met een legacysysteem: maatwerk, vooraf geoffreerd." },
+        { "q": "Kan ik weg?", "a": "Altijd, met één klik vanuit Billing. Je data blijft van jou en blijft exporteerbaar; alles boven een lagere grens wordt read-only, nooit weg." },
+        { "q": "Waarom is dit simpeler dan bij iedereen anders?", "a": "Omdat de prijs de verordening volgt. PPWR legt de verplichtingen bij wie een product op de markt brengt. Wij tellen precies die producten en rekenen daarvoor, verder niets. Dat haalt het scopinggesprek, het implementatietraject en de onvergelijkbare offerte eruit." }
+      ]
+    },
+    "closing": {
+      "title": "Klaar om je werk lichter te maken?",
+      "body": "Start gratis met je eigen verpakkingsdata. De eerste PPWR-verplichtingen gelden al sinds 12 augustus 2026.",
+      "ctaPrimary": "Start gratis (tot 25 SKU's)",
+      "ctaSecondary": "Praat met iemand die PPWR kent",
+      "ctaNote": "Een echt gesprek over hoe Livo bij jouw organisatie past. Jij bepaalt wat er daarna gebeurt."
+    },
+    "disclaimer": "Deze pagina beschrijft plannen en prijzen en is geen juridisch advies. Compliance-verplichtingen volgen uit de verordening zelf. Prijzen zijn exclusief btw en kunnen wijzigen voor nieuwe abonnementen; lopende abonnementen behouden hun prijs voor de lopende termijn."
   }
 }

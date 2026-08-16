@@ -200,5 +200,143 @@
       "back": "Back to the homepage"
     },
     "disclaimer": "This page and the whitepaper are not legal advice. Compliance obligations follow from the regulations themselves."
+  },
+  "pricing": {
+    "meta": {
+      "title": "Pricing · Priced by SKU, not complexity",
+      "description": "EU PPWR packaging compliance. One number decides your price: how many products you put on the market yourself."
+    },
+    "banner": {
+      "lead": "🌱 Be part of our launching community.",
+      "body": "LIVO PPWR is available from 1 September 2026, and every plan is free until 1 November 2026. No payment details needed, and we never invoice automatically. On 1 November you make an active choice; if you don't, you continue on the free tier and keep your data."
+    },
+    "hero": {
+      "eyebrow": "PRICING",
+      "titleLine1": "EU PPWR packaging compliance.",
+      "titleLine2": "Priced by SKU, not complexity.",
+      "lead": "Compliance software is usually sold by the project: a scoping call, an implementation fee, a quote you can't compare with anyone else's. Livo works differently. One number decides your price: how many products you put on the market yourself. Everything else is included.",
+      "bullets": ["No implementation fee", "Cancel anytime", "Start without a card"],
+      "ctaPrimary": "Start free",
+      "ctaSecondary": "Talk to someone who knows PPWR"
+    },
+    "card": {
+      "title": "Every paid plan",
+      "price": "€99–1,199 /month",
+      "note": "One product, six sizes. Find yours below.",
+      "bullets": [
+        "All 27 EU markets, never priced per market",
+        "Unlimited users and roles",
+        "Everything you resell is free and unlimited",
+        "Declaration of conformity generated from your data"
+      ]
+    },
+    "plans": {
+      "eyebrow": "01 · Plans",
+      "title": "Count what's yours. That's your plan.",
+      "body": "Your price follows the products you place on the EU market yourself: your own brands and your imports. Every paid plan is the same product: more SKUs, never more features. Monthly or yearly, and you leave whenever you like.",
+      "freeTitle": "Free: up to 25 SKUs, for as long as you like.",
+      "freeBody": "Start with real products, not a demo. No card needed.",
+      "yearlyNote": "Yearly billing saves 15%. Prices exclude VAT.",
+      "items": [
+        { "audience": "Single-brand importers", "name": "Starter", "limit": "Up to 250 own-brand or imported SKUs", "monthly": "€99", "yearly": "€84/mo billed yearly" },
+        { "audience": "Own-brand producers", "name": "Core", "limit": "Up to 1,000 own-brand or imported SKUs", "monthly": "€249", "yearly": "€212/mo billed yearly" },
+        { "audience": "Mid-size wholesalers", "name": "Growth", "limit": "Up to 2,500 own-brand or imported SKUs", "monthly": "€549", "yearly": "€467/mo billed yearly" },
+        { "audience": "Wholesalers & importers", "name": "Scale", "limit": "Up to 5,000 own-brand or imported SKUs", "monthly": "€899", "yearly": "€764/mo billed yearly" },
+        { "audience": "Upper mid-market & large importers", "name": "Enterprise", "limit": "Up to 10,000 own-brand or imported SKUs", "monthly": "€1,199", "yearly": "€1,019/mo billed yearly" }
+      ],
+      "perMonth": "/month",
+      "customTitle": "More than 10,000 SKUs? Let's talk it through.",
+      "customBody": "At that size the honest answer depends on your catalogue, so we'd rather look at it together than print a number.",
+      "customCta": "Talk it through"
+    },
+    "get": {
+      "eyebrow": "02 · What you actually get",
+      "title": "From a messy supplier file to a declaration you dare to sign.",
+      "body": "That chain is the product. Every step below works today, in every paid plan.",
+      "items": [
+        { "n": "1", "title": "Import any Excel, no rigid template", "body": "Upload your own data exports or whatever a supplier sends. Livo reads the structure (bottle, box, carton, pallet), shows you what it found and asks when it isn't sure. You confirm instead of retype, and the same file shape is recognised next time. No fixed format to fight with first.", "status": "Live", "live": true },
+        { "n": "2", "title": "Ask suppliers via portal and tasks, not email threads", "body": "Request exactly what's missing: your supplier gets a link with plain-language questions and tasks, legally reviewed guidance per field, and a place to drop their PDFs. No mailbox full of half-filled spreadsheets, and nothing a supplier sends ever overwrites what you already had.", "status": "Live · multi-supplier management in progress", "live": true },
+        { "n": "3", "title": "Always know where you stand", "body": "One live overview of your obligations, deadlines and readiness: per product, per role, per market, through 2040. And it stays honest: expired evidence automatically stops counting, so the status you see is the status that's true today.", "status": "Live", "live": true },
+        { "n": "4", "title": "The complete compliance file, per product", "body": "Declaration of conformity, technical file, test documents and an append-only attestation trail, generated from your own data and kept together per product. Livo waits until the required evidence is there, and signing is a separate right. When someone asks how you know, you show them.", "status": "Live", "live": true }
+      ]
+    },
+    "replaces": {
+      "eyebrow": "03 · What it replaces",
+      "title": "Compare the whole bill, not the licence line.",
+      "body": "Traditional compliance software is rarely just a licence. The number that matters is what leaves your account in a year, and how well you could predict it in advance.",
+      "left": {
+        "title": "A traditional PPWR project",
+        "rows": [
+          { "label": "Implementation", "value": "€5,000 – 50,000" },
+          { "label": "Consultancy", "value": "€150 – 250 / hour" },
+          { "label": "Licence", "value": "€6,000 – 40,000 / year" },
+          { "label": "Extra users, API, reports", "value": "add-ons" }
+        ],
+        "totalLabel": "Year one",
+        "totalValue": "€15,000 – 60,000"
+      },
+      "right": {
+        "title": "Livo, 1,000 SKUs",
+        "rows": [
+          { "label": "Implementation", "value": "€0" },
+          { "label": "Consultancy", "value": "€0" },
+          { "label": "Licence", "value": "€2,540 / year" },
+          { "label": "Extra users, API, reports", "value": "included" }
+        ],
+        "totalLabel": "Year one",
+        "totalValue": "€2,540"
+      },
+      "footnote": "Figures for traditional suppliers are the ranges we see quoted in this market; your mileage will vary. The point isn't that we're cheap. It's that you can work out your total cost before you sign, and it stays that way."
+    },
+    "everyPlan": {
+      "eyebrow": "04 · In every plan",
+      "title": "We limit one thing: how many SKUs you're responsible for.",
+      "body": "Every paid plan is the same product. No per-user pricing, no per-market pricing, no feature tiers.",
+      "items": [
+        "All 27 EU markets",
+        "Unlimited users, roles and packaging levels",
+        "Excel import & export with live validation",
+        "Supplier portal",
+        "Obligation timeline per role × market, to 2040",
+        "Evidence vault with expiry tracking",
+        "Declaration of conformity + technical file",
+        "Append-only attestation trail",
+        "Separated rights: enter · confirm · sign"
+      ],
+      "freeNote": "Free is the one plan with limits: it stops at 25 SKUs and leaves out signed declaration downloads and integrations. Everything else is identical.",
+      "onboarding": "Getting started: there's no implementation fee and no implementation project. We set up your environment with you (markets, users and roles), usually within a day. From there it's yours to run. Self-service onboarding is being built; until it ships we'd rather do that step with you than pretend it's already a button."
+    },
+    "integrations": {
+      "eyebrow": "05 · Integrations",
+      "title": "Integrations aren't here yet. When they ship, they're in your plan.",
+      "body": "Only Excel import and export exist today, and they carry the whole workflow. The connectors below are still to be built. We list them so you know what's coming and, more importantly, that they'll simply be part of your plan when they arrive.",
+      "items": [
+        { "title": "Excel import & export", "body": "Upload the supplier template, review what we recognised, confirm. Re-import updates instead of duplicating.", "status": "Live", "live": true },
+        { "title": "Native ERP connectors", "body": "Exact Online first. Dynamics 365 BC, SAP Business One and Odoo follow where customers ask for them.", "status": "Coming soon", "live": false },
+        { "title": "REST API + integration builder", "body": "Connect your PIM or any other system yourself: map the fields in the app, no code required.", "status": "Coming soon", "live": false },
+        { "title": "GS1 / GDSN publishing", "body": "Publish packaging and PPWR attributes straight to the data pool, with code-list mappings as a ready-made template.", "status": "Coming soon", "live": false }
+      ],
+      "custom": "A system of your own? A legacy or niche integration is tailored work: a one-time development fee quoted up front, plus a monthly care fee from €199."
+    },
+    "faq": {
+      "eyebrow": "06 · Questions",
+      "title": "The things people actually ask.",
+      "items": [
+        { "q": "What exactly counts as a SKU?", "a": "One sellable product you put on the EU market yourself: under your own brand (private label included) or as the importer. Packaging levels, components and materials are never counted, however many you have. Everything you resell as a distributor is free and unlimited, and archived products don't count either." },
+        { "q": "What if I go slightly over my plan?", "a": "Nothing happens. We look at a rolling three-month average, so a seasonal peak passes by unnoticed. If your portfolio is structurally larger, we'll get in touch and move you up. You'll never find out through a blocked screen or a surprise invoice." },
+        { "q": "My suppliers are slow. Does that block me?", "a": "It's the most common bottleneck, so the product is built around it: send a portal link or export exactly what's missing, and a partly filled return leaves what you already had intact. You keep working on everything else, and you can see per product who you're waiting on." },
+        { "q": "Are there setup or implementation fees?", "a": "No. Connectors, the API and GS1 publishing will be included in paid plans when they ship. The one exception is a fully custom integration with a legacy system: tailored work, quoted up front." },
+        { "q": "Can I leave?", "a": "Any time, in one click from Billing. Your data stays yours and stays exportable; anything above a lower limit becomes read-only, never lost." },
+        { "q": "Why is this simpler than everyone else?", "a": "Because the price follows the regulation. PPWR puts the obligations on whoever places a product on the market. We count exactly those products and charge for them, nothing else. That takes out the scoping call, the implementation project and the quote you can't compare." }
+      ]
+    },
+    "closing": {
+      "title": "Ready to lighten the workflow?",
+      "body": "Start free with your own packaging data. The first PPWR obligations have applied since 12 August 2026.",
+      "ctaPrimary": "Start free (up to 25 SKUs)",
+      "ctaSecondary": "Talk to someone who knows PPWR",
+      "ctaNote": "A real conversation about how Livo fits your organisation. You decide what happens next."
+    },
+    "disclaimer": "This page describes plans and prices; it is not legal advice. Compliance obligations follow from the regulation itself. Prices exclude VAT and may change for new subscriptions; active subscriptions keep their price for the running term."
   }
 }
