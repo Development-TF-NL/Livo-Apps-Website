@@ -16,25 +16,16 @@ import { BOOKINGS_URL as DEMO_URL, bookingLinkProps } from "../../booking";
 
 const CONTACT_EMAIL = "hello@livoapps.software";
 
-/* ---------- Brand tokens (Brand Bible) ---------- */
+/* ---------- Scoped styles — brand tokens come from :root (globals.css) ---------- */
 const css = `
 .lp-root {
-  --bg: #EEF2F3;          /* light canvas behind cards */
-  --surface: #FFFFFF;     /* cards / panels */
-  --ink: #081D33;         /* primary text (deep navy) */
-  --sub: #5B6B72;         /* secondary, muted text */
-  --line: #E4E8EA;        /* soft borders */
-  --navy: #081D33;        /* dark surfaces / header */
-  --accent: #7AC143;      /* lime — used sparingly */
-  --accent-dark: #69AD36; /* lime hover */
-
   /* functional state colours (muted, functional only) */
   --ok-bg: #EAF6DD;   --ok-tx: #3F6B16;
   --warn-bg: #FEF3C7; --warn-tx: #854F0B;
   --risk-bg: #FEE2E2; --risk-tx: #991B1B;
 
-  --display: "Satoshi", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: "Satoshi", var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --body: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 
   background: var(--bg);
   color: var(--ink);
@@ -100,8 +91,7 @@ const css = `
 
 /* feature grid */
 .lp-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.lp-feature { padding: 26px; transition: border-color .2s ease-in-out; }
-.lp-feature:hover { border-color: #C9D6CC; }
+.lp-feature { padding: 26px; }
 .lp-ico { width: 38px; height: 38px; border-radius: 9px; background: var(--bg); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; color: var(--navy); margin-bottom: 16px; }
 .lp-ico svg { width: 20px; height: 20px; }
 .lp-feature h3 { font-size: 17px; margin-bottom: 8px; }

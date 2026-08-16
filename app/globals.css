@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Brand tokens (ontwerpdocument v2 §3.1) — één bron, gespiegeld in tailwind.config.js. */
+:root {
+  --bg: #EEF2F3;
+  --surface: #FFFFFF;
+  --ink: #081D33;
+  --sub: #5B6B72;
+  --line: #E4E8EA;
+  --navy: #081D33;
+  --accent: #7AC143;
+  --accent-dark: #69AD36;
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 

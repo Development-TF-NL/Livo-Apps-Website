@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 
 const focusRing =
-  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#7AC143] rounded';
+  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent rounded';
 
 // items: [{ label, href? }] — the last item is the current page (no link)
 export default function Breadcrumb({ items = [] }) {
@@ -14,15 +14,15 @@ export default function Breadcrumb({ items = [] }) {
           return (
             <li key={item.label} className="flex items-center gap-2">
               {item.href && !isLast ? (
-                <Link href={item.href} className={`text-[#5B6B72] transition-colors duration-200 hover:text-[#081D33] ${focusRing}`}>
+                <Link href={item.href} className={`text-sub transition-colors duration-200 hover:text-ink ${focusRing}`}>
                   {item.label}
                 </Link>
               ) : (
-                <span className={isLast ? 'font-medium text-[#081D33]' : 'text-[#5B6B72]'} aria-current={isLast ? 'page' : undefined}>
+                <span className={isLast ? 'font-medium text-ink' : 'text-sub'} aria-current={isLast ? 'page' : undefined}>
                   {item.label}
                 </span>
               )}
-              {!isLast && <ChevronRight size={14} className="text-[#9AA7AE]" aria-hidden="true" />}
+              {!isLast && <ChevronRight size={14} className="text-sub/60" aria-hidden="true" />}
             </li>
           );
         })}
