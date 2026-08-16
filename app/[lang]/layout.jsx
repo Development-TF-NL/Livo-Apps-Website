@@ -14,7 +14,9 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 export const metadata = {
   metadataBase: new URL('https://livoapps.software'),
   title: 'Livo Apps · Software that lightens the workflow',
-  description: 'Elegant software that removes complexity from everyday business processes.',
+  // Fallback voor pagina's zonder eigen generateMetadata (praktisch alleen de 404);
+  // dit statische metadata-object kent geen taal, dus de EN-versie.
+  description: 'Know which rules apply. Prove that you comply.',
   icons: {
     // Afgeleiden van de SVG-master in public/ (besluit-logo-svg-master-v1)
     icon: [
