@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { BOOKINGS_URL, bookingLinkProps } from '../booking';
+import Logo from './Logo';
 
 // Visible keyboard focus, flat (outline, not a shadow/ring)
 const focusRing =
@@ -14,17 +15,6 @@ const languages = [
   ['en', 'EN'],
   ['nl', 'NL'],
 ];
-
-function LivoMark() {
-  return (
-    <span className="block w-8 h-8" aria-hidden="true">
-      <svg viewBox="0 0 40 40" fill="none" className="w-full h-full">
-        <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontSize="28" fontWeight="bold" fill="#081D33" fontFamily="serif">L</text>
-        <path d="M 20 18 Q 25 22 22 28" stroke="#7AC143" strokeWidth="3" fill="none" strokeLinecap="round" />
-      </svg>
-    </span>
-  );
-}
 
 export default function Nav({ lang, dict }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,7 +59,7 @@ export default function Nav({ lang, dict }) {
     <header className="sticky top-0 z-50 border-b border-line bg-white">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link href={`/${lang}`} aria-label="Livo Apps — home" className={`flex items-center gap-2 ${focusRing}`}>
-          <LivoMark />
+          <Logo />
           <span className="text-lg font-display font-bold tracking-wider text-ink">LIVO APPS</span>
         </Link>
 

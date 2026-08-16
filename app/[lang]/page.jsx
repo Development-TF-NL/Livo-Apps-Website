@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, Heart, Brain, Shield, Zap, CheckSquare, LayoutDashboard } from 'lucide-react';
 import { getDictionary } from '../get-dictionary';
 import { BOOKINGS_URL, bookingLinkProps } from '../booking';
+import Logo from '../components/Logo';
 
 // Icons stay in code (non-text), matched to traits by index.
 const traitIcons = [Heart, Brain, Heart, Shield];
@@ -122,12 +123,7 @@ export default async function LivoAppsWebsite({ params }) {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <div className="w-8 h-8 relative">
-                  <svg viewBox="0 0 40 40" fill="none" className="w-full h-full">
-                    <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontSize="28" fontWeight="bold" fill="white" fontFamily="serif">L</text>
-                    <path d="M 20 18 Q 25 22 22 28" stroke="#7AC143" strokeWidth="3" fill="none" strokeLinecap="round" />
-                  </svg>
-                </div>
+                <Logo variant="inverse" />
                 <span className="text-lg font-display font-bold tracking-wider">LIVO APPS</span>
               </div>
               <p className="text-white/60 text-sm">{t.footer.tagline}</p>

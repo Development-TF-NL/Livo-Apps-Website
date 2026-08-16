@@ -11,8 +11,23 @@ import { i18n } from '../i18n-config';
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 
 export const metadata = {
-  title: 'Livo Apps - Software that lightens the workflow',
+  metadataBase: new URL('https://livoapps.software'),
+  title: 'Livo Apps — Software that lightens the workflow',
   description: 'Elegant software that removes complexity from everyday business processes.',
+  icons: {
+    // Afgeleiden van de SVG-master in public/ (besluit-logo-svg-master-v1)
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon-180.png',
+  },
+  openGraph: {
+    siteName: 'Livo Apps',
+    type: 'website',
+    images: [{ url: '/og.png', width: 1200, height: 630 }],
+  },
 };
 
 export function generateStaticParams() {
