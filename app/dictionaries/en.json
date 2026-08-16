@@ -8,7 +8,7 @@
   },
   "home": {
     "meta": {
-      "title": "Livo Apps — Software that lightens the workflow",
+      "title": "Livo Apps · Software that lightens the workflow",
       "description": "Elegant software that removes complexity from everyday business processes."
     },
     "hero": {
@@ -45,7 +45,7 @@
       "title": "PPWR Dashboard",
       "subtitle": "Transform packaging regulations into clear actions.",
       "previewLabel": "PPWR Dashboard",
-      "previewNote": "Illustration — one clear status per packaging type.",
+      "previewNote": "Illustration: one clear status per packaging type.",
       "features": [
         { "title": "Keep compliance in view", "body": "All your packaging data in one place, so you're ready when an audit comes." },
         { "title": "Automated reporting", "body": "Generate PPWR reports without rebuilding them by hand." },
@@ -55,7 +55,7 @@
     },
     "whyLight": [
       "The system proposes, you confirm.",
-      "All your compliance in one calm overview — no cluttered screens.",
+      "All your compliance in one calm overview, without cluttered screens.",
       "Set up quickly, without the hassle."
     ],
     "finalCta": {
@@ -84,7 +84,7 @@
   },
   "ppwr": {
     "meta": {
-      "title": "LIVO PPWR — Packaging compliance in one calm place",
+      "title": "LIVO PPWR · Packaging compliance in one calm place",
       "description": "Keep every packaging type, obligation and document in one place. Built for the EU Packaging and Packaging Waste Regulation."
     },
     "breadcrumb": ["Livo Apps", "Products", "LIVO PPWR"],
@@ -92,7 +92,7 @@
       "eyebrow": "LIVO PPWR · Packaging compliance",
       "titleLine1": "Complex rules.",
       "titleLine2": "Effortless compliance.",
-      "lead": "The EU Packaging and Packaging Waste Regulation applies from 12 August 2026. LIVO PPWR keeps every packaging type, obligation and document in one calm place — so your team stays compliant without the stress.",
+      "lead": "The EU Packaging and Packaging Waste Regulation applies from 12 August 2026. LIVO PPWR keeps every packaging type, obligation and document in one calm place, so your team stays compliant without the stress.",
       "ctaPrimary": "Book a demo",
       "ctaSecondary": "See how it works"
     },
@@ -112,11 +112,11 @@
     "whyNow": {
       "eyebrow": "Why now",
       "title": "One regulation. A lot of new obligations.",
-      "body": "PPWR (Regulation (EU) 2025/40) applies directly across the EU and replaces the old Packaging Directive. It reaches every company that places packaging on the EU market — whatever its size.",
+      "body": "PPWR (Regulation (EU) 2025/40) applies directly across the EU and replaces the old Packaging Directive. It reaches every company that places packaging on the EU market, whatever its size.",
       "cards": [
         { "title": "Prove conformity", "body": "Each packaging type needs an EU Declaration of Conformity and technical documentation, kept on file for years." },
         { "title": "Meet design rules", "body": "Recyclability, recycled content, packaging minimisation and PFAS limits all carry their own thresholds and dates." },
-        { "title": "Avoid the fallout", "body": "Gaps can mean fines, recalls or losing a retail listing. The work is real — the stress doesn't have to be." }
+        { "title": "Avoid the fallout", "body": "Gaps can mean fines, recalls or losing a retail listing. The work is real. The stress doesn't have to be." }
       ],
       "datePrefix": "Binding from",
       "date": "12 August 2026"
@@ -124,23 +124,23 @@
     "what": {
       "eyebrow": "What LIVO PPWR does",
       "title": "Your whole packaging compliance, in one place.",
-      "body": "Register, obligations, documents, suppliers and deadlines — connected, so nothing falls through the cracks.",
+      "body": "Register, obligations, documents, suppliers and deadlines: connected, so nothing falls through the cracks.",
       "features": [
-        { "title": "Packaging register", "body": "Every packaging type you place on the market, in one list — material, weight, format and owner, found in seconds." },
+        { "title": "Packaging register", "body": "Every packaging type you place on the market, in one list: material, weight, format and owner, found in seconds." },
         { "title": "Obligations matrix", "body": "See at a glance which rules apply to each packaging type, and exactly where you still need to act." },
         { "title": "Documents & Declarations of Conformity", "body": "Keep every DoC and technical file with its packaging. Upload once, and it's always where you expect it." },
         { "title": "Suppliers", "body": "Collect the data and proof you need from suppliers, with the right owner set for you automatically." },
         { "title": "Timeline & deadlines", "body": "PPWR phases in through 2030 and beyond. LIVO keeps the dates that matter to your packaging in view." },
-        { "title": "Compliance status", "body": "A calm, honest picture of where you stand today — and a clear next step, never a wall of red." }
+        { "title": "Compliance status", "body": "A calm, honest picture of where you stand today, with a clear next step. Never a wall of red." }
       ]
     },
     "principles": {
       "eyebrow": "Built to lighten the work",
       "title": "The software shouldn't add to the complexity.",
-      "body": "PPWR is demanding enough. Every screen in LIVO PPWR follows the same principles — the ones that make work feel lighter.",
+      "body": "PPWR is demanding enough. Every screen in LIVO PPWR follows the same principles: the ones that make work feel lighter.",
       "items": [
         { "n": "01", "title": "Simplicity over features", "body": "One primary action per screen. Everything you need to stay compliant, nothing you don't." },
-        { "n": "02", "title": "Errors that help", "body": "No raw system messages. Not {code}, but “That file is a little large — try one under 15 MB.”", "code": "ERROR 413" },
+        { "n": "02", "title": "Errors that help", "body": "No raw system messages. Not {code}, but “That file is a little large. Try one under 15 MB.”", "code": "ERROR 413" },
         { "n": "03", "title": "Calm by design", "body": "Generous whitespace and progressive disclosure keep dense pages quiet. Detail appears when you ask for it." },
         { "n": "04", "title": "Smart defaults", "body": "A document is named after its file. The supplier owner is set for you. Less typing, fewer mistakes." },
         { "n": "05", "title": "Validation as you go", "body": "Fields are checked while you work, so you never complete a whole form only to hit a wall at the end." },
@@ -150,7 +150,7 @@
     "closing": {
       "eyebrow": "LIVO PPWR",
       "title": "Ready to make compliance effortless?",
-      "leadBefore": "See LIVO PPWR with your own packaging in a 20-minute demo — or email ",
+      "leadBefore": "See LIVO PPWR with your own packaging in a 20-minute demo, or email ",
       "leadAfter": ".",
       "cta": "Book a demo"
     },

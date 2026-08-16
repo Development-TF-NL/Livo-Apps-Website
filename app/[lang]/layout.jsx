@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 
 export const metadata = {
   metadataBase: new URL('https://livoapps.software'),
-  title: 'Livo Apps — Software that lightens the workflow',
+  title: 'Livo Apps · Software that lightens the workflow',
   description: 'Elegant software that removes complexity from everyday business processes.',
   icons: {
     // Afgeleiden van de SVG-master in public/ (besluit-logo-svg-master-v1)

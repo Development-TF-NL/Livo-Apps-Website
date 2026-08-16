@@ -8,7 +8,7 @@
   },
   "home": {
     "meta": {
-      "title": "Livo Apps — Software die je werk lichter maakt",
+      "title": "Livo Apps · Software die je werk lichter maakt",
       "description": "Elegante software die complexiteit weghaalt uit alledaagse bedrijfsprocessen."
     },
     "hero": {
@@ -45,7 +45,7 @@
       "title": "PPWR Dashboard",
       "subtitle": "Verander verpakkingsregels in heldere acties.",
       "previewLabel": "PPWR Dashboard",
-      "previewNote": "Illustratie — één heldere status per verpakkingstype.",
+      "previewNote": "Illustratie: één heldere status per verpakkingstype.",
       "features": [
         { "title": "Zicht op je compliance", "body": "Al je verpakkingsdata op één plek, zodat je klaar bent als er een audit komt." },
         { "title": "Automatische rapportages", "body": "Maak PPWR-rapporten zonder ze met de hand op te bouwen." },
@@ -55,7 +55,7 @@
     },
     "whyLight": [
       "Het systeem stelt voor, jij bevestigt.",
-      "Al je compliance in één rustig overzicht — geen overvolle schermen.",
+      "Al je compliance in één rustig overzicht, zonder overvolle schermen.",
       "Snel ingericht, zonder gedoe."
     ],
     "finalCta": {
@@ -84,7 +84,7 @@
   },
   "ppwr": {
     "meta": {
-      "title": "LIVO PPWR — Verpakkingscompliance op één rustige plek",
+      "title": "LIVO PPWR · Verpakkingscompliance op één rustige plek",
       "description": "Houd elk verpakkingstype, elke verplichting en elk document op één plek. Gebouwd voor de EU-verpakkingsverordening (PPWR)."
     },
     "breadcrumb": ["Livo Apps", "Producten", "LIVO PPWR"],
@@ -92,7 +92,7 @@
       "eyebrow": "LIVO PPWR · Verpakkingscompliance",
       "titleLine1": "Complexe regels.",
       "titleLine2": "Moeiteloze compliance.",
-      "lead": "De EU-verordening voor verpakkingen en verpakkingsafval geldt vanaf 12 augustus 2026. LIVO PPWR houdt elk verpakkingstype, elke verplichting en elk document op één rustige plek — zo blijft je team compliant, zonder de stress.",
+      "lead": "De EU-verordening voor verpakkingen en verpakkingsafval geldt vanaf 12 augustus 2026. LIVO PPWR houdt elk verpakkingstype, elke verplichting en elk document op één rustige plek. Zo blijft je team compliant, zonder de stress.",
       "ctaPrimary": "Demo aanvragen",
       "ctaSecondary": "Bekijk hoe het werkt"
     },
@@ -112,11 +112,11 @@
     "whyNow": {
       "eyebrow": "Waarom nu",
       "title": "Eén verordening. Veel nieuwe verplichtingen.",
-      "body": "PPWR (Verordening (EU) 2025/40) geldt rechtstreeks in de hele EU en vervangt de oude Verpakkingsrichtlijn. De regels raken elk bedrijf dat verpakkingen op de EU-markt brengt — ongeacht de omvang.",
+      "body": "PPWR (Verordening (EU) 2025/40) geldt rechtstreeks in de hele EU en vervangt de oude Verpakkingsrichtlijn. De regels raken elk bedrijf dat verpakkingen op de EU-markt brengt, ongeacht de omvang.",
       "cards": [
         { "title": "Conformiteit aantonen", "body": "Elk verpakkingstype heeft een EU-conformiteitsverklaring en technische documentatie nodig, jarenlang te bewaren." },
         { "title": "Voldoen aan ontwerpregels", "body": "Recyclebaarheid, recyclaatgehalte, verpakkingsreductie en PFAS-grenzen hebben elk hun eigen normen en termijnen." },
-        { "title": "Gedoe voorkomen", "body": "Hiaten kunnen boetes, terugroepacties of een verloren schapplek betekenen. Het werk is echt — de stress hoeft dat niet te zijn." }
+        { "title": "Gedoe voorkomen", "body": "Hiaten kunnen boetes, terugroepacties of een verloren schapplek betekenen. Het werk is echt. De stress hoeft dat niet te zijn." }
       ],
       "datePrefix": "Bindend vanaf",
       "date": "12 augustus 2026"
@@ -124,23 +124,23 @@
     "what": {
       "eyebrow": "Wat LIVO PPWR doet",
       "title": "Je hele verpakkingscompliance, op één plek.",
-      "body": "Register, verplichtingen, documenten, leveranciers en deadlines — met elkaar verbonden, zodat niets tussen wal en schip valt.",
+      "body": "Register, verplichtingen, documenten, leveranciers en deadlines: met elkaar verbonden, zodat niets tussen wal en schip valt.",
       "features": [
-        { "title": "Verpakkingsregister", "body": "Elk verpakkingstype dat je op de markt brengt, in één lijst — materiaal, gewicht, vorm en eigenaar, in seconden gevonden." },
+        { "title": "Verpakkingsregister", "body": "Elk verpakkingstype dat je op de markt brengt, in één lijst: materiaal, gewicht, vorm en eigenaar, in seconden gevonden." },
         { "title": "Verplichtingenmatrix", "body": "Zie in één oogopslag welke regels gelden voor elk verpakkingstype, en precies waar je nog actie moet ondernemen." },
         { "title": "Documenten & conformiteitsverklaringen", "body": "Bewaar elke DoC en elk technisch dossier bij de verpakking. Eén keer uploaden, en het staat altijd waar je het verwacht." },
         { "title": "Leveranciers", "body": "Verzamel de data en bewijzen die je van leveranciers nodig hebt, met automatisch de juiste eigenaar erbij." },
         { "title": "Tijdlijn & deadlines", "body": "PPWR wordt gefaseerd ingevoerd tot 2030 en verder. LIVO houdt de data die voor jouw verpakkingen tellen in beeld." },
-        { "title": "Compliance-status", "body": "Een rustig, eerlijk beeld van waar je vandaag staat — met een heldere volgende stap, nooit een muur van rood." }
+        { "title": "Compliance-status", "body": "Een rustig, eerlijk beeld van waar je vandaag staat, met een heldere volgende stap. Nooit een muur van rood." }
       ]
     },
     "principles": {
       "eyebrow": "Gebouwd om het werk lichter te maken",
       "title": "De software mag de complexiteit niet groter maken.",
-      "body": "PPWR is al veeleisend genoeg. Elk scherm in LIVO PPWR volgt dezelfde principes — de principes die werk lichter laten voelen.",
+      "body": "PPWR is al veeleisend genoeg. Elk scherm in LIVO PPWR volgt dezelfde principes: de principes die werk lichter laten voelen.",
       "items": [
         { "n": "01", "title": "Eenvoud boven functies", "body": "Eén hoofdactie per scherm. Alles wat je nodig hebt om compliant te blijven, en niets daarbuiten." },
-        { "n": "02", "title": "Foutmeldingen die helpen", "body": "Geen ruwe systeemmeldingen. Niet {code}, maar “Dat bestand is wat groot — probeer er een onder 15 MB.”", "code": "ERROR 413" },
+        { "n": "02", "title": "Foutmeldingen die helpen", "body": "Geen ruwe systeemmeldingen. Niet {code}, maar “Dat bestand is wat groot. Probeer er een onder 15 MB.”", "code": "ERROR 413" },
         { "n": "03", "title": "Rustig van opzet", "body": "Royale witruimte en stapsgewijs tonen houden volle pagina’s rustig. Details verschijnen wanneer je erom vraagt." },
         { "n": "04", "title": "Slimme standaarden", "body": "Een document krijgt de naam van het bestand. De leverancierseigenaar wordt voor je ingevuld. Minder typen, minder fouten." },
         { "n": "05", "title": "Validatie terwijl je werkt", "body": "Velden worden gecontroleerd terwijl je bezig bent, zodat je nooit een heel formulier invult om pas aan het eind vast te lopen." },
@@ -150,7 +150,7 @@
     "closing": {
       "eyebrow": "LIVO PPWR",
       "title": "Klaar om compliance moeiteloos te maken?",
-      "leadBefore": "Bekijk LIVO PPWR met je eigen verpakkingen in een demo van 20 minuten — of mail ",
+      "leadBefore": "Bekijk LIVO PPWR met je eigen verpakkingen in een demo van 20 minuten, of mail ",
       "leadAfter": ".",
       "cta": "Demo aanvragen"
     },
