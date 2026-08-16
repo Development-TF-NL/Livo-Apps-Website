@@ -92,7 +92,7 @@
       "eyebrow": "LIVO PPWR · Packaging compliance",
       "titleLine1": "Complex rules.",
       "titleLine2": "Effortless compliance.",
-      "lead": "The EU Packaging and Packaging Waste Regulation applies from 12 August 2026. LIVO PPWR keeps every packaging type, obligation and document in one calm place, so your team stays compliant without the stress.",
+      "lead": "The EU Packaging and Packaging Waste Regulation has applied since 12 August 2026. LIVO PPWR keeps every packaging type, obligation and document in one calm place, so your team stays compliant without the stress.",
       "ctaPrimary": "Book a demo",
       "ctaSecondary": "See how it works"
     },
@@ -107,7 +107,7 @@
         { "name": "E-commerce parcel", "sub": "Empty space over 40%", "status": "Needs attention", "tone": "risk" },
         { "name": "Glass jar 250 ml", "sub": "DoC complete", "status": "Compliant", "tone": "ok" }
       ],
-      "footer": "Next deadline · 12 Aug 2026"
+      "footer": "Next deadline · Feb 2027"
     },
     "whyNow": {
       "eyebrow": "Why now",
@@ -118,7 +118,7 @@
         { "title": "Meet design rules", "body": "Recyclability, recycled content, packaging minimisation and PFAS limits all carry their own thresholds and dates." },
         { "title": "Avoid the fallout", "body": "Gaps can mean fines, recalls or losing a retail listing. The work is real. The stress doesn't have to be." }
       ],
-      "datePrefix": "Binding from",
+      "datePrefix": "Binding since",
       "date": "12 August 2026"
     },
     "what": {

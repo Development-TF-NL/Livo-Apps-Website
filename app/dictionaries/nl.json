@@ -92,7 +92,7 @@
       "eyebrow": "LIVO PPWR · Verpakkingscompliance",
       "titleLine1": "Complexe regels.",
       "titleLine2": "Moeiteloze compliance.",
-      "lead": "De EU-verordening voor verpakkingen en verpakkingsafval geldt vanaf 12 augustus 2026. LIVO PPWR houdt elk verpakkingstype, elke verplichting en elk document op één rustige plek. Zo blijft je team compliant, zonder de stress.",
+      "lead": "De EU-verordening voor verpakkingen en verpakkingsafval geldt sinds 12 augustus 2026. LIVO PPWR houdt elk verpakkingstype, elke verplichting en elk document op één rustige plek. Zo blijft je team compliant, zonder de stress.",
       "ctaPrimary": "Demo aanvragen",
       "ctaSecondary": "Bekijk hoe het werkt"
     },
@@ -107,7 +107,7 @@
         { "name": "E-commerce pakket", "sub": "Meer dan 40% loze ruimte", "status": "Actie nodig", "tone": "risk" },
         { "name": "Glazen pot 250 ml", "sub": "DoC compleet", "status": "Compliant", "tone": "ok" }
       ],
-      "footer": "Volgende deadline · 12 aug 2026"
+      "footer": "Volgende deadline · feb 2027"
     },
     "whyNow": {
       "eyebrow": "Waarom nu",
@@ -118,7 +118,7 @@
         { "title": "Voldoen aan ontwerpregels", "body": "Recyclebaarheid, recyclaatgehalte, verpakkingsreductie en PFAS-grenzen hebben elk hun eigen normen en termijnen." },
         { "title": "Gedoe voorkomen", "body": "Hiaten kunnen boetes, terugroepacties of een verloren schapplek betekenen. Het werk is echt. De stress hoeft dat niet te zijn." }
       ],
-      "datePrefix": "Bindend vanaf",
+      "datePrefix": "Bindend sinds",
       "date": "12 augustus 2026"
     },
     "what": {
