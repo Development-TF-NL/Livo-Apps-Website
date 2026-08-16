@@ -1,8 +1,6 @@
 {
   "nav": {
     "products": "Products",
-    "solutions": "Solutions",
-    "pricing": "Pricing",
     "about": "About",
     "login": "Log in",
     "bookDemo": "Book a Demo",
@@ -66,12 +64,18 @@
     "footer": {
       "tagline": "Software that lightens the workflow.",
       "columns": {
-        "product": { "title": "PRODUCT", "items": ["PPWR Dashboard", "Features", "Pricing"] },
-        "company": { "title": "COMPANY", "items": ["About Us", "Careers", { "label": "Contact", "href": "mailto:hello@livoapps.software" }] },
-        "legal": { "title": "LEGAL", "items": ["Privacy Policy", "Terms"] }
+        "product": { "title": "PRODUCT", "items": [
+          { "label": "PPWR Dashboard", "href": "/ppwr" },
+          { "label": "Features", "href": "/ppwr#how-it-works" }
+        ] },
+        "company": { "title": "COMPANY", "items": [
+          { "label": "About us", "href": "#about" },
+          { "label": "Contact", "href": "mailto:hello@livoapps.software" }
+        ] }
       },
-      "copyright": "© 2026 Livo Apps. All rights reserved.",
-      "social": ["LinkedIn", "Twitter"]
+      "disclaimer": "This website is not legal advice; product descriptions show what the software does. Compliance obligations follow from the regulations themselves.",
+      "copyright": "© 2026 Livo Apps B.V. All rights reserved.",
+      "social": [{ "label": "LinkedIn", "href": "https://www.linkedin.com/company/livoapps-software" }]
     }
   },
   "ppwr": {

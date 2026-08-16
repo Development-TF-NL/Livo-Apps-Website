@@ -26,12 +26,15 @@ export default function Nav({ lang, dict }) {
 
   const close = () => setIsMenuOpen(false);
 
+  // Solutions en Pricing komen terug zodra die pagina's bestaan (fase C-poort) —
+  // geen dode ankers in de nav (eerlijk-principe, ontwerpdocument v2 §7.4).
   const navItems = [
     { label: dict.products, href: `/${lang}/ppwr` },
-    { label: dict.solutions, href: `/${lang}#solutions` },
-    { label: dict.pricing, href: `/${lang}#pricing` },
     { label: dict.about, href: `/${lang}#about` },
   ];
+
+  // Inloggen hoort bij het product, niet bij de site.
+  const loginUrl = 'https://ppwr.livoapps.software/login';
 
   const langSwitch = (
     <div className="flex items-center overflow-hidden rounded-md border border-line text-xs font-semibold" role="group" aria-label={dict.language}>
@@ -77,9 +80,9 @@ export default function Nav({ lang, dict }) {
         {/* Desktop right cluster */}
         <div className="hidden items-center gap-4 md:flex">
           {langSwitch}
-          <Link href={`/${lang}/login`} className={`text-sm text-ink transition-colors duration-200 hover:text-accent-dark ${focusRing}`}>
+          <a href={loginUrl} className={`text-sm text-ink transition-colors duration-200 hover:text-accent-dark ${focusRing}`}>
             {dict.login}
-          </Link>
+          </a>
           <a href={BOOKINGS_URL} {...bookingLinkProps} className={`rounded-md bg-accent px-5 py-2 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-dark ${focusRing}`}>
             {dict.bookDemo}
           </a>
@@ -111,9 +114,9 @@ export default function Nav({ lang, dict }) {
             ))}
           </ul>
           <div className="mt-4 flex items-center justify-between border-t border-line pt-4">
-            <Link href={`/${lang}/login`} onClick={close} className={`text-sm text-ink transition-colors duration-200 hover:text-accent-dark ${focusRing}`}>
+            <a href={loginUrl} onClick={close} className={`text-sm text-ink transition-colors duration-200 hover:text-accent-dark ${focusRing}`}>
               {dict.login}
-            </Link>
+            </a>
             {langSwitch}
           </div>
           <a href={BOOKINGS_URL} {...bookingLinkProps} onClick={close} className={`mt-4 block rounded-md bg-accent px-5 py-2.5 text-center text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-dark ${focusRing}`}>

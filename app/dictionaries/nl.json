@@ -1,8 +1,6 @@
 {
   "nav": {
     "products": "Producten",
-    "solutions": "Oplossingen",
-    "pricing": "Prijzen",
     "about": "Over ons",
     "login": "Inloggen",
     "bookDemo": "Demo aanvragen",
@@ -66,12 +64,18 @@
     "footer": {
       "tagline": "Software die je werk lichter maakt.",
       "columns": {
-        "product": { "title": "PRODUCT", "items": ["PPWR Dashboard", "Functies", "Prijzen"] },
-        "company": { "title": "BEDRIJF", "items": ["Over ons", "Vacatures", { "label": "Contact", "href": "mailto:hello@livoapps.software" }] },
-        "legal": { "title": "JURIDISCH", "items": ["Privacybeleid", "Voorwaarden"] }
+        "product": { "title": "PRODUCT", "items": [
+          { "label": "PPWR Dashboard", "href": "/ppwr" },
+          { "label": "Functies", "href": "/ppwr#how-it-works" }
+        ] },
+        "company": { "title": "BEDRIJF", "items": [
+          { "label": "Over ons", "href": "#about" },
+          { "label": "Contact", "href": "mailto:hello@livoapps.software" }
+        ] }
       },
-      "copyright": "© 2026 Livo Apps. Alle rechten voorbehouden.",
-      "social": ["LinkedIn", "Twitter"]
+      "disclaimer": "Deze website is geen juridisch advies; productbeschrijvingen laten zien wat de software doet. Compliance-verplichtingen volgen uit de regelgeving zelf.",
+      "copyright": "© 2026 Livo Apps B.V. Alle rechten voorbehouden.",
+      "social": [{ "label": "LinkedIn", "href": "https://www.linkedin.com/company/livoapps-software" }]
     }
   },
   "ppwr": {
