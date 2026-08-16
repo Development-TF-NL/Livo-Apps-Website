@@ -203,17 +203,17 @@
   },
   "pricing": {
     "meta": {
-      "title": "Prijzen · Geprijsd op SKU's, niet op complexiteit",
+      "title": "Prijzen · Je betaalt per SKU, niet voor complexiteit",
       "description": "EU PPWR-verpakkingscompliance. Eén getal bepaalt je prijs: hoeveel producten je zelf op de markt brengt."
     },
     "banner": {
-      "lead": "🌱 Word deel van onze launching community.",
+      "lead": "🌱 Doe mee met onze lancering.",
       "body": "LIVO PPWR is beschikbaar vanaf 1 september 2026, en elk plan is gratis tot 1 november 2026. Geen betaalgegevens nodig, en we factureren nooit automatisch. Op 1 november maak je een actieve keuze; doe je dat niet, dan ga je verder op de gratis laag en behoud je je data."
     },
     "hero": {
       "eyebrow": "PRIJZEN",
       "titleLine1": "EU PPWR-verpakkingscompliance.",
-      "titleLine2": "Geprijsd op SKU's, niet op complexiteit.",
+      "titleLine2": "Je betaalt per SKU, niet voor complexiteit.",
       "lead": "Compliancesoftware wordt meestal per project verkocht: een scopinggesprek, implementatiekosten, een offerte die je met niemand kunt vergelijken. Livo werkt anders. Eén getal bepaalt je prijs: hoeveel producten je zelf op de markt brengt. Al het andere zit erbij in.",
       "bullets": ["Geen implementatiekosten", "Altijd opzegbaar", "Starten zonder betaalgegevens"],
       "ctaPrimary": "Start gratis",
@@ -242,7 +242,7 @@
         { "audience": "Eigen-merk-producenten", "name": "Core", "limit": "Tot 1.000 eigen-merk- of import-SKU's", "monthly": "€249", "yearly": "€212/mnd bij jaarfacturatie" },
         { "audience": "Middelgrote groothandels", "name": "Growth", "limit": "Tot 2.500 eigen-merk- of import-SKU's", "monthly": "€549", "yearly": "€467/mnd bij jaarfacturatie" },
         { "audience": "Groothandels & importeurs", "name": "Scale", "limit": "Tot 5.000 eigen-merk- of import-SKU's", "monthly": "€899", "yearly": "€764/mnd bij jaarfacturatie" },
-        { "audience": "Hogere middenmarkt & grote importeurs", "name": "Enterprise", "limit": "Tot 10.000 eigen-merk- of import-SKU's", "monthly": "€1.199", "yearly": "€1.019/mnd bij jaarfacturatie" }
+        { "audience": "Grote importeurs en groothandels", "name": "Enterprise", "limit": "Tot 10.000 eigen-merk- of import-SKU's", "monthly": "€1.199", "yearly": "€1.019/mnd bij jaarfacturatie" }
       ],
       "perMonth": "/maand",
       "customTitle": "Meer dan 10.000 SKU's? Laten we het samen bekijken.",
