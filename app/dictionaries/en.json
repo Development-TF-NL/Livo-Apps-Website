@@ -107,7 +107,7 @@
         { "name": "E-commerce parcel", "sub": "Empty space over 40%", "status": "Needs attention", "tone": "risk" },
         { "name": "Glass jar 250 ml", "sub": "DoC complete", "status": "Compliant", "tone": "ok" }
       ],
-      "footer": "Next deadline · Feb 2027"
+      "footer": "In force since 12 August 2026"
     },
     "whyNow": {
       "eyebrow": "Why now",
