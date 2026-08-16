@@ -73,22 +73,22 @@ Wijzigingen via GitHub → Vercel auto-deploy (~1 min). Teksten altijd in beide 
 
 ## 7. Refresh-werklijst
 
-**Fase A — fundament (geen poorten, kan direct):**
-1. Tokens centraliseren in `tailwind.config.js` + `globals.css`; alle off-token kleuren vervangen; één hover-waarde (`#69AD36`); gradient eruit.
-2. Fonts laden (Inter via next/font; Satoshi self-hosted).
-3. `<Logo>`-component op de SVG-master; favicon + app-icon + OG-afbeelding genereren.
-4. Dode links: nav-ankers aanmaken of items tijdelijk weg; `/login` → `https://ppwr.livoapps.software/login`; footer opschonen (Careers en Twitter verwijderen tot ze bestaan — eerlijk-principe); Privacy/Voorwaarden-links **verwijderen** tot de juristteksten er zijn.
-5. Custom 404; lucide-react pinnen; per-pagina metadata + hreflang + sitemap + robots; Vercel Analytics aan.
-6. Schrijfregels doorvoeren op beide dictionaries (o.a. kastlijntjes in de trait-regels en overal elders).
+**Fase A — fundament: ✅ afgerond 16 augustus 2026 (commits hieronder):**
+1. ✅ Tokens centraliseren in `tailwind.config.js` + `globals.css`; alle off-token kleuren vervangen; één hover-waarde (`#69AD36`); gradient eruit. — `c2ee373`
+2. ✅ Fonts laden (Inter via next/font — `c2ee373`; Satoshi self-hosted: **stack staat klaar, fontbestanden nog ophalen** — backlog product-repo; koppen draaien tot dan op Inter).
+3. ✅ `<Logo>`-component op de SVG-master; favicon + app-icon + OG-afbeelding gegenereerd. — `4d74e01` (+ og:image-wiring via `app/seo.js`, `2e154a5`)
+4. ✅ Dode links: Solutions/Pricing uit de nav; `/login` → `https://ppwr.livoapps.software/login`; footer opgeschoond (Careers/Twitter weg, Privacy/Voorwaarden-kolom weg tot de juristteksten er zijn); disclaimer-voetregel op de homepage. — `c322dc9`
+5. ✅ Custom 404; lucide-react gepind (1.21.0); per-pagina metadata + hreflang + sitemap + robots; Vercel Analytics aan (cookieloos). — `48b2fc1`
+6. ✅ Schrijfregels doorgevoerd op beide dictionaries (kastlijntjes eruit; titels op `·`). — `8f306d3`
 
 **Fase B — inhoud (deels gepoort):**
 7. Demo-CTA: mailto vervangen door Microsoft Bookings-link (vergt M365-bevestiging hierboven).
 8. Echte productbeelden in plaats van code-placeholders (screenshots dashboard; geen klantdata in beeld — DPA-regel).
 9. Productsectie-teksten gelijktrekken met de claims-scheidslijn: "Automatische rapportages" herformuleren (rapportages = M8, bestaat niet — wél waar: DoC + technical file gegenereerd uit eigen data). "Snel ingericht, zonder gedoe" vervangen door de eerlijke onboarding-formulering tot M10 er is.
-10. Whitepaper-landingssectie + downloadformulier (lead magnet), zodra de whitepaper af is.
+10. ✅ *(16 aug 2026, vervroegd)* Whitepaper-landingspagina + downloadformulier gebouwd als `/[lang]/whitepaper` (`8f0e971`) — **niet live**: achter `WHITEPAPER_FORM_ENABLED` tot de privacyverklaring-poort open is (besluit lead-flow, aanvulling 16 aug; vlag omzetten vergt redeploy).
 
-**Fase C — pricing live (poort: concurrentie-offertes binnen):**
-11. `/[lang]/pricing` bouwen uit de definitieve prijspagina (EN + NL-vertaling), inclusief lanceeractie-banner ("beschikbaar vanaf 1 september" pas na het lanceeractie-besluit), disclaimer-voetregel, slider-intent-logging (bestaand pricing-meten-item).
+**Fase C — pricing live (poorten aangescherpt 16 aug, zie besluit `…prijspagina-twee-poorten-v1` in de product-repo):**
+11. ✅ *(bouw, 16 aug 2026)* `/[lang]/pricing` gebouwd (EN + NL, `8b63e5e` + `869c3cd`), incl. volledige lanceeractie-banner en disclaimer-voetregel — **niet live**: achter `PRICING_PAGE_ENABLED` tot twee poorten groen zijn: (1) per-markt-verplichtingen aantoonbaar op prod, (2) offertes + €2.540-claim geverifieerd. SKU-slider bewust niet meegebouwd (backlog, samen met slider-intent-logging).
 
 **Poorten samengevat:** offertes → prijspagina live · SenS-teksten → juridische pagina's · lanceeractie-besluit → banner-datum · DPA-clausule → elk klantnaam-gebruik · M10 → "live in minuten"-claim terug.
 
@@ -99,11 +99,12 @@ Wijzigingen via GitHub → Vercel auto-deploy (~1 min). Teksten altijd in beide 
 | Merkidentiteit incl. vector-master | Klaar (master wacht op akkoord eigenaar) |
 | Domein + deploy-pijplijn | Klaar |
 | Tweetalige site live | Klaar (refresh nodig) |
-| Tokens/fonts/logo op de site | Te doen (fase A) |
-| Dode links / footer / 404 / SEO | Te doen (fase A) |
+| Tokens/fonts/logo op de site | Klaar 16 aug 2026 (Satoshi-bestanden nog ophalen; koppen tot dan op Inter) |
+| Dode links / footer / 404 / SEO | Klaar 16 aug 2026 |
 | Demo-boeking via M365 Bookings | Te doen (fase B, na M365-bevestiging) |
 | Echte productbeelden | Te doen (fase B) |
-| Prijspagina live | Wacht op poort (offertes) |
+| Whitepaper-funnel | Gebouwd 16 aug 2026, donker — wacht op poort (privacyverklaring) |
+| Prijspagina live | Gebouwd 16 aug 2026, donker — wacht op twee poorten (prod-verificatie per-markt + offertes) |
 | Juridische pagina's | Wacht op poort (SenS) |
 | E-mailwereld gedocumenteerd | Deels — drie [TE BEVESTIGEN]-velden in §5 |
 
