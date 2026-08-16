@@ -5,18 +5,22 @@ import { notFound } from 'next/navigation';
 import Nav from '../components/Nav';
 import { getDictionary } from '../get-dictionary';
 import { i18n } from '../i18n-config';
+import { socialMetadata } from '../seo';
 
 // Body-font per ontwerpdocument v2 §3.2. Koppen: Satoshi (self-hosted, Fontshare-licentie)
 // — TODO: fontbestanden toevoegen onder app/fonts/ zodra opgehaald; de `font-display`-stack
 // valt tot die tijd terug op Inter.
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 
+// Fallback voor pagina's zonder eigen generateMetadata (praktisch alleen de 404);
+// dit statische metadata-object kent geen taal, dus de EN-versie.
+const FALLBACK_TITLE = 'Livo Apps · Software that lightens the workflow';
+const FALLBACK_DESCRIPTION = 'Know which rules apply. Prove that you comply.';
+
 export const metadata = {
   metadataBase: new URL('https://livoapps.software'),
-  title: 'Livo Apps · Software that lightens the workflow',
-  // Fallback voor pagina's zonder eigen generateMetadata (praktisch alleen de 404);
-  // dit statische metadata-object kent geen taal, dus de EN-versie.
-  description: 'Know which rules apply. Prove that you comply.',
+  title: FALLBACK_TITLE,
+  description: FALLBACK_DESCRIPTION,
   icons: {
     // Afgeleiden van de SVG-master in public/ (besluit-logo-svg-master-v1)
     icon: [
@@ -26,11 +30,7 @@ export const metadata = {
     ],
     apple: '/apple-touch-icon-180.png',
   },
-  openGraph: {
-    siteName: 'Livo Apps',
-    type: 'website',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
-  },
+  ...socialMetadata({ title: FALLBACK_TITLE, description: FALLBACK_DESCRIPTION }),
 };
 
 export function generateStaticParams() {

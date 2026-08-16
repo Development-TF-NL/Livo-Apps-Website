@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { getDictionary } from '../../get-dictionary';
 import WhitepaperForm from '../../components/WhitepaperForm';
+import { socialMetadata } from '../../seo';
 
 // Enige funnel voor de whitepaper (besluit-lead-flow-whitepaper-v1): LinkedIn en
 // elke andere uiting linken hierheen met UTM-parameters. Het formulier staat achter
@@ -14,7 +15,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     alternates: { canonical: `/${params.lang}/whitepaper`, languages: { en: '/en/whitepaper', nl: '/nl/whitepaper' } },
-    openGraph: { title, description },
+    ...socialMetadata({ title, description }),
     // Donker gedeployed tot de poort open is: niet indexeren zolang het formulier uit staat.
     robots: formEnabled() ? undefined : { index: false, follow: false },
   };

@@ -13,6 +13,7 @@
 import Breadcrumb from "../../components/Breadcrumb";
 import { getDictionary } from "../../get-dictionary";
 import { BOOKINGS_URL as DEMO_URL, bookingLinkProps } from "../../booking";
+import { socialMetadata } from "../../seo";
 
 const CONTACT_EMAIL = "hello@livoapps.software";
 
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     alternates: { canonical: `/${params.lang}/ppwr`, languages: { en: '/en/ppwr', nl: '/nl/ppwr' } },
-    openGraph: { title, description },
+    ...socialMetadata({ title, description }),
   };
 }
 

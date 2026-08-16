@@ -3,6 +3,7 @@ import { ArrowRight, Heart, Brain, Shield, Zap, CheckSquare, LayoutDashboard } f
 import { getDictionary } from '../get-dictionary';
 import { BOOKINGS_URL, bookingLinkProps } from '../booking';
 import Logo from '../components/Logo';
+import { socialMetadata } from '../seo';
 
 export async function generateMetadata({ params }) {
   const dict = await getDictionary(params.lang);
@@ -11,7 +12,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     alternates: { canonical: `/${params.lang}`, languages: { en: '/en', nl: '/nl' } },
-    openGraph: { title, description },
+    ...socialMetadata({ title, description }),
   };
 }
 
