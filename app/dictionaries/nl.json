@@ -159,5 +159,46 @@
       "line1After": " is onderdeel van LIVO APPS · Software die je werk lichter maakt.",
       "line2": "Dit overzicht is geen juridisch advies; het beschrijft wat het product doet. Compliance-verplichtingen volgen uit de verordening zelf."
     }
+  },
+  "whitepaper": {
+    "meta": {
+      "title": "Whitepaper · PPWR is er. Je verpakkingsdata nog niet.",
+      "description": "Een praktisch paper over de EU-verpakkingsverordening, voor de mensen die compliance moeten aantonen in plaats van erover praten."
+    },
+    "hero": {
+      "eyebrow": "WHITEPAPER",
+      "title": "PPWR is er. Je verpakkingsdata nog niet.",
+      "lead": "Een praktisch paper over de EU-verpakkingsverordening, voor de mensen die compliance moeten aantonen in plaats van erover praten."
+    },
+    "inside": {
+      "title": "Wat erin staat",
+      "bullets": [
+        "De verplichtingen die op 12 augustus 2026 zijn ingegaan, en de golven per land die in 2027 volgen.",
+        "Waarom je PPWR-rol een juridische kwalificatie is per product en per markt, en waarom stilte de faalmodus is.",
+        "Waarom compliance in bewijs leeft en niet in intenties, en wat dat betekent voor je dossiers.",
+        "Waar leveranciersrondes vastlopen, en de principes die ze laten slagen."
+      ]
+    },
+    "form": {
+      "title": "Ontvang de whitepaper per mail",
+      "lead": "Laat je gegevens achter en we sturen de downloadlink naar je inbox.",
+      "nameLabel": "Naam",
+      "emailLabel": "Zakelijk e-mailadres",
+      "companyLabel": "Bedrijf",
+      "submit": "Stuur mij de whitepaper",
+      "submitting": "Versturen…",
+      "error": "Dat lukte niet. Probeer het opnieuw, of mail hello@livoapps.software."
+    },
+    "comingSoon": {
+      "title": "Bijna klaar",
+      "body": "De whitepaper zit in de laatste controle. Het downloadformulier verschijnt hier binnenkort."
+    },
+    "thanks": {
+      "meta": { "title": "Kijk in je inbox · Livo Apps" },
+      "title": "Kijk in je inbox",
+      "body": "We hebben de downloadlink naar je e-mailadres gestuurd. Na een paar minuten nog niets? Kijk in je spammap, of mail hello@livoapps.software.",
+      "back": "Terug naar de homepage"
+    },
+    "disclaimer": "Deze pagina en de whitepaper zijn geen juridisch advies. Compliance-verplichtingen volgen uit de regelgeving zelf."
   }
 }

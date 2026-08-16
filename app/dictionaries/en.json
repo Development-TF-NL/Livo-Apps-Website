@@ -159,5 +159,46 @@
       "line1After": " is part of LIVO APPS · Software that lightens the workflow.",
       "line2": "This overview is not legal advice; it describes what the product does. Compliance obligations follow from the regulation itself."
     }
+  },
+  "whitepaper": {
+    "meta": {
+      "title": "Whitepaper · PPWR is here. Your packaging data isn't ready.",
+      "description": "A practical paper on the EU Packaging and Packaging Waste Regulation, for the people who have to prove compliance rather than talk about it."
+    },
+    "hero": {
+      "eyebrow": "WHITEPAPER",
+      "title": "PPWR is here. Your packaging data isn't ready.",
+      "lead": "A practical paper on the EU Packaging and Packaging Waste Regulation, for the people who have to prove compliance rather than talk about it."
+    },
+    "inside": {
+      "title": "What's inside",
+      "bullets": [
+        "The obligations that took effect on 12 August 2026, and the country-by-country waves that follow in 2027.",
+        "Why your PPWR role is a legal qualification per product and per market, and why silence is the failure mode.",
+        "Why compliance lives in evidence rather than intentions, and what that means for your files.",
+        "Where supplier data rounds stall, and the principles that make them converge."
+      ]
+    },
+    "form": {
+      "title": "Get the whitepaper by email",
+      "lead": "Leave your details and we'll send the download link to your inbox.",
+      "nameLabel": "Name",
+      "emailLabel": "Work email",
+      "companyLabel": "Company",
+      "submit": "Send me the whitepaper",
+      "submitting": "Sending…",
+      "error": "That didn't work. Please try again, or email hello@livoapps.software."
+    },
+    "comingSoon": {
+      "title": "Almost ready",
+      "body": "The whitepaper is in final review. The download form will appear here soon."
+    },
+    "thanks": {
+      "meta": { "title": "Check your inbox · Livo Apps" },
+      "title": "Check your inbox",
+      "body": "We've sent the download link to your email address. Nothing after a few minutes? Check your spam folder, or email hello@livoapps.software.",
+      "back": "Back to the homepage"
+    },
+    "disclaimer": "This page and the whitepaper are not legal advice. Compliance obligations follow from the regulations themselves."
   }
 }
