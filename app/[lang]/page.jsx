@@ -4,6 +4,17 @@ import { getDictionary } from '../get-dictionary';
 import { BOOKINGS_URL, bookingLinkProps } from '../booking';
 import Logo from '../components/Logo';
 
+export async function generateMetadata({ params }) {
+  const dict = await getDictionary(params.lang);
+  const { title, description } = dict.home.meta;
+  return {
+    title,
+    description,
+    alternates: { canonical: `/${params.lang}`, languages: { en: '/en', nl: '/nl' } },
+    openGraph: { title, description },
+  };
+}
+
 // Icons stay in code (non-text), matched to traits by index.
 const traitIcons = [Heart, Brain, Heart, Shield];
 // Icons for the "why it feels light" strip, matched to t.whyLight by index.

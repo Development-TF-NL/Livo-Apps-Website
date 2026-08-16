@@ -16,6 +16,17 @@ import { BOOKINGS_URL as DEMO_URL, bookingLinkProps } from "../../booking";
 
 const CONTACT_EMAIL = "hello@livoapps.software";
 
+export async function generateMetadata({ params }) {
+  const dict = await getDictionary(params.lang);
+  const { title, description } = dict.ppwr.meta;
+  return {
+    title,
+    description,
+    alternates: { canonical: `/${params.lang}/ppwr`, languages: { en: '/en/ppwr', nl: '/nl/ppwr' } },
+    openGraph: { title, description },
+  };
+}
+
 /* ---------- Scoped styles — brand tokens come from :root (globals.css) ---------- */
 const css = `
 .lp-root {

@@ -7,6 +7,10 @@
     "language": "Taal"
   },
   "home": {
+    "meta": {
+      "title": "Livo Apps — Software die je werk lichter maakt",
+      "description": "Elegante software die complexiteit weghaalt uit alledaagse bedrijfsprocessen."
+    },
     "hero": {
       "eyebrow": "SOFTWARE DIE WERK LICHTER MAAKT",
       "titleBefore": "Software die je werk ",
@@ -79,6 +83,10 @@
     }
   },
   "ppwr": {
+    "meta": {
+      "title": "LIVO PPWR — Verpakkingscompliance op één rustige plek",
+      "description": "Houd elk verpakkingstype, elke verplichting en elk document op één plek. Gebouwd voor de EU-verpakkingsverordening (PPWR)."
+    },
     "breadcrumb": ["Livo Apps", "Producten", "LIVO PPWR"],
     "hero": {
       "eyebrow": "LIVO PPWR · Verpakkingscompliance",

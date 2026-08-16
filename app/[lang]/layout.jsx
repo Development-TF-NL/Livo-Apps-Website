@@ -1,4 +1,5 @@
 import '../globals.css';
+import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import Nav from '../components/Nav';
@@ -45,6 +46,8 @@ export default async function RootLayout({ children, params }) {
       <body className="font-sans text-ink">
         <Nav lang={lang} dict={dict.nav} />
         {children}
+        {/* Cookieless (geen banner nodig) — ontwerpdocument v2 §5 */}
+        <Analytics />
       </body>
     </html>
   );

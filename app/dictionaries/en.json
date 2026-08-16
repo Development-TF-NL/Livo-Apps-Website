@@ -7,6 +7,10 @@
     "language": "Language"
   },
   "home": {
+    "meta": {
+      "title": "Livo Apps — Software that lightens the workflow",
+      "description": "Elegant software that removes complexity from everyday business processes."
+    },
     "hero": {
       "eyebrow": "SOFTWARE THAT LIGHTENS",
       "titleBefore": "Software that ",
@@ -79,6 +83,10 @@
     }
   },
   "ppwr": {
+    "meta": {
+      "title": "LIVO PPWR — Packaging compliance in one calm place",
+      "description": "Keep every packaging type, obligation and document in one place. Built for the EU Packaging and Packaging Waste Regulation."
+    },
     "breadcrumb": ["Livo Apps", "Products", "LIVO PPWR"],
     "hero": {
       "eyebrow": "LIVO PPWR · Packaging compliance",
