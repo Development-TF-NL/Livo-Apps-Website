@@ -48,7 +48,7 @@
       "previewNote": "Illustration: one clear status per packaging type.",
       "features": [
         { "title": "Keep compliance in view", "body": "All your packaging data in one place, so you're ready when an audit comes." },
-        { "title": "Automated reporting", "body": "Generate PPWR reports without rebuilding them by hand." },
+        { "title": "Evidence that stops counting when it expires", "body": "Every document carries its expiry date. When it lapses, the status that depended on it changes, visibly." },
         { "title": "Collaborate with suppliers", "body": "Share data securely. Work together. No friction." }
       ],
       "cta": "Explore PPWR Dashboard"
@@ -56,7 +56,7 @@
     "whyLight": [
       "The system proposes, you confirm.",
       "All your compliance in one calm overview, without cluttered screens.",
-      "Set up quickly, without the hassle."
+      "Import your own Excel, no template."
     ],
     "finalCta": {
       "titleBefore": "Ready to ",

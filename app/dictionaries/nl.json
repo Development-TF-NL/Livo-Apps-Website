@@ -48,7 +48,7 @@
       "previewNote": "Illustratie: één heldere status per verpakkingstype.",
       "features": [
         { "title": "Zicht op je compliance", "body": "Al je verpakkingsdata op één plek, zodat je klaar bent als er een audit komt." },
-        { "title": "Automatische rapportages", "body": "Maak PPWR-rapporten zonder ze met de hand op te bouwen." },
+        { "title": "Bewijs dat stopt met meetellen als het verloopt", "body": "Elk document draagt zijn vervaldatum. Verloopt hij, dan verandert de status die erop steunde, zichtbaar." },
         { "title": "Samenwerken met leveranciers", "body": "Deel data veilig. Werk samen. Zonder wrijving." }
       ],
       "cta": "Bekijk PPWR Dashboard"
@@ -56,7 +56,7 @@
     "whyLight": [
       "Het systeem stelt voor, jij bevestigt.",
       "Al je compliance in één rustig overzicht, zonder overvolle schermen.",
-      "Snel ingericht, zonder gedoe."
+      "Importeer je eigen Excel, zonder template."
     ],
     "finalCta": {
       "titleBefore": "Klaar om je werk ",
