@@ -1,85 +1,335 @@
 {
   "nav": {
     "products": "Products",
-    "about": "About",
+    "pricing": "Pricing",
+    "resources": "Resources",
+    "how": "How LIVO works",
+    "about": "About Livo",
     "login": "Log in",
-    "bookDemo": "Book a Demo",
-    "language": "Language"
+    "loginMenuTitle": "Your LIVO apps",
+    "loginPpwr": "LIVO PPWR",
+    "loginPpwrSub": "Packaging compliance",
+    "loginOpen": "Open",
+    "loginNext": "Next module",
+    "loginNextSub": "In development",
+    "cta": "Get LIVO PPWR",
+    "language": "Language",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu"
   },
   "home": {
     "meta": {
       "title": "Livo Apps · Software that lightens the workflow",
-      "description": "Know which rules apply. Prove that you comply."
+      "description": "Compliance work keeps growing. LIVO PPWR brings packaging data, obligations, evidence and supplier input into one maintained workflow."
     },
     "hero": {
-      "eyebrow": "SOFTWARE THAT LIGHTENS",
-      "titleBefore": "Software that ",
-      "titleHighlight": "lightens",
-      "titleAfter": " the workflow.",
-      "lead": "Not just by automating tasks. But by reducing friction. Making complexity understandable. And creating calm in busy organizations.",
-      "ctaPrimary": "Book a Demo",
-      "ctaSecondary": "Explore the Product",
-      "previewTitle": "PPWR Dashboard",
-      "previewSubtitle": "See it live in a demo."
+      "brandLine": "Software that lightens the workflow",
+      "title": "Compliance work keeps growing. LIVO makes it easier to manage.",
+      "lead": "LIVO brings scattered data, evidence, supplier input and open actions into one maintained workflow. Less searching, chasing and rework. More control when things change or customers ask.",
+      "ctaPrimary": "Get LIVO PPWR",
+      "ctaSecondary": "Explore the product",
+      "roadmap": "LIVO PPWR available now · Next module: in development",
+      "card": {
+        "label": "Illustration",
+        "product": "LIVO PPWR",
+        "status": "Available now",
+        "lead": "Keep packaging data, obligations, evidence and supplier input together and up to date.",
+        "rows": [
+          {
+            "label": "Packaging data",
+            "value": "Ready",
+            "tone": "ok"
+          },
+          {
+            "label": "Supplier evidence",
+            "value": "3 gaps",
+            "tone": "warn"
+          },
+          {
+            "label": "Technical documentation",
+            "value": "Up to date",
+            "tone": "ok"
+          }
+        ]
+      }
     },
-    "brand": {
-      "eyebrow": "01 OUR BRAND",
-      "whoTitle": "Who we are",
-      "whoBody1": "Livo Apps develops elegant software that removes complexity from everyday business processes.",
-      "whoBody2": "We believe software should not overwhelm people. Software should create clarity. Software should feel light.",
-      "promiseTitle": "Our promise",
-      "promiseLead": "Software that lightens the workflow.",
-      "promiseBody": "Not just by automating tasks. But by reducing friction. Making complexity understandable. And creating calm in busy organizations."
+    "benefits": [
+      {
+        "title": "Start with what you have",
+        "body": "Your existing files are part of the reality. Bring them in as they are."
+      },
+      {
+        "title": "Keep gaps visible",
+        "body": "See what is missing, expired or needs attention."
+      },
+      {
+        "title": "Share the work",
+        "body": "Suppliers fill in the gaps you ask them about."
+      },
+      {
+        "title": "Stay ready to respond",
+        "body": "Keep the information behind customer answers together."
+      }
+    ],
+    "pain": {
+      "eyebrow": "The problem",
+      "title": "The regulation is only the start. The work keeps moving.",
+      "lead": "Products change, suppliers send updates, evidence expires and customers ask for data. Without a maintained workflow, compliance turns into repeated manual work.",
+      "items": [
+        {
+          "title": "It takes too much time.",
+          "body": "Searching, checking, chasing and rebuilding answers adds up quickly across products and suppliers."
+        },
+        {
+          "title": "Customer requests become a commercial risk.",
+          "body": "If data and proof are not ready when customers ask, you risk delay, rework and lost business."
+        },
+        {
+          "title": "You lose control as things change.",
+          "body": "When data lives across files, systems and inboxes, it becomes harder to see what is complete and current."
+        }
+      ],
+      "quote": "A spreadsheet can hold compliance data. It does not help you manage obligations, evidence, gaps and changes across all your products."
     },
-    "personality": {
-      "eyebrow": "02 BRAND PERSONALITY",
+    "products": {
+      "eyebrow": "Livo products",
+      "title": "One LIVO way of working. More compliance modules over time.",
+      "lead": "Each module is built for a specific regulatory workflow, with the same focus on clarity, maintainability and less manual work.",
+      "ppwr": {
+        "status": "Available now",
+        "name": "LIVO PPWR",
+        "body": "Built for real-world PPWR work: data spread across files and systems, incomplete supplier and product data, expiring evidence and documents that need to stay traceable.",
+        "points": [
+          "Use your existing files",
+          "See gaps and open actions",
+          "Let suppliers fill missing data",
+          "Keep packaging files up to date"
+        ],
+        "ctaExplore": "Explore LIVO PPWR",
+        "ctaOpen": "Open app"
+      },
+      "next": {
+        "status": "In development",
+        "name": "Next module",
+        "body": "LIVO PPWR is the first module, not the last. The next one is in development. More details to follow.",
+        "cta": "Ask about the next module"
+      }
+    },
+    "how": {
+      "eyebrow": "How LIVO works",
+      "title": "Built around the work people actually have to do.",
+      "lead": "LIVO does not ask you to rebuild your world around the software. It helps structure the work you already have and keeps it maintainable as things change.",
+      "steps": [
+        {
+          "title": "Start with what you already have.",
+          "body": "Bring in the files your team is already working with."
+        },
+        {
+          "title": "See what needs attention.",
+          "body": "Keep missing, expired and open items visible instead of hiding them in spreadsheets."
+        },
+        {
+          "title": "Let other people do their part.",
+          "body": "Ask suppliers for the missing information with a prefilled request. Their answers come back as proposals for you to review."
+        },
+        {
+          "title": "Keep the file complete and up to date.",
+          "body": "Maintain one connected source instead of rebuilding the same answers every time."
+        }
+      ],
+      "card": {
+        "label": "Illustration · Today in LIVO PPWR",
+        "rows": [
+          {
+            "title": "Packaging file updated",
+            "body": "Existing data matched to product file",
+            "status": "Done",
+            "tone": "ok"
+          },
+          {
+            "title": "Supplier input needed",
+            "body": "2 missing evidence items",
+            "status": "Action",
+            "tone": "warn"
+          },
+          {
+            "title": "Evidence expired",
+            "body": "Review before next customer request",
+            "status": "Review",
+            "tone": "risk"
+          },
+          {
+            "title": "Product file",
+            "body": "Documentation connected and traceable",
+            "status": "Ready",
+            "tone": "ok"
+          }
+        ]
+      }
+    },
+    "pricing": {
+      "eyebrow": "Pricing",
+      "title": "Simple pricing, with a clear path to start.",
+      "lead": "One number decides your price: how many products you put on the EU market yourself. Everything else is included in every paid plan.",
+      "cardTitle": "Pricing built around your PPWR scope.",
+      "cardBody": "LIVO PPWR is not priced per user. What counts: the products you are the manufacturer, importer or EPR producer for. Products you only resell do not drive your plan.",
+      "points": [
+        "All EU markets included",
+        "No per-user pricing",
+        "Free plan up to 25 SKUs, no card needed",
+        "All plans free until 1 November 2026"
+      ],
+      "planTitle": "Choose the plan that matches your scope.",
+      "planBody": "Six plans from a free start to 10,000 SKUs, monthly or yearly. The full comparison is on the pricing page.",
+      "scaleFrom": "Smaller PPWR scope",
+      "scaleTo": "Larger PPWR scope",
+      "ctaPricing": "View pricing",
+      "pricingSoon": "The full plan comparison goes live shortly. Until then, ask us for the plan that fits your scope.",
+      "ctaAsk": "Ask about pricing"
+    },
+    "whitepaper": {
+      "eyebrow": "PPWR resource",
+      "title": "A practical PPWR whitepaper for companies doing the work.",
+      "lead": "Practical answers before you are ready to buy: what to organise, where manual workflows break down, and how to keep the file maintainable.",
+      "points": [
+        "What information you need to organise",
+        "Where manual workflows usually start to break down",
+        "How to work with supplier data and evidence",
+        "How to keep the file maintainable as things change"
+      ],
+      "cta": "Get the PPWR whitepaper",
+      "note": "The whitepaper is in final review. Leave your details on the whitepaper page and we will send it as soon as it is ready."
+    },
+    "start": {
+      "eyebrow": "Start with LIVO PPWR",
+      "title": "From pricing to a LIVO PPWR licence, without a sales process.",
+      "lead": "Product demos stay available for buyers who want them. A company that is ready to start does not have to go through one.",
+      "steps": [
+        {
+          "title": "Choose a plan",
+          "body": "On the pricing page, based on the products you are responsible for."
+        },
+        {
+          "title": "Order confirmation",
+          "body": "We confirm your plan, limit, rate, term and start date by e-mail."
+        },
+        {
+          "title": "Payment by direct debit",
+          "body": "SEPA direct debit, monthly or yearly. All plans free until 1 November 2026."
+        },
+        {
+          "title": "Set-up together",
+          "body": "We set up your environment with you and you start with your own packaging data."
+        }
+      ],
+      "customer": "Already a customer?",
+      "login": "Log in"
+    },
+    "about": {
+      "eyebrow": "Software that lightens the workflow",
+      "title": "Practical software for complex work.",
+      "lead": "The LIVO promise is not that regulation becomes simple. It is that the work around it becomes easier to understand, easier to share and easier to keep under control.",
+      "principles": [
+        {
+          "title": "Less friction",
+          "body": "Use existing data, avoid duplicate work and reduce the amount of manual checking and chasing."
+        },
+        {
+          "title": "Clear status",
+          "body": "Know what is complete, what is missing and what needs attention without relying on one person's memory."
+        },
+        {
+          "title": "Human control",
+          "body": "LIVO can structure and suggest. People review, confirm and remain responsible for the decisions."
+        }
+      ],
+      "traitsTitle": "Who we are",
       "traits": [
-        { "title": "Elegant", "sub": "Never noisy." },
-        { "title": "Intelligent", "sub": "Never arrogant." },
-        { "title": "Human", "sub": "Never bureaucratic." },
-        { "title": "Confident", "sub": "Never aggressive." }
+        {
+          "title": "Elegant",
+          "sub": "Never noisy."
+        },
+        {
+          "title": "Intelligent",
+          "sub": "Never arrogant."
+        },
+        {
+          "title": "Human",
+          "sub": "Never bureaucratic."
+        },
+        {
+          "title": "Confident",
+          "sub": "Never aggressive."
+        }
       ]
     },
-    "product": {
-      "eyebrow": "03 OUR FIRST PRODUCT",
-      "title": "PPWR Dashboard",
-      "subtitle": "Transform packaging regulations into clear actions.",
-      "previewLabel": "PPWR Dashboard",
-      "previewNote": "Illustration: one clear status per packaging type.",
-      "features": [
-        { "title": "Keep compliance in view", "body": "All your packaging data in one place, so you're ready when an audit comes." },
-        { "title": "Evidence that stops counting when it expires", "body": "Every document carries its expiry date. When it lapses, the status that depended on it changes, visibly." },
-        { "title": "Collaborate with suppliers", "body": "Share data securely. Work together. No friction." }
-      ],
-      "cta": "Explore PPWR Dashboard"
+    "nextModule": {
+      "eyebrow": "Next module",
+      "title": "Next module: in development.",
+      "body": "LIVO PPWR is the first module, not the last. The product family is being built around recurring compliance work that becomes difficult to manage in spreadsheets, folders and email.",
+      "cta": "Ask about the next module"
     },
-    "whyLight": [
-      "The system proposes, you confirm.",
-      "All your compliance in one calm overview, without cluttered screens.",
-      "Import your own Excel, no template."
-    ],
     "finalCta": {
-      "titleBefore": "Ready to ",
-      "titleHighlight": "lighten",
-      "titleAfter": " the workflow?",
-      "body": "Book a personalized demo and see how Livo can transform your compliance process.",
-      "cta": "Book a Demo"
+      "title": "See how LIVO makes ongoing PPWR work easier to manage.",
+      "body": "A short product demonstration is enough to see how the workflow fits your team.",
+      "ctaPricing": "View pricing",
+      "ctaDemo": "See LIVO PPWR"
     },
     "footer": {
       "tagline": "Software that lightens the workflow.",
       "columns": {
-        "product": { "title": "PRODUCT", "items": [
-          { "label": "PPWR Dashboard", "href": "/ppwr" },
-          { "label": "Features", "href": "/ppwr#how-it-works" }
-        ] },
-        "company": { "title": "COMPANY", "items": [
-          { "label": "About us", "href": "#about" },
-          { "label": "Contact", "href": "mailto:hello@livoapps.software" }
-        ] }
+        "product": {
+          "title": "PRODUCT",
+          "items": [
+            {
+              "label": "LIVO PPWR",
+              "href": "/ppwr"
+            },
+            {
+              "label": "How LIVO works",
+              "href": "#how"
+            },
+            {
+              "label": "Pricing",
+              "href": "#pricing"
+            }
+          ]
+        },
+        "resources": {
+          "title": "RESOURCES",
+          "items": [
+            {
+              "label": "PPWR whitepaper",
+              "href": "/whitepaper"
+            }
+          ]
+        },
+        "company": {
+          "title": "COMPANY",
+          "items": [
+            {
+              "label": "About Livo",
+              "href": "#about"
+            },
+            {
+              "label": "Contact",
+              "href": "mailto:hello@livoapps.software"
+            },
+            {
+              "label": "Log in",
+              "href": "https://ppwr.livoapps.software/login"
+            }
+          ]
+        }
       },
-      "disclaimer": "This website is not legal advice; product descriptions show what the software does. Compliance obligations follow from the regulations themselves.",
-      "copyright": "© 2026 Livo Apps B.V. All rights reserved.",
-      "social": [{ "label": "LinkedIn", "href": "https://www.linkedin.com/company/livoapps-software" }]
+      "disclaimer": "LIVO PPWR supports your compliance work; it is not legal advice and does not guarantee compliance. Compliance obligations follow from the regulations themselves.",
+      "copyright": "© 2026 LIVO APPS B.V. · livoapps.software · All rights reserved",
+      "social": [
+        {
+          "label": "LinkedIn",
+          "href": "https://www.linkedin.com/company/livoapps-software"
+        }
+      ]
     }
   },
   "ppwr": {
@@ -87,12 +337,16 @@
       "title": "LIVO PPWR · Packaging compliance in one calm place",
       "description": "Keep every packaging type, obligation and document in one place. Built for the EU Packaging and Packaging Waste Regulation."
     },
-    "breadcrumb": ["Livo Apps", "Products", "LIVO PPWR"],
+    "breadcrumb": [
+      "Livo Apps",
+      "Products",
+      "LIVO PPWR"
+    ],
     "hero": {
       "eyebrow": "LIVO PPWR · Packaging compliance",
-      "titleLine1": "Complex rules.",
-      "titleLine2": "Effortless compliance.",
-      "lead": "The EU Packaging and Packaging Waste Regulation has applied since 12 August 2026. LIVO PPWR keeps every packaging type, obligation and document in one calm place, so your team stays compliant without the stress.",
+      "titleLine1": "PPWR is one regulation.",
+      "titleLine2": "The work behind it quickly multiplies.",
+      "lead": "The EU Packaging and Packaging Waste Regulation has applied since 12 August 2026. LIVO PPWR keeps packaging data, obligations, evidence and supplier input together and up to date, so your team knows where it stands.",
       "ctaPrimary": "Book a demo",
       "ctaSecondary": "See how it works"
     },
@@ -102,10 +356,30 @@
       "progressLabel": "Compliant packaging",
       "progressValue": "12 / 18",
       "rows": [
-        { "name": "PET bottle 0.5 L", "sub": "DoC complete · 30% recycled", "status": "Compliant", "tone": "ok" },
-        { "name": "Folding carton", "sub": "Awaiting supplier data", "status": "In review", "tone": "warn" },
-        { "name": "E-commerce parcel", "sub": "Empty space over 40%", "status": "Needs attention", "tone": "risk" },
-        { "name": "Glass jar 250 ml", "sub": "DoC complete", "status": "Compliant", "tone": "ok" }
+        {
+          "name": "PET bottle 0.5 L",
+          "sub": "DoC complete · 30% recycled",
+          "status": "Compliant",
+          "tone": "ok"
+        },
+        {
+          "name": "Folding carton",
+          "sub": "Awaiting supplier data",
+          "status": "In review",
+          "tone": "warn"
+        },
+        {
+          "name": "E-commerce parcel",
+          "sub": "Empty space over 40%",
+          "status": "Needs attention",
+          "tone": "risk"
+        },
+        {
+          "name": "Glass jar 250 ml",
+          "sub": "DoC complete",
+          "status": "Compliant",
+          "tone": "ok"
+        }
       ],
       "footer": "In force since 12 August 2026"
     },
@@ -114,9 +388,18 @@
       "title": "One regulation. A lot of new obligations.",
       "body": "PPWR (Regulation (EU) 2025/40) applies directly across the EU and replaces the old Packaging Directive. It reaches every company that places packaging on the EU market, whatever its size.",
       "cards": [
-        { "title": "Prove conformity", "body": "Each packaging type needs an EU Declaration of Conformity and technical documentation, kept on file for years." },
-        { "title": "Meet design rules", "body": "Recyclability, recycled content, packaging minimisation and PFAS limits all carry their own thresholds and dates." },
-        { "title": "Avoid the fallout", "body": "Gaps can mean fines, recalls or losing a retail listing. The work is real. The stress doesn't have to be." }
+        {
+          "title": "Prove conformity",
+          "body": "Each packaging type needs an EU Declaration of Conformity and technical documentation, kept on file for years."
+        },
+        {
+          "title": "Meet design rules",
+          "body": "Recyclability, recycled content, packaging minimisation and PFAS limits all carry their own thresholds and dates."
+        },
+        {
+          "title": "Avoid the fallout",
+          "body": "Gaps can mean fines, recalls or losing a retail listing. The work is real. The stress doesn't have to be."
+        }
       ],
       "datePrefix": "Binding since",
       "date": "12 August 2026"
@@ -126,12 +409,30 @@
       "title": "Your whole packaging compliance, in one place.",
       "body": "Register, obligations, documents, suppliers and deadlines: connected, so nothing falls through the cracks.",
       "features": [
-        { "title": "Packaging register", "body": "Every packaging type you place on the market, in one list: material, weight, format and owner, found in seconds." },
-        { "title": "Obligations matrix", "body": "See at a glance which rules apply to each packaging type, and exactly where you still need to act." },
-        { "title": "Documents & Declarations of Conformity", "body": "Keep every DoC and technical file with its packaging. Upload once, and it's always where you expect it." },
-        { "title": "Suppliers", "body": "Collect the data and proof you need from suppliers, with the right owner set for you automatically." },
-        { "title": "Timeline & deadlines", "body": "PPWR phases in through 2030 and beyond. LIVO keeps the dates that matter to your packaging in view." },
-        { "title": "Compliance status", "body": "A calm, honest picture of where you stand today, with a clear next step. Never a wall of red." }
+        {
+          "title": "Packaging register",
+          "body": "Every packaging type you place on the market, in one list: material, weight, format and owner, found in seconds."
+        },
+        {
+          "title": "Obligations matrix",
+          "body": "See at a glance which rules apply to each packaging type, and exactly where you still need to act."
+        },
+        {
+          "title": "Documents & Declarations of Conformity",
+          "body": "Keep every DoC and technical file with its packaging. Upload once, and it's always where you expect it."
+        },
+        {
+          "title": "Suppliers",
+          "body": "Collect the data and proof you need from suppliers, with the right owner set for you automatically."
+        },
+        {
+          "title": "Timeline & deadlines",
+          "body": "PPWR phases in through 2030 and beyond. LIVO keeps the dates that matter to your packaging in view."
+        },
+        {
+          "title": "Compliance status",
+          "body": "A calm, honest picture of where you stand today, with a clear next step. Never a wall of red."
+        }
       ]
     },
     "principles": {
@@ -139,18 +440,43 @@
       "title": "The software shouldn't add to the complexity.",
       "body": "PPWR is demanding enough. Every screen in LIVO PPWR follows the same principles: the ones that make work feel lighter.",
       "items": [
-        { "n": "01", "title": "Simplicity over features", "body": "One primary action per screen. Everything you need to stay compliant, nothing you don't." },
-        { "n": "02", "title": "Errors that help", "body": "No raw system messages. Not {code}, but “That file is a little large. Try one under 15 MB.”", "code": "ERROR 413" },
-        { "n": "03", "title": "Calm by design", "body": "Generous whitespace and progressive disclosure keep dense pages quiet. Detail appears when you ask for it." },
-        { "n": "04", "title": "Smart defaults", "body": "A document is named after its file. The supplier owner is set for you. Less typing, fewer mistakes." },
-        { "n": "05", "title": "Validation as you go", "body": "Fields are checked while you work, so you never complete a whole form only to hit a wall at the end." },
-        { "n": "06", "title": "Human in the loop", "body": "You stay in control. The software suggests and prepares; you decide and confirm." }
+        {
+          "n": "01",
+          "title": "Simplicity over features",
+          "body": "One primary action per screen. Everything you need, nothing you don't."
+        },
+        {
+          "n": "02",
+          "title": "Errors that help",
+          "body": "No raw system messages. Not {code}, but “That file is a little large. Try one under 15 MB.”",
+          "code": "ERROR 413"
+        },
+        {
+          "n": "03",
+          "title": "Calm by design",
+          "body": "Generous whitespace and progressive disclosure keep dense pages quiet. Detail appears when you ask for it."
+        },
+        {
+          "n": "04",
+          "title": "Smart defaults",
+          "body": "A document is named after its file. The supplier owner is set for you. Less typing, fewer mistakes."
+        },
+        {
+          "n": "05",
+          "title": "Validation as you go",
+          "body": "Fields are checked while you work, so you never complete a whole form only to hit a wall at the end."
+        },
+        {
+          "n": "06",
+          "title": "Human in the loop",
+          "body": "You stay in control. The software suggests and prepares; you decide and confirm."
+        }
       ]
     },
     "closing": {
       "eyebrow": "LIVO PPWR",
-      "title": "Ready to make compliance effortless?",
-      "leadBefore": "See LIVO PPWR with your own packaging in a 20-minute demo, or email ",
+      "title": "See how LIVO makes ongoing PPWR work easier to manage.",
+      "leadBefore": "A 20-minute walkthrough is enough to see how the workflow fits your team, or email ",
       "leadAfter": ".",
       "cta": "Book a demo"
     },
@@ -194,7 +520,9 @@
       "body": "The whitepaper is in final review. The download form will appear here soon."
     },
     "thanks": {
-      "meta": { "title": "Check your inbox · Livo Apps" },
+      "meta": {
+        "title": "Check your inbox · Livo Apps"
+      },
       "title": "Check your inbox",
       "body": "We've sent the download link to your email address. Nothing after a few minutes? Check your spam folder, or email hello@livoapps.software.",
       "back": "Back to the homepage"
@@ -215,7 +543,11 @@
       "titleLine1": "EU PPWR packaging compliance.",
       "titleLine2": "Priced by SKU, not complexity.",
       "lead": "Compliance software is usually sold by the project: a scoping call, an implementation fee, a quote you can't compare with anyone else's. Livo works differently. One number decides your price: how many products you put on the market yourself. Everything else is included.",
-      "bullets": ["No implementation fee", "Cancel anytime", "Start without a card"],
+      "bullets": [
+        "No implementation fee",
+        "Cancel anytime",
+        "Start without a card"
+      ],
       "ctaPrimary": "Start free",
       "ctaSecondary": "Talk to someone who knows PPWR"
     },
@@ -238,11 +570,41 @@
       "freeBody": "Start with real products, not a demo. No card needed.",
       "yearlyNote": "Yearly billing saves 15%. Prices exclude VAT.",
       "items": [
-        { "audience": "Single-brand importers", "name": "Starter", "limit": "Up to 250 own-brand or imported SKUs", "monthly": "€99", "yearly": "€84/mo billed yearly" },
-        { "audience": "Own-brand producers", "name": "Core", "limit": "Up to 1,000 own-brand or imported SKUs", "monthly": "€249", "yearly": "€212/mo billed yearly" },
-        { "audience": "Mid-size wholesalers", "name": "Growth", "limit": "Up to 2,500 own-brand or imported SKUs", "monthly": "€549", "yearly": "€467/mo billed yearly" },
-        { "audience": "Wholesalers & importers", "name": "Scale", "limit": "Up to 5,000 own-brand or imported SKUs", "monthly": "€899", "yearly": "€764/mo billed yearly" },
-        { "audience": "Upper mid-market & large importers", "name": "Enterprise", "limit": "Up to 10,000 own-brand or imported SKUs", "monthly": "€1,199", "yearly": "€1,019/mo billed yearly" }
+        {
+          "audience": "Single-brand importers",
+          "name": "Starter",
+          "limit": "Up to 250 own-brand or imported SKUs",
+          "monthly": "€99",
+          "yearly": "€84/mo billed yearly"
+        },
+        {
+          "audience": "Own-brand producers",
+          "name": "Core",
+          "limit": "Up to 1,000 own-brand or imported SKUs",
+          "monthly": "€249",
+          "yearly": "€212/mo billed yearly"
+        },
+        {
+          "audience": "Mid-size wholesalers",
+          "name": "Growth",
+          "limit": "Up to 2,500 own-brand or imported SKUs",
+          "monthly": "€549",
+          "yearly": "€467/mo billed yearly"
+        },
+        {
+          "audience": "Wholesalers & importers",
+          "name": "Scale",
+          "limit": "Up to 5,000 own-brand or imported SKUs",
+          "monthly": "€899",
+          "yearly": "€764/mo billed yearly"
+        },
+        {
+          "audience": "Upper mid-market & large importers",
+          "name": "Enterprise",
+          "limit": "Up to 10,000 own-brand or imported SKUs",
+          "monthly": "€1,199",
+          "yearly": "€1,019/mo billed yearly"
+        }
       ],
       "perMonth": "/month",
       "customTitle": "More than 10,000 SKUs? Let's talk it through.",
@@ -254,10 +616,34 @@
       "title": "From a messy supplier file to a declaration you dare to sign.",
       "body": "That chain is the product. Every step below works today, in every paid plan.",
       "items": [
-        { "n": "1", "title": "Import any Excel, no rigid template", "body": "Upload your own data exports or whatever a supplier sends. Livo reads the structure (bottle, box, carton, pallet), shows you what it found and asks when it isn't sure. You confirm instead of retype, and the same file shape is recognised next time. No fixed format to fight with first.", "status": "Live", "live": true },
-        { "n": "2", "title": "Ask suppliers via portal and tasks, not email threads", "body": "Request exactly what's missing: your supplier gets a link with plain-language questions and tasks, legally reviewed guidance per field, and a place to drop their PDFs. No mailbox full of half-filled spreadsheets, and nothing a supplier sends ever overwrites what you already had.", "status": "Live · multi-supplier management in progress", "live": true },
-        { "n": "3", "title": "Always know where you stand", "body": "One live overview of your obligations, deadlines and readiness: per product, per role, per market, through 2040. And it stays honest: expired evidence automatically stops counting, so the status you see is the status that's true today.", "status": "Live", "live": true },
-        { "n": "4", "title": "The complete compliance file, per product", "body": "Declaration of conformity, technical file, test documents and an append-only attestation trail, generated from your own data and kept together per product. Livo waits until the required evidence is there, and signing is a separate right. When someone asks how you know, you show them.", "status": "Live", "live": true }
+        {
+          "n": "1",
+          "title": "Import any Excel, no rigid template",
+          "body": "Upload your own data exports or whatever a supplier sends. Livo reads the structure (bottle, box, carton, pallet), shows you what it found and asks when it isn't sure. You confirm instead of retype, and the same file shape is recognised next time. No fixed format to fight with first.",
+          "status": "Live",
+          "live": true
+        },
+        {
+          "n": "2",
+          "title": "Ask suppliers via portal and tasks, not email threads",
+          "body": "Request exactly what's missing: your supplier gets a link with plain-language questions and tasks, legally reviewed guidance per field, and a place to drop their PDFs. No mailbox full of half-filled spreadsheets, and nothing a supplier sends ever overwrites what you already had.",
+          "status": "Live · multi-supplier management in progress",
+          "live": true
+        },
+        {
+          "n": "3",
+          "title": "Always know where you stand",
+          "body": "One live overview of your obligations, deadlines and readiness: per product, per role, per market, through 2040. And it stays honest: expired evidence automatically stops counting, so the status you see is the status that's true today.",
+          "status": "Live",
+          "live": true
+        },
+        {
+          "n": "4",
+          "title": "The complete compliance file, per product",
+          "body": "Declaration of conformity, technical file, test documents and an append-only attestation trail, generated from your own data and kept together per product. Livo waits until the required evidence is there, and signing is a separate right. When someone asks how you know, you show them.",
+          "status": "Live",
+          "live": true
+        }
       ]
     },
     "replaces": {
@@ -267,10 +653,22 @@
       "left": {
         "title": "A traditional PPWR project",
         "rows": [
-          { "label": "Implementation", "value": "€5,000 – 50,000" },
-          { "label": "Consultancy", "value": "€150 – 250 / hour" },
-          { "label": "Licence", "value": "€6,000 – 40,000 / year" },
-          { "label": "Extra users, API, reports", "value": "add-ons" }
+          {
+            "label": "Implementation",
+            "value": "€5,000 – 50,000"
+          },
+          {
+            "label": "Consultancy",
+            "value": "€150 – 250 / hour"
+          },
+          {
+            "label": "Licence",
+            "value": "€6,000 – 40,000 / year"
+          },
+          {
+            "label": "Extra users, API, reports",
+            "value": "add-ons"
+          }
         ],
         "totalLabel": "Year one",
         "totalValue": "€15,000 – 60,000"
@@ -278,10 +676,22 @@
       "right": {
         "title": "Livo, 1,000 SKUs",
         "rows": [
-          { "label": "Implementation", "value": "€0" },
-          { "label": "Consultancy", "value": "€0" },
-          { "label": "Licence", "value": "€2,540 / year" },
-          { "label": "Extra users, API, reports", "value": "included" }
+          {
+            "label": "Implementation",
+            "value": "€0"
+          },
+          {
+            "label": "Consultancy",
+            "value": "€0"
+          },
+          {
+            "label": "Licence",
+            "value": "€2,540 / year"
+          },
+          {
+            "label": "Extra users, API, reports",
+            "value": "included"
+          }
         ],
         "totalLabel": "Year one",
         "totalValue": "€2,540"
@@ -311,10 +721,30 @@
       "title": "Integrations aren't here yet. When they ship, they're in your plan.",
       "body": "Only Excel import and export exist today, and they carry the whole workflow. The connectors below are still to be built. We list them so you know what's coming and, more importantly, that they'll simply be part of your plan when they arrive.",
       "items": [
-        { "title": "Excel import & export", "body": "Upload the supplier template, review what we recognised, confirm. Re-import updates instead of duplicating.", "status": "Live", "live": true },
-        { "title": "Native ERP connectors", "body": "Exact Online first. Dynamics 365 BC, SAP Business One and Odoo follow where customers ask for them.", "status": "Coming soon", "live": false },
-        { "title": "REST API + integration builder", "body": "Connect your PIM or any other system yourself: map the fields in the app, no code required.", "status": "Coming soon", "live": false },
-        { "title": "GS1 / GDSN publishing", "body": "Publish packaging and PPWR attributes straight to the data pool, with code-list mappings as a ready-made template.", "status": "Coming soon", "live": false }
+        {
+          "title": "Excel import & export",
+          "body": "Upload the supplier template, review what we recognised, confirm. Re-import updates instead of duplicating.",
+          "status": "Live",
+          "live": true
+        },
+        {
+          "title": "Native ERP connectors",
+          "body": "Exact Online first. Dynamics 365 BC, SAP Business One and Odoo follow where customers ask for them.",
+          "status": "Coming soon",
+          "live": false
+        },
+        {
+          "title": "REST API + integration builder",
+          "body": "Connect your PIM or any other system yourself: map the fields in the app, no code required.",
+          "status": "Coming soon",
+          "live": false
+        },
+        {
+          "title": "GS1 / GDSN publishing",
+          "body": "Publish packaging and PPWR attributes straight to the data pool, with code-list mappings as a ready-made template.",
+          "status": "Coming soon",
+          "live": false
+        }
       ],
       "custom": "A system of your own? A legacy or niche integration is tailored work: a one-time development fee quoted up front, plus a monthly care fee from €199."
     },
@@ -322,12 +752,30 @@
       "eyebrow": "06 · Questions",
       "title": "The things people actually ask.",
       "items": [
-        { "q": "What exactly counts as a SKU?", "a": "One sellable product you put on the EU market yourself: under your own brand (private label included) or as the importer. Packaging levels, components and materials are never counted, however many you have. Everything you resell as a distributor is free and unlimited, and archived products don't count either." },
-        { "q": "What if I go slightly over my plan?", "a": "Nothing happens. We look at a rolling three-month average, so a seasonal peak passes by unnoticed. If your portfolio is structurally larger, we'll get in touch and move you up. You'll never find out through a blocked screen or a surprise invoice." },
-        { "q": "My suppliers are slow. Does that block me?", "a": "It's the most common bottleneck, so the product is built around it: send a portal link or export exactly what's missing, and a partly filled return leaves what you already had intact. You keep working on everything else, and you can see per product who you're waiting on." },
-        { "q": "Are there setup or implementation fees?", "a": "No. Connectors, the API and GS1 publishing will be included in paid plans when they ship. The one exception is a fully custom integration with a legacy system: tailored work, quoted up front." },
-        { "q": "Can I leave?", "a": "Any time, in one click from Billing. Your data stays yours and stays exportable; anything above a lower limit becomes read-only, never lost." },
-        { "q": "Why is this simpler than everyone else?", "a": "Because the price follows the regulation. PPWR puts the obligations on whoever places a product on the market. We count exactly those products and charge for them, nothing else. That takes out the scoping call, the implementation project and the quote you can't compare." }
+        {
+          "q": "What exactly counts as a SKU?",
+          "a": "One sellable product you put on the EU market yourself: under your own brand (private label included) or as the importer. Packaging levels, components and materials are never counted, however many you have. Everything you resell as a distributor is free and unlimited, and archived products don't count either."
+        },
+        {
+          "q": "What if I go slightly over my plan?",
+          "a": "Nothing happens. We look at a rolling three-month average, so a seasonal peak passes by unnoticed. If your portfolio is structurally larger, we'll get in touch and move you up. You'll never find out through a blocked screen or a surprise invoice."
+        },
+        {
+          "q": "My suppliers are slow. Does that block me?",
+          "a": "It's the most common bottleneck, so the product is built around it: send a portal link or export exactly what's missing, and a partly filled return leaves what you already had intact. You keep working on everything else, and you can see per product who you're waiting on."
+        },
+        {
+          "q": "Are there setup or implementation fees?",
+          "a": "No. Connectors, the API and GS1 publishing will be included in paid plans when they ship. The one exception is a fully custom integration with a legacy system: tailored work, quoted up front."
+        },
+        {
+          "q": "Can I leave?",
+          "a": "Any time, in one click from Billing. Your data stays yours and stays exportable; anything above a lower limit becomes read-only, never lost."
+        },
+        {
+          "q": "Why is this simpler than everyone else?",
+          "a": "Because the price follows the regulation. PPWR puts the obligations on whoever places a product on the market. We count exactly those products and charge for them, nothing else. That takes out the scoping call, the implementation project and the quote you can't compare."
+        }
       ]
     },
     "closing": {

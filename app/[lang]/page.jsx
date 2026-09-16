@@ -1,9 +1,22 @@
 import Link from 'next/link';
-import { ArrowRight, Heart, Brain, Shield, Zap, CheckSquare, LayoutDashboard } from 'lucide-react';
+import { ArrowRight, Clock, MessageSquare, SlidersHorizontal, FileInput, Eye, Users, ShieldCheck } from 'lucide-react';
 import { getDictionary } from '../get-dictionary';
 import { BOOKINGS_URL, bookingLinkProps } from '../booking';
-import Footer from '../components/Footer';
 import { socialMetadata } from '../seo';
+import Footer from '../components/Footer';
+import StatusPill from '../components/StatusPill';
+import ProductCard from '../components/ProductCard';
+import PricingPreview from '../components/PricingPreview';
+import WhitepaperSection from '../components/WhitepaperSection';
+import OnlineSignupSection from '../components/OnlineSignupSection';
+
+// Homepage volgens brief §11 (fase 1, 16 september 2026), met de vier begrenzingen uit de
+// review: geen EUDR-datum of -eigenschappen, whitepaper zonder formulier, aankoop als uitleg,
+// prijsknop alleen als de prijspagina aan staat. Alle copy uit de dictionaries (bron:
+// docs/marketing/website/copy/home.json in de product-repo).
+
+const focusRing =
+  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent rounded';
 
 export async function generateMetadata({ params }) {
   const dict = await getDictionary(params.lang);
@@ -16,117 +29,213 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// Icons stay in code (non-text), matched to traits by index.
-const traitIcons = [Heart, Brain, Heart, Shield];
-// Icons for the "why it feels light" strip, matched to t.whyLight by index.
-const whyLightIcons = [CheckSquare, LayoutDashboard, Zap];
+const benefitIcons = [FileInput, Eye, Users, ShieldCheck];
+const painIcons = [Clock, MessageSquare, SlidersHorizontal];
+
+function Eyebrow({ children, light }) {
+  return <p className={`mb-3 text-sm font-display font-bold uppercase tracking-wide ${light ? 'text-accent' : 'text-accent-dark'}`}>{children}</p>;
+}
 
 export default async function LivoAppsWebsite({ params }) {
   const { lang } = params;
   const dict = await getDictionary(lang);
   const t = dict.home;
+  const pricingEnabled = process.env.PRICING_PAGE_ENABLED === 'true';
 
   return (
-    <div className="bg-navy text-white font-sans">
-      <section className="pt-20 pb-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <div className="text-accent text-sm font-semibold mb-4 tracking-wide">{t.hero.eyebrow}</div>
-          <h1 className="text-5xl md:text-6xl font-display font-bold leading-tight mb-6">{t.hero.titleBefore}<span className="text-accent">{t.hero.titleHighlight}</span>{t.hero.titleAfter}</h1>
-          <p className="text-lg text-white/70 mb-8 leading-relaxed">{t.hero.lead}</p>
-          <div className="flex gap-4 flex-wrap">
-            <a href={BOOKINGS_URL} {...bookingLinkProps} className="bg-accent text-ink px-8 py-3 rounded hover:bg-accent-dark transition font-semibold flex items-center gap-2">{t.hero.ctaPrimary} <ArrowRight size={18} /></a>
-            <Link href={`/${lang}/ppwr`} className="border border-white/30 px-8 py-3 rounded hover:border-accent transition font-semibold inline-flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">{t.hero.ctaSecondary}</Link>
-          </div>
-        </div>
-        <div className="hidden md:block">
-          <div className="bg-white/5 rounded-lg p-8 aspect-square flex items-center justify-center border border-white/10">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent text-navy rounded-lg mb-4 mx-auto flex items-center justify-center"><Zap size={32} /></div>
-              <p className="text-sm text-white/60">{t.hero.previewTitle}</p>
-              <p className="text-xs text-white/50 mt-2">{t.hero.previewSubtitle}</p>
+    <div className="font-sans text-ink">
+      {/* 2. Hero */}
+      <section className="bg-navy px-6 pb-20 pt-16 text-white">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <Eyebrow light>{t.hero.brandLine}</Eyebrow>
+            <h1 className="font-display text-4xl font-bold leading-tight md:text-5xl">{t.hero.title}</h1>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">{t.hero.lead}</p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link href={`/${lang}#pricing`} className={`inline-flex items-center gap-2 rounded-md bg-accent px-7 py-3 font-semibold text-ink transition-colors duration-200 hover:bg-accent-dark ${focusRing}`}>
+                {t.hero.ctaPrimary} <ArrowRight size={18} aria-hidden="true" />
+              </Link>
+              <Link href={`/${lang}/ppwr`} className={`inline-flex items-center rounded-md border border-white/30 px-7 py-3 font-semibold transition-colors duration-200 hover:border-accent ${focusRing}`}>
+                {t.hero.ctaSecondary}
+              </Link>
             </div>
+            <p className="mt-6 text-sm text-white/60">{t.hero.roadmap}</p>
           </div>
-        </div>
-      </section>
-
-      <section id="about" className="py-20 px-6 bg-white text-ink">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-sm font-semibold text-accent mb-4 tracking-wide">{t.brand.eyebrow}</div>
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div>
-              <h3 className="text-2xl font-display font-bold mb-6">{t.brand.whoTitle}</h3>
-              <p className="text-lg text-sub leading-relaxed">{t.brand.whoBody1}</p>
-              <p className="text-lg text-sub leading-relaxed mt-4">{t.brand.whoBody2}</p>
+          <div className="rounded-2xl border border-line bg-white p-6 text-ink" aria-label={t.hero.card.label}>
+            <div className="flex items-center justify-between gap-3">
+              <span className="font-display text-lg font-bold">{t.hero.card.product}</span>
+              <StatusPill tone="ok">{t.hero.card.status}</StatusPill>
             </div>
-            <div>
-              <h3 className="text-2xl font-display font-bold mb-6">{t.brand.promiseTitle}</h3>
-              <p className="text-lg font-semibold text-ink mb-3">{t.brand.promiseLead}</p>
-              <p className="text-lg text-sub leading-relaxed">{t.brand.promiseBody}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-6 bg-navy">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-sm font-semibold text-accent mb-4 tracking-wide">{t.personality.eyebrow}</div>
-          <div className="grid md:grid-cols-4 gap-8">
-            {t.personality.traits.map((trait, i) => {
-              const Icon = traitIcons[i] ?? Heart;
-              return (
-                <div className="text-center" key={trait.title}>
-                  <div className="w-16 h-16 mx-auto mb-4 border-2 border-accent rounded-full flex items-center justify-center"><Icon size={28} className="text-accent" /></div>
-                  <h4 className="font-display font-bold text-lg mb-2">{trait.title}</h4>
-                  <p className="text-white/60 text-sm">{trait.sub}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section id="product" className="py-20 px-6 bg-white text-ink">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-sm font-semibold text-accent mb-4 tracking-wide">{t.product.eyebrow}</div>
-          <h2 className="text-4xl font-display font-bold mb-4">{t.product.title}</h2>
-          <p className="text-lg text-sub mb-12">{t.product.subtitle}</p>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-navy rounded-lg p-8 aspect-video flex items-center justify-center border border-white/10">
-              <div className="text-center"><p className="text-lg font-display font-bold text-accent mb-2">{t.product.previewLabel}</p><p className="text-white/60 text-sm">{t.product.previewNote}</p></div>
-            </div>
-            <div className="space-y-6">
-              {t.product.features.map((f) => (
-                <div className="flex gap-4" key={f.title}><div className="w-6 h-6 rounded-full bg-accent flex-shrink-0 flex items-center justify-center mt-1"><span className="text-ink text-xs font-display font-bold">&#10003;</span></div><div><h4 className="font-display font-bold text-lg mb-2">{f.title}</h4><p className="text-sub">{f.body}</p></div></div>
+            <p className="mt-2 text-sm text-sub">{t.hero.card.lead}</p>
+            <ul className="mt-5 divide-y divide-line border-t border-line">
+              {t.hero.card.rows.map((r) => (
+                <li key={r.label} className="flex items-center justify-between py-3 text-sm">
+                  <span>{r.label}</span>
+                  <StatusPill tone={r.tone}>{r.value}</StatusPill>
+                </li>
               ))}
-            </div>
-          </div>
-          <div className="mt-12">
-            <Link href={`/${lang}/ppwr`} className="inline-flex items-center gap-2 bg-navy text-white px-8 py-3 rounded font-semibold transition-colors duration-200 hover:bg-navy/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
-              {t.product.cta} <ArrowRight size={18} />
-            </Link>
+            </ul>
+            <p className="mt-4 text-xs text-sub">{t.hero.card.label}</p>
           </div>
         </div>
       </section>
 
-      <section className="bg-navy border-t border-white/10 px-6 py-24">
-        <ul className="mx-auto grid max-w-5xl gap-12 md:grid-cols-3 md:items-start">
-          {t.whyLight.map((line, i) => {
-            const Icon = whyLightIcons[i] ?? CheckSquare;
+      {/* 3. Benefit strip */}
+      <section className="border-b border-line bg-white px-6 py-10">
+        <ul className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
+          {t.benefits.map((b, i) => {
+            const Icon = benefitIcons[i] ?? Eye;
             return (
-              <li key={line} className="flex flex-col items-center gap-3 text-center">
-                <Icon size={28} aria-hidden="true" className="text-accent" />
-                <p className="max-w-[16rem] text-sm leading-relaxed text-white/60 [text-wrap:balance]">{line}</p>
+              <li key={b.title} className="flex gap-3">
+                <Icon size={22} aria-hidden="true" className="mt-0.5 flex-none text-accent-dark" />
+                <div>
+                  <h3 className="font-display font-bold">{b.title}</h3>
+                  <p className="mt-1 text-sm text-sub">{b.body}</p>
+                </div>
               </li>
             );
           })}
         </ul>
       </section>
 
-      <section className="py-20 px-6 bg-white text-ink">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">{t.finalCta.titleBefore}<span className="text-accent">{t.finalCta.titleHighlight}</span>{t.finalCta.titleAfter}</h2>
-          <p className="text-lg text-sub mb-8">{t.finalCta.body}</p>
-          <a href={BOOKINGS_URL} {...bookingLinkProps} className="bg-accent text-ink px-8 py-4 rounded hover:bg-accent-dark transition font-semibold flex items-center gap-2 mx-auto text-lg">{t.finalCta.cta} <ArrowRight size={20} /></a>
+      {/* 4. Pain */}
+      <section className="bg-canvas px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <Eyebrow>{t.pain.eyebrow}</Eyebrow>
+          <h2 className="max-w-3xl font-display text-3xl font-bold md:text-4xl">{t.pain.title}</h2>
+          <p className="mt-4 max-w-3xl text-lg text-sub">{t.pain.lead}</p>
+          <ul className="mt-10 grid gap-6 md:grid-cols-3">
+            {t.pain.items.map((p, i) => {
+              const Icon = painIcons[i] ?? Clock;
+              return (
+                <li key={p.title} className="rounded-2xl border border-line bg-white p-6">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-canvas"><Icon size={20} aria-hidden="true" className="text-ink" /></span>
+                  <h3 className="mt-4 font-display text-lg font-bold">{p.title}</h3>
+                  <p className="mt-2 text-sm text-sub">{p.body}</p>
+                </li>
+              );
+            })}
+          </ul>
+          <blockquote className="mt-8 rounded-2xl border-l-4 border-accent bg-white px-6 py-5 text-lg font-medium">{t.pain.quote}</blockquote>
+        </div>
+      </section>
+
+      {/* 5. Product family */}
+      <section id="products" className="scroll-mt-20 bg-white px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <Eyebrow>{t.products.eyebrow}</Eyebrow>
+          <div className="grid items-end gap-6 md:grid-cols-[1.2fr_0.8fr]">
+            <h2 className="font-display text-3xl font-bold md:text-4xl">{t.products.title}</h2>
+            <p className="text-sub">{t.products.lead}</p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <ProductCard lang={lang} variant="ppwr" t={t.products.ppwr} />
+            <ProductCard lang={lang} variant="next" t={t.products.next} />
+          </div>
+        </div>
+      </section>
+
+      {/* 6. How LIVO works */}
+      <section id="how" className="scroll-mt-20 bg-canvas px-6 py-20">
+        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2">
+          <div>
+            <Eyebrow>{t.how.eyebrow}</Eyebrow>
+            <h2 className="font-display text-3xl font-bold md:text-4xl">{t.how.title}</h2>
+            <p className="mt-4 text-lg text-sub">{t.how.lead}</p>
+            <ol className="mt-8 space-y-6">
+              {t.how.steps.map((s, i) => (
+                <li key={s.title} className="flex gap-4">
+                  <span className="font-display text-sm font-bold text-accent-dark">{String(i + 1).padStart(2, '0')}</span>
+                  <div>
+                    <h3 className="font-display text-lg font-bold">{s.title}</h3>
+                    <p className="mt-1 text-sm text-sub">{s.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="self-start rounded-2xl border border-line bg-navy p-6 text-white">
+            <p className="text-xs uppercase tracking-wide text-white/60">{t.how.card.label}</p>
+            <ul className="mt-4 divide-y divide-white/10">
+              {t.how.card.rows.map((r, i) => (
+                <li key={r.title} className="flex items-center justify-between gap-4 py-3">
+                  <div className="flex gap-3">
+                    <span className="font-display text-xs font-bold text-accent">{String(i + 1).padStart(2, '0')}</span>
+                    <div>
+                      <p className="text-sm font-semibold">{r.title}</p>
+                      <p className="text-xs text-white/60">{r.body}</p>
+                    </div>
+                  </div>
+                  <StatusPill tone={r.tone}>{r.status}</StatusPill>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Pricing preview */}
+      <PricingPreview lang={lang} t={t.pricing} pricingEnabled={pricingEnabled} />
+
+      {/* 8. Whitepaper */}
+      <WhitepaperSection lang={lang} t={t.whitepaper} />
+
+      {/* 9. Start online (als uitleg) */}
+      <OnlineSignupSection t={t.start} />
+
+      {/* 10. About / brand principles */}
+      <section id="about" className="scroll-mt-20 bg-canvas px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <Eyebrow>{t.about.eyebrow}</Eyebrow>
+          <h2 className="max-w-3xl font-display text-3xl font-bold md:text-4xl">{t.about.title}</h2>
+          <p className="mt-4 max-w-3xl text-lg text-sub">{t.about.lead}</p>
+          <ul className="mt-10 grid gap-6 md:grid-cols-3">
+            {t.about.principles.map((p) => (
+              <li key={p.title} className="rounded-2xl border border-line bg-white p-6">
+                <h3 className="font-display text-lg font-bold">{p.title}</h3>
+                <p className="mt-2 text-sm text-sub">{p.body}</p>
+              </li>
+            ))}
+          </ul>
+          <h3 className="mt-14 font-display text-xl font-bold">{t.about.traitsTitle}</h3>
+          <ul className="mt-4 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+            {t.about.traits.map((tr) => (
+              <li key={tr.title} className="rounded-xl border border-line bg-white px-5 py-4">
+                <p className="font-display font-bold">{tr.title}</p>
+                <p className="text-sm text-sub">{tr.sub}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* 11. Next module band (zonder datum, zonder eigenschappen) */}
+      <section className="bg-navy px-6 py-16 text-white">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 md:grid-cols-[1fr_auto]">
+          <div>
+            <Eyebrow light>{t.nextModule.eyebrow}</Eyebrow>
+            <h2 className="font-display text-3xl font-bold">{t.nextModule.title}</h2>
+            <p className="mt-3 max-w-3xl text-white/70">{t.nextModule.body}</p>
+          </div>
+          <a href="mailto:hello@livoapps.software?subject=Next%20LIVO%20module" className={`inline-flex items-center gap-2 rounded-md border border-white/30 px-6 py-3 text-sm font-semibold transition-colors duration-200 hover:border-accent ${focusRing}`}>
+            {t.nextModule.cta} <ArrowRight size={16} aria-hidden="true" />
+          </a>
+        </div>
+      </section>
+
+      {/* 12. Final CTA */}
+      <section className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="font-display text-3xl font-bold md:text-4xl">{t.finalCta.title}</h2>
+          <p className="mt-4 text-lg text-sub">{t.finalCta.body}</p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Link href={`/${lang}#pricing`} className={`inline-flex items-center gap-2 rounded-md bg-accent px-7 py-3 font-semibold text-ink transition-colors duration-200 hover:bg-accent-dark ${focusRing}`}>
+              {t.finalCta.ctaPricing} <ArrowRight size={18} aria-hidden="true" />
+            </Link>
+            <a href={BOOKINGS_URL} {...bookingLinkProps} className={`inline-flex items-center rounded-md border border-line px-7 py-3 font-semibold text-ink transition-colors duration-200 hover:border-sub ${focusRing}`}>
+              {t.finalCta.ctaDemo}
+            </a>
+          </div>
         </div>
       </section>
 

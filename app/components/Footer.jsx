@@ -1,12 +1,15 @@
 import Logo from './Logo';
 
-// De site-footer, gedeeld door homepage en overige pagina's.
-// dict = home.footer uit de dictionaries; teksten dus altijd in beide talen.
+// Site-footer (brief §11 punt 13): Product, Resources, Company met login-link; voetregel
+// van 15 september ("not legal advice and does not guarantee compliance").
+// dict = home.footer; interne links in de dictionary staan zonder taalprefix.
 export default function Footer({ lang, dict }) {
+  const columns = [dict.columns.product, dict.columns.resources, dict.columns.company].filter(Boolean);
+  const resolve = (href) => (href.startsWith('/') || href.startsWith('#') ? `/${lang}${href}` : href);
   return (
     <footer className="bg-navy text-white border-t border-white/10 px-6 py-16">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid gap-12 mb-12 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-2 mb-6">
               <Logo variant="inverse" />
@@ -14,14 +17,13 @@ export default function Footer({ lang, dict }) {
             </div>
             <p className="text-white/60 text-sm">{dict.tagline}</p>
           </div>
-          {[dict.columns.product, dict.columns.company].map((col) => (
+          {columns.map((col) => (
             <div key={col.title}>
               <h4 className="font-display font-bold mb-4 text-sm tracking-wide">{col.title}</h4>
               <ul className="space-y-3 text-sm text-white/60">
                 {col.items.map(({ label, href }) => (
-                  // Interne links in de dictionary staan zonder taalprefix.
                   <li key={label}>
-                    <a href={href.startsWith('/') || href.startsWith('#') ? `/${lang}${href}` : href} className="hover:text-accent">
+                    <a href={resolve(href)} className="hover:text-accent" {...(href.startsWith('https://') ? { rel: 'noopener noreferrer' } : {})}>
                       {label}
                     </a>
                   </li>
