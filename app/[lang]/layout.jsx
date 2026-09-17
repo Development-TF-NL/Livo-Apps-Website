@@ -36,11 +36,12 @@ export const metadata = {
   icons: {
     // Afgeleiden van de SVG-master in public/ (besluit-logo-svg-master-v1)
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon.svg?v=3', type: 'image/svg+xml' },
+      { url: '/favicon-32.png?v=3', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16.png?v=3', sizes: '16x16', type: 'image/png' },
     ],
-    apple: '/apple-touch-icon-180.png',
+    apple: '/apple-touch-icon-180.png?v=3',
+    shortcut: '/favicon.ico?v=3',
   },
   ...socialMetadata({ title: FALLBACK_TITLE, description: FALLBACK_DESCRIPTION }),
 };

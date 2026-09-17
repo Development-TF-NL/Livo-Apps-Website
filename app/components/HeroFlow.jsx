@@ -12,8 +12,8 @@ const FILE = {
 // het Register als middelpunt, uitkomstkaart in mint.
 export default function HeroFlow({ t }) {
   return (
-    <div aria-label={t.label}>
-      <div className="grid items-center gap-4 md:grid-cols-[184px_40px_minmax(0,1fr)]">
+    <div aria-label={t.label} className="min-w-0">
+      <div className="grid grid-cols-[minmax(0,1fr)] items-center gap-4 md:grid-cols-[184px_40px_minmax(0,1fr)]">
         <ul className="grid gap-3">
           {t.files.map((f) => {
             const k = FILE[f.kind] ?? FILE.folder;

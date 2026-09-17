@@ -50,11 +50,12 @@ export default async function LivoAppsWebsite({ params }) {
     <div className="font-sans text-ink">
       {/* Hero: licht, inputs naar het Register */}
       <section className="bg-canvas px-6 pb-20 pt-16">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-hero border border-line bg-white p-8 pb-48 md:p-12 md:pb-60">
-          <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.6fr]">
-            <div>
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-hero border border-line bg-white p-6 pb-48 sm:p-8 md:p-12 md:pb-60">
+          {/* min-w-0 op de kolommen: anders bepaalt de min-content van het registerfragment de kolombreedte en loopt de tekst op 390 px de kaart uit. */}
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.6fr)]">
+            <div className="min-w-0">
               <Eyebrow>{t.hero.brandLine}</Eyebrow>
-              <h1 className="font-display text-5xl font-bold leading-[1.04] tracking-tight text-ink md:text-6xl">
+              <h1 lang={lang} className="font-display text-4xl font-bold leading-[1.04] tracking-tight text-ink [hyphens:auto] sm:text-5xl md:text-6xl">
                 {t.hero.titleBefore}<span className="text-green-heading">{t.hero.titleGreen}</span>{t.hero.titleAfter}
               </h1>
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-blue">{t.hero.lead}</p>
