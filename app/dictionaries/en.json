@@ -423,8 +423,8 @@
   },
   "ppwr": {
     "meta": {
-      "title": "LIVO PPWR · Packaging compliance in one calm place",
-      "description": "Keep every packaging type, obligation and document in one place. Built for the EU Packaging and Packaging Waste Regulation."
+      "title": "LIVO PPWR · Packaging compliance software for the people who do the work",
+      "description": "PPWR is one regulation. The work behind it quickly multiplies. LIVO PPWR keeps packaging data, obligations, evidence and supplier input together and up to date."
     },
     "breadcrumb": [
       "Livo Apps",
@@ -432,147 +432,173 @@
       "LIVO PPWR"
     ],
     "hero": {
-      "eyebrow": "LIVO PPWR · Packaging compliance",
-      "titleLine1": "PPWR is one regulation.",
-      "titleLine2": "The work behind it quickly multiplies.",
-      "lead": "The EU Packaging and Packaging Waste Regulation has applied since 12 August 2026. LIVO PPWR keeps packaging data, obligations, evidence and supplier input together and up to date, so your team knows where it stands.",
-      "ctaPrimary": "Book a demo",
-      "ctaSecondary": "See how it works"
+      "eyebrow": "LIVO PPWR",
+      "apply": "PPWR has applied across the EU since 12 August 2026, with requirements phasing in over time.",
+      "titleBefore": "PPWR is one regulation. The work behind it quickly ",
+      "titleGreen": "multiplies.",
+      "titleAfter": "",
+      "lead": "The challenge is not collecting packaging data once. It is keeping data, obligations and evidence connected and up to date as products, packaging and markets change.",
+      "ctaPrimary": "Get LIVO PPWR",
+      "ctaWalkthrough": "Request a walkthrough",
+      "walkthroughSubject": "LIVO PPWR walkthrough",
+      "walkthroughBody": "Hello Livo,\n\nI would like a 20-minute walkthrough of LIVO PPWR.\n\nName:\nCompany:\nA few dates that work for me:\n",
+      "registerTenant": "example-tenant",
+      "illustration": "Illustration"
     },
-    "card": {
-      "title": "Packaging obligations",
-      "updated": "Updated just now",
-      "progressLabel": "Compliant packaging",
-      "progressValue": "12 / 18",
-      "rows": [
+    "grows": {
+      "eyebrow": "Why the work grows",
+      "title": "Every product, packaging level and market adds another layer to manage.",
+      "lead": "A spreadsheet can hold PPWR data. It does not help you manage obligations, evidence, gaps and changes across all your products.",
+      "factors": [
         {
-          "name": "PET bottle 0.5 L",
-          "sub": "DoC complete · 30% recycled",
-          "status": "Compliant",
-          "tone": "ok"
+          "title": "Products",
+          "body": "The products you put on the market and need to track."
         },
         {
-          "name": "Folding carton",
-          "sub": "Awaiting supplier data",
-          "status": "In review",
-          "tone": "warn"
+          "title": "Packaging levels",
+          "body": "Primary, secondary and transport packaging, plus their layers."
         },
         {
-          "name": "E-commerce parcel",
-          "sub": "Empty space over 40%",
-          "status": "Needs attention",
-          "tone": "risk"
+          "title": "EU markets",
+          "body": "EU-wide PPWR rules sit alongside Member State registration and reporting."
         },
         {
-          "name": "Glass jar 250 ml",
-          "sub": "DoC complete",
-          "status": "Compliant",
-          "tone": "ok"
+          "title": "Obligations and proof",
+          "body": "Requirements, deadlines, reports and evidence that can expire."
         }
       ],
-      "footer": "In force since 12 August 2026"
+      "resultTitle": "One change can affect several places at once.",
+      "resultBody": "A new supplier, a changed material, an expired report or a new requirement means the picture needs to be checked again.",
+      "note": "This is ongoing work"
     },
-    "whyNow": {
-      "eyebrow": "Why now",
-      "title": "One regulation. A lot of new obligations.",
-      "body": "PPWR (Regulation (EU) 2025/40) applies directly across the EU and replaces the old Packaging Directive. It reaches every company that places packaging on the EU market, whatever its size.",
-      "cards": [
-        {
-          "title": "Prove conformity",
-          "body": "Each packaging type needs an EU Declaration of Conformity and technical documentation, kept on file for years."
-        },
-        {
-          "title": "Meet design rules",
-          "body": "Recyclability, recycled content, packaging minimisation and PFAS limits all carry their own thresholds and dates."
-        },
-        {
-          "title": "Avoid the fallout",
-          "body": "Gaps can mean fines, recalls or losing a retail listing. The work is real. The stress doesn't have to be."
-        }
-      ],
-      "datePrefix": "Binding since",
-      "date": "12 August 2026"
-    },
-    "what": {
-      "eyebrow": "What LIVO PPWR does",
-      "title": "Your whole packaging compliance, in one place.",
-      "body": "Register, obligations, documents, suppliers and deadlines: connected, so nothing falls through the cracks.",
-      "features": [
-        {
-          "title": "Packaging register",
-          "body": "Every packaging type you place on the market, in one list: material, weight, format and owner, found in seconds."
-        },
-        {
-          "title": "Obligations matrix",
-          "body": "See at a glance which rules apply to each packaging type, and exactly where you still need to act."
-        },
-        {
-          "title": "Documents & Declarations of Conformity",
-          "body": "Keep every DoC and technical file with its packaging. Upload once, and it's always where you expect it."
-        },
-        {
-          "title": "Suppliers",
-          "body": "Collect the data and proof you need from suppliers, with the right owner set for you automatically."
-        },
-        {
-          "title": "Timeline & deadlines",
-          "body": "PPWR phases in through 2030 and beyond. LIVO keeps the dates that matter to your packaging in view."
-        },
-        {
-          "title": "Compliance status",
-          "body": "A calm, honest picture of where you stand today, with a clear next step. Never a wall of red."
-        }
-      ]
-    },
-    "principles": {
-      "eyebrow": "Built to lighten the work",
-      "title": "The software shouldn't add to the complexity.",
-      "body": "PPWR is demanding enough. Every screen in LIVO PPWR follows the same principles: the ones that make work feel lighter.",
+    "costs": {
+      "eyebrow": "What this starts to cost you",
+      "title": "When PPWR stays manual, the bill keeps growing.",
       "items": [
         {
-          "n": "01",
-          "title": "Simplicity over features",
-          "body": "One primary action per screen. Everything you need, nothing you don't."
+          "title": "It takes too much time.",
+          "body": "Checking, chasing, updating and rebuilding answers quickly turns PPWR into ongoing manual work."
         },
         {
-          "n": "02",
-          "title": "Errors that help",
-          "body": "No raw system messages. Not {code}, but “That file is a little large. Try one under 15 MB.”",
-          "code": "ERROR 413"
+          "title": "Customer requests become a commercial risk.",
+          "body": "If packaging data and proof are not ready when customers ask, you risk delays, rework and lost business."
         },
         {
-          "n": "03",
-          "title": "Calm by design",
-          "body": "Generous whitespace and progressive disclosure keep dense pages quiet. Detail appears when you ask for it."
+          "title": "You lose control as things change.",
+          "body": "With data spread across files and systems, it is hard to see what is complete, outdated or still missing."
         },
         {
-          "n": "04",
-          "title": "Smart defaults",
-          "body": "A document is named after its file. The supplier owner is set for you. Less typing, fewer mistakes."
+          "title": "The work depends on a few people.",
+          "body": "When context lives in spreadsheets, folders and inboxes, one absence can slow down the whole process."
+        }
+      ],
+      "transition": "PPWR is ongoing work. When it stays manual, time, rework and customer pressure keep adding up."
+    },
+    "changes": {
+      "eyebrow": "What LIVO changes",
+      "title": "Built to make ongoing PPWR work easier to manage.",
+      "benefit": "Save time. Share the work. Keep everything together. Know where you stand.",
+      "lead": "From the first import onwards, the workflow helps you fill gaps, manage changes and maintain a complete product file.",
+      "live": "Live",
+      "features": [
+        {
+          "tag": "01 · Start faster",
+          "title": "Your Excel. No rigid template.",
+          "body": "Start with the files you already have instead of reshaping everything first. Livo reads the structure, asks when it is unsure and remembers the format. The preview shows what will change before anything is saved, and re-imports update instead of duplicating. Export works the same way, so your data is never locked in."
         },
         {
-          "n": "05",
-          "title": "Validation as you go",
-          "body": "Fields are checked while you work, so you never complete a whole form only to hit a wall at the end."
+          "tag": "02 · Stay in control",
+          "title": "Know where you stand.",
+          "body": "See what is complete, missing, expired or still open, per product and per market, with obligations mapped out to 2040. Evidence carries an expiry date; when it expires, it stops counting on its own. Less checking by hand, and fewer surprises when a customer asks."
         },
         {
-          "n": "06",
-          "title": "Human in the loop",
-          "body": "You stay in control. The software suggests and prepares; you decide and confirm."
+          "tag": "03 · Share the work",
+          "title": "Let suppliers do part of the work.",
+          "body": "Send a prefilled request from your own mailbox: a secure link to the supplier portal, or a prefilled Excel per supplier. Suppliers see what you already know and add only what is missing. Their answers come back as proposed updates for your review. Nothing overwrites what you had."
+        },
+        {
+          "tag": "04 · One maintained source",
+          "title": "Keep the file complete and up to date.",
+          "body": "Keep packaging data, evidence and status together, so changes are easier to manage. Generate the declaration of conformity and the technical documentation from the same maintained source, with an append-only attestation trail behind it. Entering, confirming and signing are separate rights, held by the people you designate."
+        }
+      ],
+      "fileInputs": [
+        "Data",
+        "Evidence",
+        "Status"
+      ],
+      "fileTitle": "Product file",
+      "fileBadge": "Up to date",
+      "fileRows": [
+        "Packaging data",
+        "Evidence",
+        "Traceability"
+      ],
+      "fileOutputs": [
+        "EU declaration",
+        "Technical docs"
+      ]
+    },
+    "cycle": {
+      "eyebrow": "Supplier round",
+      "title": "Let suppliers fill the gaps.",
+      "lead": "You send the request; LIVO prepares it. Suppliers add only what is missing and every answer comes back as a proposal for your review.",
+      "steps": [
+        {
+          "title": "Prefilled request",
+          "body": "LIVO prepares a request per supplier with everything you already know filled in."
+        },
+        {
+          "title": "You send it",
+          "body": "A secure link or a prefilled Excel, sent from your own mailbox. LIVO does not e-mail your suppliers for you."
+        },
+        {
+          "title": "Supplier fills the gaps",
+          "body": "Only what is missing, with plain-language explanations of each field."
+        },
+        {
+          "title": "Proposed updates",
+          "body": "Answers land as proposals. You review and confirm; nothing overwrites what you had."
+        }
+      ],
+      "coreTitle": "LIVO PPWR",
+      "coreSub": "review"
+    },
+    "forWhom": {
+      "eyebrow": "For whom",
+      "title": "Four questions to see whether this is your work.",
+      "lead": "PPWR assigns obligations by role, per product and per market. These questions help you see where you stand.",
+      "cards": [
+        {
+          "title": "Own-brand manufacturers",
+          "body": "Your name on the box makes you the manufacturer. Is the file per product ready to stand behind, with the evidence to back it?"
+        },
+        {
+          "title": "Importers",
+          "body": "Packaging you bring into the EU is yours to answer for. Do you have the supplier data and proof for every product you import?"
+        },
+        {
+          "title": "Wholesalers and distributors",
+          "body": "Only your own brands and imports count; what you resell does not. Do you know which of your products that is, per market?"
+        },
+        {
+          "title": "Logistics and fulfilment",
+          "body": "The box you fill and the pallet you wrap are your packaging. Do you know which role PPWR gives you, per flow, and what your customers will ask for?"
         }
       ]
     },
+    "pricing": {
+      "cta": "See pricing"
+    },
     "closing": {
-      "eyebrow": "LIVO PPWR",
-      "title": "See how LIVO makes ongoing PPWR work easier to manage.",
-      "leadBefore": "A 20-minute walkthrough is enough to see how the workflow fits your team, or email ",
-      "leadAfter": ".",
-      "cta": "Book a demo"
+      "title": "See LIVO PPWR in a 20-minute walkthrough.",
+      "lead": "See how it can reduce manual work, supplier chasing and repeated rework. Or start free with your own packaging data.",
+      "cta": "Request a walkthrough",
+      "site": "livoapps.software",
+      "mail": "hello@livoapps.software"
     },
     "footer": {
-      "brand": "LIVO PPWR",
-      "line1After": " is part of LIVO APPS · Software that lightens the workflow.",
-      "line2": "This overview is not legal advice; it describes what the product does. Compliance obligations follow from the regulation itself."
+      "line": "LIVO PPWR supports your compliance work; it is not legal advice and does not guarantee compliance. Compliance obligations follow from the regulations themselves."
     }
   },
   "whitepaper": {
