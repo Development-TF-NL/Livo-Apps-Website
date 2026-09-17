@@ -50,7 +50,7 @@ export default async function LivoAppsWebsite({ params }) {
     <div className="font-sans text-ink">
       {/* Hero: licht, inputs naar het Register */}
       <section className="bg-canvas px-6 pb-20 pt-16">
-        <div className="mx-auto max-w-7xl rounded-hero border border-line bg-white p-8 md:p-12">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-hero border border-line bg-white p-8 pb-48 md:p-12 md:pb-60">
           <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.6fr]">
             <div>
               <Eyebrow>{t.hero.brandLine}</Eyebrow>
@@ -67,9 +67,8 @@ export default async function LivoAppsWebsite({ params }) {
             </div>
             <HeroFlow t={t.hero.visual} />
           </div>
-          <div className="mt-6 flex items-end">
-            <PhotoPlace src={BOX} imgClassName="-mb-16 -ml-6 h-56 w-auto md:-mb-20 md:-ml-10 md:h-64" />
-          </div>
+          {/* De doos steekt uit de hoek linksonder van de herokaart, deels afgesneden door de kaartrand (overflow-hidden). */}
+          <PhotoPlace src={BOX} imgClassName="absolute -bottom-12 -left-8 h-52 w-auto md:-bottom-16 md:-left-12 md:h-72" />
         </div>
       </section>
 

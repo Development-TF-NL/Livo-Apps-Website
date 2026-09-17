@@ -64,8 +64,7 @@ export default function Nav({ lang, dict }) {
     <header className="sticky top-0 z-50 border-b border-line bg-white">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link href={`/${lang}`} aria-label="Livo Apps, home" className={`flex items-center gap-2 ${focusRing}`}>
-          <Logo />
-          <span className="text-lg font-display font-bold tracking-wider text-ink">LIVO APPS</span>
+          <Logo className="h-10 w-auto" />
         </Link>
 
         <ul className="hidden items-center gap-7 lg:flex">

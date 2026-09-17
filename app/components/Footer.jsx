@@ -12,8 +12,7 @@ export default function Footer({ lang, dict }) {
         <div className="grid gap-12 mb-12 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <Logo variant="inverse" />
-              <span className="text-lg font-display font-bold tracking-wider">LIVO APPS</span>
+              <Logo variant="inverse" className="h-12 w-auto" />
             </div>
             <p className="text-white/60 text-sm">{dict.tagline}</p>
           </div>
