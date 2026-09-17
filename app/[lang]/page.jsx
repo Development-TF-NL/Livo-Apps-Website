@@ -1,9 +1,29 @@
 import Link from 'next/link';
-import { ArrowRight, Heart, Brain, Shield, Zap, CheckSquare, LayoutDashboard } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { getDictionary } from '../get-dictionary';
 import { BOOKINGS_URL, bookingLinkProps } from '../booking';
-import Footer from '../components/Footer';
 import { socialMetadata } from '../seo';
+import Footer from '../components/Footer';
+import HeroFlow from '../components/HeroFlow';
+import HandNote from '../components/HandNote';
+import PhotoPlace from '../components/PhotoPlace';
+import RequestFlow from '../components/RequestFlow';
+import AttentionSection from '../components/AttentionSection';
+import SupplierRound from '../components/SupplierRound';
+import ProductCard from '../components/ProductCard';
+import PricingPreview from '../components/PricingPreview';
+import WhitepaperObject from '../components/WhitepaperObject';
+import OnlineSignupSection from '../components/OnlineSignupSection';
+
+// Homepage, huisstijl v2 uitgesproken (stap c, 17 sep 2026): lichte hero met de inputs-visual naar het echte
+// Register, request-flow, "see what needs attention", supplier round, productfamilie zonder datum, prijs in
+// drie regels en één knop, whitepaper als object zonder werkend formulier, aankoop als uitleg, about, footer.
+// Copy uit de dictionaries (bron: docs/marketing/website/copy/home.json in de product-repo).
+// Fotoplekken: de doos (primair) linksonder in de hero en het plantje op één plek (next module), beide uit de
+// tussentijdse gegenereerde set in docs/huisstijl/beeld/ (uitzondering in het besluit huisstijl v2); etiket en blad nog leeg.
+
+const SEEDLING = '/brand/photo/seedling.png'; // plantje, één plek (next module)
+const BOX = '/brand/photo/box.png'; // doos, primair (hero); bron docs/huisstijl/beeld/doos.png, licht van linksboven
 
 export async function generateMetadata({ params }) {
   const dict = await getDictionary(params.lang);
@@ -16,117 +36,113 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// Icons stay in code (non-text), matched to traits by index.
-const traitIcons = [Heart, Brain, Heart, Shield];
-// Icons for the "why it feels light" strip, matched to t.whyLight by index.
-const whyLightIcons = [CheckSquare, LayoutDashboard, Zap];
+function Eyebrow({ children }) {
+  return <p className="mb-4 text-xs font-semibold uppercase tracking-[.14em] text-ink-blue">{children}</p>;
+}
 
 export default async function LivoAppsWebsite({ params }) {
   const { lang } = params;
   const dict = await getDictionary(lang);
   const t = dict.home;
+  const pricingEnabled = process.env.PRICING_PAGE_ENABLED === 'true';
 
   return (
-    <div className="bg-navy text-white font-sans">
-      <section className="pt-20 pb-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <div className="text-accent text-sm font-semibold mb-4 tracking-wide">{t.hero.eyebrow}</div>
-          <h1 className="text-5xl md:text-6xl font-display font-bold leading-tight mb-6">{t.hero.titleBefore}<span className="text-accent">{t.hero.titleHighlight}</span>{t.hero.titleAfter}</h1>
-          <p className="text-lg text-white/70 mb-8 leading-relaxed">{t.hero.lead}</p>
-          <div className="flex gap-4 flex-wrap">
-            <a href={BOOKINGS_URL} {...bookingLinkProps} className="bg-accent text-ink px-8 py-3 rounded hover:bg-accent-dark transition font-semibold flex items-center gap-2">{t.hero.ctaPrimary} <ArrowRight size={18} /></a>
-            <Link href={`/${lang}/ppwr`} className="border border-white/30 px-8 py-3 rounded hover:border-accent transition font-semibold inline-flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">{t.hero.ctaSecondary}</Link>
-          </div>
-        </div>
-        <div className="hidden md:block">
-          <div className="bg-white/5 rounded-lg p-8 aspect-square flex items-center justify-center border border-white/10">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-accent text-navy rounded-lg mb-4 mx-auto flex items-center justify-center"><Zap size={32} /></div>
-              <p className="text-sm text-white/60">{t.hero.previewTitle}</p>
-              <p className="text-xs text-white/50 mt-2">{t.hero.previewSubtitle}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="py-20 px-6 bg-white text-ink">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-sm font-semibold text-accent mb-4 tracking-wide">{t.brand.eyebrow}</div>
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
+    <div className="font-sans text-ink">
+      {/* Hero: licht, inputs naar het Register */}
+      <section className="bg-canvas px-6 pb-20 pt-16">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-hero border border-line bg-white p-8 pb-48 md:p-12 md:pb-60">
+          <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.6fr]">
             <div>
-              <h3 className="text-2xl font-display font-bold mb-6">{t.brand.whoTitle}</h3>
-              <p className="text-lg text-sub leading-relaxed">{t.brand.whoBody1}</p>
-              <p className="text-lg text-sub leading-relaxed mt-4">{t.brand.whoBody2}</p>
+              <Eyebrow>{t.hero.brandLine}</Eyebrow>
+              <h1 className="font-display text-5xl font-bold leading-[1.04] tracking-tight text-ink md:text-6xl">
+                {t.hero.titleBefore}<span className="text-green-heading">{t.hero.titleGreen}</span>{t.hero.titleAfter}
+              </h1>
+              <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-blue">{t.hero.lead}</p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href={`/${lang}#pricing`} className="inline-flex h-12 items-center gap-2 rounded-control bg-accent px-6 font-semibold text-ink transition-colors duration-150 hover:bg-accent-dark focus-ring">{t.hero.ctaPrimary} <ArrowRight size={18} aria-hidden="true" /></Link>
+                <Link href={`/${lang}/ppwr`} className="inline-flex h-12 items-center rounded-control border-[1.5px] border-navy bg-white px-6 font-semibold text-ink transition-colors duration-150 hover:bg-canvas focus-ring">{t.hero.ctaSecondary}</Link>
+              </div>
+              <p className="mt-7"><HandNote>{t.hero.note}</HandNote></p>
+              <p className="mt-6 text-sm text-sub">{t.hero.roadmap}</p>
             </div>
-            <div>
-              <h3 className="text-2xl font-display font-bold mb-6">{t.brand.promiseTitle}</h3>
-              <p className="text-lg font-semibold text-ink mb-3">{t.brand.promiseLead}</p>
-              <p className="text-lg text-sub leading-relaxed">{t.brand.promiseBody}</p>
-            </div>
+            <HeroFlow t={t.hero.visual} />
+          </div>
+          {/* De doos steekt uit de hoek linksonder van de herokaart, deels afgesneden door de kaartrand (overflow-hidden). */}
+          <PhotoPlace src={BOX} imgClassName="absolute -bottom-12 -left-8 h-52 w-auto md:-bottom-16 md:-left-12 md:h-72" />
+        </div>
+      </section>
+
+      <RequestFlow t={t.requestFlow} />
+      <AttentionSection lang={lang} t={t.attention} register={t.hero.visual.register} />
+      <SupplierRound t={t.supplierRound} />
+
+      {/* Productfamilie */}
+      <section id="products" className="scroll-mt-20 bg-canvas px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <Eyebrow>{t.products.eyebrow}</Eyebrow>
+          <div className="grid items-end gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+            <h2 className="font-display text-4xl font-bold leading-[1.06] tracking-tight text-ink md:text-5xl">{t.products.title}</h2>
+            <p className="text-lg text-ink-blue">{t.products.lead}</p>
+          </div>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <ProductCard lang={lang} variant="ppwr" t={t.products.ppwr} />
+            <ProductCard lang={lang} variant="next" t={t.products.next} />
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-navy">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-sm font-semibold text-accent mb-4 tracking-wide">{t.personality.eyebrow}</div>
-          <div className="grid md:grid-cols-4 gap-8">
-            {t.personality.traits.map((trait, i) => {
-              const Icon = traitIcons[i] ?? Heart;
-              return (
-                <div className="text-center" key={trait.title}>
-                  <div className="w-16 h-16 mx-auto mb-4 border-2 border-accent rounded-full flex items-center justify-center"><Icon size={28} className="text-accent" /></div>
-                  <h4 className="font-display font-bold text-lg mb-2">{trait.title}</h4>
-                  <p className="text-white/60 text-sm">{trait.sub}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <PricingPreview lang={lang} t={t.pricing} pricingEnabled={pricingEnabled} />
+      <WhitepaperObject lang={lang} t={t.whitepaper} />
+      <OnlineSignupSection t={t.start} />
 
-      <section id="product" className="py-20 px-6 bg-white text-ink">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-sm font-semibold text-accent mb-4 tracking-wide">{t.product.eyebrow}</div>
-          <h2 className="text-4xl font-display font-bold mb-4">{t.product.title}</h2>
-          <p className="text-lg text-sub mb-12">{t.product.subtitle}</p>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-navy rounded-lg p-8 aspect-video flex items-center justify-center border border-white/10">
-              <div className="text-center"><p className="text-lg font-display font-bold text-accent mb-2">{t.product.previewLabel}</p><p className="text-white/60 text-sm">{t.product.previewNote}</p></div>
-            </div>
-            <div className="space-y-6">
-              {t.product.features.map((f) => (
-                <div className="flex gap-4" key={f.title}><div className="w-6 h-6 rounded-full bg-accent flex-shrink-0 flex items-center justify-center mt-1"><span className="text-ink text-xs font-display font-bold">&#10003;</span></div><div><h4 className="font-display font-bold text-lg mb-2">{f.title}</h4><p className="text-sub">{f.body}</p></div></div>
-              ))}
-            </div>
-          </div>
-          <div className="mt-12">
-            <Link href={`/${lang}/ppwr`} className="inline-flex items-center gap-2 bg-navy text-white px-8 py-3 rounded font-semibold transition-colors duration-200 hover:bg-navy/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">
-              {t.product.cta} <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-navy border-t border-white/10 px-6 py-24">
-        <ul className="mx-auto grid max-w-5xl gap-12 md:grid-cols-3 md:items-start">
-          {t.whyLight.map((line, i) => {
-            const Icon = whyLightIcons[i] ?? CheckSquare;
-            return (
-              <li key={line} className="flex flex-col items-center gap-3 text-center">
-                <Icon size={28} aria-hidden="true" className="text-accent" />
-                <p className="max-w-[16rem] text-sm leading-relaxed text-white/60 [text-wrap:balance]">{line}</p>
+      {/* About */}
+      <section id="about" className="scroll-mt-20 bg-canvas px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <Eyebrow>{t.about.eyebrow}</Eyebrow>
+          <h2 className="max-w-3xl font-display text-4xl font-bold leading-[1.06] tracking-tight text-ink md:text-5xl">{t.about.title}</h2>
+          <p className="mt-5 max-w-3xl text-lg text-ink-blue">{t.about.lead}</p>
+          <ul className="mt-12 grid gap-6 md:grid-cols-3">
+            {t.about.principles.map((p) => (
+              <li key={p.title} className="rounded-card bg-white p-7 shadow-soft">
+                <h3 className="font-display text-xl font-bold text-ink">{p.title}</h3>
+                <p className="mt-2 text-sm text-sub">{p.body}</p>
               </li>
-            );
-          })}
-        </ul>
+            ))}
+          </ul>
+          <h3 className="mt-14 font-display text-2xl font-bold text-ink">{t.about.traitsTitle}</h3>
+          <ul className="mt-4 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+            {t.about.traits.map((tr) => (
+              <li key={tr.title} className="rounded-card bg-white px-5 py-4 shadow-soft">
+                <p className="font-display font-bold text-ink">{tr.title}</p>
+                <p className="text-sm text-sub">{tr.sub}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
-      <section className="py-20 px-6 bg-white text-ink">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">{t.finalCta.titleBefore}<span className="text-accent">{t.finalCta.titleHighlight}</span>{t.finalCta.titleAfter}</h2>
-          <p className="text-lg text-sub mb-8">{t.finalCta.body}</p>
-          <a href={BOOKINGS_URL} {...bookingLinkProps} className="bg-accent text-ink px-8 py-4 rounded hover:bg-accent-dark transition font-semibold flex items-center gap-2 mx-auto text-lg">{t.finalCta.cta} <ArrowRight size={20} /></a>
+      {/* Next module: geen datum, geen eigenschappen; het plantje als randaccent (één plek) */}
+      <section className="relative overflow-hidden bg-white px-6 py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1fr_auto_200px]">
+          <div>
+            <Eyebrow>{t.nextModule.eyebrow}</Eyebrow>
+            <h2 className="font-display text-4xl font-bold leading-[1.06] tracking-tight text-ink">{t.nextModule.title}</h2>
+            <p className="mt-4 max-w-3xl text-lg text-sub">{t.nextModule.body}</p>
+          </div>
+          <a href="mailto:hello@livoapps.software?subject=Next%20LIVO%20module" className="inline-flex h-12 items-center gap-2 rounded-control border-[1.5px] border-navy px-6 font-semibold text-ink transition-colors duration-150 hover:bg-canvas focus-ring">{t.nextModule.cta} <ArrowRight size={16} aria-hidden="true" /></a>
+          <PhotoPlace src={SEEDLING} imgClassName="h-44 w-auto justify-self-end" />
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="bg-canvas px-6 py-24">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="font-display text-4xl font-bold leading-[1.06] tracking-tight text-ink md:text-5xl">{t.finalCta.title}</h2>
+          <p className="mt-5 text-lg text-ink-blue">{t.finalCta.body}</p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Link href={`/${lang}#pricing`} className="inline-flex h-12 items-center gap-2 rounded-control bg-accent px-6 font-semibold text-ink transition-colors duration-150 hover:bg-accent-dark focus-ring">{t.finalCta.ctaPricing} <ArrowRight size={18} aria-hidden="true" /></Link>
+            <a href={BOOKINGS_URL} {...bookingLinkProps} className="inline-flex h-12 items-center rounded-control border-[1.5px] border-navy bg-white px-6 font-semibold text-ink transition-colors duration-150 hover:bg-canvas focus-ring">{t.finalCta.ctaDemo}</a>
+          </div>
         </div>
       </section>
 

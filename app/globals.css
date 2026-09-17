@@ -12,6 +12,16 @@
   --navy: #081D33;
   --accent: #7AC143;
   --accent-dark: #69AD36;
+  /* Huisstijl v2 (besluit 17 september 2026) */
+  --livo-mint: #EAF7E4; --livo-green-heading: #569A28; --livo-green-text: #2F7D2A; --livo-ink-blue: #2F5FB3;
+  --file-excel: #1D6F42; --file-pdf: #B3261E; --file-mail: #2F5FB3; --file-folder: #B7791F;
+  --status-success-text: #3F6B16; --status-success-bg: #EAF6E7; --status-success-dot: #3FAE3B;
+  --status-warning-text: #854F0B; --status-warning-bg: #FEF3C7; --status-warning-dot: #D97706;
+  --status-risk-text: #991B1B; --status-risk-bg: #FBE4E4; --status-risk-dot: #C84B4B;
+  --status-info-text: #3567B7; --status-info-bg: #E8EFF8; --status-info-dot: #3567B7;
+  --radius-control: 10px; --radius-card: 16px; --radius-hero: 22px;
+  --shadow-soft: 0 8px 24px rgba(8, 29, 51, 0.08);
+  --focus-ring: 0 0 0 2px #FFFFFF, 0 0 0 4px #081D33;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }

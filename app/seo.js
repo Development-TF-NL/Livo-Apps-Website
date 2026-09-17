@@ -6,7 +6,7 @@ export const OG_IMAGE = {
   url: '/og.png', // relatief; metadataBase (layout) maakt er een absolute URL van
   width: 1200,
   height: 630,
-  alt: 'Livo Apps logo',
+  alt: 'LIVO APPS wordmark',
 };
 
 export function socialMetadata({ title, description }) {
