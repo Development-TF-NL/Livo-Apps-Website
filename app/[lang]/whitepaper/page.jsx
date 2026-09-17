@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { getDictionary } from '../../get-dictionary';
 import WhitepaperForm from '../../components/WhitepaperForm';
+import WhitepaperRequest from '../../components/WhitepaperRequest';
 import { socialMetadata } from '../../seo';
 
 // Enige funnel voor de whitepaper (besluit-lead-flow-whitepaper-v1): LinkedIn en
@@ -51,21 +52,18 @@ export default async function WhitepaperPage({ params }) {
             </ul>
           </section>
 
-          <aside className="bg-surface border border-line rounded-xl p-6">
+          <aside>
             {enabled ? (
-              <>
+              <div className="bg-surface border border-line rounded-xl p-6">
                 <h2 className="text-lg font-display font-bold text-ink mb-2">{t.form.title}</h2>
                 <p className="text-sm text-sub mb-6">{t.form.lead}</p>
                 <Suspense fallback={null}>
                   <WhitepaperForm lang={lang} labels={t.form} />
                 </Suspense>
-              </>
+              </div>
             ) : (
-              // "Coming soon" voor besloten-maar-ongebouwd, nooit een leverdatum (schrijfregels).
-              <>
-                <h2 className="text-lg font-display font-bold text-ink mb-2">{t.comingSoon.title}</h2>
-                <p className="text-sm text-sub">{t.comingSoon.body}</p>
-              </>
+              // Aanvraag per e-mail tot het formulier open mag (Attio en privacyverklaring, backlog): geen veld, geen opslag.
+              <WhitepaperRequest t={t.request} />
             )}
           </aside>
         </div>

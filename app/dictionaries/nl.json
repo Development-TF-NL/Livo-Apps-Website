@@ -208,16 +208,14 @@
         "Hoe je werkt met leveranciersdata en bewijs",
         "Hoe je het dossier onderhoudbaar houdt als er iets verandert"
       ],
-      "cta": "Ontvang de PPWR-whitepaper",
-      "note": "De whitepaper zit in de laatste controle. Laat je gegevens achter op de whitepaperpagina en we sturen hem zodra hij klaar is.",
       "coverTitle": "PPWR is er. Je verpakkingsdata nog niet.",
       "coverSub": "Een praktische paper voor wie het werk doet",
-      "form": {
-        "email": "Werk-e-mail",
-        "name": "Voornaam",
-        "company": "Bedrijf",
-        "submit": "Stuur mij de whitepaper",
-        "disabledNote": "Het formulier gaat open zodra de whitepaper klaar is. Mail tot die tijd hello@livoapps.software en we sturen hem."
+      "request": {
+        "title": "Ontvang de whitepaper",
+        "lead": "Laat weten waar we hem heen mogen sturen en we mailen hem naar je toe.",
+        "button": "Vraag de whitepaper aan",
+        "mailSubject": "PPWR whitepaper",
+        "mailBody": "Hallo Livo,\n\nStuur mij graag de PPWR-whitepaper.\n\nNaam:\nBedrijf:\n"
       }
     },
     "start": {
@@ -606,10 +604,6 @@
       "submitting": "Versturen…",
       "error": "Dat lukte niet. Probeer het opnieuw, of mail hello@livoapps.software."
     },
-    "comingSoon": {
-      "title": "Bijna klaar",
-      "body": "De whitepaper zit in de laatste controle. Het downloadformulier verschijnt hier binnenkort."
-    },
     "thanks": {
       "meta": {
         "title": "Kijk in je inbox · Livo Apps"
@@ -618,7 +612,14 @@
       "body": "We hebben de downloadlink naar je e-mailadres gestuurd. Na een paar minuten nog niets? Kijk in je spammap, of mail hello@livoapps.software.",
       "back": "Terug naar de homepage"
     },
-    "disclaimer": "Deze pagina en de whitepaper zijn geen juridisch advies. Compliance-verplichtingen volgen uit de regelgeving zelf."
+    "disclaimer": "Deze pagina en de whitepaper zijn geen juridisch advies. Compliance-verplichtingen volgen uit de regelgeving zelf.",
+    "request": {
+      "title": "Ontvang de whitepaper",
+      "lead": "Laat weten waar we hem heen mogen sturen en we mailen hem naar je toe.",
+      "button": "Vraag de whitepaper aan",
+      "mailSubject": "PPWR whitepaper",
+      "mailBody": "Hallo Livo,\n\nStuur mij graag de PPWR-whitepaper.\n\nNaam:\nBedrijf:\n"
+    }
   },
   "pricing": {
     "meta": {
