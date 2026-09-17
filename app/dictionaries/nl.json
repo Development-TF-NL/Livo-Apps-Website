@@ -261,25 +261,8 @@
           "body": "LIVO kan structureren en voorstellen. Mensen beoordelen, bevestigen en blijven verantwoordelijk voor de beslissingen."
         }
       ],
-      "traitsTitle": "Wie we zijn",
-      "traits": [
-        {
-          "title": "Elegant",
-          "sub": "Nooit luidruchtig."
-        },
-        {
-          "title": "Intelligent",
-          "sub": "Nooit arrogant."
-        },
-        {
-          "title": "Menselijk",
-          "sub": "Nooit bureaucratisch."
-        },
-        {
-          "title": "Zelfverzekerd",
-          "sub": "Nooit agressief."
-        }
-      ]
+      "aboutTitle": "Over Livo",
+      "aboutBody": "LIVO APPS is ontwikkeld vanuit het mkb: Europese regels die blijven komen, en geen leger consultants om ze na te leven. Wij maken software die eenvoudig, betaalbaar en rustig in gebruik is, zodat je verpakkingsgegevens, verplichtingen en bewijs op orde houdt, het werk deelt met leveranciers en klanten, en op elk moment kunt laten zien waar je staat."
     },
     "nextModule": {
       "eyebrow": "Volgende module",
