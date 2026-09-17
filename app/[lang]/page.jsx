@@ -55,7 +55,7 @@ export default async function LivoAppsWebsite({ params }) {
           <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.6fr)]">
             <div className="min-w-0">
               <Eyebrow>{t.hero.brandLine}</Eyebrow>
-              <h1 lang={lang} className="font-display text-4xl font-bold leading-[1.04] tracking-tight text-ink [hyphens:auto] sm:text-5xl md:text-6xl">
+              <h1 lang={lang} className="font-display text-4xl font-bold leading-[1.04] tracking-tight text-ink [hyphens:auto] sm:[hyphens:manual] sm:text-5xl lg:text-[3.1rem] xl:text-6xl">
                 {t.hero.titleBefore}<span className="text-green-heading">{t.hero.titleGreen}</span>{t.hero.titleAfter}
               </h1>
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-blue">{t.hero.lead}</p>
