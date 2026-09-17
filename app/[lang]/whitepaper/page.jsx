@@ -17,8 +17,7 @@ export async function generateMetadata({ params }) {
     description,
     alternates: { canonical: `/${params.lang}/whitepaper`, languages: { en: '/en/whitepaper', nl: '/nl/whitepaper' } },
     ...socialMetadata({ title, description }),
-    // Donker gedeployed tot de poort open is: niet indexeren zolang het formulier uit staat.
-    robots: formEnabled() ? undefined : { index: false, follow: false },
+    // Indexeerbaar sinds 17 september 2026: de pagina heeft een aanvraag per e-mail; het formulier blijft achter de poort.
   };
 }
 
