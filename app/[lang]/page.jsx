@@ -110,15 +110,9 @@ export default async function LivoAppsWebsite({ params }) {
               </li>
             ))}
           </ul>
-          <h3 className="mt-14 font-display text-2xl font-bold text-ink">{t.about.traitsTitle}</h3>
-          <ul className="mt-4 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
-            {t.about.traits.map((tr) => (
-              <li key={tr.title} className="rounded-card bg-white px-5 py-4 shadow-soft">
-                <p className="font-display font-bold text-ink">{tr.title}</p>
-                <p className="text-sm text-sub">{tr.sub}</p>
-              </li>
-            ))}
-          </ul>
+          {/* Eén korte About-alinea (17 september 2026) in plaats van de vier merkprincipe-kaarten; die staan in het stijlblad. */}
+          <h3 className="mt-14 font-display text-2xl font-bold text-ink">{t.about.aboutTitle}</h3>
+          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-ink">{t.about.aboutBody}</p>
         </div>
       </section>
 

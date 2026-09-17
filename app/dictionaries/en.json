@@ -261,25 +261,8 @@
           "body": "LIVO can structure and suggest. People review, confirm and remain responsible for the decisions."
         }
       ],
-      "traitsTitle": "Who we are",
-      "traits": [
-        {
-          "title": "Elegant",
-          "sub": "Never noisy."
-        },
-        {
-          "title": "Intelligent",
-          "sub": "Never arrogant."
-        },
-        {
-          "title": "Human",
-          "sub": "Never bureaucratic."
-        },
-        {
-          "title": "Confident",
-          "sub": "Never aggressive."
-        }
-      ]
+      "aboutTitle": "About Livo",
+      "aboutBody": "LIVO APPS was built from the reality of mid-sized companies: European rules that keep coming, and no army of consultants to meet them. We make software that is simple, affordable and calm to use, so you can keep packaging data, obligations and evidence in order, share the work with suppliers and customers, and show where you stand at any moment."
     },
     "nextModule": {
       "eyebrow": "Next module",
