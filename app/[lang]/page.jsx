@@ -19,9 +19,11 @@ import OnlineSignupSection from '../components/OnlineSignupSection';
 // Register, request-flow, "see what needs attention", supplier round, productfamilie zonder datum, prijs in
 // drie regels en één knop, whitepaper als object zonder werkend formulier, aankoop als uitleg, about, footer.
 // Copy uit de dictionaries (bron: docs/marketing/website/copy/home.json in de product-repo).
-// Fotoplekken: leeg tot er beeld is; het plantje uit de tussentijdse set staat op één plek (next module).
+// Fotoplekken: de doos (primair) linksonder in de hero en het plantje op één plek (next module), beide uit de
+// tussentijdse gegenereerde set in docs/huisstijl/beeld/ (uitzondering in het besluit huisstijl v2); etiket en blad nog leeg.
 
-const SEEDLING = '/brand/photo/seedling.png';
+const SEEDLING = '/brand/photo/seedling.png'; // plantje, één plek (next module)
+const BOX = '/brand/photo/box.png'; // doos, primair (hero); bron docs/huisstijl/beeld/doos.png, licht van linksboven
 
 export async function generateMetadata({ params }) {
   const dict = await getDictionary(params.lang);
@@ -65,9 +67,8 @@ export default async function LivoAppsWebsite({ params }) {
             </div>
             <HeroFlow t={t.hero.visual} />
           </div>
-          <div className="mt-8 grid items-end gap-6 sm:grid-cols-[260px_1fr]">
-            <PhotoPlace label={t.hero.visual.photo} className="h-28" />
-            <span />
+          <div className="mt-6 flex items-end">
+            <PhotoPlace src={BOX} imgClassName="-mb-16 -ml-6 h-56 w-auto md:-mb-20 md:-ml-10 md:h-64" />
           </div>
         </div>
       </section>
