@@ -25,7 +25,8 @@ export default function SupplierRound({ t, photoSrc }) {
             );
           })}
         </ol>
-        <div className="mt-8 flex justify-end"><PhotoPlace label={t.photo} src={photoSrc} className="h-24 w-64" imgClassName="h-32 w-auto" /></div>
+        {/* Fotoplek: met beeld een randaccent rechtsonder; zonder beeld verdwijnt de rij (PhotoPlace rendert niets op productie). */}
+        {photoSrc ? <div className="mt-8 flex justify-end"><PhotoPlace label={t.photo} src={photoSrc} imgClassName="h-32 w-auto" /></div> : <PhotoPlace label={t.photo} className="mt-8 h-24 w-64" />}
       </div>
     </section>
   );
