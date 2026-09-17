@@ -208,16 +208,14 @@
         "How to work with supplier data and evidence",
         "How to keep the file maintainable as things change"
       ],
-      "cta": "Get the PPWR whitepaper",
-      "note": "The whitepaper is in final review. Leave your details on the whitepaper page and we will send it as soon as it is ready.",
       "coverTitle": "PPWR is here. Your packaging data isn't ready.",
       "coverSub": "A practical paper for the people who do the work",
-      "form": {
-        "email": "Work email",
-        "name": "First name",
-        "company": "Company",
-        "submit": "Send me the whitepaper",
-        "disabledNote": "The form opens when the whitepaper is ready. Until then, email hello@livoapps.software and we will send it."
+      "request": {
+        "title": "Get the whitepaper",
+        "lead": "Tell us where to send it and we'll e-mail it to you.",
+        "button": "Request the whitepaper",
+        "mailSubject": "PPWR whitepaper",
+        "mailBody": "Hello Livo,\n\nPlease send me the PPWR whitepaper.\n\nName:\nCompany:\n"
       }
     },
     "start": {
@@ -606,10 +604,6 @@
       "submitting": "Sending…",
       "error": "That didn't work. Please try again, or email hello@livoapps.software."
     },
-    "comingSoon": {
-      "title": "Almost ready",
-      "body": "The whitepaper is in final review. The download form will appear here soon."
-    },
     "thanks": {
       "meta": {
         "title": "Check your inbox · Livo Apps"
@@ -618,7 +612,14 @@
       "body": "We've sent the download link to your email address. Nothing after a few minutes? Check your spam folder, or email hello@livoapps.software.",
       "back": "Back to the homepage"
     },
-    "disclaimer": "This page and the whitepaper are not legal advice. Compliance obligations follow from the regulations themselves."
+    "disclaimer": "This page and the whitepaper are not legal advice. Compliance obligations follow from the regulations themselves.",
+    "request": {
+      "title": "Get the whitepaper",
+      "lead": "Tell us where to send it and we'll e-mail it to you.",
+      "button": "Request the whitepaper",
+      "mailSubject": "PPWR whitepaper",
+      "mailBody": "Hello Livo,\n\nPlease send me the PPWR whitepaper.\n\nName:\nCompany:\n"
+    }
   },
   "pricing": {
     "meta": {

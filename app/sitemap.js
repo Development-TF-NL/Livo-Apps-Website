@@ -1,10 +1,9 @@
 const BASE = 'https://livoapps.software';
 
-// De whitepaper-funnel staat hier bewust niet in zolang het formulier
-// achter de privacyverklaring-poort zit (besluit-lead-flow-whitepaper-v1);
-// de prijspagina alleen als de PRICING_PAGE_ENABLED-poort open is (fase C).
+// De whitepaperpagina staat erin sinds 17 september 2026 (aanvraag per e-mail; het formulier
+// blijft achter de privacyverklaring-poort). De prijspagina alleen als de PRICING_PAGE_ENABLED-poort open is (fase C).
 export default function sitemap() {
-  const pages = ['', '/ppwr'];
+  const pages = ['', '/ppwr', '/whitepaper'];
   if (process.env.PRICING_PAGE_ENABLED === 'true') pages.push('/pricing');
   return pages.flatMap((page) =>
     ['en', 'nl'].map((lang) => ({

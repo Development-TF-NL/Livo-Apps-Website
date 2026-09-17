@@ -1,8 +1,7 @@
-import Link from 'next/link';
-import { ArrowRight, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
+import WhitepaperRequest from './WhitepaperRequest';
 
-// Whitepaper als object: cover-mock plus formulier zonder werking (fase 1: geen data verstuurd).
-// Het echte formulier staat op /[lang]/whitepaper achter WHITEPAPER_FORM_ENABLED.
+// Whitepaper als object: cover-mock plus aanvraagblok (mailto). Geen formulier, geen opslag (17 september 2026).
 export default function WhitepaperObject({ lang, t }) {
   return (
     <section id="whitepaper" className="scroll-mt-20 bg-canvas px-6 py-24">
@@ -23,16 +22,7 @@ export default function WhitepaperObject({ lang, t }) {
             <p className="mt-10 font-display text-xl font-bold leading-tight">{t.coverTitle}</p>
             <p className="mt-4 text-xs text-white/70">{t.coverSub}</p>
           </div>
-          <form className="rounded-card bg-white p-6 shadow-soft" onSubmit={undefined} aria-describedby="wp-note">
-            <fieldset disabled className="space-y-3">
-              <label className="block text-sm font-medium text-ink">{t.form.email}<input type="email" className="mt-1 h-11 w-full rounded-control border border-line px-3 text-sm" placeholder="name@company.com" /></label>
-              <label className="block text-sm font-medium text-ink">{t.form.name}<input type="text" className="mt-1 h-11 w-full rounded-control border border-line px-3 text-sm" /></label>
-              <label className="block text-sm font-medium text-ink">{t.form.company}<input type="text" className="mt-1 h-11 w-full rounded-control border border-line px-3 text-sm" /></label>
-              <button type="button" className="h-12 w-full rounded-control bg-accent font-semibold text-ink opacity-60">{t.form.submit}</button>
-            </fieldset>
-            <p id="wp-note" className="mt-3 text-xs text-sub">{t.form.disabledNote}</p>
-            <Link href={`/${lang}/whitepaper`} className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-green-text focus-ring">{t.cta} <ArrowRight size={14} aria-hidden="true" /></Link>
-          </form>
+          <WhitepaperRequest t={t.request} />
         </div>
       </div>
     </section>
