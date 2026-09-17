@@ -56,7 +56,7 @@
           }
         ],
         "register": {
-          "tenant": "demo-tenant",
+          "tenant": "example-tenant",
           "tabs": [
             "Overview",
             "Obligations",
@@ -149,26 +149,26 @@
           {
             "title": "Packaging file updated",
             "body": "Existing data matched to product file",
-            "status": "Done",
-            "tone": "ok"
+            "status": "Ready",
+            "tone": "success"
           },
           {
             "title": "Supplier input needed",
             "body": "2 missing evidence items",
-            "status": "Action",
-            "tone": "warn"
+            "status": "Needs data",
+            "tone": "warning"
           },
           {
             "title": "Evidence expired",
             "body": "Review before next customer request",
-            "status": "Review",
+            "status": "Expired",
             "tone": "risk"
           },
           {
-            "title": "Product file",
-            "body": "Documentation connected and traceable",
-            "status": "Ready",
-            "tone": "ok"
+            "title": "Shipping carton",
+            "body": "Packaging level to confirm",
+            "status": "Open",
+            "tone": "info"
           }
         ]
       }

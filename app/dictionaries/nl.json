@@ -57,7 +57,7 @@
           }
         ],
         "register": {
-          "tenant": "demo-tenant",
+          "tenant": "example-tenant",
           "tabs": [
             "Overview",
             "Obligations",
@@ -149,26 +149,26 @@
           {
             "title": "Verpakkingsdossier bijgewerkt",
             "body": "Bestaande data gekoppeld aan het productdossier",
-            "status": "Klaar",
-            "tone": "ok"
+            "status": "Ready",
+            "tone": "success"
           },
           {
             "title": "Leveranciersinput nodig",
             "body": "2 ontbrekende bewijsstukken",
-            "status": "Actie",
-            "tone": "warn"
+            "status": "Needs data",
+            "tone": "warning"
           },
           {
             "title": "Bewijs verlopen",
             "body": "Beoordelen vóór de volgende klantvraag",
-            "status": "Beoordelen",
+            "status": "Expired",
             "tone": "risk"
           },
           {
-            "title": "Productdossier",
-            "body": "Documentatie gekoppeld en herleidbaar",
-            "status": "Gereed",
-            "tone": "ok"
+            "title": "Verzenddoos",
+            "body": "Verpakkingsniveau te bevestigen",
+            "status": "Open",
+            "tone": "info"
           }
         ]
       }
