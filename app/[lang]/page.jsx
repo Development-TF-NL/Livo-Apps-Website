@@ -22,7 +22,7 @@ import OnlineSignupSection from '../components/OnlineSignupSection';
 // Fotoplekken: de doos (primair) linksonder in de hero en het plantje op één plek (next module), beide uit de
 // tussentijdse gegenereerde set in docs/huisstijl/beeld/ (uitzondering in het besluit huisstijl v2); etiket en blad nog leeg.
 
-const SEEDLING = '/brand/photo/seedling.png'; // plantje, één plek (next module)
+const SEEDLING = '/brand/photo/seedling.png'; // plantje: supplier round en next module (het etiket bestaat nog niet)
 const BOX = '/brand/photo/box.png'; // doos, primair (hero); bron docs/huisstijl/beeld/doos.png, licht van linksboven
 
 export async function generateMetadata({ params }) {
@@ -75,7 +75,7 @@ export default async function LivoAppsWebsite({ params }) {
 
       <RequestFlow t={t.requestFlow} />
       <AttentionSection lang={lang} t={t.attention} register={t.hero.visual.register} />
-      <SupplierRound t={t.supplierRound} />
+      <SupplierRound t={t.supplierRound} photoSrc={SEEDLING} />
 
       {/* Productfamilie */}
       <section id="products" className="scroll-mt-20 bg-canvas px-6 py-24">
