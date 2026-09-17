@@ -21,7 +21,7 @@ export default async function WhitepaperThanksPage({ params }) {
         <p className="text-sub leading-relaxed mb-8">{t.thanks.body}</p>
         <Link
           href={`/${lang}`}
-          className="inline-block rounded-md bg-navy px-6 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-navy/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="inline-block rounded-md bg-navy px-6 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-navy/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
         >
           {t.thanks.back}
         </Link>

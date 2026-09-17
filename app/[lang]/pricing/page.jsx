@@ -14,7 +14,7 @@ const pricingEnabled = () => process.env.PRICING_PAGE_ENABLED === 'true';
 const START_URL = 'https://ppwr.livoapps.software/login';
 
 const focusRing =
-  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent';
+  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy';
 
 function StatusPill({ status, live }) {
   return (
