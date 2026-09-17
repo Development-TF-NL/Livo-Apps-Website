@@ -24,72 +24,78 @@
     },
     "hero": {
       "brandLine": "Software die je werk lichter maakt",
-      "title": "Compliancewerk blijft groeien. LIVO maakt het beheersbaar.",
-      "lead": "LIVO brengt verspreide data, bewijs, leveranciersinput en open acties samen in één bijgehouden werkstroom. Minder zoeken, najagen en overdoen. Meer grip als er iets verandert of een klant iets vraagt.",
+      "lead": "Breng verpakkingsdata, leveranciersinput en bewijs samen op één plek. Minder zoeken, najagen en overdoen. Klaar als klanten iets vragen.",
       "ctaPrimary": "LIVO PPWR gebruiken",
       "ctaSecondary": "Bekijk het product",
       "roadmap": "LIVO PPWR nu beschikbaar · Volgende module: in ontwikkeling",
-      "card": {
+      "titleBefore": "Compliancewerk blijft groeien. ",
+      "titleGreen": "LIVO",
+      "titleAfter": " maakt het lichter.",
+      "note": "Zelfde vraag. Veel minder werk.",
+      "visual": {
         "label": "Illustratie",
-        "product": "LIVO PPWR",
-        "status": "Nu beschikbaar",
-        "lead": "Houd verpakkingsdata, verplichtingen, bewijs en leveranciersinput bij elkaar en actueel.",
-        "rows": [
+        "files": [
           {
-            "label": "Verpakkingsdata",
-            "value": "Gereed",
-            "tone": "ok"
+            "kind": "excel",
+            "title": "Productdata",
+            "sub": "Excel-bestanden"
           },
           {
-            "label": "Leveranciersbewijs",
-            "value": "3 gaten",
-            "tone": "warn"
+            "kind": "mail",
+            "title": "Leveranciersinformatie",
+            "sub": "E-mails"
           },
           {
-            "label": "Technische documentatie",
-            "value": "Actueel",
-            "tone": "ok"
+            "kind": "pdf",
+            "title": "Verklaringen",
+            "sub": "PDF-bestanden"
+          },
+          {
+            "kind": "folder",
+            "title": "Losse mappen",
+            "sub": "Verschillende versies"
           }
-        ]
-      }
-    },
-    "benefits": [
-      {
-        "title": "Begin met wat je hebt",
-        "body": "Je bestaande bestanden zijn de werkelijkheid. Lees ze in zoals ze zijn."
-      },
-      {
-        "title": "Houd gaten zichtbaar",
-        "body": "Zie wat ontbreekt, verlopen is of aandacht vraagt."
-      },
-      {
-        "title": "Deel het werk",
-        "body": "Leveranciers vullen de gaten in waar je ze naar vraagt."
-      },
-      {
-        "title": "Blijf klaar om te antwoorden",
-        "body": "Houd de informatie achter klantvragen bij elkaar."
-      }
-    ],
-    "pain": {
-      "eyebrow": "Het probleem",
-      "title": "De verordening is pas het begin. Het werk blijft in beweging.",
-      "lead": "Producten veranderen, leveranciers sturen updates, bewijs verloopt en klanten vragen om data. Zonder bijgehouden werkstroom wordt compliance steeds opnieuw handwerk.",
-      "items": [
-        {
-          "title": "Het kost te veel tijd.",
-          "body": "Zoeken, controleren, najagen en antwoorden opnieuw opbouwen telt snel op over producten en leveranciers."
+        ],
+        "register": {
+          "tenant": "demo-tenant",
+          "tabs": [
+            "Overview",
+            "Obligations",
+            "Register",
+            "Suppliers"
+          ],
+          "title": "Packaging register",
+          "action": "Upload data",
+          "rows": [
+            {
+              "name": "Barbecue tongs · sales box",
+              "status": "Ready",
+              "tone": "success",
+              "next": "Passport"
+            },
+            {
+              "name": "Fire lighter 1 L · bottle",
+              "status": "Needs data",
+              "tone": "warning",
+              "next": "Ask supplier"
+            },
+            {
+              "name": "Charcoal 5 kg · bag",
+              "status": "Expired",
+              "tone": "risk",
+              "next": "Review evidence"
+            },
+            {
+              "name": "Shipping carton 60×40",
+              "status": "Open",
+              "tone": "info",
+              "next": "Confirm level"
+            }
+          ]
         },
-        {
-          "title": "Klantvragen worden een commercieel risico.",
-          "body": "Als data en bewijs niet klaarliggen als klanten erom vragen, riskeer je vertraging, herstelwerk en verloren omzet."
-        },
-        {
-          "title": "Je verliest grip als dingen veranderen.",
-          "body": "Als data verspreid staat over bestanden, systemen en mailboxen, is moeilijk te zien wat compleet en actueel is."
-        }
-      ],
-      "quote": "Een spreadsheet kan compliancedata bevatten. Hij helpt je niet om verplichtingen, bewijs, gaten en veranderingen over al je producten te beheren."
+        "outcome": "Antwoord klaar voor je klant",
+        "photo": "foto: kartonnen doos, vrijstaand"
+      }
     },
     "products": {
       "eyebrow": "Livo-producten",
@@ -185,7 +191,12 @@
       "scaleTo": "Grotere PPWR-scope",
       "ctaPricing": "Bekijk prijzen",
       "pricingSoon": "De volledige planvergelijking gaat binnenkort live. Vraag ons tot die tijd naar het plan dat bij je scope past.",
-      "ctaAsk": "Vraag naar prijzen"
+      "ctaAsk": "Vraag naar prijzen",
+      "lines": [
+        "Prijs op de producten die je zelf op de EU-markt brengt.",
+        "Alle EU-markten inbegrepen. Geen prijs per gebruiker.",
+        "Alle plannen gratis tot 1 november 2026."
+      ]
     },
     "whitepaper": {
       "eyebrow": "PPWR-hulpmiddel",
@@ -198,7 +209,16 @@
         "Hoe je het dossier onderhoudbaar houdt als er iets verandert"
       ],
       "cta": "Ontvang de PPWR-whitepaper",
-      "note": "De whitepaper zit in de laatste controle. Laat je gegevens achter op de whitepaperpagina en we sturen hem zodra hij klaar is."
+      "note": "De whitepaper zit in de laatste controle. Laat je gegevens achter op de whitepaperpagina en we sturen hem zodra hij klaar is.",
+      "coverTitle": "PPWR is er. Je verpakkingsdata nog niet.",
+      "coverSub": "Een praktische paper voor wie het werk doet",
+      "form": {
+        "email": "Werk-e-mail",
+        "name": "Voornaam",
+        "company": "Bedrijf",
+        "submit": "Stuur mij de whitepaper",
+        "disabledNote": "Het formulier gaat open zodra de whitepaper klaar is. Mail tot die tijd hello@livoapps.software en we sturen hem."
+      }
     },
     "start": {
       "eyebrow": "Starten met LIVO PPWR",
@@ -267,7 +287,8 @@
       "eyebrow": "Volgende module",
       "title": "Volgende module: in ontwikkeling.",
       "body": "LIVO PPWR is de eerste module, niet de laatste. De productfamilie wordt gebouwd rond terugkerend compliancewerk dat in spreadsheets, mappen en e-mail moeilijk te beheren wordt.",
-      "cta": "Vraag naar de volgende module"
+      "cta": "Vraag naar de volgende module",
+      "photo": "seedling"
     },
     "finalCta": {
       "title": "Zie hoe LIVO doorlopend PPWR-werk beheersbaar maakt.",
@@ -330,6 +351,76 @@
           "href": "https://www.linkedin.com/company/livoapps-software"
         }
       ]
+    },
+    "requestFlow": {
+      "eyebrow": "Herkenbaar?",
+      "title": "Eén klantvraag. Twee dagen zoeken.",
+      "steps": [
+        {
+          "title": "De vraag komt binnen",
+          "body": "\"Kunnen jullie de verpakkingsdata en de verklaring sturen?\""
+        },
+        {
+          "title": "Je gaat zoeken",
+          "body": "Waar staat de laatste versie?"
+        },
+        {
+          "title": "Leveranciersdata ontbreekt",
+          "body": "Wie heeft deze informatie?"
+        },
+        {
+          "title": "Twee dagen later",
+          "body": "Nog steeds aan het uitzoeken."
+        }
+      ],
+      "withTitle": "Met LIVO",
+      "with": [
+        "Open het product",
+        "Zie wat ontbreekt",
+        "Vraag het de leverancier",
+        "Antwoord je klant"
+      ],
+      "note": "Zelfde vraag. Veel minder werk.",
+      "quote": "Een spreadsheet kan compliancedata bevatten. Hij helpt je niet om verplichtingen, bewijs, gaten en veranderingen over al je producten te beheren."
+    },
+    "attention": {
+      "eyebrow": "Grip zonder handwerk",
+      "title": "Zie wat aandacht vraagt.",
+      "lead": "Een helder overzicht van je producten, verplichtingen en bewijs. Weet wat compleet is, wat ontbreekt en wat verlopen is.",
+      "points": [
+        "Producten en verpakkingen",
+        "Leveranciersinformatie",
+        "Bewijs en documenten",
+        "Verplichtingen per markt",
+        "Taken",
+        "Paspoorten voor klanten"
+      ],
+      "cta": "Bekijk hoe het werkt",
+      "note": "Alles op één plek."
+    },
+    "supplierRound": {
+      "eyebrow": "Leveranciersronde",
+      "title": "Laat leveranciers de gaten invullen.",
+      "lead": "Een voorgevuld verzoek per leverancier, verstuurd vanuit je eigen mailbox. Leveranciers vullen alleen aan wat ontbreekt. Hun antwoorden komen terug als voorstellen die jij beoordeelt.",
+      "steps": [
+        {
+          "title": "Gat gevonden",
+          "body": "Ontbrekende data of bewijs verschijnt als taak."
+        },
+        {
+          "title": "Jij verstuurt het verzoek",
+          "body": "Een voorgevuld bestand of een beveiligde link, vanuit je eigen mailbox."
+        },
+        {
+          "title": "Leverancier vult aan",
+          "body": "Alleen wat ontbreekt, niets anders."
+        },
+        {
+          "title": "Jij beoordeelt",
+          "body": "Antwoorden komen terug als voorstellen. Niets overschrijft wat je had."
+        }
+      ],
+      "photo": "foto: etiket of blad, vrijstaand"
     }
   },
   "ppwr": {

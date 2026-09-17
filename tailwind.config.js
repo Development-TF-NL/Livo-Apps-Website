@@ -31,7 +31,7 @@ module.exports = {
       borderRadius: { control: '10px', card: '16px', hero: '22px' },
       boxShadow: { soft: '0 8px 24px rgba(8,29,51,.08)' },
       fontFamily: {
-        display: ['Satoshi', 'var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['var(--font-satoshi)', 'Satoshi', 'var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         sans: ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         hand: ['var(--font-caveat)', 'Caveat', 'cursive'], // handschrift-accent, alleen website en flyer
       },

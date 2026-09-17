@@ -1,6 +1,6 @@
 const PPWR_LOGIN_URL = 'https://ppwr.livoapps.software/login';
 const focusRing =
-  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent rounded';
+  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded';
 
 // Aankoopsectie als uitleg (begrenzing 3, fase 1): de bedoelde route in vier stappen,
 // zonder knop naar een checkout en zonder toegangsbelofte. Stappen volgen AV 5.3

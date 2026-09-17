@@ -10,7 +10,7 @@ import StatusPill from './StatusPill';
 const PPWR_LOGIN_URL = 'https://ppwr.livoapps.software/login';
 
 const focusRing =
-  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent rounded';
+  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded';
 
 export default function ProductLoginMenu({ dict, mobile = false }) {
   const [open, setOpen] = useState(false);

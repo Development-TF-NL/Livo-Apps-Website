@@ -24,72 +24,78 @@
     },
     "hero": {
       "brandLine": "Software that lightens the workflow",
-      "title": "Compliance work keeps growing. LIVO makes it easier to manage.",
-      "lead": "LIVO brings scattered data, evidence, supplier input and open actions into one maintained workflow. Less searching, chasing and rework. More control when things change or customers ask.",
+      "lead": "Bring packaging data, supplier input and evidence together in one place. Less searching, chasing and rework. Ready when customers ask.",
       "ctaPrimary": "Get LIVO PPWR",
       "ctaSecondary": "Explore the product",
-      "roadmap": "LIVO PPWR available now · Next module: in development",
-      "card": {
+      "titleBefore": "Compliance work keeps growing. ",
+      "titleGreen": "LIVO",
+      "titleAfter": " makes it easier.",
+      "note": "Same request. A lot less work.",
+      "visual": {
         "label": "Illustration",
-        "product": "LIVO PPWR",
-        "status": "Available now",
-        "lead": "Keep packaging data, obligations, evidence and supplier input together and up to date.",
-        "rows": [
+        "files": [
           {
-            "label": "Packaging data",
-            "value": "Ready",
-            "tone": "ok"
+            "kind": "excel",
+            "title": "Product data",
+            "sub": "Excel files"
           },
           {
-            "label": "Supplier evidence",
-            "value": "3 gaps",
-            "tone": "warn"
+            "kind": "mail",
+            "title": "Supplier information",
+            "sub": "E-mails"
           },
           {
-            "label": "Technical documentation",
-            "value": "Up to date",
-            "tone": "ok"
+            "kind": "pdf",
+            "title": "Declarations",
+            "sub": "PDF files"
+          },
+          {
+            "kind": "folder",
+            "title": "Various folders",
+            "sub": "Different versions"
           }
-        ]
-      }
-    },
-    "benefits": [
-      {
-        "title": "Start with what you have",
-        "body": "Your existing files are part of the reality. Bring them in as they are."
-      },
-      {
-        "title": "Keep gaps visible",
-        "body": "See what is missing, expired or needs attention."
-      },
-      {
-        "title": "Share the work",
-        "body": "Suppliers fill in the gaps you ask them about."
-      },
-      {
-        "title": "Stay ready to respond",
-        "body": "Keep the information behind customer answers together."
-      }
-    ],
-    "pain": {
-      "eyebrow": "The problem",
-      "title": "The regulation is only the start. The work keeps moving.",
-      "lead": "Products change, suppliers send updates, evidence expires and customers ask for data. Without a maintained workflow, compliance turns into repeated manual work.",
-      "items": [
-        {
-          "title": "It takes too much time.",
-          "body": "Searching, checking, chasing and rebuilding answers adds up quickly across products and suppliers."
+        ],
+        "register": {
+          "tenant": "demo-tenant",
+          "tabs": [
+            "Overview",
+            "Obligations",
+            "Register",
+            "Suppliers"
+          ],
+          "title": "Packaging register",
+          "action": "Upload data",
+          "rows": [
+            {
+              "name": "Barbecue tongs · sales box",
+              "status": "Ready",
+              "tone": "success",
+              "next": "Passport"
+            },
+            {
+              "name": "Fire lighter 1 L · bottle",
+              "status": "Needs data",
+              "tone": "warning",
+              "next": "Ask supplier"
+            },
+            {
+              "name": "Charcoal 5 kg · bag",
+              "status": "Expired",
+              "tone": "risk",
+              "next": "Review evidence"
+            },
+            {
+              "name": "Shipping carton 60×40",
+              "status": "Open",
+              "tone": "info",
+              "next": "Confirm level"
+            }
+          ]
         },
-        {
-          "title": "Customer requests become a commercial risk.",
-          "body": "If data and proof are not ready when customers ask, you risk delay, rework and lost business."
-        },
-        {
-          "title": "You lose control as things change.",
-          "body": "When data lives across files, systems and inboxes, it becomes harder to see what is complete and current."
-        }
-      ],
-      "quote": "A spreadsheet can hold compliance data. It does not help you manage obligations, evidence, gaps and changes across all your products."
+        "outcome": "Answer ready for your customer",
+        "photo": "photo: cardboard box, cut-out"
+      },
+      "roadmap": "LIVO PPWR available now · Next module: in development"
     },
     "products": {
       "eyebrow": "Livo products",
@@ -185,7 +191,12 @@
       "scaleTo": "Larger PPWR scope",
       "ctaPricing": "View pricing",
       "pricingSoon": "The full plan comparison goes live shortly. Until then, ask us for the plan that fits your scope.",
-      "ctaAsk": "Ask about pricing"
+      "ctaAsk": "Ask about pricing",
+      "lines": [
+        "Priced by the products you put on the EU market yourself.",
+        "All EU markets included. No per-user pricing.",
+        "All plans free until 1 November 2026."
+      ]
     },
     "whitepaper": {
       "eyebrow": "PPWR resource",
@@ -198,7 +209,16 @@
         "How to keep the file maintainable as things change"
       ],
       "cta": "Get the PPWR whitepaper",
-      "note": "The whitepaper is in final review. Leave your details on the whitepaper page and we will send it as soon as it is ready."
+      "note": "The whitepaper is in final review. Leave your details on the whitepaper page and we will send it as soon as it is ready.",
+      "coverTitle": "PPWR is here. Your packaging data isn't ready.",
+      "coverSub": "A practical paper for the people who do the work",
+      "form": {
+        "email": "Work email",
+        "name": "First name",
+        "company": "Company",
+        "submit": "Send me the whitepaper",
+        "disabledNote": "The form opens when the whitepaper is ready. Until then, email hello@livoapps.software and we will send it."
+      }
     },
     "start": {
       "eyebrow": "Start with LIVO PPWR",
@@ -267,7 +287,8 @@
       "eyebrow": "Next module",
       "title": "Next module: in development.",
       "body": "LIVO PPWR is the first module, not the last. The product family is being built around recurring compliance work that becomes difficult to manage in spreadsheets, folders and email.",
-      "cta": "Ask about the next module"
+      "cta": "Ask about the next module",
+      "photo": "seedling"
     },
     "finalCta": {
       "title": "See how LIVO makes ongoing PPWR work easier to manage.",
@@ -330,6 +351,76 @@
           "href": "https://www.linkedin.com/company/livoapps-software"
         }
       ]
+    },
+    "requestFlow": {
+      "eyebrow": "A familiar situation?",
+      "title": "One customer request. Two days of searching.",
+      "steps": [
+        {
+          "title": "Request arrives",
+          "body": "\"Can you send the packaging data and declaration?\""
+        },
+        {
+          "title": "You start searching",
+          "body": "Where is the latest version?"
+        },
+        {
+          "title": "Supplier data is missing",
+          "body": "Who has this information?"
+        },
+        {
+          "title": "Two days later",
+          "body": "Still checking."
+        }
+      ],
+      "withTitle": "With LIVO",
+      "with": [
+        "Open the product",
+        "See what is missing",
+        "Ask the supplier",
+        "Respond to your customer"
+      ],
+      "note": "Same request. A lot less work.",
+      "quote": "A spreadsheet can hold compliance data. It does not help you manage obligations, evidence, gaps and changes across all your products."
+    },
+    "attention": {
+      "eyebrow": "Keep control without the manual work",
+      "title": "See what needs attention.",
+      "lead": "A clear overview of your products, obligations and evidence. Know what is complete, what is missing and what has expired.",
+      "points": [
+        "Products and packaging",
+        "Supplier information",
+        "Evidence and documents",
+        "Obligations per market",
+        "Tasks",
+        "Passports for customers"
+      ],
+      "cta": "See how it works",
+      "note": "Everything in one place."
+    },
+    "supplierRound": {
+      "eyebrow": "Supplier round",
+      "title": "Let suppliers fill the gaps.",
+      "lead": "A prefilled request per supplier, sent from your own mailbox. Suppliers add only what is missing. Their answers come back as proposals for you to review.",
+      "steps": [
+        {
+          "title": "Gap detected",
+          "body": "Missing data or evidence shows up as a task."
+        },
+        {
+          "title": "You send the request",
+          "body": "A prefilled file or a secure link, sent from your own mailbox."
+        },
+        {
+          "title": "Supplier fills the gaps",
+          "body": "Only what is missing, nothing else."
+        },
+        {
+          "title": "You review",
+          "body": "Answers return as proposals. Nothing overwrites what you had."
+        }
+      ],
+      "photo": "photo: label or leaf, cut-out"
     }
   },
   "ppwr": {

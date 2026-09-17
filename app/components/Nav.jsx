@@ -14,7 +14,7 @@ import ProductLoginMenu from './ProductLoginMenu';
 // (beslissing 5: geen /resources-index tot er een tweede resource is).
 
 const focusRing =
-  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent rounded';
+  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded';
 
 const languages = [
   ['en', 'EN'],
@@ -81,7 +81,7 @@ export default function Nav({ lang, dict }) {
         <div className="hidden items-center gap-4 lg:flex">
           {langSwitch}
           <ProductLoginMenu dict={dict} />
-          <Link href={ctaHref} className={`rounded-md bg-accent px-5 py-2 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-dark ${focusRing}`}>
+          <Link href={ctaHref} className={`rounded-control bg-accent px-5 py-2 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-dark ${focusRing}`}>
             {dict.cta}
           </Link>
         </div>
@@ -113,7 +113,7 @@ export default function Nav({ lang, dict }) {
             <ProductLoginMenu dict={dict} mobile />
             {langSwitch}
           </div>
-          <Link href={ctaHref} onClick={close} className={`mt-4 block rounded-md bg-accent px-5 py-2.5 text-center text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-dark ${focusRing}`}>
+          <Link href={ctaHref} onClick={close} className={`mt-4 block rounded-control bg-accent px-5 py-2.5 text-center text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-dark ${focusRing}`}>
             {dict.cta}
           </Link>
         </div>
