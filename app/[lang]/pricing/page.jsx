@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { getDictionary } from '../../get-dictionary';
 import { BOOKINGS_URL, bookingLinkProps } from '../../booking';
 import Footer from '../../components/Footer';
-import { socialMetadata } from '../../seo';
+import { languageAlternates, socialMetadata } from '../../seo';
 
 // Prijspagina achter een poort (fase C, ontwerpdocument v2 §7.11): PRICING_PAGE_ENABLED
 // blijft uit tot de concurrentie-offertes binnen zijn. Poort dicht = notFound(), noindex
@@ -34,8 +34,8 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    alternates: { canonical: `/${params.lang}/pricing`, languages: { en: '/en/pricing', nl: '/nl/pricing' } },
-    ...socialMetadata({ title, description }),
+    alternates: { canonical: `/${params.lang}/pricing`, languages: languageAlternates('/pricing') },
+    ...socialMetadata({ title, description, lang: params.lang }),
     robots: pricingEnabled() ? undefined : { index: false, follow: false },
   };
 }

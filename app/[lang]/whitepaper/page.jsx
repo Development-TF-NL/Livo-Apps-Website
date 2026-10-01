@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { getDictionary } from '../../get-dictionary';
 import WhitepaperForm from '../../components/WhitepaperForm';
 import WhitepaperRequest from '../../components/WhitepaperRequest';
-import { socialMetadata } from '../../seo';
+import { languageAlternates, socialMetadata } from '../../seo';
 
 // Enige funnel voor de whitepaper (besluit-lead-flow-whitepaper-v1): LinkedIn en
 // elke andere uiting linken hierheen met UTM-parameters. Het formulier staat achter
@@ -15,8 +15,8 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    alternates: { canonical: `/${params.lang}/whitepaper`, languages: { en: '/en/whitepaper', nl: '/nl/whitepaper' } },
-    ...socialMetadata({ title, description }),
+    alternates: { canonical: `/${params.lang}/whitepaper`, languages: languageAlternates('/whitepaper') },
+    ...socialMetadata({ title, description, lang: params.lang }),
     // Indexeerbaar sinds 17 september 2026: de pagina heeft een aanvraag per e-mail; het formulier blijft achter de poort.
   };
 }

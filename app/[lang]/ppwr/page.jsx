@@ -10,7 +10,7 @@ import WhitepaperObject from '../../components/WhitepaperObject';
 import OrderButton from '../../components/OrderButton';
 import { ImportVisual, StatusVisual, CycleVisual, FileVisual } from '../../components/FeatureVisuals';
 import { getDictionary } from '../../get-dictionary';
-import { socialMetadata } from '../../seo';
+import { languageAlternates, socialMetadata } from '../../seo';
 
 // Productpagina LIVO PPWR, ontwerp v2 (17 september 2026): ruggengraat is de flyer 2026-09-17
 // (probleem, kosten, wat LIVO verandert, demo), uitgebreid waar een pagina meer ruimte heeft.
@@ -27,7 +27,7 @@ const mailto = (subject, body) => `mailto:hello@livoapps.software?subject=${enco
 export async function generateMetadata({ params }) {
   const dict = await getDictionary(params.lang);
   const { title, description } = dict.ppwr.meta;
-  return { title, description, alternates: { canonical: `/${params.lang}/ppwr`, languages: { en: '/en/ppwr', nl: '/nl/ppwr' } }, ...socialMetadata({ title, description }) };
+  return { title, description, alternates: { canonical: `/${params.lang}/ppwr`, languages: languageAlternates('/ppwr') }, ...socialMetadata({ title, description, lang: params.lang }) };
 }
 
 export default async function PpwrPage({ params }) {

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, Check, FileCheck, Mail, Send } from 'lucide-react';
 import { getDictionary } from '../get-dictionary';
 import { mailto } from '../mailto';
-import { socialMetadata } from '../seo';
+import { languageAlternates, socialMetadata } from '../seo';
 import Footer from '../components/Footer';
 import PhotoPlace from '../components/PhotoPlace';
 import RegisterFragment from '../components/RegisterFragment';
@@ -34,8 +34,8 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    alternates: { canonical: `/${params.lang}`, languages: { en: '/en', nl: '/nl' } },
-    ...socialMetadata({ title, description }),
+    alternates: { canonical: `/${params.lang}`, languages: languageAlternates() },
+    ...socialMetadata({ title, description, lang: params.lang }),
   };
 }
 

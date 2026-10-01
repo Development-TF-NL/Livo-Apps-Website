@@ -16,9 +16,10 @@ import OrderButton from './OrderButton';
 const focusRing =
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded';
 
+// Volgorde van de taalwissel: de standaardtaal eerst (NL · EN).
 const languages = [
-  ['en', 'EN'],
   ['nl', 'NL'],
+  ['en', 'EN'],
 ];
 
 export default function Nav({ lang, dict }) {
