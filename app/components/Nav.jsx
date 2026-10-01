@@ -10,8 +10,8 @@ import OrderButton from './OrderButton';
 
 // Header volgens homepage v5 (1 oktober 2026): drie menulinks (How it works, Pricing, About LIVO APPS),
 // taalwissel, Log in (menu) en de tijdelijke bestelknop (mailto, tot 1 november 2026).
-// Geen dode links: de drie links zijn ankers op de homepage; de productpagina en de whitepaper
-// staan lager op de pagina en in de footer.
+// Geen dode links: de drie links zijn ankers op de homepage (Prijzen wijst naar /pricing zodra de poort
+// open is); de productpagina en de whitepaper staan lager op de pagina en in de footer.
 
 const focusRing =
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded';
@@ -22,7 +22,7 @@ const languages = [
   ['en', 'EN'],
 ];
 
-export default function Nav({ lang, dict }) {
+export default function Nav({ lang, dict, pricingEnabled = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname() || `/${lang}`;
 
@@ -33,7 +33,8 @@ export default function Nav({ lang, dict }) {
 
   const navItems = [
     { label: dict.how, href: `/${lang}#how` },
-    { label: dict.pricing, href: `/${lang}#pricing` },
+    // Poort open (PRICING_PAGE_ENABLED): naar de prijspagina; dicht: naar het prijsblok op de homepage.
+    { label: dict.pricing, href: pricingEnabled ? `/${lang}/pricing` : `/${lang}#pricing` },
     { label: dict.about, href: `/${lang}#about` },
   ];
 

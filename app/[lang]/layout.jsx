@@ -25,9 +25,9 @@ const satoshi = localFont({
 const caveat = Caveat({ subsets: ['latin'], weight: ['500', '600'], variable: '--font-caveat', display: 'swap' });
 
 // Fallback voor pagina's zonder eigen generateMetadata (praktisch alleen de 404);
-// dit statische metadata-object kent geen taal, dus de EN-versie.
-const FALLBACK_TITLE = 'Livo Apps · Software that lightens the workflow';
-const FALLBACK_DESCRIPTION = 'Know which rules apply. Prove that you comply.';
+// dit statische metadata-object kent geen taal, dus de versie in de standaardtaal (Nederlands, 1 oktober 2026).
+const FALLBACK_TITLE = 'LIVO APPS · Software die je werk lichter maakt';
+const FALLBACK_DESCRIPTION = 'Weet welke regels gelden. Bewijs dat je voldoet.';
 
 export const metadata = {
   metadataBase: new URL('https://livoapps.software'),
@@ -59,7 +59,7 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={lang} className={`${inter.variable} ${satoshi.variable} ${caveat.variable}`}>
       <body className="font-sans text-ink">
-        <Nav lang={lang} dict={dict.nav} />
+        <Nav lang={lang} dict={dict.nav} pricingEnabled={process.env.PRICING_PAGE_ENABLED === 'true'} />
         {children}
         {/* Cookieless (geen banner nodig) — ontwerpdocument v2 §5 */}
         <Analytics />
