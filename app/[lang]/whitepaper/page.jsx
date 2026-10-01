@@ -11,6 +11,7 @@ import { Section, Eyebrow, h1, h2, lead, heroPanel, cardOnWhite, cardTitleSmall,
 // elke andere uiting linken hierheen met UTM-parameters. Het formulier staat achter
 // WHITEPAPER_FORM_ENABLED en gaat pas aan als de privacyverklaring live is (poort).
 // Vorm (1 oktober 2026): de gedeelde bouwstenen uit components/ui.jsx; een lichte hero in plaats van de navy band.
+// De regel over juridisch advies staat in de gedeelde footer.
 const formEnabled = () => process.env.WHITEPAPER_FORM_ENABLED === 'true';
 
 export async function generateMetadata({ params }) {
@@ -72,7 +73,6 @@ export default async function WhitepaperPage({ params }) {
           </aside>
         </div>
 
-        <p className="mt-16 border-t border-line pt-8 text-xs text-sub">{t.disclaimer}</p>
       </Section>
     </main>
     <Footer lang={lang} dict={dict.home.footer} />

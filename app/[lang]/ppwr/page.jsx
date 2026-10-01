@@ -174,13 +174,12 @@ export default async function PpwrPage({ params }) {
 
       <WhitepaperObject t={dict.home.whitepaper} />
 
-      {/* Slot: het ene navy moment van de pagina */}
+      {/* Slot: het ene navy moment van de pagina. De voetregel staat in de gedeelde footer. */}
       <ClosingBand
         tone="canvas"
         title={t.closing.title}
         lead={t.closing.lead}
         aside={<div className="text-sm md:text-right"><b className="block font-semibold text-accent">{t.closing.site}</b><a href="mailto:hello@livoapps.software" className="inline-flex min-h-[44px] items-center rounded text-white/80 transition-colors duration-150 hover:text-white focus-ring">{t.closing.mail}</a></div>}
-        footnote={<p className="mx-auto mt-8 max-w-content text-xs text-sub">{t.footer.line}</p>}
       >
         <a href={demo} className={btnPrimary}><Mail size={18} aria-hidden="true" />{t.closing.cta}</a>
       </ClosingBand>

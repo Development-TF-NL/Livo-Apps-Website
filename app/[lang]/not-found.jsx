@@ -8,7 +8,7 @@ import { eyebrow, h1, heroPanel, textLink } from '../components/ui';
 // (not-found krijgt geen params), dus beide talen krijgen hun eigen regel en link.
 // Nederlands eerst: de standaardtaal (1 oktober 2026).
 // Vorm (1 oktober 2026): een licht paneel op canvas, zoals de hero van de andere pagina's; geen navy vlak.
-// Handschrift: één notitie per taal ("Oeps" bij de Nederlandse kop, "Oops" bij de Engelse regel).
+// Handschrift: één notitie, "Oeps", bij de kop.
 // De gedeelde footer haalt de taal uit het pad (FooterForPath).
 export default async function NotFound() {
   const [nl, en] = await Promise.all([getDictionary('nl'), getDictionary('en')]);
@@ -29,7 +29,6 @@ export default async function NotFound() {
             .
           </p>
           <p lang="en" className="text-lg text-sub">
-            <HandNote className="mr-2 align-baseline">Oops</HandNote>{' '}
             This page doesn&rsquo;t exist.{' '}
             <Link href="/en" className={`${textLink} rounded underline`}>
               Go to the homepage
