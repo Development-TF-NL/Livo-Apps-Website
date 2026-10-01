@@ -13,8 +13,8 @@ export default function PhotoPlace({ label, src, className = '', imgClassName = 
     <div
       aria-hidden="true"
       data-placeholder="photo"
-      className={`flex items-center justify-center rounded-card border-2 border-dashed border-[#C9D3DA] p-4 text-center text-xs text-sub ${className}`}
-      style={{ backgroundImage: 'repeating-linear-gradient(135deg,#F7F9FA 0 10px,#FFFFFF 10px 20px)' }}
+      className={`flex items-center justify-center rounded-card border-2 border-dashed border-frame p-4 text-center text-xs text-sub ${className}`}
+      style={{ backgroundImage: 'repeating-linear-gradient(135deg,var(--frame-bar) 0 10px,var(--surface) 10px 20px)' }}
     >
       {label}
     </div>

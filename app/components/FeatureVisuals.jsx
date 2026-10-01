@@ -40,14 +40,14 @@ export function CycleVisual({ t }) {
     <div className={frame} aria-hidden="true">
       <div className="absolute inset-4">
         <svg viewBox="0 0 100 56" className="absolute inset-0 h-full w-full" preserveAspectRatio="none">
-          <path d="M25,28a25,18 0 1,1 50,0a25,18 0 1,1 -50,0" fill="none" stroke="#B9C6CE" strokeWidth="1.2" />
-          <path d="M-3.2 -2.6 L0 0 L-3.2 2.6" transform="translate(68.5 14.9) rotate(50)" fill="none" stroke="#2F5FB3" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /><path d="M-3.2 -2.6 L0 0 L-3.2 2.6" transform="translate(31.5 41.1) rotate(230)" fill="none" stroke="#2F5FB3" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M25,28a25,18 0 1,1 50,0a25,18 0 1,1 -50,0" fill="none" className="stroke-frame-line" strokeWidth="1.2" />
+          <path d="M-3.2 -2.6 L0 0 L-3.2 2.6" transform="translate(68.5 14.9) rotate(50)" fill="none" className="stroke-ink-blue" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /><path d="M-3.2 -2.6 L0 0 L-3.2 2.6" transform="translate(31.5 41.1) rotate(230)" fill="none" className="stroke-ink-blue" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        <span className="absolute left-1/2 top-0 -translate-x-1/2 rounded-full bg-mint px-3 py-1 text-[11px] font-semibold text-green-text">{t.steps[0].title}</span>
-        <span className="absolute right-0 top-1/2 -translate-y-1/2 rounded-full border border-line bg-white px-3 py-1 text-[11px] font-semibold text-ink">{t.steps[2].title}</span>
-        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 rounded-full bg-mint px-3 py-1 text-[11px] font-semibold text-green-text">{t.steps[3].title}</span>
-        <span className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full border border-line bg-white px-3 py-1 text-[11px] font-semibold text-ink">{t.steps[1].title}</span>
-        <span className="absolute left-1/2 top-1/2 flex h-12 w-24 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-[8px] border-[1.5px] border-navy bg-white text-center leading-none">
+        <span className="absolute left-1/2 top-0 -translate-x-1/2 whitespace-nowrap rounded-full bg-mint px-2.5 py-0.5 text-[10px] font-semibold text-green-text">{t.steps[0].title}</span>
+        <span className="absolute right-0 top-[73%] -translate-y-1/2 whitespace-nowrap rounded-full border border-line bg-white px-2.5 py-0.5 text-[10px] font-semibold text-ink">{t.steps[2].title}</span>
+        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-mint px-2.5 py-0.5 text-[10px] font-semibold text-green-text">{t.steps[3].title}</span>
+        <span className="absolute left-0 top-[27%] -translate-y-1/2 whitespace-nowrap rounded-full border border-line bg-white px-2.5 py-0.5 text-[10px] font-semibold text-ink">{t.steps[1].title}</span>
+        <span className="absolute left-1/2 top-1/2 flex h-10 w-24 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-[8px] border-[1.5px] border-navy bg-white text-center leading-none">
           <b className="font-display text-[11px] font-bold text-ink">{t.coreTitle}</b><span className="mt-1 text-[9px] text-sub">{t.coreSub}</span>
         </span>
       </div>

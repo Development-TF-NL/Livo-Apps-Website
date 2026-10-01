@@ -14,6 +14,7 @@
   --accent-dark: #69AD36;
   /* Huisstijl v2 (besluit 17 september 2026) */
   --livo-mint: #EAF7E4; --livo-green-heading: #569A28; --livo-green-text: #2F7D2A; --livo-ink-blue: #2F5FB3;
+  --frame: #C9D3DA; --frame-bar: #F6F8F9; --frame-dot: #D5DDE3; --frame-line: #B9C6CE;
   --file-excel: #1D6F42; --file-pdf: #B3261E; --file-mail: #2F5FB3; --file-folder: #B7791F;
   --status-success-text: #3F6B16; --status-success-bg: #EAF6E7; --status-success-dot: #3FAE3B;
   --status-warning-text: #854F0B; --status-warning-bg: #FEF3C7; --status-warning-dot: #D97706;
@@ -31,8 +32,15 @@ html { scroll-behavior: smooth; }
    De enige uitzondering op plat. Op een donker vlak is de witte binnenring de zichtbare rand. De transparante
    outline houdt de rand zichtbaar als het systeem kleuren afdwingt (forced colors laat box-shadow weg). */
 @layer components {
-  .focus-ring:focus-visible { outline: 2px solid transparent; outline-offset: 2px; box-shadow: var(--focus-ring); }
+  .focus-ring:focus-visible:not([data-pointer-focus]) { outline: 2px solid transparent; outline-offset: 2px; box-shadow: var(--focus-ring); }
 }
+
+/* Alleen bij toetsenbordfocus. Een browser laat :focus-visible ook gelden zodra er na een muisklik een toets wordt
+   ingedrukt (ook alleen Cmd of Shift). Omdat de kopbalk bij een paginawissel blijft staan, houdt de aangeklikte link
+   de focus en verscheen de rand dan alsnog. app/components/FocusModality.jsx merkt een link, knop of keuzerondje dat
+   focus kreeg door muis of aanraking (data-pointer-focus); zo'n element krijgt geen rand, ook niet die van de browser.
+   Tab verplaatst de focus en geeft de rand weer. Tekstvelden worden niet gemerkt. Zonder JavaScript geldt :focus-visible. */
+[data-pointer-focus]:focus-visible { outline: none; }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }

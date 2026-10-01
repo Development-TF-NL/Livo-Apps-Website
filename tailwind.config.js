@@ -20,6 +20,8 @@ module.exports = {
         'green-heading': '#569A28', // één woord in een kop van 32px+ vet (AA groot)
         'green-text': '#2F7D2A', // links, kleine nadruk (AA)
         'ink-blue': '#2F5FB3', // leads, labels, notities, verbinders (website en flyer)
+        // Apparaatkader en diagramlijnen (1 oktober 2026): voorheen losse hexwaarden in de componenten
+        frame: { DEFAULT: '#C9D3DA', bar: '#F6F8F9', dot: '#D5DDE3', line: '#B9C6CE' },
         file: { excel: '#1D6F42', pdf: '#B3261E', mail: '#2F5FB3', folder: '#B7791F' }, // alleen pictogrammen in flowvisuals
         status: {
           'success-text': '#3F6B16', 'success-bg': '#EAF6E7', 'success-dot': '#3FAE3B',
@@ -29,6 +31,11 @@ module.exports = {
         },
       },
       borderRadius: { control: '10px', card: '16px', hero: '22px' },
+      maxWidth: { content: '1200px' }, // inhoud maximaal 1200 px (huisstijl v2 §4)
+      fontSize: {
+        body: ['1.0625rem', { lineHeight: '1.6' }], // lopende tekst op de website: 17 px (huisstijl v2 §3)
+        card: ['1.375rem', { lineHeight: '1.25' }], // kaarttitel 22 px, de ondergrens van 22 tot 26
+      },
       boxShadow: { soft: '0 8px 24px rgba(8,29,51,.08)' },
       fontFamily: {
         display: ['var(--font-satoshi)', 'Satoshi', 'var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],

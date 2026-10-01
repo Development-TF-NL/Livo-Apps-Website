@@ -10,19 +10,19 @@ import WhitepaperObject from '../../components/WhitepaperObject';
 import OrderButton from '../../components/OrderButton';
 import { ImportVisual, StatusVisual, CycleVisual, FileVisual } from '../../components/FeatureVisuals';
 import { getDictionary } from '../../get-dictionary';
+import { mailto } from '../../mailto';
 import { languageAlternates, socialMetadata } from '../../seo';
+import { Section, Eyebrow, IconCircle, Callout, ClosingBand, h1, h2, lead, cardTitle, cardTitleSmall, cardBody, btnPrimary, btnSecondary, heroPanel, cardOnCanvas, cardOnWhite, promoPanel } from '../../components/ui';
 
 // Productpagina LIVO PPWR, ontwerp v2 (17 september 2026): ruggengraat is de flyer 2026-09-17
 // (probleem, kosten, wat LIVO verandert, demo), uitgebreid waar een pagina meer ruimte heeft.
 // Hero (1 oktober 2026): de primaire knop is de tijdelijke bestelknop van de homepage (mailto, tot 1 november 2026).
-// Alle tekst uit de dictionaries (bron: docs/marketing/website/copy/ppwr.json). Geen schaduw op canvas-kaarten.
+// Alle tekst uit de dictionaries (bron: docs/marketing/website/copy/ppwr.json).
+// Vorm (1 oktober 2026): de gedeelde bouwstenen uit components/ui.jsx. Na de hero wisselen wit en canvas elkaar af;
+// kaarten op canvas dragen de schaduw, kaarten op wit een rand; nergens meer dan twee kaarten naast elkaar.
 const SEEDLING = '/brand/photo/seedling.png';
 const factorIcons = [Package, Layers, Globe, FileCheck];
 const costIcons = [Clock, MessageSquareWarning, FileSearch, Users];
-const eyebrow = 'mb-4 text-xs font-semibold uppercase tracking-[.14em] text-ink-blue';
-const h2 = 'font-display text-4xl font-bold leading-[1.06] tracking-tight text-ink md:text-5xl';
-const btn = 'inline-flex h-12 items-center gap-2 rounded-control px-6 font-semibold transition-colors duration-150 focus-ring';
-const mailto = (subject, body) => `mailto:hello@livoapps.software?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
 export async function generateMetadata({ params }) {
   const dict = await getDictionary(params.lang);
@@ -47,19 +47,19 @@ export default async function PpwrPage({ params }) {
       <Breadcrumb items={[{ label: t.breadcrumb[0], href: `/${lang}` }, { label: t.breadcrumb[1], href: `/${lang}/ppwr` }, { label: t.breadcrumb[2] }]} />
 
       {/* 1. Hero, licht: kop met één groen woord, lead uit de flyer, het echte Register-fragment */}
-      <section className="px-6 pb-20 pt-4">
-        <div className="mx-auto max-w-7xl rounded-hero border border-line bg-white p-6 sm:p-8 md:p-12">
+      <Section tone="canvas" className="!pt-2 md:!pt-2">
+        <div className={`${heroPanel} p-6 sm:p-8 md:p-12`}>
           <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
             <div className="min-w-0">
-              <p className={eyebrow}>{t.hero.eyebrow}</p>
+              <Eyebrow>{t.hero.eyebrow}</Eyebrow>
               <p className="mb-3 text-sm font-semibold text-ink-blue">{t.hero.apply}</p>
-              <h1 lang={lang} className="font-display text-4xl font-bold leading-[1.04] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem] xl:text-6xl">
+              <h1 lang={lang} className={`${h1} lg:text-[3.4rem]`}>
                 {t.hero.titleBefore}<span className="text-green-heading">{t.hero.titleGreen}</span>{t.hero.titleAfter}
               </h1>
-              <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-blue">{t.hero.lead}</p>
+              <p className={`mt-6 max-w-lg ${lead}`}>{t.hero.lead}</p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <OrderButton t={dict.nav.order} className={`${btn} bg-accent text-ink hover:bg-accent-dark`} />
-                <a href={demo} className={`${btn} border-[1.5px] border-navy bg-white text-ink hover:bg-canvas`}><Mail size={18} aria-hidden="true" />{t.hero.ctaDemo}</a>
+                <OrderButton t={dict.nav.order} className={btnPrimary} />
+                <a href={demo} className={btnSecondary}><Mail size={18} aria-hidden="true" />{t.hero.ctaDemo}</a>
               </div>
             </div>
             <div className="min-w-0">
@@ -68,140 +68,123 @@ export default async function PpwrPage({ params }) {
             </div>
           </div>
         </div>
-      </section>
+      </Section>
 
-      {/* 2. Why the work grows: vier factoren en de spreadsheetzin */}
-      <section id="grows" className="scroll-mt-20 px-6 pb-24">
-        <div className="mx-auto max-w-7xl">
-          <p className={eyebrow}>{t.grows.eyebrow}</p>
-          <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-            <h2 className={h2}>{t.grows.title}</h2>
-            <p className="text-lg text-ink-blue">{t.grows.lead}</p>
-          </div>
-          <div className="mt-12 grid items-stretch gap-3 sm:grid-cols-2 lg:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr]">
-            {t.grows.factors.map((f, i) => {
-              const Icon = factorIcons[i];
-              return (
-                <div key={f.title} className="contents">
-                  <div className="rounded-card border border-line bg-white p-6">
-                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-mint text-green-text"><Icon size={24} aria-hidden="true" /></span>
-                    <p className="mt-5 font-display text-xl font-bold text-ink">{f.title}</p>
-                    <p className="mt-2 text-sm text-sub">{f.body}</p>
-                  </div>
-                  {i < 3 && <span aria-hidden="true" className="hidden items-center justify-center px-1 font-display text-3xl font-bold text-accent-dark lg:flex">×</span>}
-                </div>
-              );
-            })}
-          </div>
-          <div className="mt-6 grid items-center gap-4 rounded-card border border-line bg-white p-6 md:grid-cols-[auto_1fr] md:gap-8">
-            <p className="max-w-xs font-display text-xl font-bold text-ink">{t.grows.resultTitle}</p>
-            <p className="text-sub">{t.grows.resultBody} <HandNote className="ml-2 align-baseline">{t.grows.note}</HandNote></p>
-          </div>
+      {/* 2. Why the work grows: vier factoren, twee bij twee met het maalteken ertussen, en de spreadsheetzin */}
+      <Section id="grows">
+        <Eyebrow>{t.grows.eyebrow}</Eyebrow>
+        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          <h2 className={h2}>{t.grows.title}</h2>
+          <p className={lead}>{t.grows.lead}</p>
         </div>
-      </section>
+        <div className="mt-12 grid items-stretch gap-3 sm:grid-cols-2 lg:grid-cols-[1fr_auto_1fr]">
+          {t.grows.factors.map((f, i) => (
+            <div key={f.title} className="contents">
+              <div className={`${cardOnWhite} p-6`}>
+                <IconCircle icon={factorIcons[i]} />
+                <p className={`mt-5 ${cardTitle}`}>{f.title}</p>
+                <p className={`mt-2 ${cardBody}`}>{f.body}</p>
+              </div>
+              {/* Het maalteken: tussen de kaarten op een rij, en gecentreerd tussen de twee rijen. Alleen op desktop. */}
+              {i < 3 && <span aria-hidden="true" className={`hidden items-center justify-center px-1 font-display text-3xl font-bold text-accent-dark lg:flex ${i === 1 ? 'lg:col-span-3' : ''}`}>×</span>}
+            </div>
+          ))}
+        </div>
+        <div className={`mt-6 grid items-center gap-4 ${cardOnWhite} p-6 md:grid-cols-[auto_1fr] md:gap-8`}>
+          <p className={`max-w-xs ${cardTitleSmall}`}>{t.grows.resultTitle}</p>
+          <p className={cardBody}>{t.grows.resultBody} <HandNote className="ml-2 align-baseline">{t.grows.note}</HandNote></p>
+        </div>
+      </Section>
 
       {/* 3. What this costs you */}
-      <section id="costs" className="scroll-mt-20 bg-white px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <p className={eyebrow}>{t.costs.eyebrow}</p>
-          <h2 className={`${h2} max-w-3xl`}>{t.costs.title}</h2>
-          <ul className="mt-12 grid gap-5 sm:grid-cols-2">
-            {t.costs.items.map((c, i) => {
-              const Icon = costIcons[i];
-              return (
-                <li key={c.title} className="grid grid-cols-[auto_1fr] gap-4 rounded-card border border-line bg-white p-6">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-mint text-green-text"><Icon size={22} aria-hidden="true" /></span>
-                  <div><p className="font-display text-lg font-bold text-ink">{c.title}</p><p className="mt-1.5 text-sm text-sub">{c.body}</p></div>
-                </li>
-              );
-            })}
-          </ul>
-          <p className="mt-8 rounded-r-control border-l-4 border-accent bg-mint px-6 py-4 font-display text-lg font-bold text-ink">{t.costs.transition}</p>
-        </div>
-      </section>
+      <Section id="costs" tone="canvas">
+        <Eyebrow>{t.costs.eyebrow}</Eyebrow>
+        <h2 className={`${h2} max-w-3xl`}>{t.costs.title}</h2>
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2">
+          {t.costs.items.map((c, i) => (
+            <li key={c.title} className={`grid grid-cols-[auto_1fr] gap-4 ${cardOnCanvas} p-6`}>
+              <IconCircle icon={costIcons[i]} />
+              <div><p className={cardTitleSmall}>{c.title}</p><p className={`mt-1.5 ${cardBody}`}>{c.body}</p></div>
+            </li>
+          ))}
+        </ul>
+        <Callout className="mt-8 font-display text-lg font-bold">{t.costs.transition}</Callout>
+      </Section>
 
       {/* 4. What LIVO changes: vier features met de vier illustraties, elk met de status Live */}
-      <section id="changes" className="scroll-mt-20 px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <p className={eyebrow}>{t.changes.eyebrow}</p>
-          <h2 className={`${h2} max-w-3xl`}>{t.changes.title}</h2>
-          <p className="mt-5 font-display text-lg font-bold text-green-text">{t.changes.benefit}</p>
-          <p className="mt-2 max-w-3xl text-lg text-ink-blue">{t.changes.lead}</p>
-          <div className="mt-12 grid grid-cols-[minmax(0,1fr)] gap-6 md:grid-cols-2">
-            {t.changes.features.map((f, i) => (
-              <article key={f.title} className="min-w-0 rounded-card border border-line bg-white p-6">
-                {visuals[i]}
-                <div className="mt-5 flex items-center justify-between gap-3">
-                  <p className="text-xs font-semibold uppercase tracking-[.12em] text-ink-blue">{f.tag}</p>
-                  <StatusPill tone="success">{t.changes.live}</StatusPill>
-                </div>
-                <h3 className="mt-2 font-display text-2xl font-bold text-ink">{f.title}</h3>
-                <p className="mt-3 text-sub">{f.body}</p>
-              </article>
-            ))}
-          </div>
-          <p className="mt-3 text-right text-xs text-sub">{t.hero.illustration}</p>
+      <Section id="changes">
+        <Eyebrow>{t.changes.eyebrow}</Eyebrow>
+        <h2 className={`${h2} max-w-3xl`}>{t.changes.title}</h2>
+        <p className="mt-5 font-display text-lg font-bold text-green-text">{t.changes.benefit}</p>
+        <p className={`mt-2 max-w-3xl ${lead}`}>{t.changes.lead}</p>
+        <div className="mt-12 grid grid-cols-[minmax(0,1fr)] gap-6 md:grid-cols-2">
+          {t.changes.features.map((f, i) => (
+            <article key={f.title} className={`min-w-0 ${cardOnWhite} p-6`}>
+              {visuals[i]}
+              <div className="mt-5 flex items-center justify-between gap-3">
+                <p className="text-xs font-semibold uppercase tracking-[.12em] text-ink-blue">{f.tag}</p>
+                <StatusPill tone="success">{t.changes.live}</StatusPill>
+              </div>
+              <h3 className={`mt-2 ${cardTitle}`}>{f.title}</h3>
+              <p className={`mt-3 ${cardBody}`}>{f.body}</p>
+            </article>
+          ))}
         </div>
-      </section>
+        <p className="mt-3 text-right text-xs text-sub">{t.hero.illustration}</p>
+      </Section>
 
       {/* 5. Supplier round als cirkel */}
       <SupplierCycle t={t.cycle} />
 
-      {/* 6. For whom: vragen, geen functieclaims */}
-      <section id="for-whom" className="scroll-mt-20 px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <p className={eyebrow}>{t.forWhom.eyebrow}</p>
-          <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
-            <h2 className={h2}>{t.forWhom.title}</h2>
-            <p className="text-lg text-ink-blue">{t.forWhom.lead}</p>
-          </div>
-          <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {t.forWhom.cards.map((c) => (
-              <li key={c.title} className="rounded-card border border-line bg-white p-6">
-                <p className="font-display text-lg font-bold text-ink">{c.title}</p>
-                <p className="mt-2 text-sm text-sub">{c.body}</p>
-              </li>
-            ))}
-          </ul>
+      {/* 6. For whom: vragen, geen functieclaims; twee bij twee */}
+      <Section id="for-whom">
+        <Eyebrow>{t.forWhom.eyebrow}</Eyebrow>
+        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+          <h2 className={h2}>{t.forWhom.title}</h2>
+          <p className={lead}>{t.forWhom.lead}</p>
         </div>
-      </section>
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2">
+          {t.forWhom.cards.map((c) => (
+            <li key={c.title} className={`${cardOnWhite} p-6`}>
+              <p className={cardTitleSmall}>{c.title}</p>
+              <p className={`mt-2 ${cardBody}`}>{c.body}</p>
+            </li>
+          ))}
+        </ul>
+      </Section>
 
       {/* 7. Pricing: drie regels en één knop. De knop volgt de poort, net als menu en footer:
           open (PRICING_PAGE_ENABLED) naar de prijspagina, dicht naar het prijsblok op de homepage. */}
-      <section id="pricing" className="scroll-mt-20 bg-white px-6 py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_1fr]">
+      <Section id="pricing" tone="canvas">
+        <div className="grid items-center gap-12 lg:grid-cols-[1fr_1fr]">
           <div>
-            <p className={eyebrow}>{pricing.eyebrow}</p>
+            <Eyebrow>{pricing.eyebrow}</Eyebrow>
             <h2 className={h2}>{pricing.title}</h2>
           </div>
-          <div className="rounded-hero bg-mint p-8">
+          <div className={`${promoPanel} p-8`}>
             <ul className="space-y-3">
               {pricing.lines.map((l) => (
                 <li key={l} className="flex items-start gap-3 text-lg font-medium text-ink"><span aria-hidden="true" className="mt-2 inline-block h-2.5 w-2.5 flex-none rounded-full bg-accent" />{l}</li>
               ))}
             </ul>
-            <div className="mt-8"><Link href={pricingEnabled ? `/${lang}/pricing` : `/${lang}#pricing`} className={`${btn} bg-accent text-ink hover:bg-accent-dark`}>{t.pricing.cta} <ArrowRight size={18} aria-hidden="true" /></Link></div>
+            <div className="mt-8"><Link href={pricingEnabled ? `/${lang}/pricing` : `/${lang}#pricing`} className={btnPrimary}>{t.pricing.cta} <ArrowRight size={18} aria-hidden="true" /></Link></div>
           </div>
         </div>
-      </section>
+      </Section>
 
-      <WhitepaperObject lang={lang} t={dict.home.whitepaper} />
+      <WhitepaperObject t={dict.home.whitepaper} />
 
-      {/* Slot: demo-CTA als navy band met plantje */}
-      <section className="px-6 pb-24 pt-4">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-hero bg-navy px-8 py-12 text-white md:px-12">
-          <div className="grid items-center gap-8 md:grid-cols-[1fr_auto] md:pr-44">
-            <div>
-              <h2 className="font-display text-3xl font-bold leading-tight md:text-4xl">{t.closing.title}</h2>
-              <p className="mt-4 max-w-xl text-white/80">{t.closing.lead}</p>
-              <a href={demo} className={`${btn} mt-8 bg-accent text-ink hover:bg-accent-dark`}><Mail size={18} aria-hidden="true" />{t.closing.cta}</a>
-            </div>
-            <div className="text-sm md:text-right"><b className="block font-semibold text-accent">{t.closing.site}</b><a href="mailto:hello@livoapps.software" className="rounded text-white/80 hover:text-white focus-ring">{t.closing.mail}</a></div>
-          </div>
-          <PhotoPlace src={SEEDLING} imgClassName="pointer-events-none absolute -bottom-10 -right-6 hidden h-52 w-auto md:block" />
-        </div>
-        <p className="mx-auto mt-8 max-w-7xl text-xs text-sub">{t.footer.line}</p>
-      </section>
+      {/* Slot: het ene navy moment van de pagina, met het plantje als randaccent */}
+      <ClosingBand
+        tone="canvas"
+        title={t.closing.title}
+        lead={t.closing.lead}
+        aside={<div className="text-sm md:text-right"><b className="block font-semibold text-accent">{t.closing.site}</b><a href="mailto:hello@livoapps.software" className="inline-flex min-h-[44px] items-center rounded text-white/80 transition-colors duration-150 hover:text-white focus-ring">{t.closing.mail}</a></div>}
+        photo={<PhotoPlace src={SEEDLING} imgClassName="pointer-events-none absolute -bottom-10 -right-6 hidden h-52 w-auto md:block" />}
+        footnote={<p className="mx-auto mt-8 max-w-content text-xs text-sub">{t.footer.line}</p>}
+      >
+        <a href={demo} className={btnPrimary}><Mail size={18} aria-hidden="true" />{t.closing.cta}</a>
+      </ClosingBand>
     </div>
   );
 }

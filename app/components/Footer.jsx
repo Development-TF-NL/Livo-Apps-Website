@@ -14,7 +14,7 @@ export default function Footer({ lang, dict }) {
   };
   return (
     <footer className="bg-navy text-white border-t border-white/10 px-6 py-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-content">
         <div className="grid gap-12 mb-12 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-2 mb-6">
@@ -24,11 +24,11 @@ export default function Footer({ lang, dict }) {
           </div>
           {columns.map((col) => (
             <div key={col.title}>
-              <h4 className="font-display font-bold mb-4 text-sm tracking-wide">{col.title}</h4>
-              <ul className="space-y-3 text-sm text-white/60">
+              <h4 className="mb-2 font-display text-sm font-bold tracking-wide">{col.title}</h4>
+              <ul className="text-sm text-white/60">
                 {col.items.map(({ label, href }) => (
                   <li key={label}>
-                    <a href={resolve(href)} className="rounded hover:text-accent focus-ring" {...(href.startsWith('https://') ? { rel: 'noopener noreferrer' } : {})}>
+                    <a href={resolve(href)} className="inline-flex min-h-[44px] items-center rounded transition-colors duration-150 hover:text-accent focus-ring" {...(href.startsWith('https://') ? { rel: 'noopener noreferrer' } : {})}>
                       {label}
                     </a>
                   </li>
@@ -40,11 +40,11 @@ export default function Footer({ lang, dict }) {
         <p className="text-xs text-white/50 mb-8">{dict.disclaimer}</p>
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/60">
           <p>{dict.copyright}</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
+          <div className="mt-2 flex items-center gap-6 md:mt-0">
             {dict.social.map(({ label, href }) => (
-              <a href={href} target="_blank" rel="noopener noreferrer" className="rounded hover:text-accent focus-ring" key={label}>{label}</a>
+              <a href={href} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center rounded transition-colors duration-150 hover:text-accent focus-ring" key={label}>{label}</a>
             ))}
-            <a href="mailto:hello@livoapps.software" className="rounded hover:text-accent focus-ring">hello@livoapps.software</a>
+            <a href="mailto:hello@livoapps.software" className="inline-flex min-h-[44px] items-center rounded transition-colors duration-150 hover:text-accent focus-ring">hello@livoapps.software</a>
           </div>
         </div>
       </div>

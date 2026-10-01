@@ -29,14 +29,14 @@ export default function ProductLoginMenu({ dict, mobile = false }) {
       id="login-menu"
       role="menu"
       aria-label={dict.loginMenuTitle}
-      className={`${mobile ? 'mt-2' : 'absolute right-0 mt-2 w-72'} rounded-lg border border-line bg-white p-2 text-left`}
+      className={`${mobile ? 'mt-2' : 'absolute right-0 mt-2 w-72'} rounded-card border border-line bg-white p-2 text-left shadow-soft`}
     >
       <p className="px-2 pb-1 pt-1 text-xs font-semibold uppercase tracking-wide text-sub">{dict.loginMenuTitle}</p>
       <a
         role="menuitem"
         href={PPWR_LOGIN_URL}
         rel="noopener noreferrer"
-        className={`flex items-center justify-between gap-3 rounded-md px-2 py-2 transition-colors duration-200 hover:bg-canvas ${focusRing}`}
+        className={`flex min-h-[44px] items-center justify-between gap-3 rounded-control px-2 py-2 transition-colors duration-150 hover:bg-canvas ${focusRing}`}
       >
         <span>
           <span className="block text-sm font-semibold text-ink">{dict.loginPpwr}</span>
@@ -64,9 +64,9 @@ export default function ProductLoginMenu({ dict, mobile = false }) {
         aria-expanded={open}
         aria-controls="login-menu"
         aria-haspopup="menu"
-        className={`inline-flex items-center gap-1 text-sm text-ink transition-colors duration-200 hover:text-accent-dark ${focusRing}`}
+        className={`inline-flex h-11 items-center gap-1 text-sm text-ink transition-colors duration-150 hover:text-accent-dark ${focusRing}`}
       >
-        {dict.login} <ChevronDown size={16} aria-hidden="true" className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
+        {dict.login} <ChevronDown size={16} aria-hidden="true" className={`transition-transform duration-150 ${open ? 'rotate-180' : ''}`} />
       </button>
       {open && panel}
     </div>

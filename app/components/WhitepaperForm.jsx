@@ -2,12 +2,14 @@
 
 import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { btnPrimary } from './ui';
 
+// Tekstvelden tonen de rand bij elke focus, ook na een klik (de klasse focus-ring slaat muisfocus over).
 const focusRing =
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy';
 
 const inputClass =
-  `w-full rounded-md border border-line bg-surface px-3 py-2 text-sm text-ink placeholder:text-sub/60 ${focusRing}`;
+  `h-12 w-full rounded-control border border-line bg-surface px-3 text-body text-ink placeholder:text-sub/60 ${focusRing}`;
 
 export default function WhitepaperForm({ lang, labels }) {
   const router = useRouter();
@@ -68,13 +70,13 @@ export default function WhitepaperForm({ lang, labels }) {
       </div>
 
       {status === 'error' && (
-        <p role="alert" className="text-sm text-[#991B1B] bg-[#FEE2E2] rounded-md px-3 py-2">{labels.error}</p>
+        <p role="alert" className="rounded-control bg-status-risk-bg px-3 py-2 text-sm text-status-risk-text">{labels.error}</p>
       )}
 
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className={`w-full rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-navy transition-colors duration-200 hover:bg-accent-dark disabled:opacity-60 ${focusRing}`}
+        className={`${btnPrimary} w-full disabled:opacity-60`}
       >
         {status === 'submitting' ? labels.submitting : labels.submit}
       </button>

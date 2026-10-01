@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getDictionary } from '../../../get-dictionary';
+import { btnPrimary, heroPanel } from '../../../components/ui';
 
 export async function generateMetadata({ params }) {
   const dict = await getDictionary(params.lang);
@@ -15,13 +16,13 @@ export default async function WhitepaperThanksPage({ params }) {
   const t = dict.whitepaper;
 
   return (
-    <main className="bg-canvas px-6 py-24 min-h-[60vh]">
-      <div className="max-w-xl mx-auto bg-surface border border-line rounded-xl p-10 text-center">
+    <main className="min-h-[60vh] bg-canvas px-6 py-16 md:py-24">
+      <div className={`mx-auto max-w-xl ${heroPanel} p-10 text-center`}>
         <h1 className="text-3xl font-display font-bold text-ink mb-4">{t.thanks.title}</h1>
         <p className="text-sub leading-relaxed mb-8">{t.thanks.body}</p>
         <Link
           href={`/${lang}`}
-          className="inline-block rounded-md bg-navy px-6 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-navy/85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy"
+          className={btnPrimary}
         >
           {t.thanks.back}
         </Link>

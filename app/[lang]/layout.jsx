@@ -4,6 +4,7 @@ import { Inter, Caveat } from 'next/font/google';
 import localFont from 'next/font/local';
 import { notFound } from 'next/navigation';
 import Nav from '../components/Nav';
+import FocusModality from '../components/FocusModality';
 import { getDictionary } from '../get-dictionary';
 import { i18n } from '../i18n-config';
 import { socialMetadata } from '../seo';
@@ -61,6 +62,8 @@ export default async function RootLayout({ children, params }) {
       <body className="font-sans text-ink">
         <Nav lang={lang} dict={dict.nav} pricingEnabled={process.env.PRICING_PAGE_ENABLED === 'true'} />
         {children}
+        {/* De focusrand alleen bij toetsenbordfocus (zie globals.css) */}
+        <FocusModality />
         {/* Cookieless (geen banner nodig) — ontwerpdocument v2 §5 */}
         <Analytics />
       </body>
