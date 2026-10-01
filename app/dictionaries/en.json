@@ -488,7 +488,7 @@
     "head": {
       "title": "Your own PPWR expert. Without hiring one.",
       "trigger": "The first question won't come from a regulator. It will come from your customer. LIVO PPWR prepares your answer.",
-      "audience": "For importers, wholesalers and brands with packaged products. From €84 a month."
+      "audience": "For importers, wholesalers and brands with packaged products. From €99 a month."
     },
     "benefits": [
       {
@@ -548,7 +548,7 @@
     },
     "page": {
       "toggleMonthly": "Monthly",
-      "toggleAnnual": "Annually",
+      "toggleAnnual": "Annually · 15% off",
       "orderPlan": "Buy {plan}",
       "orderSubject": "Order LIVO PPWR: {plan}",
       "planLine": "Plan: {plan}",

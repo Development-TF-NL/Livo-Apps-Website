@@ -488,7 +488,7 @@
     "head": {
       "title": "Je eigen PPWR-expert. Zonder er één aan te nemen.",
       "trigger": "De eerste vraag komt niet van de toezichthouder. Hij komt van je klant. LIVO PPWR zet je antwoord klaar.",
-      "audience": "Voor importeurs, groothandels en merken met verpakte producten. Vanaf €84 per maand."
+      "audience": "Voor importeurs, groothandels en merken met verpakte producten. Vanaf €99 per maand."
     },
     "benefits": [
       {
@@ -548,7 +548,7 @@
     },
     "page": {
       "toggleMonthly": "Maandelijks",
-      "toggleAnnual": "Jaarlijks",
+      "toggleAnnual": "Jaarlijks · 15% korting",
       "orderPlan": "Bestel {plan}",
       "orderSubject": "LIVO PPWR bestellen: {plan}",
       "planLine": "Plan: {plan}",

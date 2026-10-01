@@ -79,11 +79,12 @@ export default async function PricingPage({ params }) {
           <h2 className="font-display text-3xl font-bold leading-tight tracking-tight md:text-4xl">{t.price.title}</h2>
           <p className="mt-3 text-sub">{t.price.line}</p>
 
-          {/* De twee keuzerondjes sturen met CSS (peer) welke prijs zichtbaar is; standaard jaarlijks.
+          {/* De twee keuzerondjes sturen met CSS (peer) welke prijs zichtbaar is; standaard maandelijks
+              (besluit prijzen 1 oktober 2026: de maandprijs is de standaard, jaarbetaling de optie met korting).
               Zonder CSS staan beide bedragen er, elk met zijn naam ervoor. De focus landt op het verborgen
               keuzerondje; het label ernaast krijgt dan dezelfde rand als de klasse focus-ring (--focus-ring). */}
-          <input type="radio" name="billing" id="billing-annual" defaultChecked className="peer/annual sr-only" />
-          <input type="radio" name="billing" id="billing-monthly" className="peer/monthly sr-only" />
+          <input type="radio" name="billing" id="billing-monthly" defaultChecked className="peer/monthly sr-only" />
+          <input type="radio" name="billing" id="billing-annual" className="peer/annual sr-only" />
           <div className="mt-6 inline-flex rounded-control border border-line bg-canvas p-1 text-sm font-semibold peer-checked/annual:[&_.t-annual]:bg-navy peer-checked/annual:[&_.t-annual]:text-white peer-checked/monthly:[&_.t-monthly]:bg-navy peer-checked/monthly:[&_.t-monthly]:text-white peer-focus-visible/annual:[&_.t-annual]:[box-shadow:var(--focus-ring)] peer-focus-visible/monthly:[&_.t-monthly]:[box-shadow:var(--focus-ring)]">
             <label htmlFor="billing-monthly" className="t-monthly inline-flex min-h-[44px] cursor-pointer items-center rounded-[8px] px-4 text-sub">{t.page.toggleMonthly}</label>
             <label htmlFor="billing-annual" className="t-annual inline-flex min-h-[44px] cursor-pointer items-center rounded-[8px] px-4 text-sub">{t.page.toggleAnnual}</label>
@@ -93,7 +94,7 @@ export default async function PricingPage({ params }) {
             <div className={`hidden border-b-[1.5px] border-navy pb-2 md:grid md:grid-cols-[1fr_1fr_1.2fr_17rem] md:gap-6 ${eyebrow}`} aria-hidden="true">
               <span>{t.price.columns.plan}</span>
               <span>{t.price.columns.skus}</span>
-              <span><span className="p-annual">{t.price.columns.annual}</span> <span className="p-monthly">{t.price.columns.monthly}</span></span>
+              <span><span className="p-monthly">{t.price.columns.monthly}</span> <span className="p-annual">{t.price.columns.annual}</span></span>
               <span />
             </div>
             <ul>
@@ -102,14 +103,14 @@ export default async function PricingPage({ params }) {
                   <h3 className="font-display text-2xl font-bold tracking-tight md:text-xl">{p.name}</h3>
                   <p className="text-sub"><span className="md:hidden">{t.price.columns.skus}: </span>{t.price.upTo} {num(p.limit, lang)}</p>
                   <div>
-                    <p className="p-annual">
-                      <span className="sr-only">{t.page.toggleAnnual}: </span>
-                      <span className="font-display text-2xl font-bold text-ink">€{num(p.annualMonthly, lang)}</span> <span className="text-sm text-sub">{t.price.perMonth}</span>
-                      <span className="block text-sm text-sub">€{num(p.annualTotal, lang)} {t.price.perYear}</span>
-                    </p>
                     <p className="p-monthly">
                       <span className="sr-only">{t.page.toggleMonthly}: </span>
                       <span className="font-display text-2xl font-bold text-ink">€{num(p.monthly, lang)}</span> <span className="text-sm text-sub">{t.price.perMonth}</span>
+                    </p>
+                    <p className="p-annual">
+                      <span className="sr-only">{t.price.columns.annual}: </span>
+                      <span className="font-display text-2xl font-bold text-ink">€{num(p.annualMonthly, lang)}</span> <span className="text-sm text-sub">{t.price.perMonth}</span>
+                      <span className="block text-sm text-sub">€{num(p.annualTotal, lang)} {t.price.perYear}</span>
                     </p>
                   </div>
                   <a href={planMail(order, t.page, p.name, t.page.orderSubject)} className={`${btn} bg-accent text-ink hover:bg-accent-dark`}>
