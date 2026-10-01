@@ -1,10 +1,8 @@
 {
   "nav": {
-    "products": "Products",
+    "how": "How it works",
     "pricing": "Pricing",
-    "resources": "Resources",
-    "how": "How LIVO works",
-    "about": "About Livo",
+    "about": "About LIVO APPS",
     "login": "Log in",
     "loginMenuTitle": "Your LIVO apps",
     "loginPpwr": "LIVO PPWR",
@@ -12,49 +10,31 @@
     "loginOpen": "Open",
     "loginNext": "Next module",
     "loginNextSub": "In development",
-    "cta": "Get LIVO PPWR",
     "language": "Language",
     "menuOpen": "Open menu",
-    "menuClose": "Close menu"
+    "menuClose": "Close menu",
+    "order": {
+      "cta": "Buy LIVO PPWR",
+      "mailSubject": "Order LIVO PPWR",
+      "mailBody": "Hello LIVO APPS,\n\nWe would like to start with LIVO PPWR.\n\nCompany:\nName:\nJob title:\nNumber of products we place on the EU market ourselves:\n"
+    }
   },
   "home": {
     "meta": {
-      "title": "Livo Apps · Software that lightens the workflow",
-      "description": "Compliance work keeps growing. LIVO PPWR brings packaging data, obligations, evidence and supplier input into one maintained workflow."
+      "title": "LIVO PPWR · PPWR expertise. Ready when you need it.",
+      "description": "Your own PPWR expert, without hiring one. For importers, wholesalers and brands that want less research and faster answers to customer requests."
     },
     "hero": {
-      "brandLine": "Software that lightens the workflow",
-      "lead": "Bring packaging data, supplier input and evidence together in one place. Less searching, chasing and rework. Ready when customers ask.",
-      "ctaPrimary": "Get LIVO PPWR",
-      "ctaSecondary": "Explore the product",
-      "titleBefore": "Compliance work keeps growing. ",
-      "titleGreen": "LIVO",
-      "titleAfter": " makes it easier.",
-      "note": "Four sources. One answer.",
+      "eyebrow": "Your own PPWR expert, without hiring one.",
+      "title": "PPWR expertise. Ready when you need it.",
+      "lead": "Your customer wants packaging data. LIVO PPWR works through the obligations and prepares the documentation work. Less research. Faster answers.",
+      "audience": "For importers, wholesalers and brands with packaged products.",
+      "ctaDemo": "Request a demo",
+      "demoSubject": "LIVO PPWR demo",
+      "ctaHow": "See how it works",
+      "anchor": "LIVO does the groundwork and prepares the next steps. You review and confirm.",
       "visual": {
         "label": "Illustration",
-        "files": [
-          {
-            "kind": "excel",
-            "title": "Product data",
-            "sub": "Excel files"
-          },
-          {
-            "kind": "mail",
-            "title": "Supplier information",
-            "sub": "E-mails"
-          },
-          {
-            "kind": "pdf",
-            "title": "Declarations",
-            "sub": "PDF files"
-          },
-          {
-            "kind": "folder",
-            "title": "Various folders",
-            "sub": "Different versions"
-          }
-        ],
         "register": {
           "tenant": "example-tenant",
           "tabs": [
@@ -91,112 +71,102 @@
               "next": "Confirm level"
             }
           ]
-        },
-        "outcome": "Answer ready for your customer",
-        "photo": "photo: cardboard box, cut-out"
-      },
-      "roadmap": "LIVO PPWR available now · Next module: in development"
-    },
-    "products": {
-      "eyebrow": "Livo products",
-      "title": "One LIVO way of working. More compliance modules over time.",
-      "lead": "Each module is built for a specific regulatory workflow, with the same focus on clarity, maintainability and less manual work.",
-      "ppwr": {
-        "status": "Available now",
-        "name": "LIVO PPWR",
-        "body": "Built for real-world PPWR work: data spread across files and systems, incomplete supplier and product data, expiring evidence and documents that need to stay traceable.",
-        "points": [
-          "Use your existing files",
-          "See gaps and open actions",
-          "Let suppliers fill missing data",
-          "Keep packaging files up to date"
-        ],
-        "ctaExplore": "Explore LIVO PPWR",
-        "ctaOpen": "Open app"
-      },
-      "next": {
-        "status": "In development",
-        "name": "Next module",
-        "body": "LIVO PPWR is the first module, not the last. The next one is in development. More details to follow.",
-        "cta": "Ask about the next module"
+        }
       }
+    },
+    "question": {
+      "eyebrow": "The first question won't come from a regulator.",
+      "title": "Your customer asks. Where is your answer?",
+      "lead": "Your customers will ask for packaging data. By item. By material. With evidence. That is the time to deliver, not dig through spreadsheets, inboxes and supplier files.",
+      "card": "“Please send the packaging data and evidence for these items.”",
+      "closing": "Your customer wants an answer. Not your search history."
+    },
+    "value": {
+      "title": "Bring in expertise. Free up time and budget.",
+      "cards": [
+        {
+          "label": "Expertise",
+          "title": "The expertise. Without the hire.",
+          "body": "LIVO PPWR works out which obligations apply to your packaging."
+        },
+        {
+          "label": "Time",
+          "title": "Less searching. More getting done.",
+          "body": "Reuse your data and let suppliers fill the gaps."
+        },
+        {
+          "label": "Money",
+          "title": "Stop paying to solve the same PPWR questions.",
+          "body": "Put recurring work into software. Spend your advice budget on judgement, not groundwork."
+        }
+      ]
     },
     "how": {
-      "eyebrow": "How LIVO works",
-      "title": "Built around the work people actually have to do.",
-      "lead": "LIVO does not ask you to rebuild your world around the software. It helps structure the work you already have and keeps it maintainable as things change.",
-      "steps": [
+      "eyebrow": "More than an overview",
+      "title": "See what is missing. Get to work.",
+      "proofs": [
         {
-          "title": "Start with what you already have.",
-          "body": "Bring in the files your team is already working with."
+          "lead": "Start with your own Excel file.",
+          "body": "LIVO recognises the columns. You confirm."
         },
         {
-          "title": "See what needs attention.",
-          "body": "Keep missing, expired and open items visible instead of hiding them in spreadsheets."
+          "lead": "Obligations alongside your packaging.",
+          "body": "With status and the date they take effect."
         },
         {
-          "title": "Let other people do their part.",
-          "body": "Ask suppliers for the missing information with a prefilled request. Their answers come back as proposals for you to review."
-        },
-        {
-          "title": "Keep the file complete and up to date.",
-          "body": "Maintain one connected source instead of rebuilding the same answers every time."
+          "lead": "Evidence at the source.",
+          "body": "Documents linked to packaging and material layers."
         }
       ],
-      "card": {
-        "label": "Illustration · Today in LIVO PPWR",
-        "rows": [
-          {
-            "title": "Packaging file updated",
-            "body": "Existing data matched to product file",
-            "status": "Ready",
-            "tone": "success"
-          },
-          {
-            "title": "Supplier input needed",
-            "body": "2 missing evidence items",
-            "status": "Needs data",
-            "tone": "warning"
-          },
-          {
-            "title": "Evidence expired",
-            "body": "Review before next customer request",
-            "status": "Expired",
-            "tone": "risk"
-          },
-          {
-            "title": "Shipping carton",
-            "body": "Packaging level to confirm",
-            "status": "Open",
-            "tone": "info"
-          }
-        ]
-      }
+      "cta": "Explore LIVO PPWR"
+    },
+    "chain": {
+      "eyebrow": "From supplier to customer",
+      "title": "Get the data in. Get the answer out.",
+      "cards": [
+        {
+          "title": "Your supplier fills the gaps.",
+          "body": "LIVO PPWR prepares a prefilled request. In the portal, your supplier sees what is already there and fills in only the gaps."
+        },
+        {
+          "title": "You export for your customer.",
+          "body": "Save your customer’s SKU selection and export it to Excel. LIVO PPWR also uses the same data to prepare a draft declaration of conformity."
+        }
+      ],
+      "expertLead": "A filled field is not proof of sound data.",
+      "expertBody": "LIVO PPWR includes questionable values, such as an implausible weight or zero recycled content, in the request for your supplier to check."
     },
     "pricing": {
       "eyebrow": "Pricing",
       "title": "Simple pricing, with a clear path to start.",
-      "lead": "One number decides your price: how many products you put on the EU market yourself. Everything else is included in every paid plan.",
-      "cardTitle": "Pricing built around your PPWR scope.",
-      "cardBody": "LIVO PPWR is not priced per user. What counts: the products you are the manufacturer, importer or EPR producer for. Products you only resell do not drive your plan.",
-      "points": [
-        "All EU markets included",
-        "No per-user pricing",
-        "Free plan up to 25 SKUs, no card needed",
-        "All plans free until 1 November 2026"
-      ],
-      "planTitle": "Choose the plan that matches your scope.",
-      "planBody": "Six plans from a free start to 10,000 SKUs, monthly or yearly. The full comparison is on the pricing page.",
-      "scaleFrom": "Smaller PPWR scope",
-      "scaleTo": "Larger PPWR scope",
-      "ctaPricing": "View pricing",
-      "pricingSoon": "The full plan comparison goes live shortly. Until then, ask us for the plan that fits your scope.",
-      "ctaAsk": "Ask about pricing",
       "lines": [
         "Priced by the products you put on the EU market yourself.",
         "All EU markets included. No per-user pricing.",
         "All plans free until 1 November 2026."
-      ]
+      ],
+      "ctaAsk": "Ask about pricing",
+      "ctaPricing": "View pricing"
+    },
+    "start": {
+      "eyebrow": "Start with LIVO PPWR",
+      "title": "Start now. Free until 1 November.",
+      "steps": [
+        {
+          "title": "Order by e-mail",
+          "body": "Click Buy LIVO PPWR and fill in your details."
+        },
+        {
+          "title": "We confirm",
+          "body": "You receive your plan, the terms and your start date by e-mail."
+        },
+        {
+          "title": "Set up together",
+          "body": "We set up your environment with you and you start with your own packaging data."
+        }
+      ],
+      "note": "Until 1 November, ordering runs by e-mail.",
+      "customer": "Already a customer?",
+      "login": "Log in"
     },
     "whitepaper": {
       "eyebrow": "PPWR resource",
@@ -215,67 +185,19 @@
         "lead": "Tell us where to send it and we'll e-mail it to you.",
         "button": "Request the whitepaper",
         "mailSubject": "PPWR whitepaper",
-        "mailBody": "Hello Livo,\n\nPlease send me the PPWR whitepaper.\n\nName:\nCompany:\n"
-      }
-    },
-    "start": {
-      "eyebrow": "Start with LIVO PPWR",
-      "title": "From pricing to a LIVO PPWR licence, without a sales process.",
-      "lead": "Product demos stay available for buyers who want them. A company that is ready to start does not have to go through one.",
-      "steps": [
-        {
-          "title": "Choose a plan",
-          "body": "On the pricing page, based on the products you are responsible for."
-        },
-        {
-          "title": "Order confirmation",
-          "body": "We confirm your plan, limit, rate, term and start date by e-mail."
-        },
-        {
-          "title": "Payment by direct debit",
-          "body": "SEPA direct debit, monthly or yearly. All plans free until 1 November 2026."
-        },
-        {
-          "title": "Set-up together",
-          "body": "We set up your environment with you and you start with your own packaging data."
-        }
-      ],
-      "customer": "Already a customer?",
-      "login": "Log in"
+        "mailBody": "Hello LIVO APPS,\n\nPlease send me the PPWR whitepaper.\n\nName:\nCompany:\n"
+      },
+      "rowTitle": "Want to read first?",
+      "rowBody": "The PPWR whitepaper helps you organise data, supplier input and evidence."
     },
     "about": {
-      "eyebrow": "Software that lightens the workflow",
-      "title": "Practical software for complex work.",
-      "lead": "The LIVO promise is not that regulation becomes simple. It is that the work around it becomes easier to understand, easier to share and easier to keep under control.",
-      "principles": [
-        {
-          "title": "Less friction",
-          "body": "Use existing data, avoid duplicate work and reduce the amount of manual checking and chasing."
-        },
-        {
-          "title": "Clear status",
-          "body": "Know what is complete, what is missing and what needs attention without relying on one person's memory."
-        },
-        {
-          "title": "Human control",
-          "body": "LIVO can structure and suggest. People review, confirm and remain responsible for the decisions."
-        }
-      ],
-      "aboutTitle": "About Livo",
-      "aboutBody": "LIVO APPS was built from the reality of mid-sized companies: European rules that keep coming, and no army of consultants to meet them. We make software that is simple, affordable and calm to use, so you can keep packaging data, obligations and evidence in order, share the work with suppliers and customers, and show where you stand at any moment."
-    },
-    "nextModule": {
-      "eyebrow": "Next module",
-      "title": "Next module: in development.",
-      "body": "LIVO PPWR is the first module, not the last. The product family is being built around recurring compliance work that becomes difficult to manage in spreadsheets, folders and email.",
-      "cta": "Ask about the next module",
-      "photo": "seedling"
+      "eyebrow": "Software that lightens the workflow.",
+      "title": "Specialist knowledge for everyday work.",
+      "body": "LIVO APPS brings specialist knowledge to businesses without an army of experts. LIVO PPWR connects obligations to packaging data, supplier input and evidence.",
+      "moduleLine": "LIVO PPWR is available now. Another module is in development."
     },
     "finalCta": {
-      "title": "See how LIVO makes ongoing PPWR work easier to manage.",
-      "body": "A short product demonstration is enough to see how the workflow fits your team.",
-      "ctaPricing": "View pricing",
-      "ctaDemo": "See LIVO PPWR"
+      "title": "Your customer wants data. Not your PPWR learning curve."
     },
     "footer": {
       "tagline": "Software that lightens the workflow.",
@@ -288,7 +210,7 @@
               "href": "/ppwr"
             },
             {
-              "label": "How LIVO works",
+              "label": "How it works",
               "href": "#how"
             },
             {
@@ -310,7 +232,7 @@
           "title": "COMPANY",
           "items": [
             {
-              "label": "About Livo",
+              "label": "About LIVO APPS",
               "href": "#about"
             },
             {
@@ -332,76 +254,6 @@
           "href": "https://www.linkedin.com/company/livoapps-software"
         }
       ]
-    },
-    "requestFlow": {
-      "eyebrow": "A familiar situation?",
-      "title": "One customer request. Two days of searching.",
-      "steps": [
-        {
-          "title": "Request arrives",
-          "body": "\"Can you send the packaging data and declaration?\""
-        },
-        {
-          "title": "You start searching",
-          "body": "Where is the latest version?"
-        },
-        {
-          "title": "Supplier data is missing",
-          "body": "Who has this information?"
-        },
-        {
-          "title": "Two days later",
-          "body": "Still checking."
-        }
-      ],
-      "withTitle": "With LIVO",
-      "with": [
-        "Open the product",
-        "See what is missing",
-        "Ask the supplier",
-        "Respond to your customer"
-      ],
-      "note": "Same request. A lot less work.",
-      "quote": "A spreadsheet can hold compliance data. It does not help you manage obligations, evidence, gaps and changes across all your products."
-    },
-    "attention": {
-      "eyebrow": "Keep control without the manual work",
-      "title": "See what needs attention.",
-      "lead": "A clear overview of your products, obligations and evidence. Know what is complete, what is missing and what has expired.",
-      "points": [
-        "Products and packaging",
-        "Supplier information",
-        "Evidence and documents",
-        "Obligations per market",
-        "Tasks",
-        "Passports for customers"
-      ],
-      "cta": "See how it works",
-      "note": "Everything in one place."
-    },
-    "supplierRound": {
-      "eyebrow": "Supplier round",
-      "title": "Let suppliers fill the gaps.",
-      "lead": "A prefilled request per supplier, sent from your own mailbox. Suppliers add only what is missing. Their answers come back as proposals for you to review.",
-      "steps": [
-        {
-          "title": "Gap detected",
-          "body": "Missing data or evidence shows up as a task."
-        },
-        {
-          "title": "You send the request",
-          "body": "A prefilled file or a secure link, sent from your own mailbox."
-        },
-        {
-          "title": "Supplier fills the gaps",
-          "body": "Only what is missing, nothing else."
-        },
-        {
-          "title": "You review",
-          "body": "Answers return as proposals. Nothing overwrites what you had."
-        }
-      ],
-      "photo": "photo: label or leaf, cut-out"
     }
   },
   "ppwr": {
@@ -422,7 +274,7 @@
       "titleAfter": "",
       "lead": "The challenge is not collecting packaging data once. It is keeping data, obligations and evidence connected and up to date as products, packaging and markets change.",
       "ctaPrimary": "Get LIVO PPWR",
-      "ctaWalkthrough": "Request a walkthrough",
+      "ctaWalkthrough": "Request a demo",
       "walkthroughSubject": "LIVO PPWR walkthrough",
       "walkthroughBody": "Hello Livo,\n\nI would like a 20-minute walkthrough of LIVO PPWR.\n\nName:\nCompany:\nA few dates that work for me:\n",
       "registerTenant": "example-tenant",
@@ -576,7 +428,7 @@
     "closing": {
       "title": "See LIVO PPWR in a 20-minute walkthrough.",
       "lead": "See how it can reduce manual work, supplier chasing and repeated rework. Or start free with your own packaging data.",
-      "cta": "Request a walkthrough",
+      "cta": "Request a demo",
       "site": "livoapps.software",
       "mail": "hello@livoapps.software"
     },

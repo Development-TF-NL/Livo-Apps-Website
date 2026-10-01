@@ -6,12 +6,12 @@ import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 import ProductLoginMenu from './ProductLoginMenu';
+import OrderButton from './OrderButton';
 
-// Header volgens brief §3 en §11 (fase 1, 16 september 2026): Products, Pricing, Resources,
-// How LIVO works, About Livo, taalwissel, Log in (menu), Get LIVO PPWR.
-// Geen dode links: Pricing en Get LIVO PPWR wijzen naar de prijssectie op de homepage
-// zolang /[lang]/pricing achter de poort staat; Resources wijst naar /[lang]/whitepaper
-// (beslissing 5: geen /resources-index tot er een tweede resource is).
+// Header volgens homepage v5 (1 oktober 2026): drie menulinks (How it works, Pricing, About LIVO APPS),
+// taalwissel, Log in (menu) en de tijdelijke bestelknop (mailto, tot 1 november 2026).
+// Geen dode links: de drie links zijn ankers op de homepage; de productpagina en de whitepaper
+// staan lager op de pagina en in de footer.
 
 const focusRing =
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded';
@@ -31,14 +31,10 @@ export default function Nav({ lang, dict }) {
   const close = () => setIsMenuOpen(false);
 
   const navItems = [
-    { label: dict.products, href: `/${lang}/ppwr` },
-    { label: dict.pricing, href: `/${lang}#pricing` },
-    { label: dict.resources, href: `/${lang}/whitepaper` },
     { label: dict.how, href: `/${lang}#how` },
+    { label: dict.pricing, href: `/${lang}#pricing` },
     { label: dict.about, href: `/${lang}#about` },
   ];
-
-  const ctaHref = `/${lang}#pricing`;
 
   const langSwitch = (
     <div className="flex items-center overflow-hidden rounded-md border border-line text-xs font-semibold" role="group" aria-label={dict.language}>
@@ -80,9 +76,7 @@ export default function Nav({ lang, dict }) {
         <div className="hidden items-center gap-4 lg:flex">
           {langSwitch}
           <ProductLoginMenu dict={dict} />
-          <Link href={ctaHref} className={`rounded-control bg-accent px-5 py-2 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-dark ${focusRing}`}>
-            {dict.cta}
-          </Link>
+          <OrderButton t={dict.order} className={`inline-flex items-center gap-2 rounded-control bg-accent px-5 py-2 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-dark ${focusRing}`} />
         </div>
 
         <button
@@ -112,9 +106,7 @@ export default function Nav({ lang, dict }) {
             <ProductLoginMenu dict={dict} mobile />
             {langSwitch}
           </div>
-          <Link href={ctaHref} onClick={close} className={`mt-4 block rounded-control bg-accent px-5 py-2.5 text-center text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-dark ${focusRing}`}>
-            {dict.cta}
-          </Link>
+          <OrderButton t={dict.order} onClick={close} className={`mt-4 flex items-center justify-center gap-2 rounded-control bg-accent px-5 py-2.5 text-sm font-semibold text-ink transition-colors duration-200 hover:bg-accent-dark ${focusRing}`} />
         </div>
       )}
     </header>

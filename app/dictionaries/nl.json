@@ -1,10 +1,8 @@
 {
   "nav": {
-    "products": "Producten",
+    "how": "Hoe het werkt",
     "pricing": "Prijzen",
-    "resources": "Hulpmiddelen",
-    "how": "Hoe LIVO werkt",
-    "about": "Over Livo",
+    "about": "Over LIVO APPS",
     "login": "Inloggen",
     "loginMenuTitle": "Jouw LIVO-apps",
     "loginPpwr": "LIVO PPWR",
@@ -12,50 +10,31 @@
     "loginOpen": "Openen",
     "loginNext": "Volgende module",
     "loginNextSub": "In ontwikkeling",
-    "cta": "LIVO PPWR gebruiken",
     "language": "Taal",
     "menuOpen": "Menu openen",
-    "menuClose": "Menu sluiten"
+    "menuClose": "Menu sluiten",
+    "order": {
+      "cta": "Bestel LIVO PPWR",
+      "mailSubject": "LIVO PPWR bestellen",
+      "mailBody": "Hallo LIVO APPS,\n\nWij willen starten met LIVO PPWR.\n\nBedrijf:\nNaam:\nFunctie:\nAantal producten dat wij zelf op de EU-markt brengen:\n"
+    }
   },
   "home": {
     "meta": {
-      "title": "Livo Apps · Software die je werk lichter maakt",
-      "description": "Compliancewerk blijft groeien. LIVO PPWR brengt verpakkingsdata, verplichtingen, bewijs en leveranciersinput samen in één bijgehouden werkstroom."
+      "title": "LIVO PPWR · PPWR-expertise. Direct beschikbaar.",
+      "description": "Je eigen PPWR-expert, zonder er één aan te nemen. Voor importeurs, groothandels en merken die minder willen uitzoeken en sneller willen antwoorden op klantvragen."
     },
     "hero": {
-      "brandLine": "Software die je werk lichter maakt",
-      "lead": "Breng verpakkingsdata, leveranciersinput en bewijs samen op één plek. Minder zoeken, najagen en overdoen. Klaar als klanten iets vragen.",
-      "ctaPrimary": "LIVO PPWR gebruiken",
-      "ctaSecondary": "Bekijk het product",
-      "roadmap": "LIVO PPWR nu beschikbaar · Volgende module: in ontwikkeling",
-      "titleBefore": "Compliancewerk blijft groeien. ",
-      "titleGreen": "LIVO",
-      "titleAfter": " maakt het lichter.",
-      "note": "Vier bronnen. Eén antwoord.",
+      "eyebrow": "Je eigen PPWR-expert, zonder er één aan te nemen.",
+      "title": "PPWR-expertise. Direct beschikbaar.",
+      "lead": "Je klant vraagt om verpakkingsdata. LIVO PPWR zoekt de verplichtingen uit en zet het dossierwerk klaar. Minder uitzoeken. Sneller antwoorden.",
+      "audience": "Voor importeurs, groothandels en merken met verpakte producten.",
+      "ctaDemo": "Plan een demo",
+      "demoSubject": "LIVO PPWR demo",
+      "ctaHow": "Bekijk hoe het werkt",
+      "anchor": "LIVO zoekt uit en zet klaar. Jij beoordeelt en bevestigt.",
       "visual": {
         "label": "Illustratie",
-        "files": [
-          {
-            "kind": "excel",
-            "title": "Productdata",
-            "sub": "Excel-bestanden"
-          },
-          {
-            "kind": "mail",
-            "title": "Leveranciersinformatie",
-            "sub": "E-mails"
-          },
-          {
-            "kind": "pdf",
-            "title": "Verklaringen",
-            "sub": "PDF-bestanden"
-          },
-          {
-            "kind": "folder",
-            "title": "Losse mappen",
-            "sub": "Verschillende versies"
-          }
-        ],
         "register": {
           "tenant": "example-tenant",
           "tabs": [
@@ -92,111 +71,102 @@
               "next": "Confirm level"
             }
           ]
-        },
-        "outcome": "Antwoord klaar voor je klant",
-        "photo": "foto: kartonnen doos, vrijstaand"
+        }
       }
     },
-    "products": {
-      "eyebrow": "Livo-producten",
-      "title": "Eén LIVO-manier van werken. Meer compliancemodules in de loop van de tijd.",
-      "lead": "Elke module is gebouwd voor één regelgevende werkstroom, met dezelfde nadruk op helderheid, onderhoudbaarheid en minder handwerk.",
-      "ppwr": {
-        "status": "Nu beschikbaar",
-        "name": "LIVO PPWR",
-        "body": "Gebouwd voor echt PPWR-werk: data verspreid over bestanden en systemen, onvolledige leveranciers- en productdata, verlopend bewijs en documenten die herleidbaar moeten blijven.",
-        "points": [
-          "Gebruik je bestaande bestanden",
-          "Zie gaten en open acties",
-          "Laat leveranciers ontbrekende data invullen",
-          "Houd verpakkingsdossiers actueel"
-        ],
-        "ctaExplore": "Bekijk LIVO PPWR",
-        "ctaOpen": "Open de app"
-      },
-      "next": {
-        "status": "In ontwikkeling",
-        "name": "Volgende module",
-        "body": "LIVO PPWR is de eerste module, niet de laatste. De volgende is in ontwikkeling. Meer details volgen.",
-        "cta": "Vraag naar de volgende module"
-      }
+    "question": {
+      "eyebrow": "De eerste vraag komt niet van de toezichthouder.",
+      "title": "Je klant vraagt. Waar staat je antwoord?",
+      "lead": "Je klanten gaan om verpakkingsdata vragen. Per artikel. Per materiaal. Met bewijs. Dan wil je leveren, niet zoeken in Excel, mailboxen en leveranciersmappen.",
+      "card": "“Stuur ons de verpakkingsdata en het bewijs voor deze artikelen.”",
+      "closing": "Je klant vraagt om een antwoord. Niet om je zoektocht."
+    },
+    "value": {
+      "title": "Haal expertise binnen. Houd tijd en budget over.",
+      "cards": [
+        {
+          "label": "Expertise",
+          "title": "De kennis binnen. Zonder de vacature.",
+          "body": "LIVO PPWR zoekt uit welke verplichtingen op jouw verpakkingen spelen."
+        },
+        {
+          "label": "Tijd",
+          "title": "Minder zoeken. Meer afhandelen.",
+          "body": "Hergebruik je data en laat leveranciers de gaten vullen."
+        },
+        {
+          "label": "Geld",
+          "title": "Stop met betalen voor hetzelfde uitzoekwerk.",
+          "body": "Zet het terugkerende werk in software. Gebruik je adviesbudget voor specialistisch oordeel."
+        }
+      ]
     },
     "how": {
-      "eyebrow": "Hoe LIVO werkt",
-      "title": "Gebouwd rond het werk dat mensen echt moeten doen.",
-      "lead": "LIVO vraagt je niet om je wereld rond de software om te bouwen. Het helpt het werk dat je al hebt te structureren en houdt het onderhoudbaar als er iets verandert.",
-      "steps": [
+      "eyebrow": "Meer dan een overzicht",
+      "title": "Zie wat ontbreekt. Pak het werk op.",
+      "proofs": [
         {
-          "title": "Begin met wat je al hebt.",
-          "body": "Lees de bestanden in waar je team al mee werkt."
+          "lead": "Begin met je eigen Excel.",
+          "body": "LIVO herkent de kolommen, jij bevestigt."
         },
         {
-          "title": "Zie wat aandacht vraagt.",
-          "body": "Houd ontbrekende, verlopen en open punten zichtbaar in plaats van verstopt in spreadsheets."
+          "lead": "Verplichtingen bij je verpakking.",
+          "body": "Met status en wettelijke ingangsdatum."
         },
         {
-          "title": "Laat anderen hun deel doen.",
-          "body": "Vraag leveranciers om de ontbrekende informatie met een voorgevuld verzoek. Hun antwoorden komen terug als voorstellen die jij beoordeelt."
-        },
-        {
-          "title": "Houd het dossier compleet en actueel.",
-          "body": "Onderhoud één samenhangende bron in plaats van steeds dezelfde antwoorden opnieuw op te bouwen."
+          "lead": "Bewijs bij de bron.",
+          "body": "Documenten gekoppeld aan verpakking en materiaallaag."
         }
       ],
-      "card": {
-        "label": "Illustratie · Vandaag in LIVO PPWR",
-        "rows": [
-          {
-            "title": "Verpakkingsdossier bijgewerkt",
-            "body": "Bestaande data gekoppeld aan het productdossier",
-            "status": "Ready",
-            "tone": "success"
-          },
-          {
-            "title": "Leveranciersinput nodig",
-            "body": "2 ontbrekende bewijsstukken",
-            "status": "Needs data",
-            "tone": "warning"
-          },
-          {
-            "title": "Bewijs verlopen",
-            "body": "Beoordelen vóór de volgende klantvraag",
-            "status": "Expired",
-            "tone": "risk"
-          },
-          {
-            "title": "Verzenddoos",
-            "body": "Verpakkingsniveau te bevestigen",
-            "status": "Open",
-            "tone": "info"
-          }
-        ]
-      }
+      "cta": "Bekijk LIVO PPWR"
+    },
+    "chain": {
+      "eyebrow": "Van leverancier naar klant",
+      "title": "Haal de data op. Lever het antwoord.",
+      "cards": [
+        {
+          "title": "Je leverancier vult aan.",
+          "body": "LIVO PPWR zet een voorgevulde uitvraag klaar. In het portaal ziet je leverancier wat er al staat en vult alleen de gaten in."
+        },
+        {
+          "title": "Jij exporteert voor je klant.",
+          "body": "Bewaar de SKU-selectie voor je klant en exporteer die naar Excel. LIVO PPWR zet uit dezelfde data ook een concept van je conformiteitsverklaring klaar."
+        }
+      ],
+      "expertLead": "Ingevuld betekent niet dat het klopt.",
+      "expertBody": "LIVO PPWR zet verdachte waarden, zoals een onwaarschijnlijk gewicht of recyclaatgehalte van nul, gericht in de uitvraag ter controle klaar."
     },
     "pricing": {
       "eyebrow": "Prijzen",
       "title": "Eenvoudige prijzen, met een duidelijke weg om te starten.",
-      "lead": "Eén getal bepaalt je prijs: hoeveel producten je zelf op de EU-markt brengt. Al het andere zit in elk betaald plan.",
-      "cardTitle": "Prijs gebouwd rond jouw PPWR-scope.",
-      "cardBody": "LIVO PPWR is niet geprijsd per gebruiker. Wat telt: de producten waarvoor jij fabrikant, importeur of EPR-producent bent. Producten die je alleen doorverkoopt bepalen je plan niet.",
-      "points": [
-        "Alle EU-markten inbegrepen",
-        "Geen prijs per gebruiker",
-        "Gratis plan tot 25 SKU's, zonder kaart",
-        "Alle plannen gratis tot 1 november 2026"
-      ],
-      "planTitle": "Kies het plan dat bij je scope past.",
-      "planBody": "Zes plannen, van een gratis start tot 10.000 SKU's, per maand of per jaar. De volledige vergelijking staat op de prijspagina.",
-      "scaleFrom": "Kleinere PPWR-scope",
-      "scaleTo": "Grotere PPWR-scope",
-      "ctaPricing": "Bekijk prijzen",
-      "pricingSoon": "De volledige planvergelijking gaat binnenkort live. Vraag ons tot die tijd naar het plan dat bij je scope past.",
-      "ctaAsk": "Vraag naar prijzen",
       "lines": [
         "Prijs op de producten die je zelf op de EU-markt brengt.",
         "Alle EU-markten inbegrepen. Geen prijs per gebruiker.",
         "Alle plannen gratis tot 1 november 2026."
-      ]
+      ],
+      "ctaAsk": "Vraag naar prijzen",
+      "ctaPricing": "Bekijk prijzen"
+    },
+    "start": {
+      "eyebrow": "Starten met LIVO PPWR",
+      "title": "Start nu. Gratis tot 1 november.",
+      "steps": [
+        {
+          "title": "Bestel per mail",
+          "body": "Klik op Bestel LIVO PPWR en vul je gegevens in."
+        },
+        {
+          "title": "Wij bevestigen",
+          "body": "Je ontvangt per mail je plan, de voorwaarden en je startdatum."
+        },
+        {
+          "title": "Samen inrichten",
+          "body": "We richten je omgeving met je in en je begint met je eigen verpakkingsdata."
+        }
+      ],
+      "note": "Tot 1 november loopt bestellen via e-mail.",
+      "customer": "Al klant?",
+      "login": "Inloggen"
     },
     "whitepaper": {
       "eyebrow": "PPWR-hulpmiddel",
@@ -215,67 +185,19 @@
         "lead": "Laat weten waar we hem heen mogen sturen en we mailen hem naar je toe.",
         "button": "Vraag de whitepaper aan",
         "mailSubject": "PPWR whitepaper",
-        "mailBody": "Hallo Livo,\n\nStuur mij graag de PPWR-whitepaper.\n\nNaam:\nBedrijf:\n"
-      }
-    },
-    "start": {
-      "eyebrow": "Starten met LIVO PPWR",
-      "title": "Van prijs naar een LIVO PPWR-licentie, zonder verkooptraject.",
-      "lead": "Productdemo's blijven beschikbaar voor wie dat wil. Een bedrijf dat klaar is om te starten hoeft er niet doorheen.",
-      "steps": [
-        {
-          "title": "Kies een plan",
-          "body": "Op de prijspagina, op basis van de producten waarvoor je verantwoordelijk bent."
-        },
-        {
-          "title": "Orderbevestiging",
-          "body": "We bevestigen je plan, limiet, tarief, looptijd en ingangsdatum per e-mail."
-        },
-        {
-          "title": "Betaling via incasso",
-          "body": "SEPA-incasso, per maand of per jaar. Alle plannen gratis tot 1 november 2026."
-        },
-        {
-          "title": "Samen inrichten",
-          "body": "We richten je omgeving samen met je in en je begint met je eigen verpakkingsdata."
-        }
-      ],
-      "customer": "Al klant?",
-      "login": "Inloggen"
+        "mailBody": "Hallo LIVO APPS,\n\nStuur mij graag de PPWR-whitepaper.\n\nNaam:\nBedrijf:\n"
+      },
+      "rowTitle": "Eerst zelf lezen?",
+      "rowBody": "De PPWR-whitepaper helpt je data, leveranciersinput en bewijs organiseren."
     },
     "about": {
-      "eyebrow": "Software die je werk lichter maakt",
-      "title": "Praktische software voor complex werk.",
-      "lead": "De belofte van LIVO is niet dat regelgeving eenvoudig wordt. Wel dat het werk eromheen makkelijker te begrijpen, te delen en onder controle te houden is.",
-      "principles": [
-        {
-          "title": "Minder wrijving",
-          "body": "Gebruik bestaande data, vermijd dubbel werk en verminder handmatig controleren en najagen."
-        },
-        {
-          "title": "Heldere status",
-          "body": "Weet wat compleet is, wat ontbreekt en wat aandacht vraagt, zonder te leunen op het geheugen van één persoon."
-        },
-        {
-          "title": "Mens aan het stuur",
-          "body": "LIVO kan structureren en voorstellen. Mensen beoordelen, bevestigen en blijven verantwoordelijk voor de beslissingen."
-        }
-      ],
-      "aboutTitle": "Over Livo",
-      "aboutBody": "LIVO APPS is ontwikkeld vanuit het mkb: Europese regels die blijven komen, en geen leger consultants om ze na te leven. Wij maken software die eenvoudig, betaalbaar en rustig in gebruik is, zodat je verpakkingsgegevens, verplichtingen en bewijs op orde houdt, het werk deelt met leveranciers en klanten, en op elk moment kunt laten zien waar je staat."
-    },
-    "nextModule": {
-      "eyebrow": "Volgende module",
-      "title": "Volgende module: in ontwikkeling.",
-      "body": "LIVO PPWR is de eerste module, niet de laatste. De productfamilie wordt gebouwd rond terugkerend compliancewerk dat in spreadsheets, mappen en e-mail moeilijk te beheren wordt.",
-      "cta": "Vraag naar de volgende module",
-      "photo": "seedling"
+      "eyebrow": "Software die je werk lichter maakt.",
+      "title": "Specialistische kennis voor het dagelijkse werk.",
+      "body": "LIVO APPS brengt specialistische kennis naar bedrijven zonder eigen leger experts. LIVO PPWR verbindt verplichtingen aan verpakkingsdata, leveranciersinput en bewijs.",
+      "moduleLine": "LIVO PPWR is nu beschikbaar. Een volgende module is in ontwikkeling."
     },
     "finalCta": {
-      "title": "Zie hoe LIVO doorlopend PPWR-werk beheersbaar maakt.",
-      "body": "Een korte productdemonstratie is genoeg om te zien hoe de werkstroom bij je team past.",
-      "ctaPricing": "Bekijk prijzen",
-      "ctaDemo": "Bekijk LIVO PPWR"
+      "title": "Je klant wacht op data. Niet op jouw PPWR-opleiding."
     },
     "footer": {
       "tagline": "Software die je werk lichter maakt.",
@@ -288,7 +210,7 @@
               "href": "/ppwr"
             },
             {
-              "label": "Hoe LIVO werkt",
+              "label": "Hoe het werkt",
               "href": "#how"
             },
             {
@@ -310,7 +232,7 @@
           "title": "BEDRIJF",
           "items": [
             {
-              "label": "Over Livo",
+              "label": "Over LIVO APPS",
               "href": "#about"
             },
             {
@@ -332,76 +254,6 @@
           "href": "https://www.linkedin.com/company/livoapps-software"
         }
       ]
-    },
-    "requestFlow": {
-      "eyebrow": "Herkenbaar?",
-      "title": "Eén klantvraag. Twee dagen zoeken.",
-      "steps": [
-        {
-          "title": "De vraag komt binnen",
-          "body": "\"Kunnen jullie de verpakkingsdata en de verklaring sturen?\""
-        },
-        {
-          "title": "Je gaat zoeken",
-          "body": "Waar staat de laatste versie?"
-        },
-        {
-          "title": "Leveranciersdata ontbreekt",
-          "body": "Wie heeft deze informatie?"
-        },
-        {
-          "title": "Twee dagen later",
-          "body": "Nog steeds aan het uitzoeken."
-        }
-      ],
-      "withTitle": "Met LIVO",
-      "with": [
-        "Open het product",
-        "Zie wat ontbreekt",
-        "Vraag het de leverancier",
-        "Antwoord je klant"
-      ],
-      "note": "Zelfde vraag. Veel minder werk.",
-      "quote": "Een spreadsheet kan compliancedata bevatten. Hij helpt je niet om verplichtingen, bewijs, gaten en veranderingen over al je producten te beheren."
-    },
-    "attention": {
-      "eyebrow": "Grip zonder handwerk",
-      "title": "Zie wat aandacht vraagt.",
-      "lead": "Een helder overzicht van je producten, verplichtingen en bewijs. Weet wat compleet is, wat ontbreekt en wat verlopen is.",
-      "points": [
-        "Producten en verpakkingen",
-        "Leveranciersinformatie",
-        "Bewijs en documenten",
-        "Verplichtingen per markt",
-        "Taken",
-        "Paspoorten voor klanten"
-      ],
-      "cta": "Bekijk hoe het werkt",
-      "note": "Alles op één plek."
-    },
-    "supplierRound": {
-      "eyebrow": "Leveranciersronde",
-      "title": "Laat leveranciers de gaten invullen.",
-      "lead": "Een voorgevuld verzoek per leverancier, verstuurd vanuit je eigen mailbox. Leveranciers vullen alleen aan wat ontbreekt. Hun antwoorden komen terug als voorstellen die jij beoordeelt.",
-      "steps": [
-        {
-          "title": "Gat gevonden",
-          "body": "Ontbrekende data of bewijs verschijnt als taak."
-        },
-        {
-          "title": "Jij verstuurt het verzoek",
-          "body": "Een voorgevuld bestand of een beveiligde link, vanuit je eigen mailbox."
-        },
-        {
-          "title": "Leverancier vult aan",
-          "body": "Alleen wat ontbreekt, niets anders."
-        },
-        {
-          "title": "Jij beoordeelt",
-          "body": "Antwoorden komen terug als voorstellen. Niets overschrijft wat je had."
-        }
-      ],
-      "photo": "foto: etiket of blad, vrijstaand"
     }
   },
   "ppwr": {
@@ -422,7 +274,7 @@
       "titleAfter": " snel.",
       "lead": "De uitdaging is niet om verpakkingsdata één keer te verzamelen. Het is om data, verplichtingen en bewijs verbonden en actueel te houden terwijl producten, verpakkingen en markten veranderen.",
       "ctaPrimary": "LIVO PPWR gebruiken",
-      "ctaWalkthrough": "Vraag een doorloop aan",
+      "ctaWalkthrough": "Plan een demo",
       "walkthroughSubject": "LIVO PPWR walkthrough",
       "walkthroughBody": "Hallo Livo,\n\nIk wil graag een doorloop van 20 minuten van LIVO PPWR.\n\nNaam:\nBedrijf:\nEen paar data die mij schikken:\n",
       "registerTenant": "example-tenant",
@@ -576,7 +428,7 @@
     "closing": {
       "title": "Zie LIVO PPWR in een doorloop van 20 minuten.",
       "lead": "Zie hoe het handwerk, het najagen van leveranciers en herhaald herstelwerk vermindert. Of start gratis met je eigen verpakkingsdata.",
-      "cta": "Vraag een doorloop aan",
+      "cta": "Plan een demo",
       "site": "livoapps.software",
       "mail": "hello@livoapps.software"
     },
