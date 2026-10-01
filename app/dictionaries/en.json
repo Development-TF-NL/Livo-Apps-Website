@@ -544,7 +544,7 @@
     "anchor": "LIVO does the groundwork. You review and confirm.",
     "closing": {
       "title": "Your customer wants data. Not your PPWR learning curve.",
-      "start": "Try it free until 1 November 2026. No implementation fee: we set up your environment with you and confirm your plan and terms by e-mail."
+      "start": "Try it free until 1 November 2026. Nothing continues automatically afterwards. No implementation fee: we set up your environment with you and confirm your plan and terms by e-mail."
     },
     "page": {
       "toggleMonthly": "Monthly",
@@ -569,15 +569,15 @@
           "name": "Core",
           "limit": 1000,
           "monthly": 249,
-          "annualMonthly": 212,
-          "annualTotal": 2544
+          "annualMonthly": 211,
+          "annualTotal": 2532
         },
         {
           "name": "Growth",
           "limit": 2500,
           "monthly": 549,
-          "annualMonthly": 467,
-          "annualTotal": 5604
+          "annualMonthly": 466,
+          "annualTotal": 5592
         },
         {
           "name": "Scale",

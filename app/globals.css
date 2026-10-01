@@ -27,6 +27,13 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
+/* Focusrand (huisstijl v2 §4): 2 px navy ring op 2 px afstand, alleen bij toetsenbordnavigatie (:focus-visible).
+   De enige uitzondering op plat. Op een donker vlak is de witte binnenring de zichtbare rand. De transparante
+   outline houdt de rand zichtbaar als het systeem kleuren afdwingt (forced colors laat box-shadow weg). */
+@layer components {
+  .focus-ring:focus-visible { outline: 2px solid transparent; outline-offset: 2px; box-shadow: var(--focus-ring); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }

@@ -3,9 +3,15 @@ import Logo from './Logo';
 // Site-footer (brief §11 punt 13): Product, Resources, Company met login-link; voetregel
 // van 15 september ("not legal advice and does not guarantee compliance").
 // dict = home.footer; interne links in de dictionary staan zonder taalprefix.
+// De link Prijzen volgt de poort, net als het menu: open (PRICING_PAGE_ENABLED) naar de prijspagina,
+// dicht naar het prijsblok op de homepage.
 export default function Footer({ lang, dict }) {
   const columns = [dict.columns.product, dict.columns.resources, dict.columns.company].filter(Boolean);
-  const resolve = (href) => (href.startsWith('/') || href.startsWith('#') ? `/${lang}${href}` : href);
+  const pricingEnabled = process.env.PRICING_PAGE_ENABLED === 'true';
+  const resolve = (href) => {
+    if (href === '#pricing' && pricingEnabled) return `/${lang}/pricing`;
+    return href.startsWith('/') || href.startsWith('#') ? `/${lang}${href}` : href;
+  };
   return (
     <footer className="bg-navy text-white border-t border-white/10 px-6 py-16">
       <div className="max-w-7xl mx-auto">

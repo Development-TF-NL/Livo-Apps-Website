@@ -544,7 +544,7 @@
     "anchor": "LIVO zoekt uit en zet klaar. Jij beoordeelt en bevestigt.",
     "closing": {
       "title": "Je klant wacht op data. Niet op jouw PPWR-opleiding.",
-      "start": "Probeer gratis tot 1 november 2026. Geen implementatiekosten: we richten je omgeving samen met je in en bevestigen plan en voorwaarden per mail."
+      "start": "Probeer gratis tot 1 november 2026. Daarna loopt niets automatisch door. Geen implementatiekosten: we richten je omgeving samen met je in en bevestigen plan en voorwaarden per mail."
     },
     "page": {
       "toggleMonthly": "Maandelijks",
@@ -569,15 +569,15 @@
           "name": "Core",
           "limit": 1000,
           "monthly": 249,
-          "annualMonthly": 212,
-          "annualTotal": 2544
+          "annualMonthly": 211,
+          "annualTotal": 2532
         },
         {
           "name": "Growth",
           "limit": 2500,
           "monthly": 549,
-          "annualMonthly": 467,
-          "annualTotal": 5604
+          "annualMonthly": 466,
+          "annualTotal": 5592
         },
         {
           "name": "Scale",

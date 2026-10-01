@@ -13,9 +13,9 @@ import { languageAlternates, socialMetadata } from '../../seo';
 // in het menu. Bestellen loopt tot 1 november 2026 via de bestelmail van de homepage, hier met het plan erin.
 const pricingEnabled = () => process.env.PRICING_PAGE_ENABLED === 'true';
 
-const focus = 'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy';
 const eyebrow = 'text-xs font-semibold uppercase tracking-[.14em] text-ink-blue';
-const btn = `inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-control px-6 font-semibold transition-colors duration-150 ${focus}`;
+// De focusrand komt van de klasse focus-ring (globals.css), zoals op de homepage en de productpagina.
+const btn = 'inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-control px-6 font-semibold transition-colors duration-150 focus-ring';
 
 // 1008 wordt "1.008" (NL) of "1,008" (EN); de bedragen staan één keer als getal in de bron.
 const num = (n, lang) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, lang === 'nl' ? '.' : ',');
@@ -80,12 +80,13 @@ export default async function PricingPage({ params }) {
           <p className="mt-3 text-sub">{t.price.line}</p>
 
           {/* De twee keuzerondjes sturen met CSS (peer) welke prijs zichtbaar is; standaard jaarlijks.
-              Zonder CSS staan beide bedragen er, elk met zijn naam ervoor. */}
+              Zonder CSS staan beide bedragen er, elk met zijn naam ervoor. De focus landt op het verborgen
+              keuzerondje; het label ernaast krijgt dan dezelfde rand als de klasse focus-ring (--focus-ring). */}
           <input type="radio" name="billing" id="billing-annual" defaultChecked className="peer/annual sr-only" />
           <input type="radio" name="billing" id="billing-monthly" className="peer/monthly sr-only" />
-          <div className="mt-6 inline-flex rounded-control border border-line bg-canvas p-1 text-sm font-semibold peer-checked/annual:[&_.t-annual]:bg-navy peer-checked/annual:[&_.t-annual]:text-white peer-checked/monthly:[&_.t-monthly]:bg-navy peer-checked/monthly:[&_.t-monthly]:text-white peer-focus-visible/annual:[&_.t-annual]:outline peer-focus-visible/monthly:[&_.t-monthly]:outline">
-            <label htmlFor="billing-monthly" className="t-monthly inline-flex min-h-[44px] cursor-pointer items-center rounded-[8px] px-4 text-sub outline-2 outline-offset-2 outline-navy">{t.page.toggleMonthly}</label>
-            <label htmlFor="billing-annual" className="t-annual inline-flex min-h-[44px] cursor-pointer items-center rounded-[8px] px-4 text-sub outline-2 outline-offset-2 outline-navy">{t.page.toggleAnnual}</label>
+          <div className="mt-6 inline-flex rounded-control border border-line bg-canvas p-1 text-sm font-semibold peer-checked/annual:[&_.t-annual]:bg-navy peer-checked/annual:[&_.t-annual]:text-white peer-checked/monthly:[&_.t-monthly]:bg-navy peer-checked/monthly:[&_.t-monthly]:text-white peer-focus-visible/annual:[&_.t-annual]:[box-shadow:var(--focus-ring)] peer-focus-visible/monthly:[&_.t-monthly]:[box-shadow:var(--focus-ring)]">
+            <label htmlFor="billing-monthly" className="t-monthly inline-flex min-h-[44px] cursor-pointer items-center rounded-[8px] px-4 text-sub">{t.page.toggleMonthly}</label>
+            <label htmlFor="billing-annual" className="t-annual inline-flex min-h-[44px] cursor-pointer items-center rounded-[8px] px-4 text-sub">{t.page.toggleAnnual}</label>
           </div>
 
           <div className="mt-6 peer-checked/annual:[&_.p-monthly]:hidden peer-checked/monthly:[&_.p-annual]:hidden">
