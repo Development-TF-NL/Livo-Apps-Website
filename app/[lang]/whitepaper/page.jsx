@@ -3,6 +3,7 @@ import { Check } from 'lucide-react';
 import { getDictionary } from '../../get-dictionary';
 import WhitepaperForm from '../../components/WhitepaperForm';
 import WhitepaperRequest from '../../components/WhitepaperRequest';
+import Footer from '../../components/Footer';
 import { languageAlternates, socialMetadata } from '../../seo';
 import { Section, Eyebrow, h1, h2, lead, heroPanel, cardOnWhite, cardTitleSmall, cardBody } from '../../components/ui';
 
@@ -31,7 +32,8 @@ export default async function WhitepaperPage({ params }) {
   const enabled = formEnabled();
 
   return (
-    <main className="font-sans text-ink">
+    <div className="font-sans text-ink">
+    <main>
       <Section tone="canvas" hero>
         <header className={`${heroPanel} p-6 sm:p-8 md:p-12`}>
           <Eyebrow>{t.hero.eyebrow}</Eyebrow>
@@ -73,5 +75,7 @@ export default async function WhitepaperPage({ params }) {
         <p className="mt-16 border-t border-line pt-8 text-xs text-sub">{t.disclaimer}</p>
       </Section>
     </main>
+    <Footer lang={lang} dict={dict.home.footer} />
+    </div>
   );
 }

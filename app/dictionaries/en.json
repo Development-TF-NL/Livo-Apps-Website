@@ -27,6 +27,7 @@
     "hero": {
       "eyebrow": "Your own PPWR expert, without hiring one.",
       "title": "PPWR expertise. Ready when you need it.",
+      "titleGreen": "PPWR expertise",
       "lead": "Your customer wants packaging data. LIVO PPWR works through the obligations and prepares the documentation work. Less research. Faster answers.",
       "audience": "For importers, wholesalers and brands with packaged products.",
       "ctaDemo": "Request a demo",
@@ -78,7 +79,8 @@
       "title": "Your customer asks. Where is your answer?",
       "lead": "Your customers will ask for packaging data. By item. By material. With evidence. That is the time to deliver, not dig through spreadsheets, inboxes and supplier files.",
       "card": "“Please send the packaging data and evidence for these items.”",
-      "closing": "Your customer wants an answer. Not your search history."
+      "closing": "Your customer wants an answer. Not your search history.",
+      "hand": "Sound familiar?"
     },
     "value": {
       "title": "Bring in expertise. Free up time and budget.",
@@ -149,6 +151,7 @@
     "start": {
       "eyebrow": "Start with LIVO PPWR",
       "title": "Start now. Free until 1 November.",
+      "hand": "Three steps, that's it",
       "steps": [
         {
           "title": "Order by e-mail",
@@ -325,7 +328,8 @@
           "body": "When context lives in spreadsheets, folders and inboxes, one absence can slow down the whole process."
         }
       ],
-      "transition": "PPWR is ongoing work. When it stays manual, time, rework and customer pressure keep adding up."
+      "transition": "PPWR is ongoing work. When it stays manual, time, rework and customer pressure keep adding up.",
+      "hand": "It adds up"
     },
     "changes": {
       "eyebrow": "What LIVO changes",
@@ -395,7 +399,8 @@
         }
       ],
       "coreTitle": "LIVO PPWR",
-      "coreSub": "review"
+      "coreSub": "review",
+      "hand": "You stay in charge"
     },
     "forWhom": {
       "eyebrow": "For whom",
@@ -418,7 +423,8 @@
           "title": "Logistics and fulfilment",
           "body": "The box you fill and the pallet you wrap are your packaging. Do you know which role PPWR gives you, per flow, and what your customers will ask for?"
         }
-      ]
+      ],
+      "hand": "Is yours in here?"
     },
     "pricing": {
       "cta": "See pricing"
@@ -487,6 +493,7 @@
     },
     "head": {
       "title": "Your own PPWR expert. Without hiring one.",
+      "titleGreen": "PPWR expert",
       "trigger": "The first question won't come from a regulator. It will come from your customer. LIVO PPWR prepares your answer.",
       "audience": "For importers, wholesalers and brands with packaged products. From €99 a month."
     },

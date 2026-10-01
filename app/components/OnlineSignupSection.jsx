@@ -1,4 +1,5 @@
 import OrderButton from './OrderButton';
+import HandNote from './HandNote';
 import { Section, Eyebrow, h2, btnPrimary, cardOnCanvas, cardTitleSmall, cardBody } from './ui';
 
 const PPWR_LOGIN_URL = 'https://ppwr.livoapps.software/login';
@@ -9,7 +10,10 @@ export default function OnlineSignupSection({ t, order }) {
   return (
     <Section id="start" tone="canvas">
       <Eyebrow>{t.eyebrow}</Eyebrow>
-      <h2 className={`max-w-3xl ${h2}`}>{t.title}</h2>
+      <div className="flex flex-wrap items-end justify-between gap-x-10 gap-y-3">
+        <h2 className={`max-w-3xl ${h2}`}>{t.title}</h2>
+        <HandNote className="mb-1">{t.hand}</HandNote>
+      </div>
       <ol className="mt-10 grid gap-6 md:grid-cols-3">
         {t.steps.map((s, i) => (
           <li key={s.title} className={`${cardOnCanvas} p-7`}>

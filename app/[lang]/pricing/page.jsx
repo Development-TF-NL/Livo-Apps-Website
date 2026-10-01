@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import OrderButton from '../../components/OrderButton';
 import PhotoPlace from '../../components/PhotoPlace';
 import { languageAlternates, socialMetadata } from '../../seo';
-import { Section, IconCircle, Callout, ClosingBand, benefitIcons, eyebrow, h1, h2, lead, cardTitleSmall, cardBody, btnPrimary, btnSecondary, btnOnNavy, heroPanel, cardOnCanvas, cardOnWhite } from '../../components/ui';
+import { Section, IconCircle, Callout, ClosingBand, GreenTitle, benefitIcons, eyebrow, h1, h2, lead, cardTitleSmall, cardBody, btnPrimary, btnSecondary, btnOnNavy, heroPanel, cardOnCanvas, cardOnWhite } from '../../components/ui';
 
 // Prijspagina (1 oktober 2026). Tekst en bedragen komen uit één bron (docs/marketing/website/copy/pricing.json
 // in de product-repo), dezelfde als de prijsflyer. De vorm komt uit dezelfde bouwstenen als de homepage
@@ -59,7 +59,7 @@ export default async function PricingPage({ params }) {
       <Section tone="canvas" hero>
         <div className={`relative overflow-hidden ${heroPanel} p-6 sm:p-8 md:p-12`}>
           <div className="md:pr-64">
-            <h1 lang={lang} className={`${h1} max-w-3xl lg:text-[3.4rem]`}>{t.head.title}</h1>
+            <h1 lang={lang} className={`${h1} max-w-3xl lg:text-[3.4rem]`}><GreenTitle title={t.head.title} green={t.head.titleGreen} /></h1>
             <p className={`mt-6 max-w-2xl ${lead}`}>{t.head.trigger}</p>
             <p className="mt-5 font-semibold text-ink">{t.head.audience}</p>
           </div>

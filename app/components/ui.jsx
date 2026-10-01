@@ -41,12 +41,26 @@ export const benefitIcons = [GraduationCap, Clock, Coins];
 const TONES = { white: 'bg-white', canvas: 'bg-canvas' };
 
 // Een sectie: wit of canvas, met de vaste ruimte en de vaste breedte. `hero` geeft de ruimte van een eerste sectie.
-export function Section({ id, tone = 'white', hero = false, className = '', children }) {
+// `after` komt buiten de inhoudsbreedte, binnen de sectie (voor een fotoplek aan de rand).
+export function Section({ id, tone = 'white', hero = false, className = '', after, children }) {
   const space = hero ? 'pb-16 pt-12 md:pb-24 md:pt-20' : 'py-16 md:py-24';
   return (
     <section id={id} className={`scroll-mt-20 px-6 ${space} ${TONES[tone] ?? TONES.white} ${className}`}>
       <div className={container}>{children}</div>
+      {after}
     </section>
+  );
+}
+
+// Eén groen woord in een grote kop (Green Heading). `green` is het deel van de titel dat groen wordt;
+// staat het er niet in, dan blijft de titel zoals hij is. De tekst zelf verandert niet.
+export function GreenTitle({ title, green }) {
+  const i = green ? title.indexOf(green) : -1;
+  if (i < 0) return title;
+  return (
+    <>
+      {title.slice(0, i)}<span className="text-green-heading">{green}</span>{title.slice(i + green.length)}
+    </>
   );
 }
 
@@ -74,7 +88,7 @@ export function ClosingBand({ tone = 'white', title, lead: leadText, center = fa
   return (
     <section className={`px-6 py-16 md:py-20 ${TONES[tone] ?? TONES.white}`}>
       <div className={`relative ${container} overflow-hidden rounded-hero bg-navy px-8 py-12 text-white md:px-12 md:py-14 ${center ? 'text-center' : ''}`}>
-        <div className={aside ? 'grid items-center gap-8 md:grid-cols-[1fr_auto] md:pr-44' : ''}>
+        <div className={aside ? `grid items-center gap-8 md:grid-cols-[1fr_auto] ${photo ? 'md:pr-44' : ''}` : ''}>
           <div>
             <h2 className={`${h2Base} max-w-3xl ${center ? 'mx-auto' : ''}`}>{title}</h2>
             {leadText && <p className={`mt-4 max-w-3xl text-lg text-white/80 ${center ? 'mx-auto' : ''}`}>{leadText}</p>}

@@ -27,6 +27,7 @@
     "hero": {
       "eyebrow": "Je eigen PPWR-expert, zonder er één aan te nemen.",
       "title": "PPWR-expertise. Direct beschikbaar.",
+      "titleGreen": "PPWR-expertise",
       "lead": "Je klant vraagt om verpakkingsdata. LIVO PPWR zoekt de verplichtingen uit en zet het dossierwerk klaar. Minder uitzoeken. Sneller antwoorden.",
       "audience": "Voor importeurs, groothandels en merken met verpakte producten.",
       "ctaDemo": "Plan een demo",
@@ -78,7 +79,8 @@
       "title": "Je klant vraagt. Waar staat je antwoord?",
       "lead": "Je klanten gaan om verpakkingsdata vragen. Per artikel. Per materiaal. Met bewijs. Dan wil je leveren, niet zoeken in Excel, mailboxen en leveranciersmappen.",
       "card": "“Stuur ons de verpakkingsdata en het bewijs voor deze artikelen.”",
-      "closing": "Je klant vraagt om een antwoord. Niet om je zoektocht."
+      "closing": "Je klant vraagt om een antwoord. Niet om je zoektocht.",
+      "hand": "Herkenbaar?"
     },
     "value": {
       "title": "Haal expertise binnen. Houd tijd en budget over.",
@@ -149,6 +151,7 @@
     "start": {
       "eyebrow": "Starten met LIVO PPWR",
       "title": "Start nu. Gratis tot 1 november.",
+      "hand": "Drie stappen, meer niet",
       "steps": [
         {
           "title": "Bestel per mail",
@@ -325,7 +328,8 @@
           "body": "Als de context in spreadsheets, mappen en mailboxen zit, kan één afwezigheid het hele proces vertragen."
         }
       ],
-      "transition": "PPWR is doorlopend werk. Zolang het handwerk blijft, stapelen tijd, herstelwerk en klantdruk zich op."
+      "transition": "PPWR is doorlopend werk. Zolang het handwerk blijft, stapelen tijd, herstelwerk en klantdruk zich op.",
+      "hand": "Dit telt op"
     },
     "changes": {
       "eyebrow": "Wat LIVO verandert",
@@ -395,7 +399,8 @@
         }
       ],
       "coreTitle": "LIVO PPWR",
-      "coreSub": "beoordeling"
+      "coreSub": "beoordeling",
+      "hand": "Jij houdt de regie"
     },
     "forWhom": {
       "eyebrow": "Voor wie",
@@ -418,7 +423,8 @@
           "title": "Logistiek en fulfilment",
           "body": "De doos die je vult en de pallet die je wikkelt zijn jouw verpakking. Weet je welke rol de PPWR jou geeft, per stroom, en wat je klanten gaan vragen?"
         }
-      ]
+      ],
+      "hand": "Zit jouw vraag erbij?"
     },
     "pricing": {
       "cta": "Bekijk de prijzen"
@@ -487,6 +493,7 @@
     },
     "head": {
       "title": "Je eigen PPWR-expert. Zonder er één aan te nemen.",
+      "titleGreen": "PPWR-expert",
       "trigger": "De eerste vraag komt niet van de toezichthouder. Hij komt van je klant. LIVO PPWR zet je antwoord klaar.",
       "audience": "Voor importeurs, groothandels en merken met verpakte producten. Vanaf €99 per maand."
     },

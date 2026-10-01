@@ -4,10 +4,10 @@ import Logo from './Logo';
 // van 15 september ("not legal advice and does not guarantee compliance").
 // dict = home.footer; interne links in de dictionary staan zonder taalprefix.
 // De link Prijzen volgt de poort, net als het menu: open (PRICING_PAGE_ENABLED) naar de prijspagina,
-// dicht naar het prijsblok op de homepage.
-export default function Footer({ lang, dict }) {
+// dicht naar het prijsblok op de homepage. De poortstand komt uit de omgeving; op de 404 wordt hij meegegeven,
+// omdat de footer daar in de browser draait (FooterForPath).
+export default function Footer({ lang, dict, pricingEnabled = process.env.PRICING_PAGE_ENABLED === 'true' }) {
   const columns = [dict.columns.product, dict.columns.resources, dict.columns.company].filter(Boolean);
-  const pricingEnabled = process.env.PRICING_PAGE_ENABLED === 'true';
   const resolve = (href) => {
     if (href === '#pricing' && pricingEnabled) return `/${lang}/pricing`;
     return href.startsWith('/') || href.startsWith('#') ? `/${lang}${href}` : href;

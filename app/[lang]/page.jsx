@@ -10,7 +10,8 @@ import PricingPreview from '../components/PricingPreview';
 import OnlineSignupSection from '../components/OnlineSignupSection';
 import WhitepaperRow from '../components/WhitepaperRow';
 import OrderButton from '../components/OrderButton';
-import { Section, Eyebrow, IconCircle, Callout, ClosingBand, benefitIcons, h1, h2, lead, cardTitle, cardBody, btnPrimary, btnSecondary, btnOnNavy, textLink, heroPanel, cardOnCanvas, cardOnWhite } from '../components/ui';
+import HandNote from '../components/HandNote';
+import { Section, Eyebrow, IconCircle, Callout, ClosingBand, GreenTitle, benefitIcons, h1, h2, lead, cardTitle, cardBody, btnPrimary, btnSecondary, btnOnNavy, textLink, heroPanel, cardOnCanvas, cardOnWhite } from '../components/ui';
 
 // Homepage v5 (1 oktober 2026), huisstijl v2 uitgesproken. Volgorde: hero, de klantvraag, expertise tijd en
 // geld, productbewijs (#how), leveranciers en klanten, prijs (#pricing), start (#start, tijdelijke bestelroute
@@ -18,9 +19,11 @@ import { Section, Eyebrow, IconCircle, Callout, ClosingBand, benefitIcons, h1, h
 // Copy uit de dictionaries (bron: docs/marketing/website/copy/home.json en nav.json in de product-repo,
 // gebouwd uit 06-homepage-tekst-v5-1okt2026.md). De vorm komt uit de gedeelde bouwstenen in components/ui.jsx.
 // Beeld: de Register-illustratie (fictieve data, gelabeld) blijft in de hero en bij het productbewijs tot er
-// een echte productopname is. De doos linksonder in de hero komt uit de tussentijdse set in docs/huisstijl/beeld/.
+// een echte productopname is. De doos linksonder in de hero en het plantje in de sectie Over LIVO APPS komen uit de
+// tussentijdse set in docs/huisstijl/beeld/. Handschrift: één notitie bij de klantvraag en één bij de startsectie.
 
 const BOX = '/brand/photo/box.png'; // doos, primair (hero); bron docs/huisstijl/beeld/doos.png, licht van linksboven
+const SEEDLING = '/brand/photo/seedling.png'; // plantje, op één plek: de sectie Over LIVO APPS; bron docs/huisstijl/beeld/plantje.png
 const chainIcons = [Send, FileCheck];
 
 export async function generateMetadata({ params }) {
@@ -54,7 +57,7 @@ export default async function LivoAppsWebsite({ params }) {
               <Eyebrow>{t.hero.eyebrow}</Eyebrow>
               <p className="mb-3 text-sm font-semibold text-ink-blue">{t.hero.audience}</p>
               <h1 lang={lang} className={`${h1} [hyphens:auto] sm:[hyphens:manual] lg:text-[3.1rem]`}>
-                {t.hero.title}
+                <GreenTitle title={t.hero.title} green={t.hero.titleGreen} />
               </h1>
               <p className={`mt-6 max-w-lg ${lead}`}>{t.hero.lead}</p>
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -82,7 +85,8 @@ export default async function LivoAppsWebsite({ params }) {
             <p className={`mt-5 ${lead}`}>{t.question.lead}</p>
           </div>
           <div>
-            <div className={`${cardOnWhite} p-8`}>
+            <div className={`relative ${cardOnWhite} p-8`}>
+              <HandNote className="absolute right-7 top-9">{t.question.hand}</HandNote>
               <IconCircle icon={Mail} />
               <p className={`mt-5 ${cardTitle} leading-snug`}>{t.question.card}</p>
             </div>
@@ -151,8 +155,14 @@ export default async function LivoAppsWebsite({ params }) {
       <OnlineSignupSection t={t.start} order={order} />
       <WhitepaperRow t={t.whitepaper} />
 
-      {/* 9. Over LIVO APPS: compact tekstblok, de ontwikkelregel klein */}
-      <Section id="about" tone="canvas">
+      {/* 9. Over LIVO APPS: compact tekstblok, de ontwikkelregel klein. Het plantje staat als randaccent rechtsonder,
+          bij de regel over de volgende module; alleen vanaf 1024 px, waar de tekst links ruimte overlaat. */}
+      <Section
+        id="about"
+        tone="canvas"
+        className="relative overflow-hidden"
+        after={<PhotoPlace src={SEEDLING} imgClassName="absolute -bottom-10 right-[max(1.5rem,calc(50%_-_600px))] hidden h-52 w-auto lg:block" />}
+      >
         <Eyebrow>{t.about.eyebrow}</Eyebrow>
         <h2 className={`max-w-3xl ${h2}`}>{t.about.title}</h2>
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink">{t.about.body}</p>

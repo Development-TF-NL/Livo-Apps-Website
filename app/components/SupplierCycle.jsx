@@ -1,4 +1,5 @@
 import { FileText, Send, PencilLine, ClipboardCheck } from 'lucide-react';
+import HandNote from './HandNote';
 import { Section, Eyebrow, IconCircle, h2, lead, cardTitleSmall, cardBody } from './ui';
 
 const icons = [FileText, Send, PencilLine, ClipboardCheck];
@@ -13,20 +14,23 @@ export default function SupplierCycle({ t }) {
   return (
     <Section id="suppliers" tone="canvas">
       <div className="grid items-center gap-12 lg:grid-cols-[1fr_1fr]">
-        <div aria-hidden="true" className="relative mx-auto aspect-[100/110] w-full max-w-[560px] rounded-hero bg-white shadow-soft sm:aspect-[100/80]">
-          <div className="absolute inset-x-3 inset-y-8">
-            <svg viewBox="0 0 100 56" className="absolute inset-0 h-full w-full" preserveAspectRatio="none">
-              <path d="M25,28a25,18 0 1,1 50,0a25,18 0 1,1 -50,0" fill="none" className="stroke-frame-line" strokeWidth="0.9" />
-              <path d="M-3.2 -2.6 L0 0 L-3.2 2.6" transform="translate(68.5 14.9) rotate(50)" fill="none" className="stroke-ink-blue" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /><path d="M-3.2 -2.6 L0 0 L-3.2 2.6" transform="translate(31.5 41.1) rotate(230)" fill="none" className="stroke-ink-blue" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <span className={`${pill} left-1/2 top-0 -translate-x-1/2 bg-mint text-green-text`}>{t.steps[0].title}</span>
-            <span className={`${pill} right-0 top-[73%] -translate-y-1/2 border border-line bg-canvas text-ink`}>{t.steps[2].title}</span>
-            <span className={`${pill} bottom-0 left-1/2 -translate-x-1/2 bg-mint text-green-text`}>{t.steps[3].title}</span>
-            <span className={`${pill} left-0 top-[27%] -translate-y-1/2 border border-line bg-canvas text-ink`}>{t.steps[1].title}</span>
-            <span className="absolute left-1/2 top-1/2 flex h-20 w-36 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-card border-2 border-navy bg-white text-center leading-none">
-              <b className="font-display text-lg font-bold text-ink">{t.coreTitle}</b><span className="mt-1.5 text-xs text-sub">{t.coreSub}</span>
-            </span>
+        <div>
+          <div aria-hidden="true" className="relative mx-auto aspect-[100/110] w-full max-w-[560px] rounded-hero bg-white shadow-soft sm:aspect-[100/80]">
+            <div className="absolute inset-x-3 inset-y-8">
+              <svg viewBox="0 0 100 56" className="absolute inset-0 h-full w-full" preserveAspectRatio="none">
+                <path d="M25,28a25,18 0 1,1 50,0a25,18 0 1,1 -50,0" fill="none" className="stroke-frame-line" strokeWidth="0.9" />
+                <path d="M-3.2 -2.6 L0 0 L-3.2 2.6" transform="translate(68.5 14.9) rotate(50)" fill="none" className="stroke-ink-blue" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /><path d="M-3.2 -2.6 L0 0 L-3.2 2.6" transform="translate(31.5 41.1) rotate(230)" fill="none" className="stroke-ink-blue" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span className={`${pill} left-1/2 top-0 -translate-x-1/2 bg-mint text-green-text`}>{t.steps[0].title}</span>
+              <span className={`${pill} right-0 top-[73%] -translate-y-1/2 border border-line bg-canvas text-ink`}>{t.steps[2].title}</span>
+              <span className={`${pill} bottom-0 left-1/2 -translate-x-1/2 bg-mint text-green-text`}>{t.steps[3].title}</span>
+              <span className={`${pill} left-0 top-[27%] -translate-y-1/2 border border-line bg-canvas text-ink`}>{t.steps[1].title}</span>
+              <span className="absolute left-1/2 top-1/2 flex h-20 w-36 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-card border-2 border-navy bg-white text-center leading-none">
+                <b className="font-display text-lg font-bold text-ink">{t.coreTitle}</b><span className="mt-1.5 text-xs text-sub">{t.coreSub}</span>
+              </span>
+            </div>
           </div>
+          <p className="mt-5 text-center"><HandNote>{t.hand}</HandNote></p>
         </div>
         <div>
           <Eyebrow>{t.eyebrow}</Eyebrow>

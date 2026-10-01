@@ -2,6 +2,8 @@ import { StatusDot } from './StatusPill';
 
 // UI-fragment van het echte Register (topbalk, tabs, titel, lijst) met fictieve data en alleen bestaande
 // statussen; dun apparaatkader zonder glans (website, uitgesproken), kleuren uit de tokens frame. Gelabeld als illustratie door de ouder.
+// Op smal (1 oktober 2026): een rij loopt over twee regels als naam, status en actie niet naast elkaar passen
+// (de naam wordt niet meer afgekapt), en de laatste tab is onder 640 px verborgen in plaats van half zichtbaar.
 export default function RegisterFragment({ t, compact = false }) {
   return (
     <div className="overflow-hidden rounded-card border-[1.5px] border-frame bg-white shadow-soft">
@@ -13,21 +15,23 @@ export default function RegisterFragment({ t, compact = false }) {
         <span className="text-xs text-sub">{t.tenant}</span>
       </div>
       <div className="flex gap-1 border-b border-line px-3 py-2">
-        {t.tabs.map((tab) => (
-          <span key={tab} className={`rounded-control px-2.5 py-1.5 text-xs font-medium ${tab === 'Register' ? 'bg-mint font-semibold text-green-text' : 'text-sub'}`}>{tab}</span>
+        {t.tabs.map((tab, i) => (
+          <span key={tab} className={`whitespace-nowrap rounded-control px-2.5 py-1.5 text-xs font-medium ${tab === 'Register' ? 'bg-mint font-semibold text-green-text' : 'text-sub'} ${i === t.tabs.length - 1 && tab !== 'Register' ? 'hidden sm:inline' : ''}`}>{tab}</span>
         ))}
       </div>
       <div className="bg-canvas p-4">
-        <div className="mb-3 flex items-center justify-between">
-          <span className="font-display text-lg font-bold text-ink">{t.title}</span>
-          <span className="rounded-control bg-accent px-3 py-1.5 text-xs font-semibold text-ink">{t.action}</span>
+        <div className="mb-3 flex items-center justify-between gap-2">
+          <span className="whitespace-nowrap font-display text-base font-bold text-ink sm:text-lg">{t.title}</span>
+          <span className="whitespace-nowrap rounded-control bg-accent px-3 py-1.5 text-xs font-semibold text-ink">{t.action}</span>
         </div>
         <ul className="divide-y divide-line overflow-hidden rounded-control border border-line bg-white">
           {t.rows.map((r) => (
-            <li key={r.name} className={`grid grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-3 px-3.5 ${compact ? 'py-2.5' : 'py-3'}`}>
-              <span className="truncate text-sm text-ink">{r.name}</span>
-              <StatusDot tone={r.tone}>{r.status}</StatusDot>
-              <span className="text-xs font-medium text-ink-blue">{r.next}</span>
+            <li key={r.name} className={`flex flex-wrap items-center justify-between gap-x-3 gap-y-1 px-3.5 ${compact ? 'py-2.5' : 'py-3'}`}>
+              <span className="text-sm text-ink">{r.name}</span>
+              <span className="flex items-center gap-3">
+                <StatusDot tone={r.tone}>{r.status}</StatusDot>
+                <span className="whitespace-nowrap text-xs font-medium text-ink-blue">{r.next}</span>
+              </span>
             </li>
           ))}
         </ul>

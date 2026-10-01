@@ -3,11 +3,11 @@ import { ArrowRight, Mail, Package, Layers, Globe, FileCheck, Clock, MessageSqua
 import Breadcrumb from '../../components/Breadcrumb';
 import RegisterFragment from '../../components/RegisterFragment';
 import HandNote from '../../components/HandNote';
-import PhotoPlace from '../../components/PhotoPlace';
 import StatusPill from '../../components/StatusPill';
 import SupplierCycle from '../../components/SupplierCycle';
 import WhitepaperObject from '../../components/WhitepaperObject';
 import OrderButton from '../../components/OrderButton';
+import Footer from '../../components/Footer';
 import { ImportVisual, StatusVisual, CycleVisual, FileVisual } from '../../components/FeatureVisuals';
 import { getDictionary } from '../../get-dictionary';
 import { mailto } from '../../mailto';
@@ -20,7 +20,6 @@ import { Section, Eyebrow, IconCircle, Callout, ClosingBand, h1, h2, lead, cardT
 // Alle tekst uit de dictionaries (bron: docs/marketing/website/copy/ppwr.json).
 // Vorm (1 oktober 2026): de gedeelde bouwstenen uit components/ui.jsx. Na de hero wisselen wit en canvas elkaar af;
 // kaarten op canvas dragen de schaduw, kaarten op wit een rand; nergens meer dan twee kaarten naast elkaar.
-const SEEDLING = '/brand/photo/seedling.png';
 const factorIcons = [Package, Layers, Globe, FileCheck];
 const costIcons = [Clock, MessageSquareWarning, FileSearch, Users];
 
@@ -108,7 +107,7 @@ export default async function PpwrPage({ params }) {
             </li>
           ))}
         </ul>
-        <Callout className="mt-8 font-display text-lg font-bold">{t.costs.transition}</Callout>
+        <Callout className="mt-8 font-display text-lg font-bold">{t.costs.transition} <HandNote className="ml-2 align-baseline">{t.costs.hand}</HandNote></Callout>
       </Section>
 
       {/* 4. What LIVO changes: vier features met de vier illustraties, elk met de status Live */}
@@ -151,6 +150,7 @@ export default async function PpwrPage({ params }) {
             </li>
           ))}
         </ul>
+        <p className="mt-6 text-right"><HandNote>{t.forWhom.hand}</HandNote></p>
       </Section>
 
       {/* 7. Pricing: drie regels en één knop. De knop volgt de poort, net als menu en footer:
@@ -174,17 +174,18 @@ export default async function PpwrPage({ params }) {
 
       <WhitepaperObject t={dict.home.whitepaper} />
 
-      {/* Slot: het ene navy moment van de pagina, met het plantje als randaccent */}
+      {/* Slot: het ene navy moment van de pagina */}
       <ClosingBand
         tone="canvas"
         title={t.closing.title}
         lead={t.closing.lead}
         aside={<div className="text-sm md:text-right"><b className="block font-semibold text-accent">{t.closing.site}</b><a href="mailto:hello@livoapps.software" className="inline-flex min-h-[44px] items-center rounded text-white/80 transition-colors duration-150 hover:text-white focus-ring">{t.closing.mail}</a></div>}
-        photo={<PhotoPlace src={SEEDLING} imgClassName="pointer-events-none absolute -bottom-10 -right-6 hidden h-52 w-auto md:block" />}
         footnote={<p className="mx-auto mt-8 max-w-content text-xs text-sub">{t.footer.line}</p>}
       >
         <a href={demo} className={btnPrimary}><Mail size={18} aria-hidden="true" />{t.closing.cta}</a>
       </ClosingBand>
+
+      <Footer lang={lang} dict={dict.home.footer} />
     </div>
   );
 }
