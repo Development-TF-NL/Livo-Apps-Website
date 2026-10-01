@@ -30,7 +30,6 @@
       "lead": "Your customer wants packaging data. LIVO PPWR works through the obligations and prepares the documentation work. Less research. Faster answers.",
       "audience": "For importers, wholesalers and brands with packaged products.",
       "ctaDemo": "Request a demo",
-      "demoSubject": "LIVO PPWR demo",
       "ctaHow": "See how it works",
       "anchor": "LIVO does the groundwork and prepares the next steps. You review and confirm.",
       "visual": {
@@ -262,21 +261,20 @@
       "description": "PPWR is one regulation. The work behind it quickly multiplies. LIVO PPWR keeps packaging data, obligations, evidence and supplier input together and up to date."
     },
     "breadcrumb": [
-      "Livo Apps",
+      "LIVO APPS",
       "Products",
       "LIVO PPWR"
     ],
     "hero": {
       "eyebrow": "LIVO PPWR",
-      "apply": "PPWR has applied across the EU since 12 August 2026, with requirements phasing in over time.",
+      "apply": "PPWR has applied across the EU since 12 August 2026, with obligations phasing in over time.",
       "titleBefore": "PPWR is one regulation. The work behind it quickly ",
       "titleGreen": "multiplies.",
       "titleAfter": "",
       "lead": "The challenge is not collecting packaging data once. It is keeping data, obligations and evidence connected and up to date as products, packaging and markets change.",
-      "ctaPrimary": "Get LIVO PPWR",
-      "ctaWalkthrough": "Request a demo",
-      "walkthroughSubject": "LIVO PPWR demo",
-      "walkthroughBody": "Hello LIVO APPS,\n\nI would like a 20-minute demo of LIVO PPWR.\n\nName:\nCompany:\nA few dates that work for me:\n",
+      "ctaDemo": "Request a demo",
+      "demoSubject": "LIVO PPWR demo",
+      "demoBody": "Hello LIVO APPS,\n\nI would like a 20-minute demo of LIVO PPWR.\n\nName:\nCompany:\nA few dates that work for me:\n",
       "registerTenant": "example-tenant",
       "illustration": "Illustration"
     },
@@ -299,11 +297,11 @@
         },
         {
           "title": "Obligations and proof",
-          "body": "Requirements, deadlines, reports and evidence that can expire."
+          "body": "Obligations, deadlines, reports and evidence that can expire."
         }
       ],
       "resultTitle": "One change can affect several places at once.",
-      "resultBody": "A new supplier, a changed material, an expired report or a new requirement means the picture needs to be checked again.",
+      "resultBody": "A new supplier, a changed material, an expired report or a new obligation means the picture needs to be checked again.",
       "note": "This is ongoing work"
     },
     "costs": {
@@ -339,7 +337,7 @@
         {
           "tag": "01 · Start faster",
           "title": "Your Excel. No rigid template.",
-          "body": "Start with the files you already have instead of reshaping everything first. Livo reads the structure, asks when it is unsure and remembers the format. The preview shows what will change before anything is saved, and re-imports update instead of duplicating. Export works the same way, so your data is never locked in."
+          "body": "Start with the files you already have instead of reshaping everything first. LIVO reads the structure, asks when it is unsure and remembers the format. The preview shows what will change before anything is saved, and re-imports update instead of duplicating. Export works the same way, so your data is never locked in."
         },
         {
           "tag": "02 · Stay in control",

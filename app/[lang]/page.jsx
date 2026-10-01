@@ -48,7 +48,8 @@ export default async function LivoAppsWebsite({ params }) {
   const dict = await getDictionary(lang);
   const t = dict.home;
   const order = dict.nav.order;
-  const demo = mailto(t.hero.demoSubject);
+  // De demomail (onderwerp en voorgevulde tekst) is dezelfde als op de productpagina: één bron, ppwr.hero.
+  const demo = mailto(dict.ppwr.hero.demoSubject, dict.ppwr.hero.demoBody);
   const pricingEnabled = process.env.PRICING_PAGE_ENABLED === 'true';
 
   return (

@@ -30,7 +30,6 @@
       "lead": "Je klant vraagt om verpakkingsdata. LIVO PPWR zoekt de verplichtingen uit en zet het dossierwerk klaar. Minder uitzoeken. Sneller antwoorden.",
       "audience": "Voor importeurs, groothandels en merken met verpakte producten.",
       "ctaDemo": "Plan een demo",
-      "demoSubject": "LIVO PPWR demo",
       "ctaHow": "Bekijk hoe het werkt",
       "anchor": "LIVO zoekt uit en zet klaar. Jij beoordeelt en bevestigt.",
       "visual": {
@@ -262,7 +261,7 @@
       "description": "PPWR is één verordening. Het werk erachter vermenigvuldigt snel. LIVO PPWR houdt verpakkingsdata, verplichtingen, bewijs en leveranciersinput bij elkaar en actueel."
     },
     "breadcrumb": [
-      "Livo Apps",
+      "LIVO APPS",
       "Producten",
       "LIVO PPWR"
     ],
@@ -273,10 +272,9 @@
       "titleGreen": "vermenigvuldigt",
       "titleAfter": " snel.",
       "lead": "De uitdaging is niet om verpakkingsdata één keer te verzamelen. Het is om data, verplichtingen en bewijs verbonden en actueel te houden terwijl producten, verpakkingen en markten veranderen.",
-      "ctaPrimary": "LIVO PPWR gebruiken",
-      "ctaWalkthrough": "Plan een demo",
-      "walkthroughSubject": "LIVO PPWR demo",
-      "walkthroughBody": "Hallo LIVO APPS,\n\nIk wil graag een demo van 20 minuten van LIVO PPWR.\n\nNaam:\nBedrijf:\nEen paar data die mij schikken:\n",
+      "ctaDemo": "Plan een demo",
+      "demoSubject": "LIVO PPWR demo",
+      "demoBody": "Hallo LIVO APPS,\n\nIk wil graag een demo van 20 minuten van LIVO PPWR.\n\nNaam:\nBedrijf:\nEen paar data die mij schikken:\n",
       "registerTenant": "example-tenant",
       "illustration": "Illustratie"
     },
@@ -339,7 +337,7 @@
         {
           "tag": "01 · Sneller starten",
           "title": "Jouw Excel. Geen vast sjabloon.",
-          "body": "Begin met de bestanden die je al hebt in plaats van eerst alles om te bouwen. Livo leest de structuur, vraagt door bij twijfel en onthoudt het formaat. De preview laat zien wat er verandert voordat er iets wordt opgeslagen, en een nieuwe import werkt bij in plaats van te dupliceren. Exporteren werkt net zo, dus je data zit nooit vast."
+          "body": "Begin met de bestanden die je al hebt in plaats van eerst alles om te bouwen. LIVO leest de structuur, vraagt door bij twijfel en onthoudt het formaat. De preview laat zien wat er verandert voordat er iets wordt opgeslagen, en een nieuwe import werkt bij in plaats van te dupliceren. Exporteren werkt net zo, dus je data zit nooit vast."
         },
         {
           "tag": "02 · Grip houden",

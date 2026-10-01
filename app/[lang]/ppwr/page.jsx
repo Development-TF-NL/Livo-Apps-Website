@@ -7,12 +7,14 @@ import PhotoPlace from '../../components/PhotoPlace';
 import StatusPill from '../../components/StatusPill';
 import SupplierCycle from '../../components/SupplierCycle';
 import WhitepaperObject from '../../components/WhitepaperObject';
+import OrderButton from '../../components/OrderButton';
 import { ImportVisual, StatusVisual, CycleVisual, FileVisual } from '../../components/FeatureVisuals';
 import { getDictionary } from '../../get-dictionary';
 import { socialMetadata } from '../../seo';
 
 // Productpagina LIVO PPWR, ontwerp v2 (17 september 2026): ruggengraat is de flyer 2026-09-17
-// (probleem, kosten, wat LIVO verandert, walkthrough), uitgebreid waar een pagina meer ruimte heeft.
+// (probleem, kosten, wat LIVO verandert, demo), uitgebreid waar een pagina meer ruimte heeft.
+// Hero (1 oktober 2026): de primaire knop is de tijdelijke bestelknop van de homepage (mailto, tot 1 november 2026).
 // Alle tekst uit de dictionaries (bron: docs/marketing/website/copy/ppwr.json). Geen schaduw op canvas-kaarten.
 const SEEDLING = '/brand/photo/seedling.png';
 const factorIcons = [Package, Layers, Globe, FileCheck];
@@ -34,7 +36,7 @@ export default async function PpwrPage({ params }) {
   const t = dict.ppwr;
   const register = { ...dict.home.hero.visual.register, tenant: t.hero.registerTenant };
   const pricing = dict.home.pricing;
-  const walkthrough = mailto(t.hero.walkthroughSubject, t.hero.walkthroughBody);
+  const demo = mailto(t.hero.demoSubject, t.hero.demoBody);
   const statusRows = register.rows.map((r) => ({ status: r.status, tone: r.tone }));
   const fileLabels = [[t.changes.fileInputs[0], t.changes.fileInputs[1], t.changes.fileInputs[2]], { title: t.changes.fileTitle, badge: t.changes.fileBadge, rows: t.changes.fileRows }, t.changes.fileOutputs];
   const visuals = [<ImportVisual key="v1" />, <StatusVisual key="v2" rows={statusRows} />, <CycleVisual key="v3" t={t.cycle} />, <FileVisual key="v4" labels={fileLabels} />];
@@ -55,8 +57,8 @@ export default async function PpwrPage({ params }) {
               </h1>
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-blue">{t.hero.lead}</p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Link href={`/${lang}#pricing`} className={`${btn} bg-accent text-ink hover:bg-accent-dark`}>{t.hero.ctaPrimary} <ArrowRight size={18} aria-hidden="true" /></Link>
-                <a href={walkthrough} className={`${btn} border-[1.5px] border-navy bg-white text-ink hover:bg-canvas`}><Mail size={18} aria-hidden="true" />{t.hero.ctaWalkthrough}</a>
+                <OrderButton t={dict.nav.order} className={`${btn} bg-accent text-ink hover:bg-accent-dark`} />
+                <a href={demo} className={`${btn} border-[1.5px] border-navy bg-white text-ink hover:bg-canvas`}><Mail size={18} aria-hidden="true" />{t.hero.ctaDemo}</a>
               </div>
             </div>
             <div className="min-w-0">
@@ -183,14 +185,14 @@ export default async function PpwrPage({ params }) {
 
       <WhitepaperObject lang={lang} t={dict.home.whitepaper} />
 
-      {/* Slot: walkthrough-CTA als navy band met plantje */}
+      {/* Slot: demo-CTA als navy band met plantje */}
       <section className="px-6 pb-24 pt-4">
         <div className="relative mx-auto max-w-7xl overflow-hidden rounded-hero bg-navy px-8 py-12 text-white md:px-12">
           <div className="grid items-center gap-8 md:grid-cols-[1fr_auto] md:pr-44">
             <div>
               <h2 className="font-display text-3xl font-bold leading-tight md:text-4xl">{t.closing.title}</h2>
               <p className="mt-4 max-w-xl text-white/80">{t.closing.lead}</p>
-              <a href={walkthrough} className={`${btn} mt-8 bg-accent text-ink hover:bg-accent-dark`}><Mail size={18} aria-hidden="true" />{t.closing.cta}</a>
+              <a href={demo} className={`${btn} mt-8 bg-accent text-ink hover:bg-accent-dark`}><Mail size={18} aria-hidden="true" />{t.closing.cta}</a>
             </div>
             <div className="text-sm md:text-right"><b className="block font-semibold text-accent">{t.closing.site}</b><a href="mailto:hello@livoapps.software" className="text-white/80 hover:text-white">{t.closing.mail}</a></div>
           </div>
