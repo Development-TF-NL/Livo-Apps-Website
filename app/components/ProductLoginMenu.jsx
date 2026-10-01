@@ -9,8 +9,7 @@ import StatusPill from './StatusPill';
 // geen datum: beslissing 3 van 16 september). Toetsenbord: Escape sluit, Tab loopt door.
 const PPWR_LOGIN_URL = 'https://ppwr.livoapps.software/login';
 
-const focusRing =
-  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded';
+const focusRing = 'focus-ring rounded';
 
 export default function ProductLoginMenu({ dict, mobile = false }) {
   const [open, setOpen] = useState(false);

@@ -13,14 +13,14 @@ export default function NotFound() {
         </h1>
         <p className="text-white/70 mb-2">
           Het adres is misschien gewijzigd of heeft nooit bestaan.{' '}
-          <Link href="/nl" className="text-accent hover:text-accent-dark underline underline-offset-4">
+          <Link href="/nl" className="rounded text-accent hover:text-accent-dark underline underline-offset-4 focus-ring">
             Naar de homepage
           </Link>
           .
         </p>
         <p lang="en" className="text-white/70">
           This page doesn&rsquo;t exist.{' '}
-          <Link href="/en" className="text-accent hover:text-accent-dark underline underline-offset-4">
+          <Link href="/en" className="rounded text-accent hover:text-accent-dark underline underline-offset-4 focus-ring">
             Go to the homepage
           </Link>
           .

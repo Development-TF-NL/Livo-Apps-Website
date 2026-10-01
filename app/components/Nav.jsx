@@ -13,10 +13,11 @@ import OrderButton from './OrderButton';
 // Geen dode links: de drie links zijn ankers op de homepage (Prijzen wijst naar /pricing zodra de poort
 // open is); de productpagina en de whitepaper staan lager op de pagina en in de footer.
 
-const focusRing =
-  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded';
+// De focusrand komt van de klasse focus-ring (globals.css); rounded geeft de rand afgeronde hoeken.
+const focusRing = 'focus-ring rounded';
 
-// Volgorde van de taalwissel: de standaardtaal eerst (NL · EN).
+// Volgorde van de taalwissel: de standaardtaal eerst (NL · EN). Het blokje heeft geen overflow-hidden,
+// anders wordt de focusrand afgesneden; de link met focus ligt boven zijn buur.
 const languages = [
   ['nl', 'NL'],
   ['en', 'EN'],
@@ -39,7 +40,7 @@ export default function Nav({ lang, dict, pricingEnabled = false }) {
   ];
 
   const langSwitch = (
-    <div className="flex items-center overflow-hidden rounded-md border border-line text-xs font-semibold" role="group" aria-label={dict.language}>
+    <div className="flex items-center rounded-md border border-line text-xs font-semibold" role="group" aria-label={dict.language}>
       {languages.map(([code, label]) => {
         const active = code === lang;
         return (
@@ -49,7 +50,7 @@ export default function Nav({ lang, dict, pricingEnabled = false }) {
             hrefLang={code}
             onClick={close}
             aria-current={active ? 'true' : undefined}
-            className={`px-2.5 py-1 transition-colors duration-200 ${focusRing} ${active ? 'bg-navy text-white' : 'text-sub hover:text-ink'}`}
+            className={`px-2.5 py-1 transition-colors duration-200 ${focusRing} focus-visible:relative focus-visible:z-10 ${active ? 'bg-navy text-white' : 'text-sub hover:text-ink'}`}
           >
             {label}
           </Link>

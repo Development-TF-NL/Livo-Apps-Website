@@ -36,6 +36,7 @@ export default async function PpwrPage({ params }) {
   const t = dict.ppwr;
   const register = { ...dict.home.hero.visual.register, tenant: t.hero.registerTenant };
   const pricing = dict.home.pricing;
+  const pricingEnabled = process.env.PRICING_PAGE_ENABLED === 'true';
   const demo = mailto(t.hero.demoSubject, t.hero.demoBody);
   const statusRows = register.rows.map((r) => ({ status: r.status, tone: r.tone }));
   const fileLabels = [[t.changes.fileInputs[0], t.changes.fileInputs[1], t.changes.fileInputs[2]], { title: t.changes.fileTitle, badge: t.changes.fileBadge, rows: t.changes.fileRows }, t.changes.fileOutputs];
@@ -165,7 +166,8 @@ export default async function PpwrPage({ params }) {
         </div>
       </section>
 
-      {/* 7. Pricing: drie regels en één knop naar de prijssectie op de homepage */}
+      {/* 7. Pricing: drie regels en één knop. De knop volgt de poort, net als menu en footer:
+          open (PRICING_PAGE_ENABLED) naar de prijspagina, dicht naar het prijsblok op de homepage. */}
       <section id="pricing" className="scroll-mt-20 bg-white px-6 py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1fr_1fr]">
           <div>
@@ -178,7 +180,7 @@ export default async function PpwrPage({ params }) {
                 <li key={l} className="flex items-start gap-3 text-lg font-medium text-ink"><span aria-hidden="true" className="mt-2 inline-block h-2.5 w-2.5 flex-none rounded-full bg-accent" />{l}</li>
               ))}
             </ul>
-            <div className="mt-8"><Link href={`/${lang}#pricing`} className={`${btn} bg-accent text-ink hover:bg-accent-dark`}>{t.pricing.cta} <ArrowRight size={18} aria-hidden="true" /></Link></div>
+            <div className="mt-8"><Link href={pricingEnabled ? `/${lang}/pricing` : `/${lang}#pricing`} className={`${btn} bg-accent text-ink hover:bg-accent-dark`}>{t.pricing.cta} <ArrowRight size={18} aria-hidden="true" /></Link></div>
           </div>
         </div>
       </section>
@@ -194,7 +196,7 @@ export default async function PpwrPage({ params }) {
               <p className="mt-4 max-w-xl text-white/80">{t.closing.lead}</p>
               <a href={demo} className={`${btn} mt-8 bg-accent text-ink hover:bg-accent-dark`}><Mail size={18} aria-hidden="true" />{t.closing.cta}</a>
             </div>
-            <div className="text-sm md:text-right"><b className="block font-semibold text-accent">{t.closing.site}</b><a href="mailto:hello@livoapps.software" className="text-white/80 hover:text-white">{t.closing.mail}</a></div>
+            <div className="text-sm md:text-right"><b className="block font-semibold text-accent">{t.closing.site}</b><a href="mailto:hello@livoapps.software" className="rounded text-white/80 hover:text-white focus-ring">{t.closing.mail}</a></div>
           </div>
           <PhotoPlace src={SEEDLING} imgClassName="pointer-events-none absolute -bottom-10 -right-6 hidden h-52 w-auto md:block" />
         </div>

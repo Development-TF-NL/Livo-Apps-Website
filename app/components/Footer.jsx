@@ -28,7 +28,7 @@ export default function Footer({ lang, dict }) {
               <ul className="space-y-3 text-sm text-white/60">
                 {col.items.map(({ label, href }) => (
                   <li key={label}>
-                    <a href={resolve(href)} className="hover:text-accent" {...(href.startsWith('https://') ? { rel: 'noopener noreferrer' } : {})}>
+                    <a href={resolve(href)} className="rounded hover:text-accent focus-ring" {...(href.startsWith('https://') ? { rel: 'noopener noreferrer' } : {})}>
                       {label}
                     </a>
                   </li>
@@ -42,9 +42,9 @@ export default function Footer({ lang, dict }) {
           <p>{dict.copyright}</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             {dict.social.map(({ label, href }) => (
-              <a href={href} target="_blank" rel="noopener noreferrer" className="hover:text-accent" key={label}>{label}</a>
+              <a href={href} target="_blank" rel="noopener noreferrer" className="rounded hover:text-accent focus-ring" key={label}>{label}</a>
             ))}
-            <a href="mailto:hello@livoapps.software" className="hover:text-accent">hello@livoapps.software</a>
+            <a href="mailto:hello@livoapps.software" className="rounded hover:text-accent focus-ring">hello@livoapps.software</a>
           </div>
         </div>
       </div>

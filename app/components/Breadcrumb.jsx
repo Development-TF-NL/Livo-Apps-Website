@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 
-const focusRing =
-  'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy rounded';
+const focusRing = 'focus-ring rounded';
 
 // items: [{ label, href? }] — the last item is the current page (no link)
 export default function Breadcrumb({ items = [] }) {
