@@ -275,8 +275,8 @@
       "lead": "The challenge is not collecting packaging data once. It is keeping data, obligations and evidence connected and up to date as products, packaging and markets change.",
       "ctaPrimary": "Get LIVO PPWR",
       "ctaWalkthrough": "Request a demo",
-      "walkthroughSubject": "LIVO PPWR walkthrough",
-      "walkthroughBody": "Hello Livo,\n\nI would like a 20-minute walkthrough of LIVO PPWR.\n\nName:\nCompany:\nA few dates that work for me:\n",
+      "walkthroughSubject": "LIVO PPWR demo",
+      "walkthroughBody": "Hello LIVO APPS,\n\nI would like a 20-minute demo of LIVO PPWR.\n\nName:\nCompany:\nA few dates that work for me:\n",
       "registerTenant": "example-tenant",
       "illustration": "Illustration"
     },
@@ -426,7 +426,7 @@
       "cta": "See pricing"
     },
     "closing": {
-      "title": "See LIVO PPWR in a 20-minute walkthrough.",
+      "title": "See LIVO PPWR in a 20-minute demo.",
       "lead": "See how it can reduce manual work, supplier chasing and repeated rework. Or start free with your own packaging data.",
       "cta": "Request a demo",
       "site": "livoapps.software",
@@ -479,7 +479,7 @@
       "lead": "Tell us where to send it and we'll e-mail it to you.",
       "button": "Request the whitepaper",
       "mailSubject": "PPWR whitepaper",
-      "mailBody": "Hello Livo,\n\nPlease send me the PPWR whitepaper.\n\nName:\nCompany:\n"
+      "mailBody": "Hello LIVO APPS,\n\nPlease send me the PPWR whitepaper.\n\nName:\nCompany:\n"
     }
   },
   "pricing": {

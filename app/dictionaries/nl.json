@@ -275,8 +275,8 @@
       "lead": "De uitdaging is niet om verpakkingsdata één keer te verzamelen. Het is om data, verplichtingen en bewijs verbonden en actueel te houden terwijl producten, verpakkingen en markten veranderen.",
       "ctaPrimary": "LIVO PPWR gebruiken",
       "ctaWalkthrough": "Plan een demo",
-      "walkthroughSubject": "LIVO PPWR walkthrough",
-      "walkthroughBody": "Hallo Livo,\n\nIk wil graag een doorloop van 20 minuten van LIVO PPWR.\n\nNaam:\nBedrijf:\nEen paar data die mij schikken:\n",
+      "walkthroughSubject": "LIVO PPWR demo",
+      "walkthroughBody": "Hallo LIVO APPS,\n\nIk wil graag een demo van 20 minuten van LIVO PPWR.\n\nNaam:\nBedrijf:\nEen paar data die mij schikken:\n",
       "registerTenant": "example-tenant",
       "illustration": "Illustratie"
     },
@@ -426,7 +426,7 @@
       "cta": "Bekijk de prijzen"
     },
     "closing": {
-      "title": "Zie LIVO PPWR in een doorloop van 20 minuten.",
+      "title": "Zie LIVO PPWR in een demo van 20 minuten.",
       "lead": "Zie hoe het handwerk, het najagen van leveranciers en herhaald herstelwerk vermindert. Of start gratis met je eigen verpakkingsdata.",
       "cta": "Plan een demo",
       "site": "livoapps.software",
@@ -479,7 +479,7 @@
       "lead": "Laat weten waar we hem heen mogen sturen en we mailen hem naar je toe.",
       "button": "Vraag de whitepaper aan",
       "mailSubject": "PPWR whitepaper",
-      "mailBody": "Hallo Livo,\n\nStuur mij graag de PPWR-whitepaper.\n\nNaam:\nBedrijf:\n"
+      "mailBody": "Hallo LIVO APPS,\n\nStuur mij graag de PPWR-whitepaper.\n\nNaam:\nBedrijf:\n"
     }
   },
   "pricing": {
