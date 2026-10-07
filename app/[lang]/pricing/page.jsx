@@ -3,17 +3,16 @@ import { Check, FileCheck, FileSpreadsheet, ListChecks, Mail, Send } from 'lucid
 import { getDictionary } from '../../get-dictionary';
 import { mailto } from '../../mailto';
 import Footer from '../../components/Footer';
-import OrderButton from '../../components/OrderButton';
 import PhotoPlace from '../../components/PhotoPlace';
 import { languageAlternates, socialMetadata } from '../../seo';
-import { Section, IconCircle, Callout, ClosingBand, GreenTitle, benefitIcons, eyebrow, h1, h2, lead, cardTitleSmall, cardBody, btnPrimary, btnSecondary, btnOnNavy, heroPanel, cardOnCanvas, cardOnWhite } from '../../components/ui';
+import { Section, IconCircle, Callout, ClosingBand, GreenTitle, benefitIcons, eyebrow, h1, h2, lead, cardTitleSmall, cardBody, btnPrimary, btnSecondary, heroPanel, cardOnCanvas, cardOnWhite } from '../../components/ui';
 
 // Prijspagina (1 oktober 2026). Tekst en bedragen komen uit één bron (docs/marketing/website/copy/pricing.json
 // in de product-repo), dezelfde als de prijsflyer. De vorm komt uit dezelfde bouwstenen als de homepage
 // (components/ui.jsx): een lichte hero, drie voordelen met een icoon, de prijstabel in een kaart met "wat telt"
-// erbij, vier functies met een icoon en het anker, en het navy slotpaneel met de twee knoppen.
+// erbij, vier functies met een icoon en het anker, en het navy slotpaneel met één demoaanvraag.
 // Achter de poort PRICING_PAGE_ENABLED: dicht = notFound() en noindex; open = de pagina, in de sitemap en
-// in het menu. Bestellen loopt tot 1 november 2026 via de bestelmail van de homepage, hier met het plan erin.
+// in het menu. Een plan opent een demoaanvraag per e-mail, met het gekozen plan erin.
 const pricingEnabled = () => process.env.PRICING_PAGE_ENABLED === 'true';
 
 const BOX = '/brand/photo/box.png'; // doos uit de tussentijdse set (docs/huisstijl/beeld/doos.png), randaccent in de hero
@@ -23,7 +22,7 @@ const featureIcons = [FileSpreadsheet, Send, ListChecks, FileCheck];
 const num = (n, lang) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, lang === 'nl' ? '.' : ',');
 const fill = (template, plan) => template.replace('{plan}', plan);
 
-// De bestelmail van de homepage, met het plan in het onderwerp en als eerste ingevulde regel van de velden.
+// De demoaanvraag van de homepage, met het plan in het onderwerp en bij de optionele gegevens.
 function planMail(order, page, plan, subjectTemplate) {
   const parts = order.mailBody.split('\n\n');
   parts[parts.length - 1] = `${fill(page.planLine, plan)}\n${parts[parts.length - 1]}`;
@@ -161,10 +160,9 @@ export default async function PricingPage({ params }) {
         <p className="mt-10 font-display text-2xl font-bold text-ink">{t.anchor}</p>
       </Section>
 
-      {/* 5. Slot: het ene navy moment van de pagina; demo primair, de bestelknop ernaast */}
+      {/* 5. Slot: het ene navy moment van de pagina, met één demoaanvraag. */}
       <ClosingBand tone="canvas" title={t.closing.title} lead={t.closing.start}>
         <a href={demo} className={btnPrimary}><Mail size={18} aria-hidden="true" />{dict.home.hero.ctaDemo}</a>
-        <OrderButton t={order} className={btnOnNavy} />
       </ClosingBand>
 
       <Footer lang={lang} dict={dict.home.footer} />

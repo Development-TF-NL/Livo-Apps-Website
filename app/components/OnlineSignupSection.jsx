@@ -1,11 +1,12 @@
 import OrderButton from './OrderButton';
 import HandNote from './HandNote';
+import { MAIL, mailto } from '../mailto';
 import { Section, Eyebrow, h2, btnPrimary, cardOnCanvas, cardTitleSmall, cardBody } from './ui';
 
 const PPWR_LOGIN_URL = 'https://ppwr.livoapps.software/login';
 
-// Startsectie met de tijdelijke bestelroute (homepage v5, 1 oktober 2026): drie stappen en de bestelknop
-// (mailto). Geldt tot 1 november 2026; daarna vervangt het bestelproces op de website deze tekst en de knop.
+// Startsectie M1 (7 oktober 2026): drie stappen naar een demo en een zichtbaar contactadres.
+// De aanvraag opent een e-mailconcept. De bestaande login blijft beschikbaar.
 export default function OnlineSignupSection({ t, order }) {
   return (
     <Section id="start" tone="canvas">
@@ -30,6 +31,7 @@ export default function OnlineSignupSection({ t, order }) {
           <a href={PPWR_LOGIN_URL} rel="noopener noreferrer" className="rounded font-semibold text-green-text underline-offset-4 transition-colors duration-150 hover:underline focus-ring">{t.login}</a>
         </p>
       </div>
+      <a href={mailto(order.mailSubject, order.mailBody)} className="mt-3 inline-flex min-h-[44px] max-w-full items-center rounded text-sm text-green-text underline underline-offset-4 [overflow-wrap:anywhere] focus-ring">{MAIL}</a>
     </Section>
   );
 }

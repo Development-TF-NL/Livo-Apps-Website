@@ -8,14 +8,12 @@ import PhotoPlace from '../components/PhotoPlace';
 import RegisterFragment from '../components/RegisterFragment';
 import PricingPreview from '../components/PricingPreview';
 import OnlineSignupSection from '../components/OnlineSignupSection';
-import WhitepaperRow from '../components/WhitepaperRow';
-import OrderButton from '../components/OrderButton';
 import HandNote from '../components/HandNote';
-import { Section, Eyebrow, IconCircle, Callout, ClosingBand, GreenTitle, benefitIcons, h1, h2, lead, cardTitle, cardBody, btnPrimary, btnSecondary, btnOnNavy, textLink, heroPanel, cardOnCanvas, cardOnWhite } from '../components/ui';
+import { Section, Eyebrow, IconCircle, Callout, ClosingBand, GreenTitle, benefitIcons, h1, h2, lead, cardTitle, cardBody, btnPrimary, btnSecondary, textLink, heroPanel, cardOnCanvas, cardOnWhite } from '../components/ui';
 
 // Homepage v5 (1 oktober 2026), huisstijl v2 uitgesproken. Volgorde: hero, de klantvraag, expertise tijd en
-// geld, productbewijs (#how), leveranciers en klanten, prijs (#pricing), start (#start, tijdelijke bestelroute
-// per e-mail tot 1 november 2026), whitepaper, over LIVO APPS (#about), slot, footer.
+// geld, productbewijs (#how), leveranciers en klanten, prijs (#pricing), start (#start, demoaanvraag),
+// over LIVO APPS (#about), slot, footer. Whitepaperpromotie wacht op de inhoudelijke review.
 // Copy uit de dictionaries (bron: docs/marketing/website/copy/home.json en nav.json in de product-repo,
 // gebouwd uit 06-homepage-tekst-v5-1okt2026.md). De vorm komt uit de gedeelde bouwstenen in components/ui.jsx.
 // Beeld: de Register-illustratie (fictieve data, gelabeld) blijft in de hero en bij het productbewijs tot er
@@ -153,7 +151,6 @@ export default async function LivoAppsWebsite({ params }) {
 
       <PricingPreview lang={lang} t={t.pricing} order={order} pricingEnabled={pricingEnabled} />
       <OnlineSignupSection t={t.start} order={order} />
-      <WhitepaperRow t={t.whitepaper} />
 
       {/* 9. Over LIVO APPS: compact tekstblok, de ontwikkelregel klein. Het plantje staat als randaccent rechtsonder,
           bij de regel over de volgende module; alleen vanaf 1024 px, waar de tekst links ruimte overlaat. */}
@@ -169,10 +166,9 @@ export default async function LivoAppsWebsite({ params }) {
         <p className="mt-6 text-sm text-sub">{t.about.moduleLine}</p>
       </Section>
 
-      {/* 10. Slot: het ene navy moment van de pagina; demo primair, de tijdelijke bestelknop ernaast */}
+      {/* 10. Slot: het ene navy moment van de pagina, met één demoaanvraag. */}
       <ClosingBand title={t.finalCta.title} center>
         <a href={demo} className={btnPrimary}><Mail size={18} aria-hidden="true" />{t.hero.ctaDemo}</a>
-        <OrderButton t={order} className={btnOnNavy} />
       </ClosingBand>
 
       <Footer lang={lang} dict={t.footer} />

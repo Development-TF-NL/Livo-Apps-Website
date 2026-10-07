@@ -14,19 +14,19 @@
     "menuOpen": "Open menu",
     "menuClose": "Close menu",
     "order": {
-      "cta": "Buy LIVO PPWR",
-      "mailSubject": "Order LIVO PPWR",
-      "mailBody": "Hello LIVO APPS,\n\nWe would like to start with LIVO PPWR.\n\nCompany:\nName:\nJob title:\nNumber of products we place on the EU market ourselves:\n"
+      "cta": "Request a demo",
+      "mailSubject": "LIVO PPWR demo",
+      "mailBody": "Hello LIVO APPS,\n\nI would like to explore LIVO PPWR in a 20-minute demo. Could you suggest a time?\n\nCompany (optional):\nMy question (optional):\n"
     }
   },
   "home": {
     "meta": {
-      "title": "LIVO PPWR · PPWR expertise. Ready when you need it.",
+      "title": "LIVO PPWR · PPWR expertise for your everyday work.",
       "description": "Your own PPWR expert, without hiring one. For importers, wholesalers and brands that want less research and faster answers to customer requests."
     },
     "hero": {
       "eyebrow": "Your own PPWR expert, without hiring one.",
-      "title": "PPWR expertise. Ready when you need it.",
+      "title": "PPWR expertise for your everyday work.",
       "titleGreen": "PPWR expertise",
       "lead": "Your customer wants packaging data. LIVO PPWR works through the obligations and prepares the documentation work. Less research. Faster answers.",
       "audience": "For importers, wholesalers and brands with packaged products.",
@@ -112,7 +112,7 @@
         },
         {
           "lead": "Obligations alongside your packaging.",
-          "body": "With status and the date they take effect."
+          "body": "See the status and what needs attention."
         },
         {
           "lead": "Evidence at the source.",
@@ -142,31 +142,31 @@
       "title": "Simple pricing, with a clear path to start.",
       "lines": [
         "Priced by the products you put on the EU market yourself.",
-        "All EU markets included. No per-user pricing.",
-        "All plans free until 1 November 2026."
+        "No surcharge per EU market or user.",
+        "In the demo, we discuss available features and country coverage."
       ],
       "ctaAsk": "Ask about pricing",
       "ctaPricing": "View pricing"
     },
     "start": {
       "eyebrow": "Start with LIVO PPWR",
-      "title": "Start now. Free until 1 November.",
-      "hand": "Three steps, that's it",
+      "title": "See how LIVO PPWR fits your work.",
+      "hand": "Start with your customer request",
       "steps": [
         {
-          "title": "Order by e-mail",
-          "body": "Click Buy LIVO PPWR and fill in your details."
+          "title": "Request a demo",
+          "body": "Let us know you would like to meet. We agree a time together."
         },
         {
-          "title": "We confirm",
-          "body": "You receive your plan, the terms and your start date by e-mail."
+          "title": "Discuss your workflow",
+          "body": "We look at how you collect packaging data and where questions remain."
         },
         {
-          "title": "Set up together",
-          "body": "We set up your environment with you and you start with your own packaging data."
+          "title": "Agree a next step",
+          "body": "We discuss available features, your product range and a suitable start."
         }
       ],
-      "note": "Until 1 November, ordering runs by e-mail.",
+      "note": "A demo request is not an order.",
       "customer": "Already a customer?",
       "login": "Log in"
     },
@@ -196,7 +196,7 @@
       "eyebrow": "Software that lightens the workflow.",
       "title": "Specialist knowledge for everyday work.",
       "body": "LIVO APPS brings specialist knowledge to businesses without an army of experts. LIVO PPWR connects obligations to packaging data, supplier input and evidence.",
-      "moduleLine": "LIVO PPWR is available now. Another module is in development."
+      "moduleLine": "Explore LIVO PPWR in a demo. Another module is in development."
     },
     "finalCta": {
       "title": "Your customer wants data. Not your PPWR learning curve."
@@ -277,7 +277,7 @@
       "lead": "The challenge is not collecting packaging data once. It is keeping data, obligations and evidence connected and up to date as products, packaging and markets change.",
       "ctaDemo": "Request a demo",
       "demoSubject": "LIVO PPWR demo",
-      "demoBody": "Hello LIVO APPS,\n\nI would like a 20-minute demo of LIVO PPWR.\n\nName:\nCompany:\nA few dates that work for me:\n",
+      "demoBody": "Hello LIVO APPS,\n\nI would like to explore LIVO PPWR in a 20-minute demo. Could you suggest a time?\n\nCompany (optional):\nMy question (optional):\n",
       "registerTenant": "example-tenant",
       "illustration": "Illustration"
     },
@@ -431,7 +431,7 @@
     },
     "closing": {
       "title": "See LIVO PPWR in a 20-minute demo.",
-      "lead": "See how it can reduce manual work, supplier chasing and repeated rework.",
+      "lead": "See how you bring packaging data, supplier questions and available evidence together.",
       "cta": "Request a demo",
       "site": "livoapps.software",
       "mail": "hello@livoapps.software"
@@ -486,7 +486,7 @@
   "pricing": {
     "meta": {
       "title": "LIVO PPWR · Pricing",
-      "description": "One product. You pay for your SKUs, not your users. Every feature in every plan. EU markets included. 15% off with annual billing. Prices exclude VAT."
+      "description": "You pay for your SKUs, not your users. From €99 a month. 15% off with annual billing. Prices exclude VAT."
     },
     "head": {
       "title": "Your own PPWR expert. Without hiring one.",
@@ -510,7 +510,7 @@
     ],
     "price": {
       "title": "One product. You pay for your SKUs, not your users.",
-      "line": "Every feature in every plan. EU markets included. 15% off with annual billing. Prices exclude VAT.",
+      "line": "No surcharge per EU market or user. We discuss available features and country coverage in the demo. 15% off with annual billing. Prices exclude VAT.",
       "columns": {
         "plan": "Plan",
         "skus": "SKUs",
@@ -534,11 +534,11 @@
       },
       {
         "title": "Suppliers fill the gaps.",
-        "body": "Prefilled request or portal. Questionable values go back for a check, because a filled field is not proof."
+        "body": "Prefilled request or portal. You send the request yourself and review the responses."
       },
       {
         "title": "Obligations alongside your packaging.",
-        "body": "With status and the date they take effect."
+        "body": "See the status and what needs attention."
       },
       {
         "title": "An answer for your customer.",
@@ -548,16 +548,16 @@
     "anchor": "LIVO does the groundwork. You review and confirm.",
     "closing": {
       "title": "Your customer wants data. Not your PPWR learning curve.",
-      "start": "Try it free until 1 November 2026. Nothing continues automatically afterwards. No implementation fee: we set up your environment with you and confirm your plan and terms by e-mail."
+      "start": "Discuss your product range and preferred start in a demo. Your plan, terms and start date are recorded when you order on the website. No implementation fee: we set up your environment with you."
     },
     "page": {
       "toggleMonthly": "Monthly",
       "toggleAnnual": "Annually · 15% off",
-      "orderPlan": "Buy {plan}",
-      "orderSubject": "Order LIVO PPWR: {plan}",
+      "orderPlan": "Discuss {plan}",
+      "orderSubject": "LIVO PPWR demo: {plan}",
       "planLine": "Plan: {plan}",
-      "customCta": "Request a quote",
-      "customSubject": "LIVO PPWR custom"
+      "customCta": "Discuss your product range",
+      "customSubject": "LIVO PPWR demo: product range"
     },
     "ladder": {
       "annualFactor": 0.85,

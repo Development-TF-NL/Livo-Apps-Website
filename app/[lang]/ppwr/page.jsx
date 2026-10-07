@@ -5,18 +5,16 @@ import RegisterFragment from '../../components/RegisterFragment';
 import HandNote from '../../components/HandNote';
 import StatusPill from '../../components/StatusPill';
 import SupplierCycle from '../../components/SupplierCycle';
-import WhitepaperObject from '../../components/WhitepaperObject';
-import OrderButton from '../../components/OrderButton';
 import Footer from '../../components/Footer';
 import { ImportVisual, StatusVisual, CycleVisual, FileVisual } from '../../components/FeatureVisuals';
 import { getDictionary } from '../../get-dictionary';
 import { mailto } from '../../mailto';
 import { languageAlternates, socialMetadata } from '../../seo';
-import { Section, Eyebrow, IconCircle, Callout, ClosingBand, h1, h2, lead, cardTitle, cardTitleSmall, cardBody, btnPrimary, btnSecondary, heroPanel, cardOnCanvas, cardOnWhite, promoPanel } from '../../components/ui';
+import { Section, Eyebrow, IconCircle, Callout, ClosingBand, h1, h2, lead, cardTitle, cardTitleSmall, cardBody, btnPrimary, heroPanel, cardOnCanvas, cardOnWhite, promoPanel } from '../../components/ui';
 
 // Productpagina LIVO PPWR, ontwerp v2 (17 september 2026): ruggengraat is de flyer 2026-09-17
 // (probleem, kosten, wat LIVO verandert, demo), uitgebreid waar een pagina meer ruimte heeft.
-// Hero (1 oktober 2026): de primaire knop is de tijdelijke bestelknop van de homepage (mailto, tot 1 november 2026).
+// Hero (M1, 7 oktober 2026): één demoaanvraag per e-mail. Whitepaperpromotie wacht op de inhoudelijke review.
 // Alle tekst uit de dictionaries (bron: docs/marketing/website/copy/ppwr.json).
 // Vorm (1 oktober 2026): de gedeelde bouwstenen uit components/ui.jsx. Na de hero wisselen wit en canvas elkaar af;
 // kaarten op canvas dragen de schaduw, kaarten op wit een rand; nergens meer dan twee kaarten naast elkaar.
@@ -57,8 +55,7 @@ export default async function PpwrPage({ params }) {
               </h1>
               <p className={`mt-6 max-w-lg ${lead}`}>{t.hero.lead}</p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <OrderButton t={dict.nav.order} className={btnPrimary} />
-                <a href={demo} className={btnSecondary}><Mail size={18} aria-hidden="true" />{t.hero.ctaDemo}</a>
+                <a href={demo} className={btnPrimary}><Mail size={18} aria-hidden="true" />{t.hero.ctaDemo}</a>
               </div>
             </div>
             <div className="min-w-0">
@@ -171,8 +168,6 @@ export default async function PpwrPage({ params }) {
           </div>
         </div>
       </Section>
-
-      <WhitepaperObject t={dict.home.whitepaper} />
 
       {/* Slot: het ene navy moment van de pagina. De voetregel staat in de gedeelde footer. */}
       <ClosingBand

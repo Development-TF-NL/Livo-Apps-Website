@@ -14,19 +14,19 @@
     "menuOpen": "Menu openen",
     "menuClose": "Menu sluiten",
     "order": {
-      "cta": "Bestel LIVO PPWR",
-      "mailSubject": "LIVO PPWR bestellen",
-      "mailBody": "Hallo LIVO APPS,\n\nWij willen starten met LIVO PPWR.\n\nBedrijf:\nNaam:\nFunctie:\nAantal producten dat wij zelf op de EU-markt brengen:\n"
+      "cta": "Plan een demo",
+      "mailSubject": "LIVO PPWR demo",
+      "mailBody": "Hallo LIVO APPS,\n\nIk wil graag kennismaken met LIVO PPWR in een demo van 20 minuten. Kunnen jullie een moment voorstellen?\n\nBedrijf (optioneel):\nMijn vraag (optioneel):\n"
     }
   },
   "home": {
     "meta": {
-      "title": "LIVO PPWR · PPWR-expertise. Direct beschikbaar.",
+      "title": "LIVO PPWR · PPWR-expertise voor je dagelijkse werk.",
       "description": "Je eigen PPWR-expert, zonder er één aan te nemen. Voor importeurs, groothandels en merken die minder willen uitzoeken en sneller willen antwoorden op klantvragen."
     },
     "hero": {
       "eyebrow": "Je eigen PPWR-expert, zonder er één aan te nemen.",
-      "title": "PPWR-expertise. Direct beschikbaar.",
+      "title": "PPWR-expertise voor je dagelijkse werk.",
       "titleGreen": "PPWR-expertise",
       "lead": "Je klant vraagt om verpakkingsdata. LIVO PPWR zoekt de verplichtingen uit en zet het dossierwerk klaar. Minder uitzoeken. Sneller antwoorden.",
       "audience": "Voor importeurs, groothandels en merken met verpakte producten.",
@@ -112,7 +112,7 @@
         },
         {
           "lead": "Verplichtingen bij je verpakking.",
-          "body": "Met status en wettelijke ingangsdatum."
+          "body": "Zie de status en wat aandacht vraagt."
         },
         {
           "lead": "Bewijs bij de bron.",
@@ -142,31 +142,31 @@
       "title": "Eenvoudige prijzen, met een duidelijke weg om te starten.",
       "lines": [
         "Prijs op de producten die je zelf op de EU-markt brengt.",
-        "Alle EU-markten inbegrepen. Geen prijs per gebruiker.",
-        "Alle plannen gratis tot 1 november 2026."
+        "Geen toeslag per EU-markt of gebruiker.",
+        "In de demo bespreken we de beschikbare functies en landendekking."
       ],
       "ctaAsk": "Vraag naar prijzen",
       "ctaPricing": "Bekijk prijzen"
     },
     "start": {
       "eyebrow": "Starten met LIVO PPWR",
-      "title": "Start nu. Gratis tot 1 november.",
-      "hand": "Drie stappen, meer niet",
+      "title": "Bekijk hoe LIVO PPWR bij je werk past.",
+      "hand": "Begin met je klantvraag",
       "steps": [
         {
-          "title": "Bestel per mail",
-          "body": "Klik op Bestel LIVO PPWR en vul je gegevens in."
+          "title": "Plan een demo",
+          "body": "Laat weten dat je wilt kennismaken. We spreken samen een moment af."
         },
         {
-          "title": "Wij bevestigen",
-          "body": "Je ontvangt per mail je plan, de voorwaarden en je startdatum."
+          "title": "Bespreek je werkwijze",
+          "body": "We bekijken hoe je verpakkingsdata verzamelt en waar vragen blijven liggen."
         },
         {
-          "title": "Samen inrichten",
-          "body": "We richten je omgeving met je in en je begint met je eigen verpakkingsdata."
+          "title": "Spreek een vervolgstap af",
+          "body": "We bespreken de beschikbare functies, je assortiment en een passende start."
         }
       ],
-      "note": "Tot 1 november loopt bestellen via e-mail.",
+      "note": "Een demoaanvraag is geen bestelling.",
       "customer": "Al klant?",
       "login": "Inloggen"
     },
@@ -196,7 +196,7 @@
       "eyebrow": "Software die je werk lichter maakt.",
       "title": "Specialistische kennis voor het dagelijkse werk.",
       "body": "LIVO APPS brengt specialistische kennis naar bedrijven zonder eigen leger experts. LIVO PPWR verbindt verplichtingen aan verpakkingsdata, leveranciersinput en bewijs.",
-      "moduleLine": "LIVO PPWR is nu beschikbaar. Een volgende module is in ontwikkeling."
+      "moduleLine": "Ontdek LIVO PPWR in een demo. Een volgende module is in ontwikkeling."
     },
     "finalCta": {
       "title": "Je klant wacht op data. Niet op jouw PPWR-opleiding."
@@ -277,7 +277,7 @@
       "lead": "De uitdaging is niet om verpakkingsdata één keer te verzamelen. Het is om data, verplichtingen en bewijs verbonden en actueel te houden terwijl producten, verpakkingen en markten veranderen.",
       "ctaDemo": "Plan een demo",
       "demoSubject": "LIVO PPWR demo",
-      "demoBody": "Hallo LIVO APPS,\n\nIk wil graag een demo van 20 minuten van LIVO PPWR.\n\nNaam:\nBedrijf:\nEen paar data die mij schikken:\n",
+      "demoBody": "Hallo LIVO APPS,\n\nIk wil graag kennismaken met LIVO PPWR in een demo van 20 minuten. Kunnen jullie een moment voorstellen?\n\nBedrijf (optioneel):\nMijn vraag (optioneel):\n",
       "registerTenant": "example-tenant",
       "illustration": "Illustratie"
     },
@@ -431,7 +431,7 @@
     },
     "closing": {
       "title": "Zie LIVO PPWR in een demo van 20 minuten.",
-      "lead": "Zie hoe het handwerk, het najagen van leveranciers en herhaald herstelwerk vermindert.",
+      "lead": "Bekijk hoe je verpakkingsdata, leveranciersvragen en beschikbaar bewijs bij elkaar brengt.",
       "cta": "Plan een demo",
       "site": "livoapps.software",
       "mail": "hello@livoapps.software"
@@ -486,7 +486,7 @@
   "pricing": {
     "meta": {
       "title": "LIVO PPWR · Prijzen",
-      "description": "Eén product. Je betaalt voor je SKU's, niet voor je gebruikers. Alle functies in elk plan. EU-markten inbegrepen. 15% korting bij jaarbetaling. Prijzen exclusief btw."
+      "description": "Je betaalt voor je SKU's, niet voor je gebruikers. Vanaf €99 per maand. 15% korting bij jaarbetaling. Prijzen exclusief btw."
     },
     "head": {
       "title": "Je eigen PPWR-expert. Zonder er één aan te nemen.",
@@ -510,7 +510,7 @@
     ],
     "price": {
       "title": "Eén product. Je betaalt voor je SKU's, niet voor je gebruikers.",
-      "line": "Alle functies in elk plan. EU-markten inbegrepen. 15% korting bij jaarbetaling. Prijzen exclusief btw.",
+      "line": "Geen toeslag per EU-markt of gebruiker. Beschikbare functies en landendekking bespreken we in de demo. 15% korting bij jaarbetaling. Prijzen exclusief btw.",
       "columns": {
         "plan": "Plan",
         "skus": "SKU's",
@@ -534,11 +534,11 @@
       },
       {
         "title": "Leveranciers vullen de gaten.",
-        "body": "Voorgevulde uitvraag of portaal. Verdachte waarden gaan ter controle terug, want ingevuld betekent niet dat het klopt."
+        "body": "Voorgevulde uitvraag of portaal. Je verstuurt de uitvraag zelf en beoordeelt de reacties."
       },
       {
         "title": "Verplichtingen bij je verpakking.",
-        "body": "Met status en wettelijke ingangsdatum."
+        "body": "Zie de status en wat aandacht vraagt."
       },
       {
         "title": "Antwoord voor je klant.",
@@ -548,16 +548,16 @@
     "anchor": "LIVO zoekt uit en zet klaar. Jij beoordeelt en bevestigt.",
     "closing": {
       "title": "Je klant wacht op data. Niet op jouw PPWR-opleiding.",
-      "start": "Probeer gratis tot 1 november 2026. Daarna loopt niets automatisch door. Geen implementatiekosten: we richten je omgeving samen met je in en bevestigen plan en voorwaarden per mail."
+      "start": "Bespreek je assortiment en gewenste start in een demo. Plan, voorwaarden en startdatum worden bij bestelling op de website vastgelegd. Geen implementatiekosten: we richten je omgeving samen met je in."
     },
     "page": {
       "toggleMonthly": "Maandelijks",
       "toggleAnnual": "Jaarlijks · 15% korting",
-      "orderPlan": "Bestel {plan}",
-      "orderSubject": "LIVO PPWR bestellen: {plan}",
+      "orderPlan": "Bespreek {plan}",
+      "orderSubject": "LIVO PPWR demo: {plan}",
       "planLine": "Plan: {plan}",
-      "customCta": "Vraag een offerte aan",
-      "customSubject": "LIVO PPWR maatwerk"
+      "customCta": "Bespreek je assortiment",
+      "customSubject": "LIVO PPWR demo: assortiment"
     },
     "ladder": {
       "annualFactor": 0.85,
