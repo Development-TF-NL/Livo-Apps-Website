@@ -179,7 +179,11 @@
     "about": {
       "eyebrow": "Software that lightens the workflow.",
       "title": "About LIVO APPS",
-      "body": "LIVO began when a small business received detailed packaging data requests from German retail chains. Its team struggled to keep track of the manual work involved. That led to software designed to organise packaging data and open questions."
+      "paragraphs": [
+        "European rules on packaging, sustainability and deforestation ask a lot of SMEs. You have to collect data, keep track of obligations and translate complex legislation into your own products and processes. Many small teams do not have the time or the specialist knowledge for that.",
+        "At the same time, customers, suppliers and producers ask each other for data and evidence. Spreadsheets and documents travel back and forth through the whole chain, often by hand. That takes a lot of work, while it is hard to see what is correct and what is still missing.",
+        "That is why we started LIVO. We build software that makes the work lighter for SMEs. We build knowledge of the rules into the app, so you can see which data is still missing and what the next step is. We started with packaging (PPWR) and are working on a module for deforestation-free products (EUDR)."
+      ]
     },
     "finalCta": {
       "title": "See your packaging data workflow in a demo."
@@ -480,7 +484,7 @@
     "benefits": [
       {
         "label": "Expertise",
-        "text": "The expertise. Without the hire."
+        "text": "See what's missing. Know what to do next."
       },
       {
         "label": "Time",

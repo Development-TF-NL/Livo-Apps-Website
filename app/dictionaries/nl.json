@@ -179,7 +179,11 @@
     "about": {
       "eyebrow": "Software die je werk lichter maakt.",
       "title": "Over LIVO APPS",
-      "body": "LIVO ontstond toen een mkb-bedrijf gedetailleerde vragen over verpakkingsdata van Duitse ketens kreeg. Medewerkers verloren het overzicht door de hoeveelheid handwerk. Dat werd de aanleiding om software te bouwen die verpakkingsgegevens en open vragen ordent."
+      "paragraphs": [
+        "Europese regels over verpakkingen, duurzaamheid en ontbossing vragen veel van mkb-bedrijven. Je moet gegevens verzamelen, verplichtingen bijhouden en ingewikkelde wetgeving vertalen naar je eigen producten en processen. Veel kleine teams hebben daar de tijd en specialistische kennis niet voor.",
+        "Tegelijk vragen klanten, leveranciers en producenten elkaar om gegevens en bewijs. Spreadsheets en documenten gaan door de hele keten heen en weer, vaak met de hand. Dat kost veel werk, terwijl lastig te zien is wat klopt en wat nog ontbreekt.",
+        "Daarom zijn we LIVO gestart. We bouwen software die het werk voor mkb-bedrijven lichter maakt. We verwerken kennis van de regels in de app, zodat je ziet welke gegevens nog ontbreken en welke stap volgt. We zijn begonnen met verpakkingen (PPWR) en werken aan een module voor ontbossingsvrije producten (EUDR)."
+      ]
     },
     "finalCta": {
       "title": "Laat je verpakkingsdata zien in een demo."
@@ -480,7 +484,7 @@
     "benefits": [
       {
         "label": "Expertise",
-        "text": "De kennis binnen. Zonder de vacature."
+        "text": "Zie wat ontbreekt. Weet wat je moet doen."
       },
       {
         "label": "Tijd",

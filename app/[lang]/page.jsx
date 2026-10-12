@@ -110,8 +110,8 @@ export default async function LivoAppsWebsite({ params }) {
       <PricingPreview lang={lang} t={t.pricing} order={order} pricingEnabled={pricingEnabled} />
       <OnlineSignupSection t={t.start} order={order} />
 
-      {/* 6. Over LIVO APPS: alleen de aanleiding (kandidaattekst, inhoudelijke controle door de eigenaar vóór publicatie); geen naam,
-          foto of biografie. Het plantje als randaccent rechtsonder, alleen vanaf 1024 px. */}
+      {/* 6. Over LIVO APPS: alleen de aanleiding, de door de eigenaar goedgekeurde tekst in drie alinea's (EUDR als module in ontwikkeling);
+          geen naam, foto of biografie. Het plantje als randaccent rechtsonder, alleen vanaf 1024 px. */}
       <Section
         id="about"
         tone="canvas"
@@ -120,7 +120,9 @@ export default async function LivoAppsWebsite({ params }) {
       >
         <Eyebrow>{t.about.eyebrow}</Eyebrow>
         <h2 className={`max-w-3xl ${h2}`}>{t.about.title}</h2>
-        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink">{t.about.body}</p>
+        <div className="mt-5 max-w-3xl space-y-4 text-lg leading-relaxed text-ink">
+          {t.about.paragraphs.map((p) => <p key={p.slice(0, 40)}>{p}</p>)}
+        </div>
       </Section>
 
       {/* 7. Slot: het ene navy moment van de pagina, met één demoaanvraag. */}
