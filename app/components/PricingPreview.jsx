@@ -3,9 +3,10 @@ import { ArrowRight } from 'lucide-react';
 import OrderButton from './OrderButton';
 import { Section, Eyebrow, h2, btnPrimary, textLink, promoPanel } from './ui';
 
-// Prijs op de homepage: drie regels, de tijdelijke bestelknop (mailto, tot 1 november 2026) en een kleine
-// tekstlink ernaast. De tekstlink wijst naar /[lang]/pricing alleen als PRICING_PAGE_ENABLED aan staat;
-// anders is het een contactlink. Geen dode links. Het mintpaneel staat op wit en draagt geen schaduw.
+// Prijs op de homepage (M2, 12 oktober 2026): de vanafprijs zonder implementatiekosten als kop, de prijsregel(s) uit de
+// dictionary, de demoaanvraag (mailto) en een kleine tekstlink ernaast. De tekstlink wijst naar /[lang]/pricing alleen als
+// PRICING_PAGE_ENABLED aan staat; anders is het een contactlink. Geen dode links. Het mintpaneel staat op wit en draagt geen schaduw.
+// Bedragen, ladder en poort staan niet in dit bestand (bron: copy/pricing.json en de prijspagina).
 export default function PricingPreview({ lang, t, order, pricingEnabled }) {
   return (
     <Section id="pricing">

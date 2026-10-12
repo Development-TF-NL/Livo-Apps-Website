@@ -21,18 +21,18 @@
   },
   "home": {
     "meta": {
-      "title": "LIVO PPWR · PPWR expertise for your everyday work.",
-      "description": "Your own PPWR expert, without hiring one. For importers, wholesalers and brands that want less research and faster answers to customer requests."
+      "title": "LIVO PPWR · Your PPWR expert. Built for SMEs.",
+      "description": "Your PPWR expert. Built for SMEs. For importers, wholesalers and brands with packaged products: LIVO shows what is missing and prepares the supplier request and customer file. From €99 per month, excluding VAT."
     },
     "hero": {
-      "eyebrow": "Your own PPWR expert, without hiring one.",
-      "title": "PPWR expertise for your everyday work.",
-      "titleGreen": "PPWR expertise",
-      "lead": "Your customer wants packaging data. LIVO PPWR works through the obligations and prepares the documentation work. Less research. Faster answers.",
+      "eyebrow": "LIVO PPWR",
+      "title": "Your PPWR expert. Built for SMEs.",
+      "titleGreen": "PPWR expert",
+      "lead": "Your customer asks for packaging data. LIVO shows what is missing and prepares the supplier request and customer file. You send the request, review the response and decide what to share.",
       "audience": "For importers, wholesalers and brands with packaged products.",
       "ctaDemo": "Request a demo",
       "ctaHow": "See how it works",
-      "anchor": "LIVO does the groundwork and prepares the next steps. You review and confirm.",
+      "priceLine": "From €99 per month, excluding VAT. No implementation fee.",
       "visual": {
         "label": "Illustration",
         "register": {
@@ -71,82 +71,66 @@
               "next": "Confirm level"
             }
           ]
+        },
+        "example": {
+          "tenant": "example-tenant",
+          "tabs": [
+            "Overview",
+            "Obligations",
+            "Register",
+            "Suppliers"
+          ],
+          "title": "Packaging register",
+          "action": "Upload data",
+          "rows": [
+            {
+              "name": "VH-2001 Decorative vase · packaging",
+              "status": "Needs data",
+              "tone": "warning",
+              "next": "Ask supplier"
+            }
+          ]
         }
       }
     },
-    "question": {
-      "eyebrow": "The first question won't come from a regulator.",
-      "title": "Your customer asks. Where is your answer?",
-      "lead": "Your customers will ask for packaging data. By item. By material. With evidence. That is the time to deliver, not dig through spreadsheets, inboxes and supplier files.",
-      "card": "“Please send the packaging data and evidence for these items.”",
-      "closing": "Your customer wants an answer. Not your search history.",
-      "hand": "Sound familiar?"
+    "example": {
+      "title": "One item. From Excel to a customer file.",
+      "intro": "A fictional example using a decorative vase. This is how one question moves through LIVO PPWR.",
+      "steps": [
+        "Import your Excel file. LIVO proposes the column mapping; you confirm it.",
+        "LIVO shows what is missing: the weight of a packaging part and a test report.",
+        "LIVO prepares a prefilled supplier request. You send it.",
+        "The supplier adds 45 grams. You review the response. The report is still requested.",
+        "Export the selection for your customer. The missing report remains visible."
+      ],
+      "caption": "Fictional demo data. A requested report is not evidence on file.",
+      "cta": "Explore LIVO PPWR"
     },
-    "value": {
-      "title": "Bring in expertise. Free up time and budget.",
-      "cards": [
+    "roles": {
+      "title": "What does LIVO take on?",
+      "groups": [
         {
-          "label": "Expertise",
-          "title": "The expertise. Without the hire.",
-          "body": "LIVO PPWR works out which obligations apply to your packaging."
+          "label": "Automatically visible",
+          "body": "LIVO recognises columns, shows applicable requirements and flags missing or unusual data."
         },
         {
-          "label": "Time",
-          "title": "Less searching. More getting done.",
-          "body": "Reuse your data and let suppliers fill the gaps."
+          "label": "Prepared",
+          "body": "LIVO prepares a prefilled request and a customer selection for export."
         },
         {
-          "label": "Money",
-          "title": "Stop paying to solve the same PPWR questions.",
-          "body": "Put recurring work into software. Spend your advice budget on judgement, not groundwork."
+          "label": "Your decision",
+          "body": "You confirm the import, send the request, review the response and decide what goes to your customer."
         }
       ]
     },
-    "how": {
-      "eyebrow": "More than an overview",
-      "title": "See what is missing. Get to work.",
-      "proofs": [
-        {
-          "lead": "Start with your own Excel file.",
-          "body": "LIVO recognises the columns. You confirm."
-        },
-        {
-          "lead": "Obligations alongside your packaging.",
-          "body": "See the status and what needs attention."
-        },
-        {
-          "lead": "Evidence at the source.",
-          "body": "Documents linked to packaging and material layers."
-        }
-      ],
-      "cta": "Explore LIVO PPWR"
-    },
-    "chain": {
-      "eyebrow": "From supplier to customer",
-      "title": "Get the data in. Get the answer out.",
-      "cards": [
-        {
-          "title": "Your supplier fills the gaps.",
-          "body": "LIVO PPWR prepares a prefilled request. In the portal, your supplier sees what is already there and fills in only the gaps."
-        },
-        {
-          "title": "You export for your customer.",
-          "body": "Save your customer’s SKU selection and export it to Excel. LIVO PPWR also uses the same data to prepare a draft declaration of conformity."
-        }
-      ],
-      "expertLead": "A filled field is not proof of sound data.",
-      "expertBody": "LIVO PPWR includes questionable values, such as an implausible weight or zero recycled content, in the request for your supplier to check."
-    },
     "pricing": {
       "eyebrow": "Pricing",
-      "title": "Simple pricing, with a clear path to start.",
+      "title": "From €99 per month. No implementation fee.",
       "lines": [
-        "Priced by the products you put on the EU market yourself.",
-        "No surcharge per EU market or user.",
-        "In the demo, we discuss available features and country coverage."
+        "Prices exclude VAT. Your plan is based on the products you place on the EU market yourself."
       ],
       "ctaAsk": "Ask about pricing",
-      "ctaPricing": "View pricing"
+      "ctaPricing": "View all prices"
     },
     "start": {
       "eyebrow": "Start with LIVO PPWR",
@@ -194,12 +178,11 @@
     },
     "about": {
       "eyebrow": "Software that lightens the workflow.",
-      "title": "Specialist knowledge for everyday work.",
-      "body": "LIVO APPS brings specialist knowledge to businesses without an army of experts. LIVO PPWR connects obligations to packaging data, supplier input and evidence.",
-      "moduleLine": "Explore LIVO PPWR in a demo. Another module is in development."
+      "title": "About LIVO APPS",
+      "body": "LIVO began when a small business received detailed packaging data requests from German retail chains. Its team struggled to keep track of the manual work involved. That led to software designed to organise packaging data and open questions."
     },
     "finalCta": {
-      "title": "Your customer wants data. Not your PPWR learning curve."
+      "title": "See your packaging data workflow in a demo."
     },
     "footer": {
       "tagline": "Software that lightens the workflow.",
@@ -489,7 +472,7 @@
       "description": "You pay for your SKUs, not your users. From €99 a month. 15% off with annual billing. Prices exclude VAT."
     },
     "head": {
-      "title": "Your own PPWR expert. Without hiring one.",
+      "title": "Your PPWR expert. Built for SMEs.",
       "titleGreen": "PPWR expert",
       "trigger": "The first question won't come from a regulator. It will come from your customer. LIVO PPWR prepares your answer.",
       "audience": "For importers, wholesalers and brands with packaged products. From €99 a month."

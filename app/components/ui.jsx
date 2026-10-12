@@ -53,13 +53,14 @@ export function Section({ id, tone = 'white', hero = false, className = '', afte
 }
 
 // Eén groen woord in een grote kop (Green Heading). `green` is het deel van de titel dat groen wordt;
-// staat het er niet in, dan blijft de titel zoals hij is. De tekst zelf verandert niet.
+// staat het er niet in, dan blijft de titel zoals hij is. De tekst zelf verandert niet. Het groene woord breekt niet
+// over twee regels (M2, 12 oktober 2026: "PPWR-expert" brak op 390 px na het koppelteken; de kop zelf blijft vrij afbreken).
 export function GreenTitle({ title, green }) {
   const i = green ? title.indexOf(green) : -1;
   if (i < 0) return title;
   return (
     <>
-      {title.slice(0, i)}<span className="text-green-heading">{green}</span>{title.slice(i + green.length)}
+      {title.slice(0, i)}<span className="whitespace-nowrap text-green-heading">{green}</span>{title.slice(i + green.length)}
     </>
   );
 }

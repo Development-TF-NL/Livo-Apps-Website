@@ -21,18 +21,18 @@
   },
   "home": {
     "meta": {
-      "title": "LIVO PPWR · PPWR-expertise voor je dagelijkse werk.",
-      "description": "Je eigen PPWR-expert, zonder er één aan te nemen. Voor importeurs, groothandels en merken die minder willen uitzoeken en sneller willen antwoorden op klantvragen."
+      "title": "LIVO PPWR · Jouw PPWR-expert. Gemaakt voor het mkb.",
+      "description": "Jouw PPWR-expert. Gemaakt voor het mkb. Voor importeurs, groothandels en merken met verpakte producten: LIVO laat zien wat ontbreekt en zet de leveranciersuitvraag en het klantbestand klaar. Vanaf €99 per maand, exclusief btw."
     },
     "hero": {
-      "eyebrow": "Je eigen PPWR-expert, zonder er één aan te nemen.",
-      "title": "PPWR-expertise voor je dagelijkse werk.",
-      "titleGreen": "PPWR-expertise",
-      "lead": "Je klant vraagt om verpakkingsdata. LIVO PPWR zoekt de verplichtingen uit en zet het dossierwerk klaar. Minder uitzoeken. Sneller antwoorden.",
+      "eyebrow": "LIVO PPWR",
+      "title": "Jouw PPWR-expert. Gemaakt voor het mkb.",
+      "titleGreen": "PPWR-expert",
+      "lead": "Je klant vraagt om verpakkingsdata. LIVO laat zien wat ontbreekt en zet de leveranciersuitvraag en het klantbestand klaar. Jij verstuurt de uitvraag, beoordeelt de reactie en bepaalt wat je deelt.",
       "audience": "Voor importeurs, groothandels en merken met verpakte producten.",
       "ctaDemo": "Plan een demo",
       "ctaHow": "Bekijk hoe het werkt",
-      "anchor": "LIVO zoekt uit en zet klaar. Jij beoordeelt en bevestigt.",
+      "priceLine": "Vanaf €99 per maand, exclusief btw. Geen implementatiekosten.",
       "visual": {
         "label": "Illustratie",
         "register": {
@@ -71,82 +71,66 @@
               "next": "Confirm level"
             }
           ]
+        },
+        "example": {
+          "tenant": "example-tenant",
+          "tabs": [
+            "Overview",
+            "Obligations",
+            "Register",
+            "Suppliers"
+          ],
+          "title": "Packaging register",
+          "action": "Upload data",
+          "rows": [
+            {
+              "name": "VH-2001 Decoratieve vaas · verpakking",
+              "status": "Needs data",
+              "tone": "warning",
+              "next": "Ask supplier"
+            }
+          ]
         }
       }
     },
-    "question": {
-      "eyebrow": "De eerste vraag komt niet van de toezichthouder.",
-      "title": "Je klant vraagt. Waar staat je antwoord?",
-      "lead": "Je klanten gaan om verpakkingsdata vragen. Per artikel. Per materiaal. Met bewijs. Dan wil je leveren, niet zoeken in Excel, mailboxen en leveranciersmappen.",
-      "card": "“Stuur ons de verpakkingsdata en het bewijs voor deze artikelen.”",
-      "closing": "Je klant vraagt om een antwoord. Niet om je zoektocht.",
-      "hand": "Herkenbaar?"
+    "example": {
+      "title": "Eén artikel. Van Excel naar klantbestand.",
+      "intro": "Een fictief voorbeeld met een decoratieve vaas. Zo loopt één vraag door LIVO PPWR.",
+      "steps": [
+        "Je importeert je Excel. LIVO stelt de kolomkoppeling voor; jij bevestigt.",
+        "LIVO toont wat ontbreekt: het gewicht van een verpakkingsonderdeel en een testrapport.",
+        "LIVO zet een voorgevulde leveranciersuitvraag klaar. Jij verstuurt die.",
+        "De leverancier vult 45 gram in. Jij controleert de reactie. Het rapport is nog aangevraagd.",
+        "Je exporteert de selectie voor je klant. Het ontbrekende rapport blijft zichtbaar."
+      ],
+      "caption": "Fictieve demogegevens. Een aangevraagd rapport is nog geen bewijs.",
+      "cta": "Bekijk LIVO PPWR"
     },
-    "value": {
-      "title": "Haal expertise binnen. Houd tijd en budget over.",
-      "cards": [
+    "roles": {
+      "title": "Wat neemt LIVO over?",
+      "groups": [
         {
-          "label": "Expertise",
-          "title": "De kennis binnen. Zonder de vacature.",
-          "body": "LIVO PPWR zoekt uit welke verplichtingen op jouw verpakkingen spelen."
+          "label": "Automatisch zichtbaar",
+          "body": "LIVO herkent kolommen, toont toepasselijke verplichtingen en signaleert ontbrekende of opvallende gegevens."
         },
         {
-          "label": "Tijd",
-          "title": "Minder zoeken. Meer afhandelen.",
-          "body": "Hergebruik je data en laat leveranciers de gaten vullen."
+          "label": "Klaargezet",
+          "body": "LIVO zet een voorgevulde uitvraag en een klantselectie voor export klaar."
         },
         {
-          "label": "Geld",
-          "title": "Stop met betalen voor hetzelfde uitzoekwerk.",
-          "body": "Zet het terugkerende werk in software. Gebruik je adviesbudget voor specialistisch oordeel."
+          "label": "Jouw beslissing",
+          "body": "Jij bevestigt de import, verstuurt de uitvraag, controleert de reactie en bepaalt wat naar je klant gaat."
         }
       ]
     },
-    "how": {
-      "eyebrow": "Meer dan een overzicht",
-      "title": "Zie wat ontbreekt. Pak het werk op.",
-      "proofs": [
-        {
-          "lead": "Begin met je eigen Excel.",
-          "body": "LIVO herkent de kolommen, jij bevestigt."
-        },
-        {
-          "lead": "Verplichtingen bij je verpakking.",
-          "body": "Zie de status en wat aandacht vraagt."
-        },
-        {
-          "lead": "Bewijs bij de bron.",
-          "body": "Documenten gekoppeld aan verpakking en materiaallaag."
-        }
-      ],
-      "cta": "Bekijk LIVO PPWR"
-    },
-    "chain": {
-      "eyebrow": "Van leverancier naar klant",
-      "title": "Haal de data op. Lever het antwoord.",
-      "cards": [
-        {
-          "title": "Je leverancier vult aan.",
-          "body": "LIVO PPWR zet een voorgevulde uitvraag klaar. In het portaal ziet je leverancier wat er al staat en vult alleen de gaten in."
-        },
-        {
-          "title": "Jij exporteert voor je klant.",
-          "body": "Bewaar de SKU-selectie voor je klant en exporteer die naar Excel. LIVO PPWR zet uit dezelfde data ook een concept van je conformiteitsverklaring klaar."
-        }
-      ],
-      "expertLead": "Ingevuld betekent niet dat het klopt.",
-      "expertBody": "LIVO PPWR zet verdachte waarden, zoals een onwaarschijnlijk gewicht of recyclaatgehalte van nul, gericht in de uitvraag ter controle klaar."
-    },
     "pricing": {
       "eyebrow": "Prijzen",
-      "title": "Eenvoudige prijzen, met een duidelijke weg om te starten.",
+      "title": "Vanaf €99 per maand. Geen implementatiekosten.",
       "lines": [
-        "Prijs op de producten die je zelf op de EU-markt brengt.",
-        "Geen toeslag per EU-markt of gebruiker.",
-        "In de demo bespreken we de beschikbare functies en landendekking."
+        "Prijzen exclusief btw. Je plan volgt het aantal producten dat je zelf op de EU-markt brengt."
       ],
       "ctaAsk": "Vraag naar prijzen",
-      "ctaPricing": "Bekijk prijzen"
+      "ctaPricing": "Bekijk alle prijzen"
     },
     "start": {
       "eyebrow": "Starten met LIVO PPWR",
@@ -194,12 +178,11 @@
     },
     "about": {
       "eyebrow": "Software die je werk lichter maakt.",
-      "title": "Specialistische kennis voor het dagelijkse werk.",
-      "body": "LIVO APPS brengt specialistische kennis naar bedrijven zonder eigen leger experts. LIVO PPWR verbindt verplichtingen aan verpakkingsdata, leveranciersinput en bewijs.",
-      "moduleLine": "Ontdek LIVO PPWR in een demo. Een volgende module is in ontwikkeling."
+      "title": "Over LIVO APPS",
+      "body": "LIVO ontstond toen een mkb-bedrijf gedetailleerde vragen over verpakkingsdata van Duitse ketens kreeg. Medewerkers verloren het overzicht door de hoeveelheid handwerk. Dat werd de aanleiding om software te bouwen die verpakkingsgegevens en open vragen ordent."
     },
     "finalCta": {
-      "title": "Je klant wacht op data. Niet op jouw PPWR-opleiding."
+      "title": "Laat je verpakkingsdata zien in een demo."
     },
     "footer": {
       "tagline": "Software die je werk lichter maakt.",
@@ -489,7 +472,7 @@
       "description": "Je betaalt voor je SKU's, niet voor je gebruikers. Vanaf €99 per maand. 15% korting bij jaarbetaling. Prijzen exclusief btw."
     },
     "head": {
-      "title": "Je eigen PPWR-expert. Zonder er één aan te nemen.",
+      "title": "Jouw PPWR-expert. Gemaakt voor het mkb.",
       "titleGreen": "PPWR-expert",
       "trigger": "De eerste vraag komt niet van de toezichthouder. Hij komt van je klant. LIVO PPWR zet je antwoord klaar.",
       "audience": "Voor importeurs, groothandels en merken met verpakte producten. Vanaf €99 per maand."
