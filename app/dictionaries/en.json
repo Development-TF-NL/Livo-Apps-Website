@@ -186,7 +186,9 @@
       ]
     },
     "finalCta": {
-      "title": "See your packaging data workflow in a demo."
+      "title": "See how LIVO PPWR works",
+      "lead": "See how you organise packaging data, find missing information and know what to do next.",
+      "cta": "View the example"
     },
     "footer": {
       "tagline": "Software that lightens the workflow.",
@@ -534,8 +536,9 @@
     ],
     "anchor": "LIVO does the groundwork. You review and confirm.",
     "closing": {
-      "title": "Your customer wants data. Not your PPWR learning curve.",
-      "start": "Discuss your product range, a suitable plan and your preferred start date in a demo. A demo request is not an order. No implementation fee: we set up your environment with you."
+      "title": "Want to see how it works first?",
+      "start": "Request a short demo. In 20 minutes, we will show you how LIVO PPWR works with fictional data.",
+      "cta": "Request a 20-minute demo"
     },
     "page": {
       "toggleMonthly": "Monthly",

@@ -5,7 +5,8 @@ import { mailto } from '../../mailto';
 import Footer from '../../components/Footer';
 import PhotoPlace from '../../components/PhotoPlace';
 import { languageAlternates, socialMetadata } from '../../seo';
-import { Section, IconCircle, Callout, ClosingBand, GreenTitle, benefitIcons, eyebrow, h1, h2, lead, cardTitleSmall, cardBody, btnPrimary, btnSecondary, heroPanel, cardOnCanvas, cardOnWhite } from '../../components/ui';
+import LightClosingBand from '../../components/LightClosingBand';
+import { Section, IconCircle, Callout, GreenTitle, benefitIcons, eyebrow, h1, h2, lead, cardTitleSmall, cardBody, btnPrimary, btnPrimaryWrap, btnSecondary, heroPanel, cardOnCanvas, cardOnWhite } from '../../components/ui';
 
 // Prijspagina (1 oktober 2026). Tekst en bedragen komen uit één bron (docs/marketing/website/copy/pricing.json
 // in de product-repo), dezelfde als de prijsflyer. De vorm komt uit dezelfde bouwstenen als de homepage
@@ -161,9 +162,10 @@ export default async function PricingPage({ params }) {
       </Section>
 
       {/* 5. Slot: het ene navy moment van de pagina, met één demoaanvraag. */}
-      <ClosingBand tone="canvas" title={t.closing.title} lead={t.closing.start}>
-        <a href={demo} className={btnPrimary}><Mail size={18} aria-hidden="true" />{dict.home.hero.ctaDemo}</a>
-      </ClosingBand>
+      {/* Slot (M2-nazorg, 13 oktober 2026): licht wit paneel op canvas; de knop opent de bestaande demomail (onderwerp en tekst uit ppwr.hero). */}
+      <LightClosingBand tone="card" title={t.closing.title} lead={t.closing.start}>
+        <a href={demo} className={btnPrimaryWrap}><Mail size={18} aria-hidden="true" />{t.closing.cta}</a>
+      </LightClosingBand>
 
       <Footer lang={lang} dict={dict.home.footer} />
     </div>

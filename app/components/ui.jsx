@@ -26,6 +26,8 @@ export const btn = 'inline-flex h-12 items-center justify-center gap-2 rounded-c
 export const btnPrimary = `${btn} bg-accent text-ink hover:bg-accent-dark`;
 export const btnSecondary = `${btn} border-[1.5px] border-navy bg-white text-ink hover:bg-canvas`;
 export const btnOnNavy = `${btn} bg-white text-ink hover:bg-canvas`;
+// Variant voor een langer vastgesteld label: op smalle schermen de volle breedte en zo nodig twee regels (hoogte volgt de inhoud).
+export const btnPrimaryWrap = 'inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-control px-6 py-3 text-center font-semibold transition-colors duration-150 focus-ring bg-accent text-ink hover:bg-accent-dark sm:w-auto';
 export const textLink = 'inline-flex min-h-[44px] items-center gap-1.5 font-semibold text-green-text underline-offset-4 transition-colors duration-150 hover:underline focus-ring';
 
 // Vlakken
