@@ -13,7 +13,8 @@ export default function PricingPreview({ lang, t, order, pricingEnabled }) {
       <div className="grid items-center gap-12 lg:grid-cols-[1fr_1fr]">
         <div>
           <Eyebrow>{t.eyebrow}</Eyebrow>
-          <h2 className={h2}>{t.title}</h2>
+          {/* Onder 375 px een maat kleiner (M2-nazorg, 13 oktober 2026): op 360 px stak "implementatiekosten." 5 px buiten beeld. */}
+          <h2 className={`${h2} max-[374px]:text-[2rem]`}>{t.title}</h2>
         </div>
         <div className={`${promoPanel} p-8`}>
           <ul className="space-y-3">
