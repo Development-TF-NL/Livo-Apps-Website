@@ -1,4 +1,5 @@
 import { i18n } from './i18n-config';
+import { ARTICLES } from './content/kennis';
 
 const BASE = 'https://livoapps.software';
 
@@ -7,6 +8,14 @@ const BASE = 'https://livoapps.software';
 export default function sitemap() {
   const pages = ['', '/ppwr', '/whitepaper'];
   if (process.env.PRICING_PAGE_ENABLED === 'true') pages.push('/pricing');
+  // Kennisartikelen (14 oktober 2026): per taal een eigen URL, met de tegenhanger in de andere taal als hreflang.
+  const articles = ARTICLES.flatMap((a) =>
+    i18n.locales.map((lang) => ({
+      url: `${BASE}${a.path[lang]}`,
+      changeFrequency: 'monthly',
+      alternates: { languages: { ...Object.fromEntries(i18n.locales.map((l) => [l, `${BASE}${a.path[l]}`])), 'x-default': `${BASE}${a.path[i18n.defaultLocale]}` } },
+    }))
+  );
   return pages.flatMap((page) =>
     i18n.locales.map((lang) => ({
       url: `${BASE}/${lang}${page}`,
@@ -19,5 +28,5 @@ export default function sitemap() {
         },
       },
     }))
-  );
+  ).concat(articles);
 }

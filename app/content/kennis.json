@@ -1,0 +1,503 @@
+{
+ "_bron": "ChatGPT-pakket AI_VINDBAARHEID_2026-10-13 (PAGINA_1, PAGINA_2), overgenomen op 14 oktober 2026; correcties uit de claimtoets staan in docs/ai-vindbaarheid/",
+ "articles": [
+  {
+   "id": "klantvraag",
+   "path": {
+    "nl": "/nl/kennis/klantvraag-verpakkingsdata",
+    "en": "/en/resources/customer-packaging-data-request"
+   },
+   "nl": {
+    "meta": {
+     "title": "Klant vraagt om verpakkingsdata? Zo maak je een antwoord klaar | LIVO PPWR",
+     "description": "Een klant wil verpakkingsdata en bewijs per artikel. Bekijk welke gegevens je verzamelt, wat je controleert en hoe je een bruikbaar antwoord voorbereidt."
+    },
+    "h1": "Je klant vraagt om verpakkingsdata. Waar begin je?",
+    "intro": [
+     {
+      "type": "p",
+      "text": "Een grote klant vraagt naar de verpakking van een artikel. Niet alleen naar het totale gewicht, maar ook naar de afzonderlijke verpakkingslagen, materialen, componenten en bewijsstukken. Het antwoord zit verspreid over een productsheet, een leveranciersmail en een paar Excelbestanden. Hoe maak je daar één controleerbaar antwoord van?"
+     }
+    ],
+    "sections": [
+     {
+      "title": "Begin bij één artikel",
+      "blocks": [
+       {
+        "type": "p",
+        "text": "Neem een fictief artikel: een product in een kartonnen omdoos met een kunststof binnenverpakking. De klant vraagt per laag welke materialen zijn gebruikt, wat de onderdelen wegen en welke documenten de opgegeven waarden onderbouwen. Ook vraagt de klant of bepaalde stoffen aanwezig zijn en waarop dat antwoord is gebaseerd."
+       },
+       {
+        "type": "note",
+        "label": "Illustratie.",
+        "text": "Dit is een voorbeeld van een klantvraag, geen bestaand klantdossier en geen standaardlijst met wettelijke eisen. Welke gegevens en bewijsstukken nodig zijn, hangt af van de verpakking, de rol van het bedrijf, de markt en de concrete vraag."
+       },
+       {
+        "type": "p",
+        "text": "Een werkbaar antwoord begint met de structuur: welk artikel, welke verpakkingseenheid, welke laag en welk component? Koppel daarna elke waarde aan de juiste plek. Zo voorkom je dat het gewicht van een omdoos per ongeluk als het gewicht van de hele verpakking wordt gebruikt."
+       }
+      ]
+     },
+     {
+      "title": "Welke gegevens moet je bij elkaar brengen?",
+      "blocks": [
+       {
+        "type": "table",
+        "head": [
+         "Vraag",
+         "Wat je vastlegt"
+        ],
+        "rows": [
+         [
+          "Over welk artikel gaat het?",
+          "Artikelnummer of SKU, omschrijving en de verpakking die bij dat artikel hoort."
+         ],
+         [
+          "Waaruit bestaat de verpakking?",
+          "Verpakkingslagen, losse componenten, materiaalsoorten en het gewicht per onderdeel."
+         ],
+         [
+          "Welke specifieke gegevens zijn gevraagd?",
+          "Bijvoorbeeld gerecycled materiaal, stoffen of een landgebonden vraag, maar alleen waar relevant."
+         ],
+         [
+          "Waarop berust het antwoord?",
+          "Een leveranciersverklaring, specificatie of testrapport, gekoppeld aan de waarde of het onderdeel waarop het betrekking heeft."
+         ],
+         [
+          "Is de informatie actueel?",
+          "Datum en versie van de gegevens, plus open vragen of tegenstrijdigheden."
+         ]
+        ]
+       },
+       {
+        "type": "p",
+        "text": "Een gevuld veld is nog geen gecontroleerd antwoord. Controleer of een document werkelijk over het juiste materiaal en de juiste versie gaat. Vraag de leverancier gericht om aanvulling als een waarde ontbreekt of niet te herleiden is."
+       }
+      ]
+     },
+     {
+      "title": "Van losse bestanden naar een antwoord",
+      "blocks": [
+       {
+        "type": "p",
+        "text": "LIVO PPWR helpt de gegevens per verpakking en onderdeel te ordenen, ontbrekende informatie zichtbaar te maken en een leveranciersuitvraag klaar te zetten. In het leveranciersportaal ziet de leverancier wat al bekend is en vult hij de open plekken aan. Een antwoord via het portaal komt terug als voorstel. Iemand in je eigen organisatie beoordeelt en bevestigt het voordat het in het register terechtkomt. Een teruggestuurd uitvraagbestand importeer je zelf, met een overzicht van de wijzigingen vooraf."
+       },
+       {
+        "type": "p",
+        "text": "Voor een klant kun je een SKU-selectie bewaren en de bijbehorende gegevens naar Excel exporteren. De bewijsstukken zitten niet als bijlagen in dat Excelbestand. Verzamel of deel die afzonderlijk wanneer de klant ze vraagt. LIVO zoekt uit en zet klaar. Jij beoordeelt en bevestigt."
+       },
+       {
+        "type": "p",
+        "text": "Vraagt een klant om alles binnen twee dagen? Dan is dat zijn verzoek, geen algemene PPWR-termijn. Leg eerst vast welke informatie en welke bewijsstukken hij precies wil, voor welke artikelen en in welke vorm. Dan kun je zien wat er al is en welke vragen nog openstaan."
+       }
+      ]
+     },
+     {
+      "title": "Wat kun je vandaag al doen?",
+      "blocks": [
+       {
+        "type": "p",
+        "text": "Kies één artikel waarover regelmatig vragen komen. Breng de verpakking in lagen en componenten in kaart. Zet bekende waarden met hun bron naast de open vragen. Laat een collega controleren of het antwoord voor de klant te volgen is. Pas daarna schaal je deze werkwijze op naar de rest van het assortiment."
+       }
+      ]
+     }
+    ],
+    "action": "Plan een demo van LIVO PPWR. Gebruik in de website de bestaande, door M2 goedgekeurde demoroute en vraag geen echte klantdata voor het voorbeeld.",
+    "closing": {
+     "raw": "Meer lezen: [Welke verpakkingsgegevens vraag je aan leveranciers?](/nl/kennis/verpakkingsgegevens-leveranciers). Voor de juridische basis: [Verordening (EU) 2025/40](https://eur-lex.europa.eu/eli/reg/2025/40/oj). Deze pagina geeft een praktische werkwijze, geen oordeel dat een specifiek product aan alle eisen voldoet.",
+     "parts": [
+      "Meer lezen: ",
+      "Welke verpakkingsgegevens vraag je aan leveranciers?",
+      ". Voor de juridische basis: ",
+      "Verordening (EU) 2025/40",
+      ". Deze pagina geeft een praktische werkwijze, geen oordeel dat een specifiek product aan alle eisen voldoet."
+     ],
+     "links": [
+      [
+       "Welke verpakkingsgegevens vraag je aan leveranciers?",
+       "/nl/kennis/verpakkingsgegevens-leveranciers"
+      ],
+      [
+       "Verordening (EU) 2025/40",
+       "https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      ]
+     ]
+    }
+   },
+   "en": {
+    "meta": {
+     "title": "Customer asking for packaging data? Prepare a clear answer | LIVO PPWR",
+     "description": "A customer wants packaging data and evidence by product. See what to collect, what to check and how to prepare an answer you can explain."
+    },
+    "h1": "A customer asks for packaging data. Where do you start?",
+    "intro": [
+     {
+      "type": "p",
+      "text": "A large customer asks about the packaging of one product. They want more than its total weight. They ask about individual packaging layers, materials, components and supporting documents. The answer is spread across a product sheet, supplier emails and several spreadsheets. How do you turn that into one answer you can check and explain?"
+     }
+    ],
+    "sections": [
+     {
+      "title": "Start with one product",
+      "blocks": [
+       {
+        "type": "p",
+        "text": "Take a fictional example: a product in a cardboard outer box with a plastic inner pack. The customer asks which materials are used in each layer, what the parts weigh and which documents support those values. They also ask whether certain substances are present and what supports that answer."
+       },
+       {
+        "type": "note",
+        "label": "Illustration.",
+        "text": "This is an example of a customer request, not a real customer dossier or a standard list of legal requirements. The information and evidence needed depend on the packaging, the company's role, the market and the actual request."
+       },
+       {
+        "type": "p",
+        "text": "Start with the structure: which product, packaging unit, layer and component? Then attach each value to the right place. That helps prevent the weight of an outer box from being treated as the weight of the complete pack."
+       }
+      ]
+     },
+     {
+      "title": "What information do you need to bring together?",
+      "blocks": [
+       {
+        "type": "table",
+        "head": [
+         "Question",
+         "Record"
+        ],
+        "rows": [
+         [
+          "Which product?",
+          "Product number or SKU, description and its packaging."
+         ],
+         [
+          "What is the packaging made of?",
+          "Layers, components, material types and weight per part."
+         ],
+         [
+          "Which specific details were requested?",
+          "For example, recycled content, substances or a country-specific question, where relevant."
+         ],
+         [
+          "What supports the answer?",
+          "A supplier declaration, specification or test report linked to the value or part it concerns."
+         ],
+         [
+          "Is the information current?",
+          "Date and version of the data, together with open questions or conflicting values."
+         ]
+        ]
+       },
+       {
+        "type": "p",
+        "text": "A completed field is not yet a checked answer. Check that a document actually covers the right material and version. Ask the supplier a focused question when a value is missing or cannot be traced to its source."
+       }
+      ]
+     },
+     {
+      "title": "From scattered files to a customer answer",
+      "blocks": [
+       {
+        "type": "p",
+        "text": "LIVO PPWR helps organise information by packaging unit and component, shows what is missing and prepares a supplier request. In the supplier portal, suppliers see known information and fill in the gaps. An answer given in the portal returns as a proposal. Someone in your organisation reviews and confirms it before it enters the register. A returned request file is imported by you, with an overview of the changes first."
+       },
+       {
+        "type": "p",
+        "text": "You can save a customer's SKU selection and export its data to Excel. Evidence documents are not attached to that workbook. Gather or share them separately when the customer asks for them. LIVO does the groundwork and prepares the next steps. You review and confirm."
+       },
+       {
+        "type": "p",
+        "text": "If a customer asks for everything within two days, that is their request, not a general PPWR deadline. First agree which information and evidence they need, for which products and in what format. Then you can see what is already available and which questions remain open."
+       }
+      ]
+     },
+     {
+      "title": "What can you do today?",
+      "blocks": [
+       {
+        "type": "p",
+        "text": "Choose one product that regularly triggers questions. Map its packaging layers and components. Put known values and their sources next to the open questions. Ask a colleague to check whether the answer is understandable to the customer. Then extend the approach to the rest of the range."
+       }
+      ]
+     }
+    ],
+    "action": "Book a LIVO PPWR demo. Use the existing M2-approved demo route on the website and do not request real customer data for the example.",
+    "closing": {
+     "raw": "Read next: [What packaging data should you request from suppliers?](/en/resources/packaging-data-from-suppliers). Legal source: [Regulation (EU) 2025/40](https://eur-lex.europa.eu/eli/reg/2025/40/oj). This page describes a practical workflow and does not assess whether a particular product meets every requirement.",
+     "parts": [
+      "Read next: ",
+      "What packaging data should you request from suppliers?",
+      ". Legal source: ",
+      "Regulation (EU) 2025/40",
+      ". This page describes a practical workflow and does not assess whether a particular product meets every requirement."
+     ],
+     "links": [
+      [
+       "What packaging data should you request from suppliers?",
+       "/en/resources/packaging-data-from-suppliers"
+      ],
+      [
+       "Regulation (EU) 2025/40",
+       "https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "leveranciers",
+   "path": {
+    "nl": "/nl/kennis/verpakkingsgegevens-leveranciers",
+    "en": "/en/resources/packaging-data-from-suppliers"
+   },
+   "nl": {
+    "meta": {
+     "title": "Welke verpakkingsgegevens vraag je aan leveranciers? | LIVO PPWR",
+     "description": "Vraag verpakkingsdata per artikel, laag en component op. Deze praktische checklist helpt je ontbrekende waarden, bewijs en versies gericht te controleren."
+    },
+    "h1": "Welke verpakkingsgegevens vraag je aan leveranciers?",
+    "intro": [
+     {
+      "type": "p",
+      "text": "Een vraag als “stuur alle verpakkingsdata” levert vaak een grote spreadsheet op, maar nog geen bruikbaar antwoord. Je hebt gegevens nodig die bij het juiste artikel, de juiste verpakkingslaag en het juiste onderdeel horen. En je moet kunnen zien wat bekend is, wat ontbreekt en welk document een waarde onderbouwt."
+     }
+    ],
+    "sections": [
+     {
+      "title": "Vraag eerst naar de structuur",
+      "blocks": [
+       {
+        "type": "p",
+        "text": "Begin met het artikelnummer of de SKU en de verpakking waarin het artikel op de markt komt. Vraag welke lagen en componenten bij die verpakking horen. Denk aan een buitenverpakking, binnenverpakking, sluiting of etiket wanneer die aanwezig zijn. Gebruik dezelfde benamingen in je eigen register en in de vraag aan de leverancier."
+       },
+       {
+        "type": "p",
+        "text": "Daarna kun je de gegevens gericht opvragen:"
+       },
+       {
+        "type": "table",
+        "head": [
+         "Onderwerp",
+         "Praktische vraag aan de leverancier"
+        ],
+        "rows": [
+         [
+          "Identiteit en versie",
+          "Voor welk artikel en welke verpakkingsversie gelden deze gegevens? Sinds wanneer?"
+         ],
+         [
+          "Opbouw",
+          "Welke lagen en afzonderlijke componenten zitten in de verpakking?"
+         ],
+         [
+          "Materiaal en gewicht",
+          "Welk materiaal bevat ieder onderdeel en wat weegt het? Welke meeteenheid en meetmethode zijn gebruikt?"
+         ],
+         [
+          "Samenstelling",
+          "Welke verdere samenstellingsgegevens zijn beschikbaar voor onderdelen waarvoor die informatie nodig is?"
+         ],
+         [
+          "Gerecycled materiaal",
+          "Is er een opgegeven aandeel gerecycled materiaal? Waarop is dat cijfer gebaseerd?"
+         ],
+         [
+          "Stoffen",
+          "Zijn gegevens over relevante stoffen of zware metalen beschikbaar voor de betreffende onderdelen? Welke verklaring of test ondersteunt dit?"
+         ],
+         [
+          "Bewijs",
+          "Welke specificatie, verklaring of welk testrapport hoort bij welke waarde of welk onderdeel? Wat is de datum en versie?"
+         ],
+         [
+          "Open punten",
+          "Welke gegevens zijn niet beschikbaar, onzeker of nog in onderzoek? Wie kan ze aanvullen?"
+         ]
+        ]
+       },
+       {
+        "type": "p",
+        "text": "Dit is een werkchecklist, geen universele lijst van PPWR-verplichtingen. Welke gegevens verplicht, relevant of zinvol zijn, hangt af van het product, de rol in de keten, de markt en de vraag van je klant. Vraag geen testrapport voor elk onderdeel enkel omdat er een veld in een template staat."
+       }
+      ]
+     },
+     {
+      "title": "Controleer het antwoord voordat je het overneemt",
+      "blocks": [
+       {
+        "type": "p",
+        "text": "Kijk niet alleen of alle cellen gevuld zijn. Controleer of de leverancier hetzelfde artikel en dezelfde verpakkingsversie bedoelt, of gewichten per laag en component logisch zijn en of een bewijsstuk de opgegeven waarde werkelijk dekt. Een verklaring over de oude verpakking zegt weinig over een nieuw materiaal of een gewijzigde samenstelling."
+       },
+       {
+        "type": "p",
+        "text": "Noteer tegenstrijdigheden als open vraag. Bijvoorbeeld: een materiaalspecificatie noemt een andere folie dan de artikelkaart. Vraag dan gericht welke versie actueel is. Zo voorkom je dat een onduidelijk antwoord als vaststaand gegeven door de keten reist."
+       }
+      ]
+     },
+     {
+      "title": "Hoe LIVO PPWR daarbij helpt",
+      "blocks": [
+       {
+        "type": "p",
+        "text": "LIVO PPWR kan bekende waarden in een uitvraagbestand voorinvullen. Dat bestand bevat ook gegevens die al bekend zijn, zodat de leverancier context ziet en waarden kan controleren. In het leveranciersportaal ziet de leverancier de bekende gegevens en vult hij de open plekken aan. Je verstuurt de uitvraag zelf vanuit je eigen mailbox."
+       },
+       {
+        "type": "p",
+        "text": "Een reactie via het portaal wordt als voorstel teruggegeven. Je beoordeelt en bevestigt wat in het register komt. Een teruggestuurd uitvraagbestand importeer je zelf, met een overzicht van de wijzigingen vooraf. Documenten kun je aan de passende verpakking of het onderdeel koppelen; zo'n document telt mee voor de verplichtingen waar het bij hoort. Die koppeling helpt bij het terugvinden van bewijs, maar beoordeelt niet automatisch de inhoud van het document."
+       },
+       {
+        "type": "p",
+        "text": "Als een klant daarna om verpakkingsdata vraagt, kun je een selectie van SKU's bewaren en de gegevens naar Excel exporteren. Bewijsbijlagen zijn geen onderdeel van die export. Spreek dus apart af hoe je de gevraagde documenten deelt."
+       }
+      ]
+     }
+    ],
+    "action": "Plan een demo van LIVO PPWR. Gebruik de bestaande, door M2 goedgekeurde demoroute en werk met fictieve artikelgegevens.",
+    "closing": {
+     "raw": "Meer lezen: [Je klant vraagt om verpakkingsdata. Waar begin je?](/nl/kennis/klantvraag-verpakkingsdata). Juridische basis: [Verordening (EU) 2025/40](https://eur-lex.europa.eu/eli/reg/2025/40/oj). Deze checklist is een praktische voorbereiding op een uitvraag, geen juridisch oordeel over een specifiek artikel.",
+     "parts": [
+      "Meer lezen: ",
+      "Je klant vraagt om verpakkingsdata. Waar begin je?",
+      ". Juridische basis: ",
+      "Verordening (EU) 2025/40",
+      ". Deze checklist is een praktische voorbereiding op een uitvraag, geen juridisch oordeel over een specifiek artikel."
+     ],
+     "links": [
+      [
+       "Je klant vraagt om verpakkingsdata. Waar begin je?",
+       "/nl/kennis/klantvraag-verpakkingsdata"
+      ],
+      [
+       "Verordening (EU) 2025/40",
+       "https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      ]
+     ]
+    }
+   },
+   "en": {
+    "meta": {
+     "title": "What packaging data should you request from suppliers? | LIVO PPWR",
+     "description": "Request packaging data by product, layer and component. Use this practical checklist to check missing values, supporting documents and versions."
+    },
+    "h1": "What packaging data should you request from suppliers?",
+    "intro": [
+     {
+      "type": "p",
+      "text": "“Send us all packaging data” often produces a large spreadsheet, but not a usable answer. You need information tied to the right product, packaging layer and component. You also need to see what is known, what is missing and which document supports each value."
+     }
+    ],
+    "sections": [
+     {
+      "title": "Start with the structure",
+      "blocks": [
+       {
+        "type": "p",
+        "text": "Start with the product number or SKU and the packaging in which that product is placed on the market. Ask which layers and components belong to it. These may include an outer pack, inner pack, closure or label where present. Use the same names in your own register and in the question you send to the supplier."
+       },
+       {
+        "type": "p",
+        "text": "Then request the details you need:"
+       },
+       {
+        "type": "table",
+        "head": [
+         "Topic",
+         "Practical question for the supplier"
+        ],
+        "rows": [
+         [
+          "Identity and version",
+          "Which product and packaging version does this information cover? From what date?"
+         ],
+         [
+          "Structure",
+          "Which layers and individual components make up the packaging?"
+         ],
+         [
+          "Material and weight",
+          "What material does each part contain and what does it weigh? Which unit and measurement method were used?"
+         ],
+         [
+          "Composition",
+          "What further composition data is available for parts where that information is needed?"
+         ],
+         [
+          "Recycled content",
+          "Is a share of recycled content stated? What supports the figure?"
+         ],
+         [
+          "Substances",
+          "Is information on relevant substances or heavy metals available for the parts concerned? Which declaration or test supports it?"
+         ],
+         [
+          "Evidence",
+          "Which specification, declaration or test report belongs to which value or part? What are its date and version?"
+         ],
+         [
+          "Open points",
+          "Which details are unavailable, uncertain or still being investigated? Who can clarify them?"
+         ]
+        ]
+       },
+       {
+        "type": "p",
+        "text": "This is a working checklist, not a universal list of PPWR obligations. What is required or useful depends on the product, your role in the supply chain, the market and the customer's question. Do not ask for a test report for every part just because a template has a field for it."
+       }
+      ]
+     },
+     {
+      "title": "Check the answer before using it",
+      "blocks": [
+       {
+        "type": "p",
+        "text": "Do more than check whether every cell is filled. Confirm that the supplier means the same product and packaging version, that weights by layer and component make sense, and that each supporting document actually covers the value given. A declaration for an older pack may not support a new material or changed composition."
+       },
+       {
+        "type": "p",
+        "text": "Record contradictions as open questions. For example, a material specification may name a different film from the product record. Ask which version is current. This prevents an unclear answer from being passed along as an established fact."
+       }
+      ]
+     },
+     {
+      "title": "How LIVO PPWR helps",
+      "blocks": [
+       {
+        "type": "p",
+        "text": "LIVO PPWR can prefill a supplier request file with known values. The file also contains information already known, so the supplier has context and can check values. In the supplier portal, suppliers see known information and fill in the gaps. You send the request from your own mailbox."
+       },
+       {
+        "type": "p",
+        "text": "A response given in the portal returns as a proposal. You review and confirm what enters the register. A returned request file is imported by you, with an overview of the changes first. You can link documents to the relevant packaging unit or component; a linked document then counts towards the requirements it belongs to. That link helps you find the evidence; it does not automatically assess the document's contents."
+       },
+       {
+        "type": "p",
+        "text": "When a customer asks for packaging data, you can save a SKU selection and export its data to Excel. Evidence attachments are not part of that export. Agree separately how requested documents will be shared."
+       }
+      ]
+     }
+    ],
+    "action": "Book a LIVO PPWR demo. Use the existing M2-approved demo route and fictional product data.",
+    "closing": {
+     "raw": "Read next: [A customer asks for packaging data. Where do you start?](/en/resources/customer-packaging-data-request). Legal source: [Regulation (EU) 2025/40](https://eur-lex.europa.eu/eli/reg/2025/40/oj). This checklist helps prepare a request; it is not a legal assessment of a particular product.",
+     "parts": [
+      "Read next: ",
+      "A customer asks for packaging data. Where do you start?",
+      ". Legal source: ",
+      "Regulation (EU) 2025/40",
+      ". This checklist helps prepare a request; it is not a legal assessment of a particular product."
+     ],
+     "links": [
+      [
+       "A customer asks for packaging data. Where do you start?",
+       "/en/resources/customer-packaging-data-request"
+      ],
+      [
+       "Regulation (EU) 2025/40",
+       "https://eur-lex.europa.eu/eli/reg/2025/40/oj"
+      ]
+     ]
+    }
+   }
+  }
+ ]
+}
