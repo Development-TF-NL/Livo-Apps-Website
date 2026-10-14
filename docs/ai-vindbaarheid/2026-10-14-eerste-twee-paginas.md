@@ -1,13 +1,13 @@
 # AI-vindbaarheid · eerste twee kennispagina's · inbouw, claimtoets en test · 14 oktober 2026
 
-*Inhoudspakket van 13 oktober 2026 (`AI_VINDBAARHEID_2026-10-13`: twee paginabestanden, claimcontrole en overdracht), ingebouwd als schrijver van de websitecode in de worktree `~/LIVO_AUDIT/AI-VINDBAARHEID-20261013/website-wt` op branch `ai-vindbaarheid-20261013` vanaf `main` 936c638 (de gepubliceerde M2-stand). De product-repo en de M2-nazorgbranch zijn niet aangeraakt. Niet gepusht, niet gepubliceerd; de eigenaar neemt het publicatiebesluit. Geen juridisch advies.*
+*Inhoudspakket van 13 oktober 2026 (`AI_VINDBAARHEID_2026-10-13`: twee paginabestanden, claimcontrole en overdracht), ingebouwd als schrijver van de websitecode in de worktree `~/LIVO_AUDIT/AI-VINDBAARHEID-20261013/website-wt` op branch `ai-vindbaarheid-20261013`, eerst vanaf `main` 936c638 en op 14 oktober (middag) herbaseerd op de gepubliceerde M2-nazorgstand (f245c45, dezelfde boom als `main` 072ad69 na PR 1). De product-repo en de M2-nazorgbranch zijn niet aangeraakt. Niet gepusht, niet gepubliceerd; de eigenaar neemt het publicatiebesluit. Geen juridisch advies.*
 
 ## 1. Inspectie vooraf (read-only) en conflicten met het pakket
 
 - **Routes:** alle pagina's staan onder `app/[lang]/…` met hetzelfde pad per taal (`/nl/ppwr`, `/en/ppwr`); `languageAlternates(path)` in `app/seo.js` en `app/sitemap.js` gaan daarvan uit. Het pakket vraagt per taal een eigen URL (`/nl/kennis/…`, `/en/resources/…`). Gekozen: twee routemappen (`kennis`, `resources`) op één component, met een registratie per artikel die per taal sectie en slug kent; canonical, hreflang, sitemap en de taalwissel in de kopbalk lezen die registratie. Een verkeerde combinatie (bijvoorbeeld `/en/kennis/…`) geeft 404.
 - **Metadata:** per pagina `generateMetadata` met title, description, canonical, hreflang (nl, en, x-default naar nl) en de social-tags via `socialMetadata`; `metadataBase` in de layout. Robots: `app/robots.js` staat alles toe; de sitemap staat erin. Geen `noindex` op de nieuwe pagina's.
 - **Teksten:** de dictionaries worden alleen gegenereerd uit de copybestanden in de product-repo. Dit pakket mag de product-repo niet raken, dus de artikelteksten staan in de website-repo (`app/content/kennis.json`, letterlijk uit de twee paginabestanden, plus de negen correcties uit §3). Dat wijkt af van de gewone bron; verhuizen naar `copy/` en het sync-script kan later. De kleine navigatielabels (Kennis, Resources, Meer lezen, Read next, de twee korte linklabels en de regel boven de demoknop) staan in `app/content/kennis.js`.
-- **Demoactie:** de site kent één demoroute: een mailto met onderwerp "LIVO PPWR demo" en voorgevulde tekst uit `nav.order` (`OrderButton`). Het pakket schrijft "Plan een demo" / "Book a LIVO PPWR demo" als primaire actie. De knop op de artikelen gebruikt het label uit de dictionary (op `main` "Plan een demo" / "Request a demo"). Conflict: de M2-nazorg (Regiereview 13 oktober, nog niet gepubliceerd) vervangt "Plan een demo" door "Vraag een demo aan" en sluit "Boek" of "Book" uit op een mailknop. Zodra die branch is samengevoegd, volgt het label automatisch; de tekst "Book a demo" uit het pakket is nergens overgenomen. De regel "Primaire actie" uit de paginabestanden is overdrachtsmetadata en staat niet op de pagina.
+- **Demoactie:** de site kent één demoroute: een mailto met onderwerp "LIVO PPWR demo" en voorgevulde tekst uit `nav.order` (`OrderButton`). Het pakket schrijft "Plan een demo" / "Book a LIVO PPWR demo" als primaire actie. De knop op de artikelen gebruikt het label uit de dictionary: na de publicatie van de M2-nazorg (14 oktober) "Vraag een demo aan" / "Request a demo". Conflict met het pakket: de nazorg sluit "Boek" of "Book" uit op een mailknop; de tekst "Book a demo" uit het pakket is nergens overgenomen. De regel "Primaire actie" uit de paginabestanden is overdrachtsmetadata en staat niet op de pagina.
 - **PPWR-pagina:** krijgt een leesblok met twee tekstlinks vóór het slot. **Homepage:** geen nieuwe sectie; de artikelen staan in de footer onder Hulpmiddelen / Resources, dus op elke pagina (de kolom was leeg omdat de whitepaperlink er bewust uit gefilterd wordt).
 - **Live stand (www.livoapps.software, 14 oktober):** robots.txt "Allow: /", sitemap 200, `/nl/ppwr` 200 voor Googlebot, bingbot, OAI-SearchBot en een gewone browser (user-agent-test met curl); Vercel-headers zonder `x-robots-tag`. Geen WAF-blokkade gezien voor deze user-agents; dat bewijst niet hoe een echte crawl vanaf de IP-reeksen van die bots wordt behandeld.
 
@@ -60,6 +60,21 @@ Alle overige zinnen, koppen, tabellen, titels en beschrijvingen zijn letterlijk 
 9. **Voor:** Is a recycled-content share stated? What supports the figure?
    **Na:** Is a share of recycled content stated? What supports the figure?
 
+
+**Tweede ronde (14 oktober, middag, opdracht eigenaar):** de zinnen die suggereerden dat een document aan een losse waarde gekoppeld wordt, zijn herschreven: het document hoort bij de betreffende verpakking of het onderdeel en onderbouwt de opgegeven waarde.
+
+10. **Voor:** Een leveranciersverklaring, specificatie of testrapport, gekoppeld aan de waarde of het onderdeel waarop het betrekking heeft.
+   **Na:** Een leveranciersverklaring, specificatie of testrapport dat bij de betreffende verpakking of het onderdeel hoort en de opgegeven waarde onderbouwt.
+
+11. **Voor:** A supplier declaration, specification or test report linked to the value or part it concerns.
+   **Na:** A supplier declaration, specification or test report that belongs to the packaging unit or part concerned and supports the stated value.
+
+12. **Voor:** Welke specificatie, verklaring of welk testrapport hoort bij welke waarde of welk onderdeel? Wat is de datum en versie?
+   **Na:** Welke specificatie, verklaring of welk testrapport hoort bij welke verpakking of welk onderdeel, en welke opgegeven waarde onderbouwt het? Wat is de datum en versie?
+
+13. **Voor:** Which specification, declaration or test report belongs to which value or part? What are its date and version?
+   **Na:** Which specification, declaration or test report belongs to which packaging unit or part, and which stated value does it support? What are its date and version?
+
 Correctie 9 is geen claimcorrectie: de sitebrede woordtoets leest "recycled" los van "content" wanneer er een koppelteken tussen staat; dezelfde betekenis, andere woordvolgorde.
 
 ## 4. Gewijzigde en nieuwe bestanden (website-repo)
@@ -92,6 +107,8 @@ Geen nieuwe dependency, geen `llms.txt`, geen AI-specifieke metadata, geen formu
 - Schermbeelden en meetbestanden buiten git: `~/LIVO_AUDIT/AI-VINDBAARHEID-20261013/meting/`.
 - Preview: `http://localhost:3112` (productiebuild uit de worktree; de M2-nazorgpreview blijft op 3111).
 
+Hertest na de herbasering en de tweede tekstronde (14 oktober, middag, build op f245c45): statuscodes, canonical, hreflang, sitemap, interne links, woordtoets 0, overloop op 360 tot 1280 px zonder afwijking, kop binnen het paneel op alle breedtes, focus met Tab op demoknop en beide links (NL en EN, 390 en 1280 px). De demoknop toont nu "Vraag een demo aan".
+
 ## 6. Wat pas na publicatie of met eigenaarstoegang kan
 
 - Indexstatus, zoekvragen en hreflang-rapport in Google Search Console; Bing Webmaster Tools (verificatie door de site-eigenaar; open punt 2 van de overdracht: wie beheert dit).
@@ -101,7 +118,7 @@ Geen nieuwe dependency, geen `llms.txt`, geen AI-specifieke metadata, geen formu
 
 ## 7. Open bij de eigenaar
 
-1. Publicatiebesluit voor de twee pagina's en de demoknop (na deze claimtoets). Volgorde: bij voorkeur eerst de M2-nazorgbranch samenvoegen (dan toont de knop "Vraag een demo aan"), daarna deze branch; de wijziging in `ppwr/page.jsx` raakt een andere regel dan de nazorg, dus geen inhoudelijk conflict verwacht.
+1. Publicatie als aparte stap: de inhoud is goedgekeurd (14 oktober); de branch staat op de gepubliceerde nazorgstand en past zonder conflict op `main`. Push, pull request en merge door de eigenaar; daarna de live controle van de vier URL's, de sitemap en de hreflang.
 2. Beheer van Search Console en Bing Webmaster Tools en wie de indexeringscontrole doet.
 3. Verhuizing van de artikelteksten naar de copybron in de product-repo (werkafspraak), of de keuze om kennisartikelen in de website-repo te houden.
 4. Geanonimiseerde echte vragen uit gesprekken voor het latere onderwerpenplan.

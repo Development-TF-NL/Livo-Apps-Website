@@ -62,7 +62,7 @@
          ],
          [
           "Waarop berust het antwoord?",
-          "Een leveranciersverklaring, specificatie of testrapport, gekoppeld aan de waarde of het onderdeel waarop het betrekking heeft."
+          "Een leveranciersverklaring, specificatie of testrapport dat bij de betreffende verpakking of het onderdeel hoort en de opgegeven waarde onderbouwt."
          ],
          [
           "Is de informatie actueel?",
@@ -180,7 +180,7 @@
          ],
          [
           "What supports the answer?",
-          "A supplier declaration, specification or test report linked to the value or part it concerns."
+          "A supplier declaration, specification or test report that belongs to the packaging unit or part concerned and supports the stated value."
          ],
          [
           "Is the information current?",
@@ -307,7 +307,7 @@
          ],
          [
           "Bewijs",
-          "Welke specificatie, verklaring of welk testrapport hoort bij welke waarde of welk onderdeel? Wat is de datum en versie?"
+          "Welke specificatie, verklaring of welk testrapport hoort bij welke verpakking of welk onderdeel, en welke opgegeven waarde onderbouwt het? Wat is de datum en versie?"
          ],
          [
           "Open punten",
@@ -431,7 +431,7 @@
          ],
          [
           "Evidence",
-          "Which specification, declaration or test report belongs to which value or part? What are its date and version?"
+          "Which specification, declaration or test report belongs to which packaging unit or part, and which stated value does it support? What are its date and version?"
          ],
          [
           "Open points",
