@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 import ProductLoginMenu from './ProductLoginMenu';
 import OrderButton from './OrderButton';
+import { ARTICLES } from '../content/kennis';
 
 // Header volgens homepage v5 (1 oktober 2026): drie menulinks (How it works, Pricing, About LIVO APPS),
 // taalwissel, Log in (menu) en de tijdelijke bestelknop (mailto, tot 1 november 2026).
@@ -28,8 +29,12 @@ export default function Nav({ lang, dict, pricingEnabled = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname() || `/${lang}`;
 
-  const switchPath = (locale) =>
-    `/${locale}${pathname.replace(new RegExp(`^/${lang}(?=/|$)`), '')}`;
+  // Kennisartikelen (14 oktober 2026) hebben per taal een eigen pad; de wissel gaat dan naar de tegenhanger.
+  const switchPath = (locale) => {
+    const article = ARTICLES.find((a) => a.path[lang] === pathname);
+    if (article) return article.path[locale];
+    return `/${locale}${pathname.replace(new RegExp(`^/${lang}(?=/|$)`), '')}`;
+  };
 
   const close = () => setIsMenuOpen(false);
 

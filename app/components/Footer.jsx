@@ -1,4 +1,5 @@
 import Logo from './Logo';
+import { ARTICLES, ARTICLE_LABELS, articlePath } from '../content/kennis';
 
 // Site-footer: Product en Company met login-link; whitepaperpromotie wacht op review. Voetregel
 // van 15 september ("not legal advice and does not guarantee compliance").
@@ -10,8 +11,11 @@ export default function Footer({ lang, dict, pricingEnabled = process.env.PRICIN
   const columns = [dict.columns.product, dict.columns.resources, dict.columns.company]
     .filter(Boolean)
     .map((column) => ({ ...column, items: column.items.filter(({ href }) => href !== '/whitepaper') }))
+    // Kennisartikelen (14 oktober 2026) onder Hulpmiddelen; de link draagt al de taal en wordt niet vertaald in resolve.
+    .map((column) => (column.title === dict.columns.resources?.title ? { ...column, items: [...column.items, ...ARTICLES.map((a) => ({ label: ARTICLE_LABELS[a.id][lang], href: articlePath(a, lang), absolute: true }))] } : column))
     .filter((column) => column.items.length > 0);
-  const resolve = (href) => {
+  const resolve = (href, absolute) => {
+    if (absolute) return href;
     if (href === '#pricing' && pricingEnabled) return `/${lang}/pricing`;
     return href.startsWith('/') || href.startsWith('#') ? `/${lang}${href}` : href;
   };
@@ -29,9 +33,9 @@ export default function Footer({ lang, dict, pricingEnabled = process.env.PRICIN
             <div key={col.title}>
               <h4 className="mb-2 font-display text-sm font-bold tracking-wide">{col.title}</h4>
               <ul className="text-sm text-white/60">
-                {col.items.map(({ label, href }) => (
+                {col.items.map(({ label, href, absolute }) => (
                   <li key={label}>
-                    <a href={resolve(href)} className="inline-flex min-h-[44px] items-center rounded transition-colors duration-150 hover:text-accent focus-ring" {...(href.startsWith('https://') ? { rel: 'noopener noreferrer' } : {})}>
+                    <a href={resolve(href, absolute)} className="inline-flex min-h-[44px] items-center rounded transition-colors duration-150 hover:text-accent focus-ring" {...(href.startsWith('https://') ? { rel: 'noopener noreferrer' } : {})}>
                       {label}
                     </a>
                   </li>

@@ -6,6 +6,7 @@ import HandNote from '../../components/HandNote';
 import StatusPill from '../../components/StatusPill';
 import SupplierCycle from '../../components/SupplierCycle';
 import Footer from '../../components/Footer';
+import { KennisLinks } from '../../components/Article';
 import { ImportVisual, StatusVisual, CycleVisual, FileVisual } from '../../components/FeatureVisuals';
 import { getDictionary } from '../../get-dictionary';
 import { mailto } from '../../mailto';
@@ -169,6 +170,9 @@ export default async function PpwrPage({ params }) {
           </div>
         </div>
       </Section>
+
+      {/* Kennisartikelen (14 oktober 2026): twee tekstlinks naar de praktische artikelen. */}
+      <KennisLinks lang={lang} />
 
       {/* Slot: het ene navy moment van de pagina. De voetregel staat in de gedeelde footer. */}
       <ClosingBand

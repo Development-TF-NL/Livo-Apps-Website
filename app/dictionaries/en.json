@@ -340,7 +340,7 @@
         {
           "tag": "03 · Share the work",
           "title": "Let suppliers do part of the work.",
-          "body": "Send a prefilled request from your own mailbox: a secure link to the supplier portal, or a prefilled Excel per supplier. Suppliers see what you already know and add only what is missing. Their answers come back as proposed updates for your review. Nothing overwrites what you had."
+          "body": "Send a prefilled request from your own mailbox: a secure link to the supplier portal, or a prefilled Excel per supplier. In the portal, suppliers see what you already know and fill in only the gaps; their answers come back as proposals for you to review and confirm. In an Excel, a supplier can also change known values; you import that file yourself and LIVO flags changed known values as tasks."
         },
         {
           "tag": "04 · One maintained source",
@@ -368,7 +368,7 @@
     "cycle": {
       "eyebrow": "Supplier round",
       "title": "Let suppliers fill the gaps.",
-      "lead": "You send the request; LIVO prepares it. Suppliers add only what is missing and every answer comes back as a proposal for your review.",
+      "lead": "You send the request; LIVO prepares it. In the portal, suppliers fill in only the gaps and every answer comes back as a proposal for your review. A returned Excel you import yourself, even where known values were changed.",
       "steps": [
         {
           "title": "Prefilled request",
@@ -379,12 +379,12 @@
           "body": "A secure link or a prefilled Excel, sent from your own mailbox. LIVO does not e-mail your suppliers for you."
         },
         {
-          "title": "Supplier fills the gaps",
-          "body": "Only what is missing, with plain-language explanations of each field."
+          "title": "Supplier fills in",
+          "body": "In the portal only what is missing, with plain-language explanations of each field. In an Excel, the supplier can also adjust known values."
         },
         {
           "title": "Proposed updates",
-          "body": "Answers land as proposals. You review and confirm; nothing overwrites what you had."
+          "body": "Portal answers land as proposals that you review and confirm. A completed Excel you import yourself; changed known values are flagged as tasks."
         }
       ],
       "coreTitle": "LIVO PPWR",
