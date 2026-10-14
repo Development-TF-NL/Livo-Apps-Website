@@ -90,6 +90,15 @@ Alle overige zinnen, koppen, tabellen, titels en beschrijvingen zijn letterlijk 
 17. **Voor:** You can link documents to the relevant packaging unit or component; a linked document then counts towards the requirements it belongs to. That link helps you find the evidence; it does not automatically assess the document's contents.
    **Na:** You can link documents to the relevant packaging unit or component. That link helps you find the evidence; whether a document actually supports the stated value and the relevant requirement is for you to check.
 
+
+**Vierde ronde (14 oktober, eigenaarsreview van f5a4bce en d184335):** geen gegarandeerde voorvertoning en geen onbeperkte Undo beloofd. Codefeiten: `parseImport` slaat `prefilledChanges` stil over als de lees van het register onvolledig is (de import stopt niet); `undoPrefilledChange` weigert als de rij sindsdien opnieuw is geschreven. De ontbrekende veiligheidsvoorvertoning is als productbevinding AV-01 vastgelegd (`K0B/BEVINDINGEN_APPVRIJGAVE_2026-10-14.md`); geen productcode gewijzigd.
+
+18. **Voor:** Een teruggestuurd uitvraagbestand importeer je zelf. Voor je bevestigt toont LIVO een telling en enkele voorbeelden van bekende waarden die de leverancier heeft gewijzigd; na de import loop je die wijzigingen als taken na of draai je ze terug.
+   **Na:** Een teruggestuurd uitvraagbestand importeer je zelf. Waar dat kan, toont LIVO vóór je bevestigt een telling en enkele voorbeelden van bekende waarden die de leverancier heeft gewijzigd; na de import staan die wijzigingen als taken klaar om na te lopen en, zolang de waarde daarna niet opnieuw is geschreven, terug te draaien.  (in beide artikelen)
+
+19. **Voor:** A returned request file is imported by you. Before you confirm, LIVO shows a count and a few examples of known values the supplier changed; after the import you can review those changes as tasks or undo them.
+   **Na:** A returned request file is imported by you. Where available, LIVO shows a count and a few examples of known values the supplier changed before you confirm; after the import those changes are listed as tasks to review and, as long as the value has not been written again since, to undo.  (in beide artikelen)
+
 Correctie 9 is geen claimcorrectie: de sitebrede woordtoets leest "recycled" los van "content" wanneer er een koppelteken tussen staat; dezelfde betekenis, andere woordvolgorde.
 
 ## 4. Gewijzigde en nieuwe bestanden (website-repo)
@@ -123,6 +132,8 @@ Geen nieuwe dependency, geen `llms.txt`, geen AI-specifieke metadata, geen formu
 - Preview: `http://localhost:3112` (productiebuild uit de worktree; de M2-nazorgpreview blijft op 3111).
 
 Hertest na de herbasering en de tweede tekstronde (14 oktober, middag, build op f245c45): statuscodes, canonical, hreflang, sitemap, interne links, woordtoets 0, overloop op 360 tot 1280 px zonder afwijking, kop binnen het paneel op alle breedtes, focus met Tab op demoknop en beide links (NL en EN, 390 en 1280 px). De demoknop toont nu "Vraag een demo aan".
+
+Productpagina (vierde ronde): in `ppwr.json` is op tien plekken (NL en EN: `changes.features[2].body`, `cycle.lead`, `cycle.steps[2].title` en `.body`, `cycle.steps[3].body`) het onderscheid gemaakt tussen het portaal (alleen de open plekken, antwoorden als voorstellen) en een teruggestuurde Excel (bekende waarden kunnen gewijzigd zijn, zelf importeren, gewijzigde bekende waarden als taak gemeld); "vullen alleen aan wat ontbreekt" en "met vooraf zicht op" zijn vervallen. Niet gewijzigd: de voordeelkaart "Suppliers fill the gaps." in `pricing.json` (prijspagina en flyer; buiten deze ronde, gemeld).
 
 Productpagina (derde ronde): de broncopy `docs/marketing/website/copy/ppwr.json` in de product-repo maakt in `changes.features[2].body`, `cycle.lead` en `cycle.steps[3].body` (NL en EN) het onderscheid expliciet tussen het leveranciersportaal (antwoorden als te beoordelen voorstellen) en een ingevulde Excel-uitvraag (door de gebruiker zelf geïmporteerd, met vooraf de gewijzigde bekende waarden); de zin "niets overschrijft wat je had" is vervallen omdat gewijzigde bekende waarden uit een Excel wel worden geschreven en daarna gemeld. Dictionaries uitsluitend via het sync-script; bedragen, knoppen en bestemmingen ongewijzigd. Hertest op de build met de definitieve tekst: statuscodes, canonical, hreflang, sitemap, taalwissel, demo-mailto, woordtoets 0, overloop op 360, 390 en 1280 px zonder afwijking; nieuwe 390 px-schermbeelden in `~/LIVO_AUDIT/AI-VINDBAARHEID-20261013/meting/definitief/`.
 

@@ -81,7 +81,7 @@
       "blocks": [
        {
         "type": "p",
-        "text": "LIVO PPWR helpt de gegevens per verpakking en onderdeel te ordenen, ontbrekende informatie zichtbaar te maken en een leveranciersuitvraag klaar te zetten. In het leveranciersportaal ziet de leverancier wat al bekend is en vult hij de open plekken aan. Een antwoord via het portaal komt terug als voorstel. Iemand in je eigen organisatie beoordeelt en bevestigt het voordat het in het register terechtkomt. Een teruggestuurd uitvraagbestand importeer je zelf. Voor je bevestigt toont LIVO een telling en enkele voorbeelden van bekende waarden die de leverancier heeft gewijzigd; na de import loop je die wijzigingen als taken na of draai je ze terug."
+        "text": "LIVO PPWR helpt de gegevens per verpakking en onderdeel te ordenen, ontbrekende informatie zichtbaar te maken en een leveranciersuitvraag klaar te zetten. In het leveranciersportaal ziet de leverancier wat al bekend is en vult hij de open plekken aan. Een antwoord via het portaal komt terug als voorstel. Iemand in je eigen organisatie beoordeelt en bevestigt het voordat het in het register terechtkomt. Een teruggestuurd uitvraagbestand importeer je zelf. Waar dat kan, toont LIVO vóór je bevestigt een telling en enkele voorbeelden van bekende waarden die de leverancier heeft gewijzigd; na de import staan die wijzigingen als taken klaar om na te lopen en, zolang de waarde daarna niet opnieuw is geschreven, terug te draaien."
        },
        {
         "type": "p",
@@ -199,7 +199,7 @@
       "blocks": [
        {
         "type": "p",
-        "text": "LIVO PPWR helps organise information by packaging unit and component, shows what is missing and prepares a supplier request. In the supplier portal, suppliers see known information and fill in the gaps. An answer given in the portal returns as a proposal. Someone in your organisation reviews and confirms it before it enters the register. A returned request file is imported by you. Before you confirm, LIVO shows a count and a few examples of known values the supplier changed; after the import you can review those changes as tasks or undo them."
+        "text": "LIVO PPWR helps organise information by packaging unit and component, shows what is missing and prepares a supplier request. In the supplier portal, suppliers see known information and fill in the gaps. An answer given in the portal returns as a proposal. Someone in your organisation reviews and confirms it before it enters the register. A returned request file is imported by you. Where available, LIVO shows a count and a few examples of known values the supplier changed before you confirm; after the import those changes are listed as tasks to review and, as long as the value has not been written again since, to undo."
        },
        {
         "type": "p",
@@ -343,7 +343,7 @@
        },
        {
         "type": "p",
-        "text": "Een reactie via het portaal wordt als voorstel teruggegeven. Je beoordeelt en bevestigt wat in het register komt. Een teruggestuurd uitvraagbestand importeer je zelf. Voor je bevestigt toont LIVO een telling en enkele voorbeelden van bekende waarden die de leverancier heeft gewijzigd; na de import loop je die wijzigingen als taken na of draai je ze terug. Documenten kun je aan de passende verpakking of het onderdeel koppelen. Die koppeling helpt bij het terugvinden van bewijs; of een document de opgegeven waarde en de relevante eis werkelijk onderbouwt, controleer je zelf."
+        "text": "Een reactie via het portaal wordt als voorstel teruggegeven. Je beoordeelt en bevestigt wat in het register komt. Een teruggestuurd uitvraagbestand importeer je zelf. Waar dat kan, toont LIVO vóór je bevestigt een telling en enkele voorbeelden van bekende waarden die de leverancier heeft gewijzigd; na de import staan die wijzigingen als taken klaar om na te lopen en, zolang de waarde daarna niet opnieuw is geschreven, terug te draaien. Documenten kun je aan de passende verpakking of het onderdeel koppelen. Die koppeling helpt bij het terugvinden van bewijs; of een document de opgegeven waarde en de relevante eis werkelijk onderbouwt, controleer je zelf."
        },
        {
         "type": "p",
@@ -467,7 +467,7 @@
        },
        {
         "type": "p",
-        "text": "A response given in the portal returns as a proposal. You review and confirm what enters the register. A returned request file is imported by you. Before you confirm, LIVO shows a count and a few examples of known values the supplier changed; after the import you can review those changes as tasks or undo them. You can link documents to the relevant packaging unit or component. That link helps you find the evidence; whether a document actually supports the stated value and the relevant requirement is for you to check."
+        "text": "A response given in the portal returns as a proposal. You review and confirm what enters the register. A returned request file is imported by you. Where available, LIVO shows a count and a few examples of known values the supplier changed before you confirm; after the import those changes are listed as tasks to review and, as long as the value has not been written again since, to undo. You can link documents to the relevant packaging unit or component. That link helps you find the evidence; whether a document actually supports the stated value and the relevant requirement is for you to check."
        },
        {
         "type": "p",

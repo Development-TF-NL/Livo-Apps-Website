@@ -340,7 +340,7 @@
         {
           "tag": "03 · Werk delen",
           "title": "Laat leveranciers een deel van het werk doen.",
-          "body": "Verstuur een voorgevulde uitvraag vanuit je eigen mailbox: een beveiligde link naar het leveranciersportaal, of een voorgevulde Excel per leverancier. Leveranciers zien wat je al weet en vullen alleen aan wat ontbreekt. Antwoorden via het portaal komen terug als voorstellen die jij beoordeelt en bevestigt. Een ingevulde Excel importeer je zelf; voor je bevestigt zie je welke bekende waarden de leverancier heeft gewijzigd."
+          "body": "Verstuur een voorgevulde uitvraag vanuit je eigen mailbox: een beveiligde link naar het leveranciersportaal, of een voorgevulde Excel per leverancier. In het portaal ziet de leverancier wat je al weet en vult hij alleen de open plekken aan; zijn antwoorden komen terug als voorstellen die jij beoordeelt en bevestigt. In een Excel kan een leverancier ook bekende waarden wijzigen; dat bestand importeer je zelf en LIVO meldt gewijzigde bekende waarden als taak."
         },
         {
           "tag": "04 · Eén onderhouden bron",
@@ -368,7 +368,7 @@
     "cycle": {
       "eyebrow": "Leveranciersronde",
       "title": "Laat leveranciers de gaten vullen.",
-      "lead": "Jij verstuurt de uitvraag; LIVO bereidt hem voor. Leveranciers vullen alleen aan wat ontbreekt. Antwoorden via het portaal komen terug als voorstellen die jij beoordeelt; een ingevulde Excel importeer je zelf.",
+      "lead": "Jij verstuurt de uitvraag; LIVO bereidt hem voor. In het portaal vult de leverancier alleen de open plekken aan en komt elk antwoord terug als voorstel dat jij beoordeelt. Een teruggestuurde Excel importeer je zelf, ook als daarin bekende waarden zijn gewijzigd.",
       "steps": [
         {
           "title": "Voorgevulde uitvraag",
@@ -379,12 +379,12 @@
           "body": "Een beveiligde link of een voorgevulde Excel, vanuit je eigen mailbox. LIVO mailt je leveranciers niet voor je."
         },
         {
-          "title": "Leverancier vult de gaten",
-          "body": "Alleen wat ontbreekt, met uitleg in gewone taal bij elk veld."
+          "title": "Leverancier vult aan",
+          "body": "In het portaal alleen wat ontbreekt, met uitleg in gewone taal bij elk veld. In een Excel kan de leverancier ook bekende waarden aanpassen."
         },
         {
           "title": "Voorgestelde wijzigingen",
-          "body": "Portaalantwoorden landen als voorstellen die jij beoordeelt en bevestigt. Een ingevulde Excel importeer je zelf, met vooraf zicht op gewijzigde bekende waarden."
+          "body": "Portaalantwoorden landen als voorstellen die jij beoordeelt en bevestigt. Een ingevulde Excel importeer je zelf; gewijzigde bekende waarden worden als taak gemeld."
         }
       ],
       "coreTitle": "LIVO PPWR",
