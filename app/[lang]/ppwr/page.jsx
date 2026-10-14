@@ -156,7 +156,8 @@ export default async function PpwrPage({ params }) {
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1fr]">
           <div>
             <Eyebrow>{pricing.eyebrow}</Eyebrow>
-            <h2 className={h2}>{pricing.title}</h2>
+            {/* Onder 375 px een maat kleiner (M2-nazorg, 13 oktober 2026), zoals in PricingPreview op de homepage. */}
+            <h2 className={`${h2} max-[374px]:text-[2rem]`}>{pricing.title}</h2>
           </div>
           <div className={`${promoPanel} p-8`}>
             <ul className="space-y-3">

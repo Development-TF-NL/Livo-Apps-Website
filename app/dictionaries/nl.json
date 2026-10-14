@@ -14,7 +14,7 @@
     "menuOpen": "Menu openen",
     "menuClose": "Menu sluiten",
     "order": {
-      "cta": "Plan een demo",
+      "cta": "Vraag een demo aan",
       "mailSubject": "LIVO PPWR demo",
       "mailBody": "Hallo LIVO APPS,\n\nIk wil graag kennismaken met LIVO PPWR in een demo van 20 minuten. Kunnen jullie een moment voorstellen?\n\nBedrijf (optioneel):\nMijn vraag (optioneel):\n"
     }
@@ -30,7 +30,7 @@
       "titleGreen": "PPWR-expert",
       "lead": "Je klant vraagt om verpakkingsdata. LIVO laat zien wat ontbreekt en zet de leveranciersuitvraag en het klantbestand klaar. Jij verstuurt de uitvraag, beoordeelt de reactie en bepaalt wat je deelt.",
       "audience": "Voor importeurs, groothandels en merken met verpakte producten.",
-      "ctaDemo": "Plan een demo",
+      "ctaDemo": "Vraag een demo aan",
       "ctaHow": "Bekijk hoe het werkt",
       "priceLine": "Vanaf €99 per maand, exclusief btw. Geen implementatiekosten.",
       "visual": {
@@ -138,7 +138,7 @@
       "hand": "Begin met je klantvraag",
       "steps": [
         {
-          "title": "Plan een demo",
+          "title": "Vraag een demo aan",
           "body": "Laat weten dat je wilt kennismaken. We spreken samen een moment af."
         },
         {
@@ -186,7 +186,9 @@
       ]
     },
     "finalCta": {
-      "title": "Laat je verpakkingsdata zien in een demo."
+      "title": "Bekijk hoe LIVO PPWR werkt",
+      "lead": "Zie hoe je verpakkingsgegevens ordent, ontbrekende informatie vindt en weet wat de volgende stap is.",
+      "cta": "Bekijk het voorbeeld"
     },
     "footer": {
       "tagline": "Software die je werk lichter maakt.",
@@ -262,7 +264,7 @@
       "titleGreen": "vermenigvuldigt",
       "titleAfter": " snel.",
       "lead": "De uitdaging is niet om verpakkingsdata één keer te verzamelen. Het is om data, verplichtingen en bewijs verbonden en actueel te houden terwijl producten, verpakkingen en markten veranderen.",
-      "ctaDemo": "Plan een demo",
+      "ctaDemo": "Vraag een demo aan",
       "demoSubject": "LIVO PPWR demo",
       "demoBody": "Hallo LIVO APPS,\n\nIk wil graag kennismaken met LIVO PPWR in een demo van 20 minuten. Kunnen jullie een moment voorstellen?\n\nBedrijf (optioneel):\nMijn vraag (optioneel):\n",
       "registerTenant": "example-tenant",
@@ -419,7 +421,7 @@
     "closing": {
       "title": "Zie LIVO PPWR in een demo van 20 minuten.",
       "lead": "Bekijk hoe je verpakkingsdata, leveranciersvragen en beschikbaar bewijs bij elkaar brengt.",
-      "cta": "Plan een demo",
+      "cta": "Vraag een demo aan",
       "site": "livoapps.software",
       "mail": "hello@livoapps.software"
     }
@@ -534,8 +536,9 @@
     ],
     "anchor": "LIVO zoekt uit en zet klaar. Jij beoordeelt en bevestigt.",
     "closing": {
-      "title": "Je klant wacht op data. Niet op jouw PPWR-opleiding.",
-      "start": "Bespreek je assortiment, een passend plan en je gewenste start in een demo. Een demoaanvraag is geen bestelling. Geen implementatiekosten: we richten je omgeving samen met je in."
+      "title": "Eerst zien hoe het werkt?",
+      "start": "Vraag een korte demo aan. In 20 minuten laten we je met fictieve gegevens zien hoe LIVO PPWR werkt.",
+      "cta": "Vraag een demo van 20 minuten aan"
     },
     "page": {
       "toggleMonthly": "Maandelijks",

@@ -8,11 +8,12 @@ import PhotoPlace from '../components/PhotoPlace';
 import RegisterFragment from '../components/RegisterFragment';
 import PricingPreview from '../components/PricingPreview';
 import OnlineSignupSection from '../components/OnlineSignupSection';
-import { Section, Eyebrow, ClosingBand, GreenTitle, h1, h2, lead, cardBody, btnPrimary, btnSecondary, textLink, heroPanel, cardOnCanvas, cardOnWhite } from '../components/ui';
+import LightClosingBand from '../components/LightClosingBand';
+import { Section, Eyebrow, GreenTitle, h1, h2, lead, cardBody, btnPrimary, btnSecondary, textLink, heroPanel, cardOnCanvas, cardOnWhite } from '../components/ui';
 
 // Homepage M2 (12 oktober 2026, pakket M2_WEBSITE_MKB_2026-10-10; hoofdkop vastgesteld door de eigenaar). Volgorde: hero met de
 // prijsregel, één doorlopend fictief artikelvoorbeeld (#how, VH-2001 uit het demonstratiedossier), de taakverdeling, prijs (#pricing),
-// start met demoaanvraag en zichtbaar e-mailadres (#start), over LIVO APPS (#about, alleen de aanleiding), slot, footer.
+// start met demoaanvraag en zichtbaar e-mailadres (#start), over LIVO APPS (#about, alleen de aanleiding), licht slot naar het voorbeeld (M2-nazorg 13 oktober), footer.
 // De klantvraagsectie, de drie voordeelkaarten en de tweede identieke registerillustratie zijn vervallen; de productpagina draagt de
 // diepere uitleg. Copy uit de dictionaries (bron: docs/marketing/website/copy/home.json en nav.json in de product-repo). De vorm komt
 // uit de gedeelde bouwstenen in components/ui.jsx. Beeld: in de hero één product in het Register-fragment (fictieve data, als
@@ -125,10 +126,10 @@ export default async function LivoAppsWebsite({ params }) {
         </div>
       </Section>
 
-      {/* 7. Slot: het ene navy moment van de pagina, met één demoaanvraag. */}
-      <ClosingBand title={t.finalCta.title} center>
-        <a href={demo} className={btnPrimary}><Mail size={18} aria-hidden="true" />{t.hero.ctaDemo}</a>
-      </ClosingBand>
+      {/* 7. Slot (M2-nazorg): licht mintpaneel met de uitnodiging om het voorbeeld te bekijken; de knop wijst naar #how en opent geen mail. */}
+      <LightClosingBand tone="mint" title={t.finalCta.title} lead={t.finalCta.lead}>
+        <Link href={`/${lang}#how`} className={btnPrimary}>{t.finalCta.cta} <ArrowRight size={18} aria-hidden="true" /></Link>
+      </LightClosingBand>
 
       <Footer lang={lang} dict={t.footer} />
     </div>
