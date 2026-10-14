@@ -340,7 +340,7 @@
         {
           "tag": "03 · Werk delen",
           "title": "Laat leveranciers een deel van het werk doen.",
-          "body": "Verstuur een voorgevulde uitvraag vanuit je eigen mailbox: een beveiligde link naar het leveranciersportaal, of een voorgevulde Excel per leverancier. Leveranciers zien wat je al weet en vullen alleen aan wat ontbreekt. Hun antwoorden komen terug als voorgestelde wijzigingen die jij beoordeelt. Niets overschrijft wat je had."
+          "body": "Verstuur een voorgevulde uitvraag vanuit je eigen mailbox: een beveiligde link naar het leveranciersportaal, of een voorgevulde Excel per leverancier. Leveranciers zien wat je al weet en vullen alleen aan wat ontbreekt. Antwoorden via het portaal komen terug als voorstellen die jij beoordeelt en bevestigt. Een ingevulde Excel importeer je zelf; voor je bevestigt zie je welke bekende waarden de leverancier heeft gewijzigd."
         },
         {
           "tag": "04 · Eén onderhouden bron",
@@ -368,7 +368,7 @@
     "cycle": {
       "eyebrow": "Leveranciersronde",
       "title": "Laat leveranciers de gaten vullen.",
-      "lead": "Jij verstuurt de uitvraag; LIVO bereidt hem voor. Leveranciers vullen alleen aan wat ontbreekt en elk antwoord komt terug als een voorstel dat jij beoordeelt.",
+      "lead": "Jij verstuurt de uitvraag; LIVO bereidt hem voor. Leveranciers vullen alleen aan wat ontbreekt. Antwoorden via het portaal komen terug als voorstellen die jij beoordeelt; een ingevulde Excel importeer je zelf.",
       "steps": [
         {
           "title": "Voorgevulde uitvraag",
@@ -384,7 +384,7 @@
         },
         {
           "title": "Voorgestelde wijzigingen",
-          "body": "Antwoorden landen als voorstellen. Jij beoordeelt en bevestigt; niets overschrijft wat je had."
+          "body": "Portaalantwoorden landen als voorstellen die jij beoordeelt en bevestigt. Een ingevulde Excel importeer je zelf, met vooraf zicht op gewijzigde bekende waarden."
         }
       ],
       "coreTitle": "LIVO PPWR",

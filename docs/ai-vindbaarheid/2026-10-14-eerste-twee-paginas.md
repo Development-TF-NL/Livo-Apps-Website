@@ -75,6 +75,21 @@ Alle overige zinnen, koppen, tabellen, titels en beschrijvingen zijn letterlijk 
 13. **Voor:** Which specification, declaration or test report belongs to which value or part? What are its date and version?
    **Na:** Which specification, declaration or test report belongs to which packaging unit or part, and which stated value does it support? What are its date and version?
 
+
+**Derde ronde (14 oktober, na de marketingbeoordeling van 5d0b9d9):** de Excel-import precies beschreven en de bewijszin op de leverancierspagina verder versmald. Getoetst tegen de code: het importvoorbeeld toont vóór bevestiging een telling en voorbeelden van gewijzigde bekende waarden (`import/actions.ts`, `prefilledChanges`), na de import ontstaan taken `prefilled_value_changed` met Undo (`tasks/actions.ts`, `undoPrefilledChange`); een gekoppeld document wordt nergens inhoudelijk voor een verplichting beoordeeld.
+
+14. **Voor:** Een teruggestuurd uitvraagbestand importeer je zelf, met een overzicht van de wijzigingen vooraf.
+   **Na:** Een teruggestuurd uitvraagbestand importeer je zelf. Voor je bevestigt toont LIVO een telling en enkele voorbeelden van bekende waarden die de leverancier heeft gewijzigd; na de import loop je die wijzigingen als taken na of draai je ze terug.  (in beide artikelen)
+
+15. **Voor:** A returned request file is imported by you, with an overview of the changes first.
+   **Na:** A returned request file is imported by you. Before you confirm, LIVO shows a count and a few examples of known values the supplier changed; after the import you can review those changes as tasks or undo them.  (in beide artikelen)
+
+16. **Voor:** Documenten kun je aan de passende verpakking of het onderdeel koppelen; zo'n document telt mee voor de verplichtingen waar het bij hoort. Die koppeling helpt bij het terugvinden van bewijs, maar beoordeelt niet automatisch de inhoud van het document.
+   **Na:** Documenten kun je aan de passende verpakking of het onderdeel koppelen. Die koppeling helpt bij het terugvinden van bewijs; of een document de opgegeven waarde en de relevante eis werkelijk onderbouwt, controleer je zelf.
+
+17. **Voor:** You can link documents to the relevant packaging unit or component; a linked document then counts towards the requirements it belongs to. That link helps you find the evidence; it does not automatically assess the document's contents.
+   **Na:** You can link documents to the relevant packaging unit or component. That link helps you find the evidence; whether a document actually supports the stated value and the relevant requirement is for you to check.
+
 Correctie 9 is geen claimcorrectie: de sitebrede woordtoets leest "recycled" los van "content" wanneer er een koppelteken tussen staat; dezelfde betekenis, andere woordvolgorde.
 
 ## 4. Gewijzigde en nieuwe bestanden (website-repo)
@@ -108,6 +123,8 @@ Geen nieuwe dependency, geen `llms.txt`, geen AI-specifieke metadata, geen formu
 - Preview: `http://localhost:3112` (productiebuild uit de worktree; de M2-nazorgpreview blijft op 3111).
 
 Hertest na de herbasering en de tweede tekstronde (14 oktober, middag, build op f245c45): statuscodes, canonical, hreflang, sitemap, interne links, woordtoets 0, overloop op 360 tot 1280 px zonder afwijking, kop binnen het paneel op alle breedtes, focus met Tab op demoknop en beide links (NL en EN, 390 en 1280 px). De demoknop toont nu "Vraag een demo aan".
+
+Productpagina (derde ronde): de broncopy `docs/marketing/website/copy/ppwr.json` in de product-repo maakt in `changes.features[2].body`, `cycle.lead` en `cycle.steps[3].body` (NL en EN) het onderscheid expliciet tussen het leveranciersportaal (antwoorden als te beoordelen voorstellen) en een ingevulde Excel-uitvraag (door de gebruiker zelf geïmporteerd, met vooraf de gewijzigde bekende waarden); de zin "niets overschrijft wat je had" is vervallen omdat gewijzigde bekende waarden uit een Excel wel worden geschreven en daarna gemeld. Dictionaries uitsluitend via het sync-script; bedragen, knoppen en bestemmingen ongewijzigd. Hertest op de build met de definitieve tekst: statuscodes, canonical, hreflang, sitemap, taalwissel, demo-mailto, woordtoets 0, overloop op 360, 390 en 1280 px zonder afwijking; nieuwe 390 px-schermbeelden in `~/LIVO_AUDIT/AI-VINDBAARHEID-20261013/meting/definitief/`.
 
 ## 6. Wat pas na publicatie of met eigenaarstoegang kan
 

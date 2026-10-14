@@ -340,7 +340,7 @@
         {
           "tag": "03 · Share the work",
           "title": "Let suppliers do part of the work.",
-          "body": "Send a prefilled request from your own mailbox: a secure link to the supplier portal, or a prefilled Excel per supplier. Suppliers see what you already know and add only what is missing. Their answers come back as proposed updates for your review. Nothing overwrites what you had."
+          "body": "Send a prefilled request from your own mailbox: a secure link to the supplier portal, or a prefilled Excel per supplier. Suppliers see what you already know and add only what is missing. Answers given in the portal come back as proposals for you to review and confirm. A completed Excel you import yourself; before you confirm, you see which known values the supplier changed."
         },
         {
           "tag": "04 · One maintained source",
@@ -368,7 +368,7 @@
     "cycle": {
       "eyebrow": "Supplier round",
       "title": "Let suppliers fill the gaps.",
-      "lead": "You send the request; LIVO prepares it. Suppliers add only what is missing and every answer comes back as a proposal for your review.",
+      "lead": "You send the request; LIVO prepares it. Suppliers add only what is missing. Answers given in the portal come back as proposals for your review; a completed Excel you import yourself.",
       "steps": [
         {
           "title": "Prefilled request",
@@ -384,7 +384,7 @@
         },
         {
           "title": "Proposed updates",
-          "body": "Answers land as proposals. You review and confirm; nothing overwrites what you had."
+          "body": "Portal answers land as proposals that you review and confirm. A completed Excel you import yourself, seeing changed known values before you confirm."
         }
       ],
       "coreTitle": "LIVO PPWR",
