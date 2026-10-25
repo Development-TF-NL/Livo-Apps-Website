@@ -13,8 +13,9 @@ import { Section, IconCircle, Callout, GreenTitle, benefitIcons, eyebrow, h1, h2
 // (components/ui.jsx): een lichte hero, drie voordelen met een icoon, de prijstabel in een kaart met "wat telt"
 // erbij, vier functies met een icoon en het anker, en het navy slotpaneel met één demoaanvraag.
 // Achter de poort PRICING_PAGE_ENABLED: dicht = notFound() en noindex; open = de pagina, in de sitemap en
-// in het menu. Een plan opent een demoaanvraag per e-mail, met het gekozen plan erin.
+// in het menu. De bestelknoppen blijven per e-mail totdat de bestelroute is vrijgegeven.
 const pricingEnabled = () => process.env.PRICING_PAGE_ENABLED === 'true';
+const selfServiceOrderEnabled = () => process.env.SELF_SERVICE_ORDER_ENABLED === 'true';
 
 const BOX = '/brand/photo/box.png'; // doos uit de tussentijdse set (docs/huisstijl/beeld/doos.png), randaccent in de hero
 const featureIcons = [FileSpreadsheet, Send, ListChecks, FileCheck];
@@ -51,6 +52,7 @@ export default async function PricingPage({ params }) {
   const order = dict.nav.order;
   const demo = mailto(dict.ppwr.hero.demoSubject, dict.ppwr.hero.demoBody);
   const { plans, custom } = t.ladder;
+  const selfService = selfServiceOrderEnabled();
   const row = 'grid items-center gap-3 md:grid-cols-[1fr_1fr_1.2fr_17rem] md:gap-6';
 
   return (
@@ -122,9 +124,20 @@ export default async function PricingPage({ params }) {
                       <span className="block text-sm text-sub">€{num(p.annualTotal, lang)} {t.price.perYear}</span>
                     </p>
                   </div>
-                  <a href={planMail(order, t.page, p.name, t.page.orderSubject)} className={`${btnPrimary} whitespace-nowrap`}>
-                    <Mail size={18} aria-hidden="true" />{fill(t.page.orderPlan, p.name)}
-                  </a>
+                  {selfService ? (
+                    <>
+                      <a href={`https://ppwr.livoapps.software/order?plan=${p.name.toLowerCase()}&period=monthly`} className={`${btnPrimary} p-monthly whitespace-nowrap`}>
+                        <Send size={18} aria-hidden="true" />{lang === 'nl' ? `Bestel ${p.name}` : `Buy ${p.name}`}
+                      </a>
+                      <a href={planMail(order, t.page, `${p.name} (${lang === 'nl' ? 'jaarbetaling' : 'annual billing'})`, t.page.orderSubject)} className={`${btnPrimary} p-annual whitespace-nowrap`}>
+                        <Mail size={18} aria-hidden="true" />{lang === 'nl' ? 'Bespreek jaarbetaling' : 'Discuss annual billing'}
+                      </a>
+                    </>
+                  ) : (
+                    <a href={planMail(order, t.page, p.name, t.page.orderSubject)} className={`${btnPrimary} whitespace-nowrap`}>
+                      <Mail size={18} aria-hidden="true" />{fill(t.page.orderPlan, p.name)}
+                    </a>
+                  )}
                 </li>
               ))}
               <li className={`${row} py-5 md:py-4`}>
