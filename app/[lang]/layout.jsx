@@ -1,6 +1,6 @@
 import '../globals.css';
 import { Analytics } from '@vercel/analytics/react';
-import { Inter, Caveat } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 import { notFound } from 'next/navigation';
 import Nav from '../components/Nav';
@@ -14,8 +14,8 @@ import { SITE_URL, organizationJsonLd, socialMetadata } from '../seo';
 // — TODO: fontbestanden toevoegen onder app/fonts/ zodra opgehaald; de `font-display`-stack
 // valt tot die tijd terug op Inter.
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
-// Huisstijl v2 (17 sep 2026): Satoshi self-hosted (Fontshare, bestanden uit de product-repo) en
-// Caveat als handschrift-accent (alleen website en flyer; nooit app, documenten, e-mail).
+// Huisstijl v2 (17 sep 2026): Satoshi self-hosted (Fontshare, bestanden uit de product-repo).
+// Het handschrift-accent (Caveat) is op 29 oktober 2026 vervallen: het landingspagina-concept kent alleen Satoshi en Inter.
 const satoshi = localFont({
   src: [
     { path: '../fonts/Satoshi-500.woff2', weight: '500', style: 'normal' },
@@ -24,7 +24,6 @@ const satoshi = localFont({
   variable: '--font-satoshi',
   display: 'swap',
 });
-const caveat = Caveat({ subsets: ['latin'], weight: ['500', '600'], variable: '--font-caveat', display: 'swap' });
 
 // Fallback voor pagina's zonder eigen generateMetadata (praktisch alleen de 404);
 // dit statische metadata-object kent geen taal, dus de versie in de standaardtaal (Nederlands, 1 oktober 2026).
@@ -60,7 +59,7 @@ export default async function RootLayout({ children, params }) {
   const dict = await getDictionary(lang);
 
   return (
-    <html lang={lang} className={`${inter.variable} ${satoshi.variable} ${caveat.variable}`}>
+    <html lang={lang} className={`${inter.variable} ${satoshi.variable}`}>
       <body className="bg-paper font-sans text-ink">
         {/* Organization-JSON-LD op elke pagina: naam, adres, logo, e-mail en LinkedIn staan zichtbaar in de footer. */}
         <JsonLd data={organizationJsonLd()} />

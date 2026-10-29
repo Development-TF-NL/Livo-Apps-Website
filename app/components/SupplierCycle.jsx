@@ -1,5 +1,4 @@
 import { FileText, Send, PencilLine, ClipboardCheck } from 'lucide-react';
-import HandNote from './HandNote';
 import { Section, Eyebrow, IconCircle, h2, lead, cardTitleSmall, cardBody } from './ui';
 
 const icons = [FileText, Send, PencilLine, ClipboardCheck];
@@ -30,7 +29,6 @@ export default function SupplierCycle({ t }) {
               </span>
             </div>
           </div>
-          <p className="mt-5 text-center"><HandNote>{t.hand}</HandNote></p>
         </div>
         <div>
           <Eyebrow>{t.eyebrow}</Eyebrow>

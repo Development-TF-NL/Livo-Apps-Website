@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { getDictionary } from '../get-dictionary';
 import FooterForPath from '../components/FooterForPath';
-import HandNote from '../components/HandNote';
 import { eyebrow, h1, heroPanel, textLink } from '../components/ui';
 
 // Tweetalig op één pagina: een 404 heeft geen betrouwbare taalcontext
@@ -17,7 +16,6 @@ export default async function NotFound() {
       <main className="min-h-[60vh] bg-canvas px-6 pb-16 pt-12 md:pb-24 md:pt-20">
         <div className={`mx-auto max-w-content ${heroPanel} px-6 py-16 text-center md:py-24`}>
           <p className={eyebrow}>404</p>
-          <p className="mb-2"><HandNote>Oeps</HandNote></p>
           <h1 className={`${h1} mx-auto max-w-3xl`}>
             Deze pagina bestaat niet.
           </h1>

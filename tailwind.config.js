@@ -46,7 +46,6 @@ module.exports = {
       fontFamily: {
         display: ['var(--font-satoshi)', 'Satoshi', 'var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         sans: ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        hand: ['var(--font-caveat)', 'Caveat', 'cursive'],
       },
     },
   },

@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { ArrowRight, Package, Layers, Globe, FileCheck, Clock, MessageSquareWarning, FileSearch, Users } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
 import RegisterFragment from '../../components/RegisterFragment';
-import HandNote from '../../components/HandNote';
 import StatusPill from '../../components/StatusPill';
 import SupplierCycle from '../../components/SupplierCycle';
 import Footer from '../../components/Footer';
@@ -97,7 +96,7 @@ export default async function PpwrPage({ params }) {
         </div>
         <div className={`mt-6 grid items-center gap-4 ${cardOnWhite} p-6 md:grid-cols-[auto_1fr] md:gap-8`}>
           <p className={`max-w-xs ${cardTitleSmall}`}>{t.grows.resultTitle}</p>
-          <p className={cardBody}>{t.grows.resultBody} <HandNote className="ml-2 align-baseline">{t.grows.note}</HandNote></p>
+          <p className={cardBody}>{t.grows.resultBody}</p>
         </div>
       </Section>
 
@@ -113,7 +112,7 @@ export default async function PpwrPage({ params }) {
             </li>
           ))}
         </ul>
-        <Callout className="mt-8 font-display text-lg font-bold">{t.costs.transition} <HandNote className="ml-2 align-baseline">{t.costs.hand}</HandNote></Callout>
+        <Callout className="mt-8 font-display text-lg font-bold">{t.costs.transition}</Callout>
       </Section>
 
       {/* 4. What LIVO changes: vier features met de vier illustraties, elk met de status Live */}
@@ -156,7 +155,6 @@ export default async function PpwrPage({ params }) {
             </li>
           ))}
         </ul>
-        <p className="mt-6 text-right"><HandNote>{t.forWhom.hand}</HandNote></p>
       </Section>
 
       {/* 7. Pricing: drie regels en één knop. De knop volgt de poort, net als menu en footer:
