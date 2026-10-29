@@ -2,6 +2,7 @@
   "nav": {
     "how": "How it works",
     "pricing": "Pricing",
+    "kennis": "Resources",
     "about": "About LIVO APPS",
     "login": "Log in",
     "loginMenuTitle": "Your LIVO apps",
@@ -14,25 +15,29 @@
     "menuOpen": "Open menu",
     "menuClose": "Close menu",
     "order": {
-      "cta": "Request a demo",
-      "mailSubject": "LIVO PPWR demo",
-      "mailBody": "Hello LIVO APPS,\n\nI would like to explore LIVO PPWR in a 20-minute demo. Could you suggest a time?\n\nCompany (optional):\nMy question (optional):\n"
+      "cta": "Choose your plan"
+    },
+    "demo": {
+      "cta": "Request a demo"
     }
   },
   "home": {
     "meta": {
-      "title": "LIVO PPWR · Your PPWR expert. Built for SMEs.",
-      "description": "Your PPWR expert. Built for SMEs. For importers, wholesalers and brands with packaged products: LIVO shows what is missing and prepares the supplier request and customer file. From €99 per month, excluding VAT."
+      "title": "LIVO PPWR for SMEs: packaging data in one place",
+      "description": "Keep packaging data and evidence together. See what is missing, prepare supplier requests and create a customer file. From €99 per month."
     },
     "hero": {
       "eyebrow": "LIVO PPWR",
-      "title": "Your PPWR expert. Built for SMEs.",
-      "titleGreen": "PPWR expert",
-      "lead": "Your customer asks for packaging data. LIVO shows what is missing and prepares the supplier request and customer file. You send the request, review the response and decide what to share.",
-      "audience": "For importers, wholesalers and brands with packaged products.",
-      "ctaDemo": "Request a demo",
+      "audience": "For importers, wholesalers and brands in small and medium-sized businesses.",
+      "title": "Stop drowning in complex European packaging rules!",
+      "titleGreen": "European",
+      "lead": "Your customer asks for packaging data. LIVO PPWR shows which data and evidence are missing, helps prepare focused supplier questions and prepares a customer file. You review the answers and choose what to share.",
+      "ctaPrimary": "Try LIVO PPWR for a month",
+      "ctaPlans": "Choose your plan",
       "ctaHow": "See how it works",
-      "priceLine": "From €99 per month, excluding VAT. No implementation fee.",
+      "priceLine": "From €99 per month, excluding VAT.",
+      "monthOfferLine": "With monthly billing, the first month is paid. Stop before month two if it is not right for you.",
+      "helpLine": "Help with your first setup is included.",
       "visual": {
         "label": "Illustration",
         "register": {
@@ -71,40 +76,78 @@
               "next": "Confirm level"
             }
           ]
-        },
-        "example": {
-          "tenant": "example-tenant",
-          "tabs": [
-            "Overview",
-            "Obligations",
-            "Register",
-            "Suppliers"
-          ],
-          "title": "Packaging register",
-          "action": "Upload data",
-          "rows": [
-            {
-              "name": "VH-2001 Decorative vase · packaging",
-              "status": "Needs data",
-              "tone": "warning",
-              "next": "Ask supplier"
-            }
-          ]
         }
       }
     },
     "example": {
-      "title": "One item. From Excel to a customer file.",
-      "intro": "A fictional example using a decorative vase. This is how one question moves through LIVO PPWR.",
+      "title": "From customer question to a useful answer.",
+      "intro": "No pile of loose files to decipher yourself. See in one product example what LIVO prepares and what you decide.",
       "steps": [
-        "Import your Excel file. LIVO proposes the column mapping; you confirm it.",
-        "LIVO shows what is missing: the weight of a packaging part and a test report.",
-        "LIVO prepares a prefilled supplier request. You send it.",
-        "The supplier adds 45 grams. You review the response. The report is still requested.",
-        "Export the selection for your customer. The missing report remains visible."
+        {
+          "title": "Import your existing data.",
+          "body": "Import your Excel file. LIVO proposes the column mapping; you confirm it.",
+          "icon": "excel-import"
+        },
+        {
+          "title": "See what is missing.",
+          "body": "LIVO shows what is missing: the weight of a packaging part and a test report.",
+          "icon": "open-punten"
+        },
+        {
+          "title": "Prepare a focused supplier request.",
+          "body": "LIVO prepares a prefilled supplier request. You send it.",
+          "icon": "leveranciersuitvraag"
+        },
+        {
+          "title": "Review the response.",
+          "body": "The supplier adds 45 grams. You review the response. The report is still requested.",
+          "icon": "beoordelen"
+        },
+        {
+          "title": "Prepare the customer file.",
+          "body": "Export the selection for your customer. The missing report remains visible.",
+          "icon": "klantbestand"
+        }
       ],
+      "responsibility": "LIVO keeps data and evidence together and makes the work manageable. You send supplier requests yourself, check responses and decide what you share with your customer.",
       "caption": "Fictional demo data. A requested report is not evidence on file.",
-      "cta": "Explore LIVO PPWR"
+      "cta": "Explore LIVO PPWR",
+      "path": {
+        "label": "Illustration with fictional data",
+        "product": "VH-2001 Decorative vase · packaging",
+        "rows": [
+          {
+            "title": "Import",
+            "detail": "products.xlsx · column mapping confirmed by you",
+            "status": "Imported",
+            "tone": "success"
+          },
+          {
+            "title": "Open items",
+            "detail": "Hang tag: weight missing · test report missing",
+            "status": "2 open items",
+            "tone": "warning"
+          },
+          {
+            "title": "Supplier request",
+            "detail": "Prefilled request ready · you send it",
+            "status": "Ready to send",
+            "tone": "info"
+          },
+          {
+            "title": "Review",
+            "detail": "Answer: hang tag 45 g · report requested",
+            "status": "Proposal",
+            "tone": "info"
+          },
+          {
+            "title": "Customer file",
+            "detail": "Selection for your customer · Excel · open item visible",
+            "status": "Prepared",
+            "tone": "success"
+          }
+        ]
+      }
     },
     "roles": {
       "title": "What does LIVO take on?",
@@ -134,23 +177,26 @@
     },
     "start": {
       "eyebrow": "Start with LIVO PPWR",
-      "title": "See how LIVO PPWR fits your work.",
-      "hand": "Start with your customer request",
+      "title": "Start yourself, with help for your first setup.",
+      "hand": "No implementation project",
       "steps": [
         {
-          "title": "Request a demo",
-          "body": "Let us know you would like to meet. We agree a time together."
+          "title": "Choose your plan",
+          "body": "On the pricing page, choose the plan that fits your product range. Monthly billing is the default; annual billing and custom plans are discussed with us.",
+          "icon": "zelf-starten"
         },
         {
-          "title": "Discuss your workflow",
-          "body": "We look at how you collect packaging data and where questions remain."
+          "title": "Order and receive your confirmation",
+          "body": "You confirm your order and receive an order confirmation with plan, term and terms and conditions. The first administrator gets access to the app.",
+          "icon": "verplichtingen"
         },
         {
-          "title": "Agree a next step",
-          "body": "We discuss available features, your product range and a suitable start."
+          "title": "Help with your first setup",
+          "body": "We help you with your first setup using your own packaging data. This is included in every plan.",
+          "icon": "hulp-bij-start"
         }
       ],
-      "note": "A demo request is not an order.",
+      "note": "Prefer to see how it works first?",
       "customer": "Already a customer?",
       "login": "Log in"
     },
@@ -186,9 +232,9 @@
       ]
     },
     "finalCta": {
-      "title": "See how LIVO PPWR works",
-      "lead": "See how you organise packaging data, find missing information and know what to do next.",
-      "cta": "View the example"
+      "title": "Start with your own packaging data.",
+      "lead": "Choose a plan and start in the app. We help you with your first setup. No separate implementation project is needed.",
+      "cta": "Choose your plan"
     },
     "footer": {
       "tagline": "Software that lightens the workflow.",
@@ -213,6 +259,10 @@
         "resources": {
           "title": "RESOURCES",
           "items": [
+            {
+              "label": "Resources",
+              "href": "/resources"
+            },
             {
               "label": "PPWR whitepaper",
               "href": "/whitepaper"
@@ -249,8 +299,8 @@
   },
   "ppwr": {
     "meta": {
-      "title": "LIVO PPWR · Packaging compliance software for the people who do the work",
-      "description": "PPWR is one regulation. The work behind it quickly multiplies. LIVO PPWR keeps packaging data, obligations, evidence and supplier input together and up to date."
+      "title": "PPWR software for importers and wholesalers · LIVO",
+      "description": "See how LIVO PPWR supports imports, missing data, supplier requests and customer files through one practical product example."
     },
     "breadcrumb": [
       "LIVO APPS",
@@ -406,7 +456,7 @@
         },
         {
           "title": "Wholesalers and distributors",
-          "body": "Only your own brands and imports count; what you resell does not. Do you know which of your products that is, per market?"
+          "body": "For the subscription price, your own brands and imports count; what you resell is registered without counting. Your obligations depend on your role for each product and market. Do you know which of your products that is?"
         },
         {
           "title": "Logistics and fulfilment",
@@ -419,9 +469,10 @@
       "cta": "See pricing"
     },
     "closing": {
-      "title": "See LIVO PPWR in a 20-minute demo.",
-      "lead": "See how you bring packaging data, supplier questions and available evidence together.",
-      "cta": "Request a demo",
+      "title": "Start with your own packaging data.",
+      "lead": "Choose a plan and start in the app. We help you with your first setup.",
+      "cta": "Choose your plan",
+      "demo": "Or request a 20-minute demo first",
       "site": "livoapps.software",
       "mail": "hello@livoapps.software"
     }
@@ -474,13 +525,15 @@
   },
   "pricing": {
     "meta": {
-      "title": "LIVO PPWR · Pricing",
-      "description": "You pay for your SKUs, not your users. From €99 a month. 15% off with annual billing. Prices exclude VAT."
+      "title": "LIVO PPWR pricing: from €99 per month",
+      "description": "Compare plans for your product range. With monthly billing, you can stop before month two. Help with your first setup is included.",
+      "descriptionStandard": "Compare plans for your product range. Monthly billing can be cancelled monthly. Help with your first setup is included."
     },
     "head": {
-      "title": "Your PPWR expert. Built for SMEs.",
-      "titleGreen": "PPWR expert",
-      "trigger": "The first question won't come from a regulator. It will come from your customer. LIVO PPWR prepares your answer.",
+      "title": "Choose a plan that fits your product range.",
+      "titleGreen": "product range",
+      "terms": "With monthly billing, your first month is paid. You can stop before month two. After that, 30 days' notice applies. Help with your first setup is included.",
+      "termsStandard": "Monthly billing can be cancelled monthly with 30 days' notice. Annual billing runs for one year and renews unless you cancel in time. Help with your first setup is included.",
       "audience": "For importers, wholesalers and brands with packaged products. From €99 a month."
     },
     "benefits": [
@@ -499,7 +552,7 @@
     ],
     "price": {
       "title": "One product. You pay for your SKUs, not your users.",
-      "line": "No surcharge per EU market or user. We discuss available features and country coverage in the demo. 15% off with annual billing. Prices exclude VAT.",
+      "line": "No surcharge per EU market or user. 15% off with annual billing. Prices exclude VAT. Questions about features or country coverage? E-mail us before you order.",
       "columns": {
         "plan": "Plan",
         "skus": "SKUs",
@@ -513,8 +566,8 @@
       "onRequest": "on request"
     },
     "counts": {
-      "title": "Only your own brands and imports count.",
-      "body": "Your plan counts the products you place on the EU market yourself. What you resell goes in too, without counting. For a wholesaler, that is often thousands of SKUs."
+      "title": "Which products count towards your plan?",
+      "body": "The subscription price counts the products you place on the EU market yourself. You can also register other products. This is a pricing rule only; your legal obligations depend on your role for each product and market."
     },
     "features": [
       {
@@ -536,18 +589,55 @@
     ],
     "anchor": "LIVO does the groundwork. You review and confirm.",
     "closing": {
-      "title": "Want to see how it works first?",
-      "start": "Request a short demo. In 20 minutes, we will show you how LIVO PPWR works with fictional data.",
-      "cta": "Request a 20-minute demo"
+      "title": "Start with your own packaging data.",
+      "start": "Choose a plan and start in the app. We help you with your first setup. No separate implementation project is needed.",
+      "cta": "Choose your plan",
+      "demo": "Want to see how it works first? Request a 20-minute demo"
     },
     "page": {
       "toggleMonthly": "Monthly",
       "toggleAnnual": "Annually · 15% off",
-      "orderPlan": "Discuss {plan}",
-      "orderSubject": "LIVO PPWR demo: {plan}",
+      "orderPlan": "Start with {plan}",
+      "orderAnnual": "Choose {plan} with annual billing",
+      "annualContact": "Discuss annual billing",
+      "orderMail": "Start with {plan}",
+      "orderSubject": "Start LIVO PPWR: {plan}",
+      "annualSubject": "LIVO PPWR annual billing: {plan}",
+      "orderBody": "Hello LIVO APPS,\n\nWe would like to start with LIVO PPWR.\n\nCompany:\nName:\nJob title:\n",
       "planLine": "Plan: {plan}",
-      "customCta": "Discuss your product range",
-      "customSubject": "LIVO PPWR demo: product range"
+      "customCta": "Ask for a tailored offer",
+      "customSubject": "LIVO PPWR custom",
+      "languageNote": "You order in the LIVO PPWR app. The order form and the order confirmation are in English; the contract documents are English with a Dutch rendering.",
+      "mailNote": "Ordering through the website is coming. Until then, we confirm your plan, term and terms and conditions by e-mail.",
+      "helpLine": "Help with your first setup is included.",
+      "plansHeading": "Plans",
+      "inApp": "in the app"
+    },
+    "start": {
+      "eyebrow": "How you start",
+      "title": "From choosing a plan to your first setup.",
+      "steps": [
+        {
+          "title": "Choose your plan",
+          "body": "Choose the plan above that fits your product range. Monthly billing is the default.",
+          "icon": "zelf-starten"
+        },
+        {
+          "title": "Order",
+          "body": "Enter your organisation's details, choose the first administrator, check the offer and the contract documents and confirm your order.",
+          "icon": "verplichtingen"
+        },
+        {
+          "title": "Confirmation and payment step",
+          "body": "You receive an order confirmation with plan, term, notice period and terms and conditions, and complete the payment step as shown in the app.",
+          "icon": "bewijsstukken"
+        },
+        {
+          "title": "Access and help with your start",
+          "body": "The first administrator receives an access link by e-mail. We then help you with your first setup using your own packaging data.",
+          "icon": "hulp-bij-start"
+        }
+      ]
     },
     "ladder": {
       "annualFactor": 0.85,

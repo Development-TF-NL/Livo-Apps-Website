@@ -1,14 +1,18 @@
-import { Mail } from 'lucide-react';
-import { mailto } from '../mailto';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
-// Tijdelijke bestelroute per e-mail (homepage v5, 1 oktober 2026): een mailto met onderwerp en voorgevulde
-// tekst uit de dictionary (nav.order), velden leeg. Geldt tot 1 november 2026 en vervalt zodra het bestelproces
-// op de website staat. Eén component, zodat de route op één plek weg kan.
-export default function OrderButton({ t, className = '', onClick }) {
+// De bestelknop (29 oktober 2026): geen mailto meer, maar de link naar de planselectie op de prijspagina
+// (nav.order.cta). Als de prijspagina achter de poort zit, naar het prijsblok op de homepage. Eén component,
+// zodat de bestemming op één plek staat: kopbalk, mobiel menu, prijsblok, startsectie en slot.
+export function pricingHref(lang, pricingEnabled = process.env.PRICING_PAGE_ENABLED === 'true', hash = '') {
+  return pricingEnabled ? `/${lang}/pricing${hash}` : `/${lang}#pricing`;
+}
+
+export default function OrderButton({ lang, t, className = '', onClick, pricingEnabled, label, hash = '' }) {
   return (
-    <a href={mailto(t.mailSubject, t.mailBody)} onClick={onClick} className={className}>
-      <Mail size={18} aria-hidden="true" />
-      {t.cta}
-    </a>
+    <Link href={pricingHref(lang, pricingEnabled, hash)} onClick={onClick} className={className}>
+      {label ?? t.cta}
+      <ArrowRight size={18} aria-hidden="true" />
+    </Link>
   );
 }

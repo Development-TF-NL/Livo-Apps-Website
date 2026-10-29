@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
   const { title, description } = article[params.lang].meta;
   const languages = Object.fromEntries(i18n.locales.map((l) => [l, articlePath(article, l)]));
   languages['x-default'] = articlePath(article, i18n.defaultLocale);
-  return { title, description, alternates: { canonical: articlePath(article, params.lang), languages }, ...socialMetadata({ title, description, lang: params.lang }) };
+  return { title, description, alternates: { canonical: articlePath(article, params.lang), languages }, ...socialMetadata({ title, description, lang: params.lang, path: articlePath(article, params.lang) }) };
 }
 
 export default async function KennisPage({ params }) {

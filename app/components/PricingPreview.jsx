@@ -1,11 +1,9 @@
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import OrderButton from './OrderButton';
 import { Section, Eyebrow, h2, btnPrimary, textLink, promoPanel } from './ui';
 
-// Prijs op de homepage (M2, 12 oktober 2026): de vanafprijs zonder implementatiekosten als kop, de prijsregel(s) uit de
-// dictionary, de demoaanvraag (mailto) en een kleine tekstlink ernaast. De tekstlink wijst naar /[lang]/pricing alleen als
-// PRICING_PAGE_ENABLED aan staat; anders is het een contactlink. Geen dode links. Het mintpaneel staat op wit en draagt geen schaduw.
+// Prijs op de homepage (M2, 12 oktober 2026; kooproute 29 oktober 2026): de vanafprijs zonder implementatiekosten als kop,
+// de prijsregel(s) uit de dictionary en één knop naar de planselectie op de prijspagina (OrderButton). Zit de prijspagina
+// achter de poort, dan wijst de knop naar dit blok en staat er een contactlink. Geen mailto als hoofdactie, geen dode links.
 // Bedragen, ladder en poort staan niet in dit bestand (bron: copy/pricing.json en de prijspagina).
 export default function PricingPreview({ lang, t, order, pricingEnabled }) {
   return (
@@ -23,11 +21,10 @@ export default function PricingPreview({ lang, t, order, pricingEnabled }) {
             ))}
           </ul>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2">
-            <OrderButton t={order} className={btnPrimary} />
             {pricingEnabled ? (
-              <Link href={`/${lang}/pricing`} className={`${textLink} text-sm`}>{t.ctaPricing} <ArrowRight size={16} aria-hidden="true" /></Link>
+              <OrderButton lang={lang} t={order} pricingEnabled={pricingEnabled} hash="#plans" className={btnPrimary} />
             ) : (
-              <a href="mailto:hello@livoapps.software?subject=LIVO%20PPWR%20pricing" className={`${textLink} text-sm`}>{t.ctaAsk} <ArrowRight size={16} aria-hidden="true" /></a>
+              <a href="mailto:hello@livoapps.software?subject=LIVO%20PPWR%20pricing" className={`${textLink} text-sm`}>{t.ctaAsk}</a>
             )}
           </div>
         </div>

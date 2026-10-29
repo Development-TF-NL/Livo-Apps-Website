@@ -2,6 +2,7 @@
   "nav": {
     "how": "Hoe het werkt",
     "pricing": "Prijzen",
+    "kennis": "Kennis",
     "about": "Over LIVO APPS",
     "login": "Inloggen",
     "loginMenuTitle": "Jouw LIVO-apps",
@@ -14,25 +15,29 @@
     "menuOpen": "Menu openen",
     "menuClose": "Menu sluiten",
     "order": {
-      "cta": "Vraag een demo aan",
-      "mailSubject": "LIVO PPWR demo",
-      "mailBody": "Hallo LIVO APPS,\n\nIk wil graag kennismaken met LIVO PPWR in een demo van 20 minuten. Kunnen jullie een moment voorstellen?\n\nBedrijf (optioneel):\nMijn vraag (optioneel):\n"
+      "cta": "Kies je abonnement"
+    },
+    "demo": {
+      "cta": "Vraag een demo aan"
     }
   },
   "home": {
     "meta": {
-      "title": "LIVO PPWR · Jouw PPWR-expert. Gemaakt voor het mkb.",
-      "description": "Jouw PPWR-expert. Gemaakt voor het mkb. Voor importeurs, groothandels en merken met verpakte producten: LIVO laat zien wat ontbreekt en zet de leveranciersuitvraag en het klantbestand klaar. Vanaf €99 per maand, exclusief btw."
+      "title": "LIVO PPWR voor het mkb: grip op verpakkingsdata",
+      "description": "Breng verpakkingsgegevens en bewijs bij elkaar. Zie wat ontbreekt, bereid leveranciersvragen voor en maak een klantbestand. Vanaf €99 per maand."
     },
     "hero": {
       "eyebrow": "LIVO PPWR",
-      "title": "Jouw PPWR-expert. Gemaakt voor het mkb.",
-      "titleGreen": "PPWR-expert",
-      "lead": "Je klant vraagt om verpakkingsdata. LIVO laat zien wat ontbreekt en zet de leveranciersuitvraag en het klantbestand klaar. Jij verstuurt de uitvraag, beoordeelt de reactie en bepaalt wat je deelt.",
-      "audience": "Voor importeurs, groothandels en merken met verpakte producten.",
-      "ctaDemo": "Vraag een demo aan",
+      "audience": "Voor importeurs, groothandels en merken in het mkb.",
+      "title": "Stop met verdrinken in de complexe Europese verpakkingsregelgeving!",
+      "titleGreen": "Europese",
+      "lead": "Je klant vraagt om verpakkingsgegevens. LIVO PPWR laat zien welke gegevens en bewijsstukken ontbreken, helpt je gerichte vragen aan leveranciers klaar te zetten en maakt een klantbestand voor je klaar. Jij beoordeelt de antwoorden en kiest wat je deelt.",
+      "ctaPrimary": "Probeer LIVO PPWR een maand",
+      "ctaPlans": "Kies je abonnement",
       "ctaHow": "Bekijk hoe het werkt",
-      "priceLine": "Vanaf €99 per maand, exclusief btw. Geen implementatiekosten.",
+      "priceLine": "Vanaf €99 per maand, exclusief btw.",
+      "monthOfferLine": "Bij maandbetaling is de eerste maand betaald. Stop vóór maand twee als het niet past.",
+      "helpLine": "Hulp bij de start is inbegrepen.",
       "visual": {
         "label": "Illustratie",
         "register": {
@@ -71,40 +76,78 @@
               "next": "Confirm level"
             }
           ]
-        },
-        "example": {
-          "tenant": "example-tenant",
-          "tabs": [
-            "Overview",
-            "Obligations",
-            "Register",
-            "Suppliers"
-          ],
-          "title": "Packaging register",
-          "action": "Upload data",
-          "rows": [
-            {
-              "name": "VH-2001 Decoratieve vaas · verpakking",
-              "status": "Needs data",
-              "tone": "warning",
-              "next": "Ask supplier"
-            }
-          ]
         }
       }
     },
     "example": {
-      "title": "Eén artikel. Van Excel naar klantbestand.",
-      "intro": "Een fictief voorbeeld met een decoratieve vaas. Zo loopt één vraag door LIVO PPWR.",
+      "title": "Van klantvraag naar een bruikbaar antwoord.",
+      "intro": "Geen stapel losse bestanden om zelf te ontcijferen. Zie in één productvoorbeeld wat LIVO klaarzet en wat jij beslist.",
       "steps": [
-        "Je importeert je Excel. LIVO stelt de kolomkoppeling voor; jij bevestigt.",
-        "LIVO toont wat ontbreekt: het gewicht van een verpakkingsonderdeel en een testrapport.",
-        "LIVO zet een voorgevulde leveranciersuitvraag klaar. Jij verstuurt die.",
-        "De leverancier vult 45 gram in. Jij controleert de reactie. Het rapport is nog aangevraagd.",
-        "Je exporteert de selectie voor je klant. Het ontbrekende rapport blijft zichtbaar."
+        {
+          "title": "Importeer je bestaande gegevens.",
+          "body": "Je importeert je Excel. LIVO stelt de kolomkoppeling voor; jij bevestigt.",
+          "icon": "excel-import"
+        },
+        {
+          "title": "Zie wat nog ontbreekt.",
+          "body": "LIVO toont wat ontbreekt: het gewicht van een verpakkingsonderdeel en een testrapport.",
+          "icon": "open-punten"
+        },
+        {
+          "title": "Stel een gerichte leveranciersvraag op.",
+          "body": "LIVO zet een voorgevulde leveranciersuitvraag klaar. Jij verstuurt die.",
+          "icon": "leveranciersuitvraag"
+        },
+        {
+          "title": "Beoordeel het antwoord.",
+          "body": "De leverancier vult 45 gram in. Jij controleert de reactie. Het rapport is nog aangevraagd.",
+          "icon": "beoordelen"
+        },
+        {
+          "title": "Maak het klantbestand klaar.",
+          "body": "Je exporteert de selectie voor je klant. Het ontbrekende rapport blijft zichtbaar.",
+          "icon": "klantbestand"
+        }
       ],
+      "responsibility": "LIVO houdt gegevens en bewijs bij elkaar en maakt het werk overzichtelijk. Je verstuurt leveranciersvragen zelf, controleert reacties en bepaalt wat je met je klant deelt.",
       "caption": "Fictieve demogegevens. Een aangevraagd rapport is nog geen bewijs.",
-      "cta": "Bekijk LIVO PPWR"
+      "cta": "Bekijk LIVO PPWR",
+      "path": {
+        "label": "Illustratie met fictieve gegevens",
+        "product": "VH-2001 Decoratieve vaas · verpakking",
+        "rows": [
+          {
+            "title": "Import",
+            "detail": "producten.xlsx · kolomkoppeling door jou bevestigd",
+            "status": "Geïmporteerd",
+            "tone": "success"
+          },
+          {
+            "title": "Open punten",
+            "detail": "Hangtag: gewicht ontbreekt · testrapport ontbreekt",
+            "status": "2 open punten",
+            "tone": "warning"
+          },
+          {
+            "title": "Leveranciersvraag",
+            "detail": "Voorgevulde uitvraag klaar · jij verstuurt",
+            "status": "Klaar om te versturen",
+            "tone": "info"
+          },
+          {
+            "title": "Beoordelen",
+            "detail": "Antwoord: hangtag 45 g · rapport aangevraagd",
+            "status": "Voorstel",
+            "tone": "info"
+          },
+          {
+            "title": "Klantbestand",
+            "detail": "Selectie voor je klant · Excel · open punt zichtbaar",
+            "status": "Klaargezet",
+            "tone": "success"
+          }
+        ]
+      }
     },
     "roles": {
       "title": "Wat neemt LIVO over?",
@@ -134,23 +177,26 @@
     },
     "start": {
       "eyebrow": "Starten met LIVO PPWR",
-      "title": "Bekijk hoe LIVO PPWR bij je werk past.",
-      "hand": "Begin met je klantvraag",
+      "title": "Zelf starten, met hulp bij de eerste inrichting.",
+      "hand": "Geen implementatietraject",
       "steps": [
         {
-          "title": "Vraag een demo aan",
-          "body": "Laat weten dat je wilt kennismaken. We spreken samen een moment af."
+          "title": "Kies je abonnement",
+          "body": "Kies op de prijspagina het plan dat bij je assortiment past. Maandbetaling is de standaard; jaarbetaling en maatwerk bespreek je met ons.",
+          "icon": "zelf-starten"
         },
         {
-          "title": "Bespreek je werkwijze",
-          "body": "We bekijken hoe je verpakkingsdata verzamelt en waar vragen blijven liggen."
+          "title": "Bestel en ontvang je bevestiging",
+          "body": "Je bevestigt je bestelling en ontvangt een orderbevestiging met plan, termijn en voorwaarden. De eerste beheerder krijgt toegang tot de app.",
+          "icon": "verplichtingen"
         },
         {
-          "title": "Spreek een vervolgstap af",
-          "body": "We bespreken de beschikbare functies, je assortiment en een passende start."
+          "title": "Hulp bij de eerste inrichting",
+          "body": "We helpen je bij de eerste inrichting met je eigen verpakkingsgegevens. Dat is bij elk abonnement inbegrepen.",
+          "icon": "hulp-bij-start"
         }
       ],
-      "note": "Een demoaanvraag is geen bestelling.",
+      "note": "Liever eerst zien hoe het werkt?",
       "customer": "Al klant?",
       "login": "Inloggen"
     },
@@ -186,9 +232,9 @@
       ]
     },
     "finalCta": {
-      "title": "Bekijk hoe LIVO PPWR werkt",
-      "lead": "Zie hoe je verpakkingsgegevens ordent, ontbrekende informatie vindt en weet wat de volgende stap is.",
-      "cta": "Bekijk het voorbeeld"
+      "title": "Begin met je eigen verpakkingsgegevens.",
+      "lead": "Kies een abonnement en start in de app. We helpen je bij de eerste inrichting. Je hebt geen apart implementatietraject nodig.",
+      "cta": "Kies je abonnement"
     },
     "footer": {
       "tagline": "Software die je werk lichter maakt.",
@@ -213,6 +259,10 @@
         "resources": {
           "title": "HULPMIDDELEN",
           "items": [
+            {
+              "label": "Kennis",
+              "href": "/kennis"
+            },
             {
               "label": "PPWR-whitepaper",
               "href": "/whitepaper"
@@ -249,8 +299,8 @@
   },
   "ppwr": {
     "meta": {
-      "title": "LIVO PPWR · Software voor verpakkingscompliance, voor wie het werk doet",
-      "description": "PPWR is één verordening. Het werk erachter vermenigvuldigt snel. LIVO PPWR houdt verpakkingsdata, verplichtingen, bewijs en leveranciersinput bij elkaar en actueel."
+      "title": "PPWR-software voor importeurs en groothandels · LIVO",
+      "description": "Bekijk hoe LIVO PPWR helpt bij import, ontbrekende gegevens, leveranciersvragen en klantbestanden. Met een concreet productvoorbeeld."
     },
     "breadcrumb": [
       "LIVO APPS",
@@ -406,7 +456,7 @@
         },
         {
           "title": "Groothandel en distributeurs",
-          "body": "Alleen je eigen merken en import tellen; wat je doorverkoopt niet. Weet je welke van je producten dat zijn, per markt?"
+          "body": "Voor de abonnementsprijs tellen je eigen merken en import; wat je doorverkoopt registreer je zonder dat het meetelt. Welke verplichtingen je hebt, hangt af van je rol per product en markt. Weet je welke van je producten dat zijn?"
         },
         {
           "title": "Logistiek en fulfilment",
@@ -419,9 +469,10 @@
       "cta": "Bekijk de prijzen"
     },
     "closing": {
-      "title": "Zie LIVO PPWR in een demo van 20 minuten.",
-      "lead": "Bekijk hoe je verpakkingsdata, leveranciersvragen en beschikbaar bewijs bij elkaar brengt.",
-      "cta": "Vraag een demo aan",
+      "title": "Begin met je eigen verpakkingsgegevens.",
+      "lead": "Kies een abonnement en start in de app. We helpen je bij de eerste inrichting.",
+      "cta": "Kies je abonnement",
+      "demo": "Of vraag eerst een demo van 20 minuten aan",
       "site": "livoapps.software",
       "mail": "hello@livoapps.software"
     }
@@ -474,13 +525,15 @@
   },
   "pricing": {
     "meta": {
-      "title": "LIVO PPWR · Prijzen",
-      "description": "Je betaalt voor je SKU's, niet voor je gebruikers. Vanaf €99 per maand. 15% korting bij jaarbetaling. Prijzen exclusief btw."
+      "title": "LIVO PPWR prijzen: vanaf €99 per maand",
+      "description": "Vergelijk abonnementen op basis van je assortiment. Bij maandbetaling kun je vóór maand twee stoppen. Hulp bij de eerste inrichting is inbegrepen.",
+      "descriptionStandard": "Vergelijk abonnementen op basis van je assortiment. Maandbetaling is maandelijks opzegbaar. Hulp bij de eerste inrichting is inbegrepen."
     },
     "head": {
-      "title": "Jouw PPWR-expert. Gemaakt voor het mkb.",
-      "titleGreen": "PPWR-expert",
-      "trigger": "De eerste vraag komt niet van de toezichthouder. Hij komt van je klant. LIVO PPWR zet je antwoord klaar.",
+      "title": "Kies een plan dat bij je assortiment past.",
+      "titleGreen": "assortiment",
+      "terms": "Bij maandbetaling is je eerste maand betaald. Je kunt vóór maand twee stoppen. Daarna geldt een opzegtermijn van 30 dagen. Hulp bij de eerste inrichting is inbegrepen.",
+      "termsStandard": "Maandbetaling is maandelijks opzegbaar met een opzegtermijn van 30 dagen. Jaarbetaling loopt een jaar en verlengt als je niet tijdig opzegt. Hulp bij de eerste inrichting is inbegrepen.",
       "audience": "Voor importeurs, groothandels en merken met verpakte producten. Vanaf €99 per maand."
     },
     "benefits": [
@@ -499,7 +552,7 @@
     ],
     "price": {
       "title": "Eén product. Je betaalt voor je SKU's, niet voor je gebruikers.",
-      "line": "Geen toeslag per EU-markt of gebruiker. Beschikbare functies en landendekking bespreken we in de demo. 15% korting bij jaarbetaling. Prijzen exclusief btw.",
+      "line": "Geen toeslag per EU-markt of gebruiker. 15% korting bij jaarbetaling. Prijzen exclusief btw. Vragen over functies of landendekking? Mail ons vóór je bestelt.",
       "columns": {
         "plan": "Plan",
         "skus": "SKU's",
@@ -513,8 +566,8 @@
       "onRequest": "op aanvraag"
     },
     "counts": {
-      "title": "Alleen je eigen merken en import tellen.",
-      "body": "Je plan telt de producten die je zelf op de EU-markt brengt. Wat je doorverkoopt, zet je erbij zonder dat het meetelt. Voor een groothandel zijn dat vaak duizenden SKU's."
+      "title": "Welke producten tellen mee voor je abonnement?",
+      "body": "Voor de abonnementsprijs tellen de producten die je zelf op de EU-markt brengt. Andere producten kun je ook registreren. Dit is alleen een prijsregel; je wettelijke verplichtingen hangen af van je rol per product en markt."
     },
     "features": [
       {
@@ -536,18 +589,55 @@
     ],
     "anchor": "LIVO zoekt uit en zet klaar. Jij beoordeelt en bevestigt.",
     "closing": {
-      "title": "Eerst zien hoe het werkt?",
-      "start": "Vraag een korte demo aan. In 20 minuten laten we je met fictieve gegevens zien hoe LIVO PPWR werkt.",
-      "cta": "Vraag een demo van 20 minuten aan"
+      "title": "Begin met je eigen verpakkingsgegevens.",
+      "start": "Kies een abonnement en start in de app. We helpen je bij de eerste inrichting. Je hebt geen apart implementatietraject nodig.",
+      "cta": "Kies je abonnement",
+      "demo": "Eerst zien hoe het werkt? Vraag een demo van 20 minuten aan"
     },
     "page": {
       "toggleMonthly": "Maandelijks",
       "toggleAnnual": "Jaarlijks · 15% korting",
-      "orderPlan": "Bespreek {plan}",
-      "orderSubject": "LIVO PPWR demo: {plan}",
+      "orderPlan": "Start met {plan}",
+      "orderAnnual": "Kies {plan} met jaarbetaling",
+      "annualContact": "Bespreek jaarbetaling",
+      "orderMail": "Start met {plan}",
+      "orderSubject": "LIVO PPWR starten: {plan}",
+      "annualSubject": "LIVO PPWR jaarbetaling: {plan}",
+      "orderBody": "Hallo LIVO APPS,\n\nWij willen starten met LIVO PPWR.\n\nBedrijf:\nNaam:\nFunctie:\n",
       "planLine": "Plan: {plan}",
-      "customCta": "Bespreek je assortiment",
-      "customSubject": "LIVO PPWR demo: assortiment"
+      "customCta": "Vraag een passend aanbod",
+      "customSubject": "LIVO PPWR maatwerk",
+      "languageNote": "Je bestelt in de app LIVO PPWR. Het bestelformulier en de orderbevestiging zijn in het Engels; de contractdocumenten zijn Engels met een Nederlandse weergave.",
+      "mailNote": "Bestellen via de website volgt. Tot die tijd bevestigen we je plan, de termijn en de voorwaarden per e-mail.",
+      "helpLine": "Hulp bij de eerste inrichting is inbegrepen.",
+      "plansHeading": "Plannen",
+      "inApp": "in de app"
+    },
+    "start": {
+      "eyebrow": "Zo start je",
+      "title": "Van plan kiezen tot de eerste inrichting.",
+      "steps": [
+        {
+          "title": "Kies je plan",
+          "body": "Kies hierboven het plan dat bij je assortiment past. Maandbetaling is de standaard.",
+          "icon": "zelf-starten"
+        },
+        {
+          "title": "Bestel",
+          "body": "Vul de gegevens van je organisatie in, kies de eerste beheerder, controleer het aanbod en de contractdocumenten en bevestig je bestelling.",
+          "icon": "verplichtingen"
+        },
+        {
+          "title": "Bevestiging en betaalstap",
+          "body": "Je ontvangt een orderbevestiging met plan, termijn, opzegtermijn en voorwaarden en rondt de betaalstap af zoals de app die toont.",
+          "icon": "bewijsstukken"
+        },
+        {
+          "title": "Toegang en hulp bij de start",
+          "body": "De eerste beheerder krijgt een toegangslink per e-mail. Daarna helpen we je bij de eerste inrichting met je eigen verpakkingsgegevens.",
+          "icon": "hulp-bij-start"
+        }
+      ]
     },
     "ladder": {
       "annualFactor": 0.85,

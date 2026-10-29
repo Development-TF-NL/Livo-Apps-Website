@@ -1,27 +1,30 @@
 import Link from 'next/link';
-import { ArrowRight, Mail } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { getDictionary } from '../get-dictionary';
-import { mailto } from '../mailto';
 import { languageAlternates, socialMetadata } from '../seo';
 import Footer from '../components/Footer';
 import PhotoPlace from '../components/PhotoPlace';
-import RegisterFragment from '../components/RegisterFragment';
+import ProductPath from '../components/ProductPath';
+import ProcessSteps from '../components/ProcessSteps';
 import PricingPreview from '../components/PricingPreview';
 import OnlineSignupSection from '../components/OnlineSignupSection';
 import LightClosingBand from '../components/LightClosingBand';
-import { Section, Eyebrow, GreenTitle, h1, h2, lead, cardBody, btnPrimary, btnSecondary, textLink, heroPanel, cardOnCanvas, cardOnWhite } from '../components/ui';
+import OrderButton, { pricingHref } from '../components/OrderButton';
+import { Section, Eyebrow, GreenTitle, Callout, h1, h2, lead, cardBody, btnPrimary, btnPrimaryWrap, btnSecondary, textLink, heroPanel, cardOnCanvas } from '../components/ui';
 
-// Homepage M2 (12 oktober 2026, pakket M2_WEBSITE_MKB_2026-10-10; hoofdkop vastgesteld door de eigenaar). Volgorde: hero met de
-// prijsregel, één doorlopend fictief artikelvoorbeeld (#how, VH-2001 uit het demonstratiedossier), de taakverdeling, prijs (#pricing),
-// start met demoaanvraag en zichtbaar e-mailadres (#start), over LIVO APPS (#about, alleen de aanleiding), licht slot naar het voorbeeld (M2-nazorg 13 oktober), footer.
-// De klantvraagsectie, de drie voordeelkaarten en de tweede identieke registerillustratie zijn vervallen; de productpagina draagt de
-// diepere uitleg. Copy uit de dictionaries (bron: docs/marketing/website/copy/home.json en nav.json in de product-repo). De vorm komt
-// uit de gedeelde bouwstenen in components/ui.jsx. Beeld: in de hero één product in het Register-fragment (fictieve data, als
-// illustratie gelabeld) tot er een gecontroleerde productopname is; de doos linksonder in de hero en het plantje bij Over LIVO APPS
-// komen uit de tussentijdse set in docs/huisstijl/beeld/. Eén hoofdactie per sectie.
+// Homepage op de kooproute (29 oktober 2026, brief CLAUDE_BRIEF §2 en §3; hoofdkop vastgesteld door de eigenaar). Volgorde: hero met
+// de doelgroepregel, de kop, de lead, één primaire knop naar de planselectie op de prijspagina, de tekstlink naar het proces en de
+// transparantieregel; rechts het productpad als groot, leesbaar beeld (fictieve gegevens, in de taal van de pagina, zonder tenantlabel).
+// Dan het proces (#how): vijf stappen met de marketingiconen v2 en de uitleg over de verantwoordelijkheid, de taakverdeling, prijs
+// (#pricing), start (#start: zelf starten en hulp bij de eerste inrichting), over LIVO APPS (#about), het lichte slot naar de prijzen, footer.
+// De demo blijft als tekstlink in de startsectie (geen verplichte toegang tot kopen). Copy uit de dictionaries (bron:
+// docs/marketing/website/copy/home.json en nav.json in de product-repo). De vorm komt uit de gedeelde bouwstenen in components/ui.jsx.
+// De maandactie (ctaPrimary en monthOfferLine) staat achter MONTH_OFFER_ENABLED (brief §4): zonder poort de knop ctaPlans en de
+// transparantieregel zonder de eerste-maandzin. De doos linksonder in de hero en het plantje bij Over LIVO APPS komen uit de tussentijdse set.
 
 const BOX = '/brand/photo/box.png'; // doos, primair (hero); bron docs/huisstijl/beeld/doos.png, licht van linksboven
 const SEEDLING = '/brand/photo/seedling.png'; // plantje, op één plek: de sectie Over LIVO APPS; bron docs/huisstijl/beeld/plantje.png
+const monthOfferEnabled = () => process.env.MONTH_OFFER_ENABLED === 'true';
 
 export async function generateMetadata({ params }) {
   const dict = await getDictionary(params.lang);
@@ -30,7 +33,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     alternates: { canonical: `/${params.lang}`, languages: languageAlternates() },
-    ...socialMetadata({ title, description, lang: params.lang }),
+    ...socialMetadata({ title, description, lang: params.lang, path: `/${params.lang}` }),
   };
 }
 
@@ -39,33 +42,34 @@ export default async function LivoAppsWebsite({ params }) {
   const dict = await getDictionary(lang);
   const t = dict.home;
   const order = dict.nav.order;
-  // De demomail (onderwerp en voorgevulde tekst) is dezelfde als op de productpagina: één bron, ppwr.hero.
-  const demo = mailto(dict.ppwr.hero.demoSubject, dict.ppwr.hero.demoBody);
   const pricingEnabled = process.env.PRICING_PAGE_ENABLED === 'true';
+  const monthOffer = monthOfferEnabled();
+  const transparency = [t.hero.priceLine, monthOffer ? t.hero.monthOfferLine : null, t.hero.helpLine].filter(Boolean).join(' ');
 
   return (
     <div className="font-sans text-ink">
-      {/* 1. Hero: bovenregel, doelgroep, kop, lead, één primaire knop (demo), één tekstlink, de prijsregel; het beeld erna (op smal eronder) */}
+      {/* 1. Hero: bovenregel, doelgroep, kop, lead, één primaire knop (naar de prijzen), één tekstlink, de transparantieregel; het productpad ernaast (op smal eronder) */}
       <Section tone="canvas" hero>
-        <div className={`relative overflow-hidden ${heroPanel} p-6 pb-48 sm:p-8 md:p-12 md:pb-60`}>
-          {/* min-w-0 op de kolommen: anders bepaalt de min-content van het registerfragment de kolombreedte en loopt de tekst op 390 px de kaart uit. */}
-          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+        <div className={`relative overflow-hidden ${heroPanel} p-6 pb-44 sm:p-8 md:p-12 md:pb-56`}>
+          {/* min-w-0 op de kolommen: anders bepaalt de min-content van het productpad de kolombreedte en loopt de tekst op 390 px de kaart uit. */}
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
             <div className="min-w-0">
               <Eyebrow>{t.hero.eyebrow}</Eyebrow>
               <p className="mb-3 text-sm font-semibold text-ink-blue">{t.hero.audience}</p>
-              <h1 lang={lang} className={`${h1} lg:text-[2.75rem] xl:text-[3.1rem]`}>
+              {/* "verpakkingsregelgeving" past op 360 px niet op één regel: op smal afbreken met een afbreekstreepje (hyphens: auto, taal uit lang)
+                  en als vangnet overal afbreekbaar; vanaf 640 px alleen handmatige afbreking. Onder 375 px een maat kleiner. */}
+              <h1 lang={lang} className={`${h1} max-[374px]:text-[2rem] max-sm:[hyphens:auto] max-sm:[overflow-wrap:anywhere] lg:text-[2.6rem] xl:text-[3rem]`}>
                 <GreenTitle title={t.hero.title} green={t.hero.titleGreen} />
               </h1>
               <p className={`mt-6 max-w-lg ${lead}`}>{t.hero.lead}</p>
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-                <a href={demo} className={btnPrimary}><Mail size={18} aria-hidden="true" />{t.hero.ctaDemo}</a>
+                <OrderButton lang={lang} t={order} pricingEnabled={pricingEnabled} hash="#plans" label={monthOffer ? t.hero.ctaPrimary : t.hero.ctaPlans} className={btnPrimaryWrap} />
                 <Link href={`/${lang}#how`} className={textLink}>{t.hero.ctaHow} <ArrowRight size={16} aria-hidden="true" /></Link>
               </div>
-              <p className="mt-4 text-sm font-medium text-ink">{t.hero.priceLine}</p>
+              <p className="mt-4 max-w-lg text-sm font-medium text-ink">{transparency}</p>
             </div>
             <div className="min-w-0">
-              <RegisterFragment t={t.hero.visual.example} compact />
-              <p className="mt-3 text-right text-xs text-sub">{t.hero.visual.label}</p>
+              <ProductPath t={t.example.path} />
             </div>
           </div>
           {/* De doos steekt uit de hoek linksonder van het heropaneel, deels afgesneden door de rand (overflow-hidden). */}
@@ -73,26 +77,18 @@ export default async function LivoAppsWebsite({ params }) {
         </div>
       </Section>
 
-      {/* 2. Eén artikel van import tot klantbestand (#how): vijf genummerde stappen, het bijschrift en één link naar de productpagina */}
+      {/* 2. Het proces (#how): kop, intro, vijf stappen met iconen, de uitleg over de verantwoordelijkheid en één link naar de productpagina */}
       <Section id="how">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <h2 className={h2}>{t.example.title}</h2>
-            <p className={`mt-5 ${lead}`}>{t.example.intro}</p>
-            <Link href={`/${lang}/ppwr`} className={`mt-8 ${btnSecondary}`}>{t.example.cta} <ArrowRight size={18} aria-hidden="true" /></Link>
-          </div>
-          <div className="min-w-0">
-            <ol className="space-y-4">
-              {t.example.steps.map((step, i) => (
-                <li key={step} className={`flex items-start gap-4 ${cardOnWhite} p-5`}>
-                  <span aria-hidden="true" className="mt-0.5 inline-flex h-8 w-8 flex-none items-center justify-center rounded-full bg-mint font-display text-sm font-bold text-green-text">{i + 1}</span>
-                  <p className="text-lg leading-snug text-ink">{step}</p>
-                </li>
-              ))}
-            </ol>
-            <p className="mt-4 text-sm text-sub">{t.example.caption}</p>
-          </div>
+        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+          <h2 className={h2}>{t.example.title}</h2>
+          <p className={lead}>{t.example.intro}</p>
         </div>
+        <ProcessSteps steps={t.example.steps} className="mt-12" />
+        <p className="mt-4 text-sm text-sub">{t.example.caption}</p>
+        <Callout as="div" className="mt-8">
+          <p className="max-w-4xl text-body text-ink">{t.example.responsibility}</p>
+        </Callout>
+        <Link href={`/${lang}/ppwr`} className={`mt-8 ${btnSecondary}`}>{t.example.cta} <ArrowRight size={18} aria-hidden="true" /></Link>
       </Section>
 
       {/* 3. Wat neemt LIVO over: drie kaarten (automatisch zichtbaar, klaargezet, jouw beslissing), geen knop */}
@@ -109,7 +105,7 @@ export default async function LivoAppsWebsite({ params }) {
       </Section>
 
       <PricingPreview lang={lang} t={t.pricing} order={order} pricingEnabled={pricingEnabled} />
-      <OnlineSignupSection t={t.start} order={order} />
+      <OnlineSignupSection lang={lang} t={t.start} order={order} demo={dict.ppwr.hero} demoLabel={dict.nav.demo.cta} pricingEnabled={pricingEnabled} />
 
       {/* 6. Over LIVO APPS: alleen de aanleiding, de door de eigenaar goedgekeurde tekst in drie alinea's (EUDR als module in ontwikkeling);
           geen naam, foto of biografie. Het plantje als randaccent rechtsonder, alleen vanaf 1024 px. */}
@@ -126,9 +122,9 @@ export default async function LivoAppsWebsite({ params }) {
         </div>
       </Section>
 
-      {/* 7. Slot (M2-nazorg): licht mintpaneel met de uitnodiging om het voorbeeld te bekijken; de knop wijst naar #how en opent geen mail. */}
+      {/* 7. Slot: licht mintpaneel met de uitnodiging om met eigen gegevens te beginnen; de knop wijst naar de planselectie en opent geen mail. */}
       <LightClosingBand tone="mint" title={t.finalCta.title} lead={t.finalCta.lead}>
-        <Link href={`/${lang}#how`} className={btnPrimary}>{t.finalCta.cta} <ArrowRight size={18} aria-hidden="true" /></Link>
+        <Link href={pricingHref(lang, pricingEnabled, '#plans')} className={btnPrimary}>{t.finalCta.cta} <ArrowRight size={18} aria-hidden="true" /></Link>
       </LightClosingBand>
 
       <Footer lang={lang} dict={t.footer} />

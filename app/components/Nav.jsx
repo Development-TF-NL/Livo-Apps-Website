@@ -7,12 +7,12 @@ import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
 import ProductLoginMenu from './ProductLoginMenu';
 import OrderButton from './OrderButton';
-import { ARTICLES } from '../content/kennis';
+import { ARTICLES, KENNIS_INDEX } from '../content/kennis';
 
-// Header volgens homepage v5 (1 oktober 2026): drie menulinks (How it works, Pricing, About LIVO APPS),
-// taalwissel, Log in (menu) en de tijdelijke bestelknop (mailto, tot 1 november 2026).
-// Geen dode links: de drie links zijn ankers op de homepage (Prijzen wijst naar /pricing zodra de poort
-// open is); de productpagina en de whitepaper staan lager op de pagina en in de footer.
+// Header (kooproute 29 oktober 2026): vier menulinks (Hoe het werkt, Prijzen, Kennis, Over LIVO APPS),
+// taalwissel, Log in (menu) en de knop naar de planselectie op de prijspagina (OrderButton, geen mailto).
+// Geen dode links: Prijzen wijst naar /pricing zodra de poort open is, anders naar het prijsblok op de homepage;
+// Kennis wijst naar de kennisingang van de taal; de productpagina en de whitepaper staan in de footer.
 
 // De focusrand komt van de klasse focus-ring (globals.css); rounded geeft de rand afgeronde hoeken.
 const focusRing = 'focus-ring rounded';
@@ -33,6 +33,7 @@ export default function Nav({ lang, dict, pricingEnabled = false }) {
   const switchPath = (locale) => {
     const article = ARTICLES.find((a) => a.path[lang] === pathname);
     if (article) return article.path[locale];
+    if (pathname === KENNIS_INDEX[lang]) return KENNIS_INDEX[locale];
     return `/${locale}${pathname.replace(new RegExp(`^/${lang}(?=/|$)`), '')}`;
   };
 
@@ -42,6 +43,7 @@ export default function Nav({ lang, dict, pricingEnabled = false }) {
     { label: dict.how, href: `/${lang}#how` },
     // Poort open (PRICING_PAGE_ENABLED): naar de prijspagina; dicht: naar het prijsblok op de homepage.
     { label: dict.pricing, href: pricingEnabled ? `/${lang}/pricing` : `/${lang}#pricing` },
+    { label: dict.kennis, href: KENNIS_INDEX[lang] },
     { label: dict.about, href: `/${lang}#about` },
   ];
 
@@ -85,7 +87,7 @@ export default function Nav({ lang, dict, pricingEnabled = false }) {
         <div className="hidden items-center gap-4 lg:flex">
           {langSwitch}
           <ProductLoginMenu dict={dict} />
-          <OrderButton t={dict.order} className={`inline-flex h-11 items-center gap-2 rounded-control bg-accent px-5 text-sm font-semibold text-ink transition-colors duration-150 hover:bg-accent-dark ${focusRing}`} />
+          <OrderButton lang={lang} t={dict.order} pricingEnabled={pricingEnabled} hash="#plans" className={`inline-flex h-11 items-center gap-2 rounded-control bg-accent px-5 text-sm font-semibold text-ink transition-colors duration-150 hover:bg-accent-dark ${focusRing}`} />
         </div>
 
         <button
@@ -115,7 +117,7 @@ export default function Nav({ lang, dict, pricingEnabled = false }) {
             <ProductLoginMenu dict={dict} mobile />
             {langSwitch}
           </div>
-          <OrderButton t={dict.order} onClick={close} className={`mt-4 flex h-12 items-center justify-center gap-2 rounded-control bg-accent px-5 text-sm font-semibold text-ink transition-colors duration-150 hover:bg-accent-dark ${focusRing}`} />
+          <OrderButton lang={lang} t={dict.order} pricingEnabled={pricingEnabled} hash="#plans" onClick={close} className={`mt-4 flex h-12 items-center justify-center gap-2 rounded-control bg-accent px-5 text-sm font-semibold text-ink transition-colors duration-150 hover:bg-accent-dark ${focusRing}`} />
         </div>
       )}
     </header>

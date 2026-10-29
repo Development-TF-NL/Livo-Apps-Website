@@ -1,44 +1,55 @@
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { Check, FileCheck, FileSpreadsheet, ListChecks, Mail, Send } from 'lucide-react';
+import { ArrowRight, Check, FileCheck, FileSpreadsheet, ListChecks, Mail, Send } from 'lucide-react';
 import { getDictionary } from '../../get-dictionary';
 import { mailto } from '../../mailto';
 import Footer from '../../components/Footer';
+import DemoLink from '../../components/DemoLink';
+import MarketingIcon from '../../components/MarketingIcon';
 import PhotoPlace from '../../components/PhotoPlace';
 import { languageAlternates, socialMetadata } from '../../seo';
 import LightClosingBand from '../../components/LightClosingBand';
-import { Section, IconCircle, Callout, GreenTitle, benefitIcons, eyebrow, h1, h2, lead, cardTitleSmall, cardBody, btnPrimary, btnPrimaryWrap, btnSecondary, heroPanel, cardOnCanvas, cardOnWhite } from '../../components/ui';
+import { Section, Eyebrow, IconCircle, Callout, GreenTitle, benefitIcons, eyebrow, h1, h2, cardTitleSmall, cardBody, btnPrimary, btnSecondary, heroPanel, cardOnCanvas, cardOnWhite } from '../../components/ui';
 
-// Prijspagina (1 oktober 2026). Tekst en bedragen komen uit één bron (docs/marketing/website/copy/pricing.json
-// in de product-repo), dezelfde als de prijsflyer. De vorm komt uit dezelfde bouwstenen als de homepage
-// (components/ui.jsx): een lichte hero, drie voordelen met een icoon, de prijstabel in een kaart met "wat telt"
-// erbij, vier functies met een icoon en het anker, en het navy slotpaneel met één demoaanvraag.
-// Achter de poort PRICING_PAGE_ENABLED: dicht = notFound() en noindex; open = de pagina, in de sitemap en
-// in het menu. De bestelknoppen blijven per e-mail totdat de bestelroute is vrijgegeven.
+// Prijspagina (kooproute 29 oktober 2026). Tekst en bedragen komen uit één bron (docs/marketing/website/copy/pricing.json
+// in de product-repo), dezelfde als de prijsflyer. Volgorde: een korte hero (kop, termijnregel, doelgroep en vanafprijs), direct
+// daarna de plannen (#plans) met de schakelaar, de bestelknoppen, de taalnotitie, hulp bij de start en de prijsregel; dan de vier
+// startstappen met de marketingiconen, de drie voordelen, de vier functies en het lichte slot naar de plannen met de demo als tekstlink.
+// Poorten (bouwvariabelen, nieuwe deploy nodig):
+// - PRICING_PAGE_ENABLED: dicht = notFound() en noindex; open = de pagina, in de sitemap en in het menu.
+// - SELF_SERVICE_ORDER_ENABLED: aan = maandplannen linken naar /order?plan=<code>&period=monthly in de app (Engels; de taalnotitie
+//   staat erbij); uit = de knop opent een e-mail om te starten (orderSubject), met de regel dat bestellen via de website volgt.
+// - SELF_SERVICE_ANNUAL_ORDER_ENABLED: aan (pas na de test van de jaarroute) = directe link met period=yearly; uit = contactroute per mail.
+// - MONTH_OFFER_ENABLED: aan = de termijnregel en de zoekresultaattekst van de maandactie (brief §4); uit = de standaardtermijn.
+// Custom blijft altijd een aanvraag per mail. Plancodes van het aanbod: starter, core, growth, scale, enterprise (kleine letters).
 const pricingEnabled = () => process.env.PRICING_PAGE_ENABLED === 'true';
 const selfServiceOrderEnabled = () => process.env.SELF_SERVICE_ORDER_ENABLED === 'true';
+const annualOrderEnabled = () => process.env.SELF_SERVICE_ANNUAL_ORDER_ENABLED === 'true';
+const monthOfferEnabled = () => process.env.MONTH_OFFER_ENABLED === 'true';
 
+const ORDER_URL = 'https://ppwr.livoapps.software/order';
 const BOX = '/brand/photo/box.png'; // doos uit de tussentijdse set (docs/huisstijl/beeld/doos.png), randaccent in de hero
 const featureIcons = [FileSpreadsheet, Send, ListChecks, FileCheck];
 
 // 1008 wordt "1.008" (NL) of "1,008" (EN); de bedragen staan één keer als getal in de bron.
 const num = (n, lang) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, lang === 'nl' ? '.' : ',');
 const fill = (template, plan) => template.replace('{plan}', plan);
+const orderHref = (plan, period) => `${ORDER_URL}?plan=${encodeURIComponent(plan.toLowerCase())}&period=${period}`;
 
-// De demoaanvraag van de homepage, met het plan in het onderwerp en bij de optionele gegevens.
-function planMail(order, page, plan, subjectTemplate) {
-  const parts = order.mailBody.split('\n\n');
-  parts[parts.length - 1] = `${fill(page.planLine, plan)}\n${parts[parts.length - 1]}`;
-  return mailto(fill(subjectTemplate, plan), parts.join('\n\n'));
+// De startmail met het plan in het onderwerp en als eerste regel van de tekst (de route zonder de bestelpoort, en voor jaarbetaling en Custom).
+function planMail(page, plan, subjectTemplate) {
+  return mailto(fill(subjectTemplate, plan), `${page.orderBody}\n${fill(page.planLine, plan)}\n`);
 }
 
 export async function generateMetadata({ params }) {
   const dict = await getDictionary(params.lang);
-  const { title, description } = dict.pricing.meta;
+  const { title } = dict.pricing.meta;
+  const description = monthOfferEnabled() ? dict.pricing.meta.description : dict.pricing.meta.descriptionStandard;
   return {
     title,
     description,
     alternates: { canonical: `/${params.lang}/pricing`, languages: languageAlternates('/pricing') },
-    ...socialMetadata({ title, description, lang: params.lang }),
+    ...socialMetadata({ title, description, lang: params.lang, path: `/${params.lang}/pricing` }),
     robots: pricingEnabled() ? undefined : { index: false, follow: false },
   };
 }
@@ -49,41 +60,32 @@ export default async function PricingPage({ params }) {
   const { lang } = params;
   const dict = await getDictionary(lang);
   const t = dict.pricing;
-  const order = dict.nav.order;
-  const demo = mailto(dict.ppwr.hero.demoSubject, dict.ppwr.hero.demoBody);
   const { plans, custom } = t.ladder;
   const selfService = selfServiceOrderEnabled();
+  const annualSelfService = selfService && annualOrderEnabled();
+  const terms = monthOfferEnabled() ? t.head.terms : t.head.termsStandard;
   const row = 'grid items-center gap-3 md:grid-cols-[1fr_1fr_1.2fr_17rem] md:gap-6';
+  // De plan-knoppen mogen over twee regels lopen (bijvoorbeeld "Vraag een passend aanbod" in de kolom van 17rem): hoogte volgt de inhoud.
+  const wrap = 'w-full !h-auto min-h-12 whitespace-normal py-2 text-center sm:w-auto';
+  const planBtn = `${btnPrimary} ${wrap}`;
 
   return (
     <div className="font-sans text-ink">
-      {/* 1. Hero, licht: kop, trigger als lead, doelgroep en vanafprijs; de doos als randaccent rechtsonder */}
+      {/* 1. Hero, kort: kop, de termijnregel (maandactie of standaard), doelgroep en vanafprijs; de doos als randaccent rechtsonder */}
       <Section tone="canvas" hero>
         <div className={`relative overflow-hidden ${heroPanel} p-6 sm:p-8 md:p-12`}>
           <div className="md:pr-64">
             <h1 lang={lang} className={`${h1} max-w-3xl lg:text-[3.4rem]`}><GreenTitle title={t.head.title} green={t.head.titleGreen} /></h1>
-            <p className={`mt-6 max-w-2xl ${lead}`}>{t.head.trigger}</p>
-            <p className="mt-5 font-semibold text-ink">{t.head.audience}</p>
+            <p className="mt-6 max-w-2xl text-lg font-medium leading-relaxed text-ink">{terms}</p>
+            <p className="mt-4 text-body text-sub">{t.head.audience}</p>
           </div>
           <PhotoPlace src={BOX} imgClassName="absolute -bottom-14 -right-10 hidden h-64 w-auto md:block" />
         </div>
       </Section>
 
-      {/* 2. Drie voordelen, elk met een icoon in een mintcirkel */}
-      <Section>
-        <ul className="grid gap-6 md:grid-cols-3">
-          {t.benefits.map((b, i) => (
-            <li key={b.label} className={`${cardOnWhite} p-7`}>
-              <IconCircle icon={benefitIcons[i] ?? Check} />
-              <p className={`mt-5 ${eyebrow} !mb-0`}>{b.label}</p>
-              <p className="mt-3 font-display text-2xl font-bold leading-snug text-ink">{b.text}</p>
-            </li>
-          ))}
-        </ul>
-      </Section>
-
-      {/* 3. De prijstabel in een kaart, met de schakelaar (alleen CSS: werkt ook zonder JavaScript) en "wat telt" erbij */}
-      <Section tone="canvas">
+      {/* 2. De plannen (#plans), direct na de hero: schakelaar (alleen CSS: werkt ook zonder JavaScript), de tabel met per plan de
+          bestelactie, de taalnotitie bij de bestelroute, hulp bij de start, en de prijsregel los van de wettelijke rol */}
+      <Section id="plans" tone="canvas" className="!pt-0 md:!pt-0">
         <div className={`${cardOnCanvas} p-6 md:p-10`}>
           <h2 className={h2}>{t.price.title}</h2>
           <p className="mt-4 text-body text-sub">{t.price.line}</p>
@@ -124,18 +126,23 @@ export default async function PricingPage({ params }) {
                       <span className="block text-sm text-sub">€{num(p.annualTotal, lang)} {t.price.perYear}</span>
                     </p>
                   </div>
+                  {/* Maandplan: de bestelroute in de app zodra de poort open is, anders de startmail. Jaarbetaling: directe link alleen na de test, anders de contactroute. */}
                   {selfService ? (
-                    <>
-                      <a href={`https://ppwr.livoapps.software/order?plan=${p.name.toLowerCase()}&period=monthly`} className={`${btnPrimary} p-monthly whitespace-nowrap`}>
-                        <Send size={18} aria-hidden="true" />{lang === 'nl' ? `Bestel ${p.name}` : `Buy ${p.name}`}
-                      </a>
-                      <a href={planMail(order, t.page, `${p.name} (${lang === 'nl' ? 'jaarbetaling' : 'annual billing'})`, t.page.orderSubject)} className={`${btnPrimary} p-annual whitespace-nowrap`}>
-                        <Mail size={18} aria-hidden="true" />{lang === 'nl' ? 'Bespreek jaarbetaling' : 'Discuss annual billing'}
-                      </a>
-                    </>
+                    <a href={orderHref(p.name, 'monthly')} hrefLang="en" className={`${planBtn} p-monthly`}>
+                      {fill(t.page.orderPlan, p.name)} <ArrowRight size={18} aria-hidden="true" />
+                    </a>
                   ) : (
-                    <a href={planMail(order, t.page, p.name, t.page.orderSubject)} className={`${btnPrimary} whitespace-nowrap`}>
-                      <Mail size={18} aria-hidden="true" />{fill(t.page.orderPlan, p.name)}
+                    <a href={planMail(t.page, p.name, t.page.orderSubject)} className={`${planBtn} p-monthly`}>
+                      <Mail size={18} aria-hidden="true" />{fill(t.page.orderMail, p.name)}
+                    </a>
+                  )}
+                  {annualSelfService ? (
+                    <a href={orderHref(p.name, 'yearly')} hrefLang="en" className={`${planBtn} p-annual`}>
+                      {fill(t.page.orderAnnual, p.name)} <ArrowRight size={18} aria-hidden="true" />
+                    </a>
+                  ) : (
+                    <a href={planMail(t.page, p.name, t.page.annualSubject)} className={`${btnSecondary} ${wrap} p-annual`}>
+                      <Mail size={18} aria-hidden="true" />{t.page.annualContact}
                     </a>
                   )}
                 </li>
@@ -144,12 +151,19 @@ export default async function PricingPage({ params }) {
                 <h3 className="font-display text-2xl font-bold tracking-tight md:text-card">{custom.name}</h3>
                 <p className="text-body text-sub"><span className="md:hidden">{t.price.columns.skus}: </span>{t.price.moreThan} {num(custom.moreThan, lang)}</p>
                 <p className="font-medium text-ink">{t.price.onRequest}</p>
-                <a href={planMail(order, t.page, custom.name, t.page.customSubject)} className={`${btnSecondary} whitespace-nowrap`}>
+                <a href={planMail(t.page, custom.name, t.page.customSubject)} className={`${btnSecondary} ${wrap}`}>
                   <Mail size={18} aria-hidden="true" />{t.page.customCta}
                 </a>
               </li>
             </ul>
           </div>
+
+          {/* De vervolgregels: de taalovergang naar de Engelse bestelroute (alleen als die open is), anders de regel dat bestellen via de
+              website volgt; altijd hulp bij de eerste inrichting. */}
+          <ul className="mt-6 space-y-2 text-sm text-sub">
+            <li className="flex items-start gap-2"><Check size={16} aria-hidden="true" className="mt-1 flex-none text-accent-dark" />{selfService ? t.page.languageNote : t.page.mailNote}</li>
+            <li className="flex items-start gap-2"><Check size={16} aria-hidden="true" className="mt-1 flex-none text-accent-dark" />{t.page.helpLine}</li>
+          </ul>
 
           <Callout as="div" className="mt-6">
             <h3 className={cardTitleSmall}>{t.counts.title}</h3>
@@ -158,7 +172,38 @@ export default async function PricingPage({ params }) {
         </div>
       </Section>
 
-      {/* 4. Vier functies, twee bij twee, elk met een icoon in een mintcirkel; het anker eronder */}
+      {/* 3. Zo start je: vier stappen van plan kiezen tot hulp bij de eerste inrichting, elk met een marketingicoon */}
+      <Section id="start">
+        <Eyebrow>{t.start.eyebrow}</Eyebrow>
+        <h2 className={`max-w-3xl ${h2}`}>{t.start.title}</h2>
+        <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {t.start.steps.map((s, i) => (
+            <li key={s.title} className={`${cardOnWhite} p-6`}>
+              <div className="flex items-center justify-between gap-3">
+                <MarketingIcon name={s.icon} />
+                <span className="font-display text-sm font-bold text-ink-blue">{String(i + 1).padStart(2, '0')}</span>
+              </div>
+              <h3 className={`mt-5 ${cardTitleSmall}`}>{s.title}</h3>
+              <p className={`mt-2 ${cardBody}`}>{s.body}</p>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
+      {/* 4. Drie voordelen, elk met een icoon in een mintcirkel */}
+      <Section tone="canvas">
+        <ul className="grid gap-6 md:grid-cols-3">
+          {t.benefits.map((b, i) => (
+            <li key={b.label} className={`${cardOnCanvas} p-7`}>
+              <IconCircle icon={benefitIcons[i] ?? Check} />
+              <p className={`mt-5 ${eyebrow} !mb-0`}>{b.label}</p>
+              <p className="mt-3 font-display text-2xl font-bold leading-snug text-ink">{b.text}</p>
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      {/* 5. Vier functies, twee bij twee, elk met een icoon in een mintcirkel; het anker eronder */}
       <Section>
         <ul className="grid gap-x-12 gap-y-8 md:grid-cols-2">
           {t.features.map((f, i) => (
@@ -174,10 +219,10 @@ export default async function PricingPage({ params }) {
         <p className="mt-10 font-display text-2xl font-bold text-ink">{t.anchor}</p>
       </Section>
 
-      {/* 5. Slot: het ene navy moment van de pagina, met één demoaanvraag. */}
-      {/* Slot (M2-nazorg, 13 oktober 2026): licht wit paneel op canvas; de knop opent de bestaande demomail (onderwerp en tekst uit ppwr.hero). */}
+      {/* 6. Slot: licht wit paneel op canvas; de knop gaat naar de plannen, de demo blijft als tekstlink (ppwr.hero is de ene bron van de demomail). */}
       <LightClosingBand tone="card" title={t.closing.title} lead={t.closing.start}>
-        <a href={demo} className={btnPrimaryWrap}><Mail size={18} aria-hidden="true" />{t.closing.cta}</a>
+        <Link href={`/${lang}/pricing#plans`} className={btnPrimary}>{t.closing.cta} <ArrowRight size={18} aria-hidden="true" /></Link>
+        <DemoLink demo={dict.ppwr.hero} label={t.closing.demo} className="text-sm" />
       </LightClosingBand>
 
       <Footer lang={lang} dict={dict.home.footer} />

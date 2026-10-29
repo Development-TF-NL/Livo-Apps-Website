@@ -14,7 +14,9 @@ import { Clock, Coins, GraduationCap } from 'lucide-react';
 // Tekst
 export const eyebrow = 'mb-4 text-xs font-semibold uppercase tracking-[.14em] text-ink-blue';
 export const h1 = 'font-display text-4xl font-bold leading-[1.04] tracking-tight text-ink sm:text-5xl xl:text-6xl';
-export const h2Base = 'font-display text-4xl font-bold leading-[1.06] tracking-tight md:text-5xl';
+// Onder 640 px mag een lang woord in een kop afbreken met een afbreekstreepje (hyphens: auto, taal uit <html lang>) en als vangnet
+// overal (overflow-wrap: anywhere): "verpakkingsgegevens." in het slot stak op 360 px 50 px buiten het paneel (29 oktober 2026).
+export const h2Base = 'font-display text-4xl font-bold leading-[1.06] tracking-tight max-sm:[hyphens:auto] max-sm:[overflow-wrap:anywhere] md:text-5xl';
 export const h2 = `${h2Base} text-ink`;
 export const lead = 'text-lg leading-relaxed text-ink-blue';
 export const cardTitle = 'font-display text-2xl font-bold leading-tight text-ink';

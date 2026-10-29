@@ -1,31 +1,37 @@
 import Link from 'next/link';
-import { ArrowRight, Mail, Package, Layers, Globe, FileCheck, Clock, MessageSquareWarning, FileSearch, Users } from 'lucide-react';
+import { ArrowRight, Package, Layers, Globe, FileCheck, Clock, MessageSquareWarning, FileSearch, Users } from 'lucide-react';
 import Breadcrumb from '../../components/Breadcrumb';
 import RegisterFragment from '../../components/RegisterFragment';
 import HandNote from '../../components/HandNote';
 import StatusPill from '../../components/StatusPill';
 import SupplierCycle from '../../components/SupplierCycle';
 import Footer from '../../components/Footer';
+import DemoLink from '../../components/DemoLink';
+import JsonLd from '../../components/JsonLd';
+import MarketingIcon from '../../components/MarketingIcon';
+import OrderButton, { pricingHref } from '../../components/OrderButton';
 import { KennisLinks } from '../../components/Article';
 import { ImportVisual, StatusVisual, CycleVisual, FileVisual } from '../../components/FeatureVisuals';
 import { getDictionary } from '../../get-dictionary';
-import { mailto } from '../../mailto';
-import { languageAlternates, socialMetadata } from '../../seo';
+import { breadcrumbJsonLd, languageAlternates, socialMetadata } from '../../seo';
 import { Section, Eyebrow, IconCircle, Callout, ClosingBand, h1, h2, lead, cardTitle, cardTitleSmall, cardBody, btnPrimary, heroPanel, cardOnCanvas, cardOnWhite, promoPanel } from '../../components/ui';
 
 // Productpagina LIVO PPWR, ontwerp v2 (17 september 2026): ruggengraat is de flyer 2026-09-17
 // (probleem, kosten, wat LIVO verandert, demo), uitgebreid waar een pagina meer ruimte heeft.
-// Hero (M1, 7 oktober 2026): één demoaanvraag per e-mail. Whitepaperpromotie wacht op de inhoudelijke review.
+// Hero en slot (kooproute 29 oktober 2026): de primaire knop gaat naar de planselectie op de prijspagina (nav.order.cta); de demo
+// blijft als tekstlink (ppwr.hero is de ene bron van de demomail). De vier features dragen de marketingiconen v2 naast het label.
+// BreadcrumbList-JSON-LD volgt het zichtbare kruimelpad. Whitepaperpromotie wacht op de inhoudelijke review.
 // Alle tekst uit de dictionaries (bron: docs/marketing/website/copy/ppwr.json).
 // Vorm (1 oktober 2026): de gedeelde bouwstenen uit components/ui.jsx. Na de hero wisselen wit en canvas elkaar af;
 // kaarten op canvas dragen de schaduw, kaarten op wit een rand; nergens meer dan twee kaarten naast elkaar.
 const factorIcons = [Package, Layers, Globe, FileCheck];
 const costIcons = [Clock, MessageSquareWarning, FileSearch, Users];
+const featureMarks = ['excel-import', 'verplichtingen', 'leveranciersuitvraag', 'bewijsstukken'];
 
 export async function generateMetadata({ params }) {
   const dict = await getDictionary(params.lang);
   const { title, description } = dict.ppwr.meta;
-  return { title, description, alternates: { canonical: `/${params.lang}/ppwr`, languages: languageAlternates('/ppwr') }, ...socialMetadata({ title, description, lang: params.lang }) };
+  return { title, description, alternates: { canonical: `/${params.lang}/ppwr`, languages: languageAlternates('/ppwr') }, ...socialMetadata({ title, description, lang: params.lang, path: `/${params.lang}/ppwr` }) };
 }
 
 export default async function PpwrPage({ params }) {
@@ -35,14 +41,15 @@ export default async function PpwrPage({ params }) {
   const register = { ...dict.home.hero.visual.register, tenant: t.hero.registerTenant };
   const pricing = dict.home.pricing;
   const pricingEnabled = process.env.PRICING_PAGE_ENABLED === 'true';
-  const demo = mailto(t.hero.demoSubject, t.hero.demoBody);
   const statusRows = register.rows.map((r) => ({ status: r.status, tone: r.tone }));
   const fileLabels = [[t.changes.fileInputs[0], t.changes.fileInputs[1], t.changes.fileInputs[2]], { title: t.changes.fileTitle, badge: t.changes.fileBadge, rows: t.changes.fileRows }, t.changes.fileOutputs];
   const visuals = [<ImportVisual key="v1" />, <StatusVisual key="v2" rows={statusRows} />, <CycleVisual key="v3" t={t.cycle} />, <FileVisual key="v4" labels={fileLabels} />];
+  const crumbs = [{ label: t.breadcrumb[0], href: `/${lang}` }, { label: t.breadcrumb[1], href: `/${lang}/ppwr` }, { label: t.breadcrumb[2] }];
 
   return (
     <div className="bg-canvas">
-      <Breadcrumb items={[{ label: t.breadcrumb[0], href: `/${lang}` }, { label: t.breadcrumb[1], href: `/${lang}/ppwr` }, { label: t.breadcrumb[2] }]} />
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <Breadcrumb items={crumbs} />
 
       {/* 1. Hero, licht: kop met één groen woord, lead uit de flyer, het echte Register-fragment */}
       <Section tone="canvas" className="!pt-2 md:!pt-2">
@@ -55,8 +62,9 @@ export default async function PpwrPage({ params }) {
                 {t.hero.titleBefore}<span className="text-green-heading">{t.hero.titleGreen}</span>{t.hero.titleAfter}
               </h1>
               <p className={`mt-6 max-w-lg ${lead}`}>{t.hero.lead}</p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a href={demo} className={btnPrimary}><Mail size={18} aria-hidden="true" />{t.hero.ctaDemo}</a>
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <OrderButton lang={lang} t={dict.nav.order} pricingEnabled={pricingEnabled} hash="#plans" className={btnPrimary} />
+                <DemoLink demo={t.hero} label={t.hero.ctaDemo} />
               </div>
             </div>
             <div className="min-w-0">
@@ -119,7 +127,7 @@ export default async function PpwrPage({ params }) {
             <article key={f.title} className={`min-w-0 ${cardOnWhite} p-6`}>
               {visuals[i]}
               <div className="mt-5 flex items-center justify-between gap-3">
-                <p className="text-xs font-semibold uppercase tracking-[.12em] text-ink-blue">{f.tag}</p>
+                <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[.12em] text-ink-blue"><MarketingIcon name={featureMarks[i]} size="sm" />{f.tag}</p>
                 <StatusPill tone="success">{t.changes.live}</StatusPill>
               </div>
               <h3 className={`mt-2 ${cardTitle}`}>{f.title}</h3>
@@ -171,17 +179,18 @@ export default async function PpwrPage({ params }) {
         </div>
       </Section>
 
-      {/* Kennisartikelen (14 oktober 2026): twee tekstlinks naar de praktische artikelen. */}
-      <KennisLinks lang={lang} />
+      {/* Kennisartikelen (14 oktober 2026; 29 oktober met de whitepaper en de kennisingang): tekstlinks naar de praktische artikelen. */}
+      <KennisLinks lang={lang} whitepaper={dict.home.footer.columns.resources.items.find((i) => i.href === '/whitepaper')?.label} />
 
-      {/* Slot: het ene navy moment van de pagina. De voetregel staat in de gedeelde footer. */}
+      {/* Slot: het ene navy moment van de pagina; de knop naar de plannen, de demo als tekstlink. De voetregel staat in de gedeelde footer. */}
       <ClosingBand
         tone="canvas"
         title={t.closing.title}
         lead={t.closing.lead}
         aside={<div className="text-sm md:text-right"><b className="block font-semibold text-accent">{t.closing.site}</b><a href="mailto:hello@livoapps.software" className="inline-flex min-h-[44px] items-center rounded text-white/80 transition-colors duration-150 hover:text-white focus-ring">{t.closing.mail}</a></div>}
       >
-        <a href={demo} className={btnPrimary}><Mail size={18} aria-hidden="true" />{t.closing.cta}</a>
+        <Link href={pricingHref(lang, pricingEnabled, '#plans')} className={btnPrimary}>{t.closing.cta} <ArrowRight size={18} aria-hidden="true" /></Link>
+        <DemoLink demo={t.hero} label={t.closing.demo} className="text-white hover:text-white" />
       </ClosingBand>
 
       <Footer lang={lang} dict={dict.home.footer} />

@@ -1,5 +1,5 @@
 import { i18n } from './i18n-config';
-import { ARTICLES } from './content/kennis';
+import { ARTICLES, KENNIS_INDEX } from './content/kennis';
 import { SITE_URL } from './seo';
 
 // Alleen 200-URL's op de definitieve host (www, 29 oktober 2026), elk met wederkerige hreflang.
@@ -11,9 +11,9 @@ export default function sitemap() {
   const alternatesFor = (paths) => ({
     languages: { ...Object.fromEntries(i18n.locales.map((l) => [l, `${SITE_URL}${paths[l]}`])), 'x-default': `${SITE_URL}${paths[i18n.defaultLocale]}` },
   });
-  // Kennisartikelen (14 oktober 2026): per taal een eigen URL, met de tegenhanger in de andere taal als hreflang.
-  const articles = ARTICLES.flatMap((a) =>
-    i18n.locales.map((lang) => ({ url: `${SITE_URL}${a.path[lang]}`, changeFrequency: 'monthly', alternates: alternatesFor(a.path) }))
+  // Kennisingang (29 oktober 2026) en kennisartikelen (14 oktober 2026): per taal een eigen URL, met de tegenhanger als hreflang.
+  const kennis = [KENNIS_INDEX, ...ARTICLES.map((a) => a.path)].flatMap((paths) =>
+    i18n.locales.map((lang) => ({ url: `${SITE_URL}${paths[lang]}`, changeFrequency: 'monthly', alternates: alternatesFor(paths) }))
   );
   return pages.flatMap((page) =>
     i18n.locales.map((lang) => ({
@@ -21,5 +21,5 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       alternates: alternatesFor(Object.fromEntries(i18n.locales.map((l) => [l, `/${l}${page}`]))),
     }))
-  ).concat(articles);
+  ).concat(kennis);
 }
