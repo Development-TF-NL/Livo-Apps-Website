@@ -331,7 +331,7 @@
     "plans": {
       "eyebrow": "A clear start",
       "title": "Choose by your product range. Work together with your team.",
-      "lead": "Your subscription follows the number of products that count: your own brands and your own imports. No surcharge per user. No implementation fee. Personal help with your start included.",
+      "lead": "Your subscription is based on the number of products that count: your own brands and your own imports. No surcharge per user. No implementation fee. Personal help with your start included.",
       "monthly": "Monthly",
       "annual": "Annually",
       "annualBadge": "−15%",
@@ -344,7 +344,7 @@
         "Growth": "Room for a larger range"
       },
       "featured": "Core",
-      "skuCount": "Up to {n} counting products",
+      "skuCount": "Up to {n} products that count",
       "discuss": "Start with {plan}",
       "discussShort": "Start",
       "noteMonthly": "All prices exclude VAT.",
@@ -356,7 +356,7 @@
       "onRequest": "On request",
       "perMonthLong": "per month",
       "countingQ": "Which products count towards my subscription?",
-      "countingA": "For the subscription price, LIVO counts the products you place on the EU market yourself, such as own brands and own imports. Products you resell can be in the register without counting in this price calculation. This is a pricing rule, not an exemption from legal obligations. Not sure? E-mail us your product range and we work it out with you.",
+      "countingA": "For the subscription price, LIVO counts the products you place on the EU market yourself, such as your own brands and your own imports. Products you resell can be in the register without being counted towards the price. This is a pricing rule, not an exemption from legal obligations. Not sure? E-mail us your product range and we work it out with you.",
       "allPlans": "Compare all plans and start directly",
       "help": "Need help choosing? Request a demo"
     },
@@ -725,7 +725,7 @@
         },
         {
           "title": "Wholesalers and distributors",
-          "body": "For the subscription price, your own brands and imports count; what you resell is registered without counting. Your obligations depend on your role for each product and market. Do you know which of your products that is?"
+          "body": "For the subscription price, your own brands and your own imports count; what you resell is registered but not counted. Your obligations depend on your role for each product and market. Do you know which of your products that is?"
         },
         {
           "title": "Logistics and fulfilment",
@@ -836,7 +836,7 @@
     },
     "counts": {
       "title": "Which products count towards your plan?",
-      "body": "The subscription price counts the products you place on the EU market yourself. You can also register other products. This is a pricing rule only; your legal obligations depend on your role for each product and market."
+      "body": "The subscription price is based on the products you place on the EU market yourself. You can also register other products. This is a pricing rule only; your legal obligations depend on your role for each product and market."
     },
     "features": [
       {
