@@ -29,39 +29,49 @@ Coolset (ppwr, plans, supplier guide) is als vergelijkingspunt gelezen voor de t
 
 ## 3. Zoekbewijs
 
-### 3a. Bronnen
+### 3a. Bronnen (stand 29 oktober 2026, avond; uitgelezen via Claude in Chrome met de aanmelding van de eigenaar, alleen lezend)
 
-| Bron | Stand 29 oktober 2026 |
+| Bron | Stand |
 |---|---|
-| Search Console `livoapps.software` | read-only bekeken door de eigenaar: zoektype Web, drie maanden, geen landfilter; gegevens 13 tot en met 27 oktober 2026; 120 vertoningen, 8 klikken, 27 termen zichtbaar. Niet beschikbaar in de bouwomgeving: pagina's per zoekopdracht, landen (NL en BE afzonderlijk). |
-| Google Ads zoektermenrapport | **ontbreekt**: geen toegang vanuit de bouwomgeving; onbekend of campagnes vertoningen hadden |
-| Google Zoekwoordplanner (NL en BE) | **ontbreekt**: geen toegang vanuit de bouwomgeving |
-| Semrush (MCP) | **ontbreekt**: het account heeft een actief abonnement maar geen API-eenheden meer (melding 29 oktober, trace `6d9527cc89fab99653ccb1a5f04f7e6b`); aanvullen via https://www.semrush.com/mcp-access |
+| Search Console `sc-domain:livoapps.software` | zoektype Web, drie maanden, gegevens 13 tot en met 27 oktober 2026: 120 vertoningen, 8 klikken, gemiddelde positie 36. Per land, per pagina en per land per zoekopdracht uitgelezen (zie 3b en 3c). Van de 27 zoekopdrachten zijn de eerste 10 zichtbaar; pagina 2 en 3 van de tabel laadden niet. |
+| Google Ads zoektermenrapport | **bestaat niet**: het account LIVO APPS B.V. heeft geen campagnes (overzicht "Aan de slag met Google Ads", campagnetabel leeg); dus geen vertoningen en geen zoektermen. |
+| Google Zoekwoordplanner | historische cijfers opgehaald (plan "Plan gemaakt op okt 29, 2026" in het Ads-account, netwerk Google, alle talen, periode okt 2025 tot sep 2026) voor Nederland en voor alle locaties; **België** is niet gelukt: de locatiekeuze sprong twee keer terug naar "Alle locaties". Zonder actieve campagne toont de planner alleen bereiken (10–100, 100–1K, 1K–10K), geen exacte aantallen. |
+| Semrush (MCP) | **ontbreekt**: actief abonnement, geen API-eenheden (melding 29 oktober); aanvullen via https://www.semrush.com/mcp-access |
 
-Gevolg: alleen de gemeten zoekopdrachten uit de selectie van de eigenaar zijn bewijs. Alles daarbuiten is hypothese.
+### 3b. Search Console, 13 tot en met 27 oktober 2026
 
-### 3b. Gemeten zoekopdrachten (Search Console, 13 tot 27 oktober 2026, land onbekend)
+**Landen (top 10 van 18):** Nederland 20 vertoningen en 5 klikken; België 8 en 2; Denemarken 3 en 1; Canada 18 en 0; Verenigd Koninkrijk 18 en 0; Verenigde Staten 15 en 0; Australië 12 en 0; Turkije 10 en 0; India 3; Brazilië 2. Alle klikken komen uit Nederland, België en Denemarken.
 
-| Zoekopdracht | Vertoningen | Klikken | Soort |
-|---|---:|---:|---|
-| product data for packaging | 25 | 0 | gemeten zoekopdracht |
-| packaging data software | 2 | 0 | gemeten zoekopdracht |
-| packaging data management system | 2 | 0 | gemeten zoekopdracht |
-| packaging data management | 2 | 0 | gemeten zoekopdracht |
-| leveranciers verklaring | 2 | 0 | gemeten zoekopdracht; PPWR-relatie niet aangetoond |
-| online emballage rapportage | 1 | 0 | gemeten zoekopdracht |
+**Pagina's (alle 6):** homepage 53 vertoningen en 8 klikken (positie 6,1; vrijwel alleen merkzoekopdrachten: livo apps, livo app, livo); `/en/resources/packaging-data-from-suppliers` 67 vertoningen en 0 klikken (positie 56,8; 21 zoekopdrachten, alle Engels); `livoapps.software/nl/ppwr` 15 en 0 (positie 3,9; zoekopdrachten niet zichtbaar); `/en/ppwr` 13 en 0; `/nl/kennis/klantvraag-verpakkingsdata` 9 en 0; `/nl/kennis/verpakkingsgegevens-leveranciers` 7 en 0.
 
-Dit zijn vertoningen van onze site, geen zoekvolumes. De Engelse termen bewijzen geen Nederlandse zoekvraag.
+**Zoekopdrachten (top 10 van 27, alle landen):** livo apps 1 vertoning en 1 klik; product data for packaging 25 en 0; livo app 4; packaging data software 2; packaging data management system 2; packaging data 2; packaging data management 2; packaging data solutions 2; leveranciers verklaring 2; packaging data platform 2. Op het Engelse leveranciersartikel ook: packaging data management tools 2, packaging data access 1, packaging data control 1.
 
-### 3c. Aanbevolen ingangen (maximaal vijf)
+**Per land:** Nederland toont één zichtbare zoekopdracht ("online emballage rapportage", 1 vertoning); de overige 19 Nederlandse vertoningen zijn door Google geanonimiseerd. België toont alleen merkzoekopdrachten (livo apps 1 klik, livo app, livo citragen). Conclusie: de Engelse termen over "packaging data" komen uit Canada, het Verenigd Koninkrijk, de Verenigde Staten en Australië op positie 57 en bewijzen geen Nederlandse of Belgische vraag.
+
+### 3c. Zoekwoordplanner (geschatte zoekvraag, okt 2025 tot sep 2026, Google, alle talen)
+
+| Zoekterm | Nederland | Alle locaties | Concurrentie (NL) | Opmerking |
+|---|---|---|---|---|
+| ppwr | 1K – 10K | 10K – 100K (+900% jaar op jaar) | normaal | breed, vooral informatie; geen koopknop op dit woord |
+| leveranciersverklaring | 100 – 1K | 100 – 1K | laag | Nederlandstalig, maar niet aantoonbaar PPWR-gerelateerd (ook btw en douane) |
+| ppwr software | 10 – 100 | 100 – 1K (+900%) | hoog | koopintentie; bod boven aan de pagina NL € 6,84 tot € 20,33 |
+| ppwr compliance software | 10 – 100 | 10 – 100 | hoog | koopintentie |
+| ppwr verplichtingen | 10 – 100 (stijgend) | 10 – 100 | hoog | informatie, relevant voor de doelgroep |
+| verpakkingsverordening | 10 – 100 | 10 – 100 | normaal | informatie |
+| verpakkingswetgeving | 10 – 100 | 10 – 100 | hoog | informatie |
+| packaging data software | 10 – 100 | 10 – 100 | laag | Engels |
+| product data for packaging | geen gegevens | geen gegevens | | de meest vertoonde term in Search Console heeft in de planner geen volume: lange staart |
+| verpakkingsdata | geen gegevens | geen gegevens | | |
+
+### 3d. Aanbevolen ingangen (maximaal vijf)
 
 | # | Zoekterm | Bron, datum, land, periode | Cijfers | Zoekintentie | Soort | Voorgestelde vraagkop (redactioneel) | Bestemming | Reden van prioriteit |
 |---|---|---|---|---|---|---|---|---|
-| 1 | product data for packaging | Search Console, 29 okt 2026, land onbekend, 13–27 okt | 25 vertoningen, 0 klikken | informatie: welke productgegevens horen bij verpakking, wat levert een leverancier of klant | gemeten | "Product data for packaging: how to answer a customer request" | `/en/resources/customer-packaging-data-request` (bestaand; EN-titel en -omschrijving aangepast, tekst ongewijzigd) | de enige term met zichtbaar volume op onze site; 0 klikken wijst op een titel die niet aansloot |
-| 2 | packaging data software · packaging data management (system) | idem | 2 + 2 + 2 vertoningen | commercieel: software om verpakkingsdata te beheren | gemeten, klein | "Packaging data software for small teams" (als zin in de omschrijving, geen nieuwe pagina) | `/en/ppwr` (bestaand; EN-omschrijving aangepast) | koopintentie past bij de productpagina; te klein voor een eigen pagina |
-| 3 | leveranciers verklaring · leveranciersverklaring | Search Console (2 vertoningen) plus starterm uit de aanvulling | 2 vertoningen; NL-volume onbekend | informatie: wat is een leveranciersverklaring en wat vraag je op | gemeten (klein) + hypothese | "Welke verpakkingsgegevens en verklaringen vraag je aan je leverancier?" | `/nl/kennis/verpakkingsgegevens-leveranciers` (bestaand; voorstel: één alinea over de leveranciersverklaring met bron, pas na inhoudelijke review) | sluit aan op een bestaand artikel; de PPWR-relatie en het volume moeten eerst uit Zoekwoordplanner of Ads blijken |
-| 4 | ppwr verplichtingen · verpakkingswetgeving | startermen uit de aanvulling | geen cijfers | informatie: welke verplichtingen gelden voor mij | hypothese | "Welke PPWR-verplichtingen gelden voor importeurs en groothandels?" | nog geen bestemming; mogelijk `/nl/ppwr` (sectie Voor wie) of een nieuwe pagina na review | hoge relevantie voor de doelgroep, maar geen meting; juridische uitleg vraagt primaire bronnen en review |
-| 5 | ppwr software · verpakkingsdata | startermen uit de aanvulling | geen cijfers | commercieel | hypothese | geen nieuwe vraagkop; metadata van `/nl/ppwr` noemt "PPWR-software" al | `/nl/ppwr` | pas prioriteren na Zoekwoordplanner NL en BE |
+| 1 | ppwr verplichtingen · verpakkingsverordening · verpakkingswetgeving | Zoekwoordplanner, 29 okt 2026, NL, okt 2025 tot sep 2026 | elk 10–100 per maand, "ppwr verplichtingen" stijgend; Search Console: nog geen vertoning | informatie: welke verplichtingen gelden voor mij | geschatte zoekvraag | "Welke PPWR-verplichtingen gelden voor importeurs en groothandels?" | `/nl/ppwr`, sectie Voor wie (bestaand); een eigen pagina alleen na juridische review met primaire bronnen (EUR-Lex) | hoogste relevantie voor de mkb-doelgroep; drie verwante termen samen; geen koopknop, wel de productuitleg als vervolgstap |
+| 2 | ppwr software · ppwr compliance software | Zoekwoordplanner, 29 okt 2026, NL en alle locaties | NL 10–100; wereld 100–1K (+900%); hoge concurrentie | commercieel | geschatte zoekvraag | geen vraagkop; "PPWR-software voor importeurs en groothandels" staat al in de titel van `/nl/ppwr` | `/nl/ppwr` en `/en/ppwr` (bestaand) | koopintentie, klein volume; de productpagina is de juiste landing; Search Console-positie 3,9 voor `/nl/ppwr` is al goed |
+| 3 | product data for packaging · packaging data software/management | Search Console, 29 okt 2026, land onbekend (vermoedelijk CA, VK, VS, AU), 13–27 okt | 25 + 2 + 2 + 2 vertoningen, 0 klikken, positie 57 | informatie: welke productgegevens horen bij verpakking | gemeten | "Product data for packaging: how to answer a customer request" | `/en/resources/customer-packaging-data-request` (EN-titel en -omschrijving aangepast); de vertoningen vielen op het leveranciersartikel, dus ook dat artikel kan een alinea "product data for packaging" krijgen | enige gemeten volume; buiten NL en BE, dus lage commerciële prioriteit, wel goedkoop te benutten |
+| 4 | leveranciersverklaring | Zoekwoordplanner NL 100–1K; Search Console 2 vertoningen | 100–1K per maand, lage concurrentie | informatie: wat is een leveranciersverklaring en wat vraag je op | geschat + gemeten (klein) | "Welke verpakkingsgegevens en verklaringen vraag je aan je leverancier?" | `/nl/kennis/verpakkingsgegevens-leveranciers` (bestaand); één alinea met bron, pas na inhoudelijke review | het grootste Nederlandstalige volume, maar de term is breder dan PPWR; eerst toetsen welke betekenis zoekers bedoelen |
+| 5 | ppwr | Zoekwoordplanner NL 1K–10K, wereld 10K–100K | groot, normaal concurrerend | informatie, breed | geschatte zoekvraag | geen eigen vraagkop; de kennisingang en de productpagina dragen de term al | `/nl/kennis` en `/nl/ppwr` | te breed voor een koopknop; alleen als onderdeel van langere termen (ingang 1 en 2) |
 
 Niet gebruikt als bewijs: de FAQ van Coolset, eigen zoekopdrachten, aantallen Google-resultaten en de tien meetvragen uit het AI-vindbaarheidspakket.
 
@@ -77,7 +87,7 @@ Niet gebruikt als bewijs: de FAQ van Coolset, eigen zoekopdrachten, aantallen Go
 
 ## 5. Open punten met eigenaar
 
-1. **Zoekdata aanvullen (eigenaar):** Search Console per pagina en per land (NL en BE), het Ads-zoektermenrapport als er vertoningen waren, Zoekwoordplanner NL en BE met periode en netwerk; Semrush pas na API-eenheden. Daarna de ingangen 3 tot 5 herwegen.
+1. **Zoekdata aanvullen (eigenaar):** Zoekwoordplanner voor België (de locatiekeuze lukte niet via de browser); exacte aantallen in de planner verschijnen pas bij een actieve campagne; Semrush na API-eenheden. Het zoekwoordplan van 29 oktober staat als concept in het Ads-account en kan blijven of weg. Daarna de ingangen herwegen.
 2. **EN-titel van het klantvraagartikel** ("Product data for packaging: …") ter goedkeuring; de artikeltekst is niet gewijzigd.
 3. **Leverancierslink zonder apart account**: in de productcode aanwezig; de zin op de homepage blijft alleen als de vrijgavetest dit bevestigt.
 4. **Alinea over de leveranciersverklaring** in het leveranciersartikel: alleen na inhoudelijke review met een primaire bron; nu niet geschreven.
