@@ -356,9 +356,9 @@
       "onRequest": "Op aanvraag",
       "perMonthLong": "per maand",
       "countingQ": "Welke producten tellen mee voor mijn abonnement?",
-      "countingA": "Voor de abonnementsprijs telt LIVO de producten die je zelf op de EU-markt brengt, zoals eigen merken en eigen import. Producten die je doorverkoopt kunnen in het register staan zonder mee te tellen in deze prijsberekening. Dit is een prijsregel, geen vrijstelling van wettelijke verplichtingen. In de demo bespreken we hoe dit uitpakt voor jouw assortiment.",
+      "countingA": "Voor de abonnementsprijs telt LIVO de producten die je zelf op de EU-markt brengt, zoals eigen merken en eigen import. Producten die je doorverkoopt kunnen in het register staan zonder mee te tellen in deze prijsberekening. Dit is een prijsregel, geen vrijstelling van wettelijke verplichtingen. Twijfel je? Mail ons je assortiment, dan rekenen we het met je na.",
       "allPlans": "Alle plannen vergelijken en direct starten",
-      "help": "Hulp bij je keuze? Plan een demo van 20 minuten"
+      "help": "Hulp bij je keuze? Vraag een demo aan"
     },
     "faq": {
       "eyebrow": "Eerst even dit",
@@ -368,7 +368,7 @@
       "items": [
         [
           "Kan ik beginnen met mijn eigen Excel?",
-          "Ja. LIVO stelt voor hoe je kolommen op de gegevens in het register aansluiten. Je bekijkt en bevestigt de import. In de demo laten we zien hoe dat werkt en bespreken we je huidige bestanden."
+          "Ja. LIVO stelt voor hoe je kolommen op de gegevens in het register aansluiten. Je bekijkt en bevestigt de import. Wil je het eerst zien, dan laten we dat in een demo zien met je eigen bestanden."
         ],
         [
           "Verstuurt LIVO automatisch e-mails naar leveranciers?",
@@ -388,7 +388,7 @@
         ],
         [
           "Ik weet nog niet precies wat ik nodig heb. Kan ik wel starten?",
-          "Begin met de vraag die nu op je bureau ligt. In een demo bekijken we de werkwijze met fictieve gegevens en bespreken we je assortiment, beschikbare functies en een passende vervolgstap."
+          "Begin met Starter en je eigen gegevens; bij de eerste inrichting kijken we mee. Twijfel je over je plan, dan bespreken we je assortiment in een korte demo."
         ]
       ]
     },
@@ -425,7 +425,7 @@
         {
           "label": "Hulp bij je keuze",
           "title": "Twijfel je welk plan past?",
-          "body": "In 20 minuten laten we met fictieve gegevens zien hoe LIVO werkt en bespreken we je assortiment.",
+          "body": "In een korte demo laten we zien hoe LIVO werkt en bespreken we je assortiment.",
           "cta": "Plan een demo",
           "subject": "LIVO PPWR demo"
         },
@@ -585,7 +585,7 @@
       "lead": "De uitdaging is niet om verpakkingsdata één keer te verzamelen. Het is om data, verplichtingen en bewijs verbonden en actueel te houden terwijl producten, verpakkingen en markten veranderen.",
       "ctaDemo": "Vraag een demo aan",
       "demoSubject": "LIVO PPWR demo",
-      "demoBody": "Hallo LIVO APPS,\n\nIk wil graag kennismaken met LIVO PPWR in een demo van 20 minuten. Kunnen jullie een moment voorstellen?\n\nBedrijf (optioneel):\nMijn vraag (optioneel):\n",
+      "demoBody": "Hallo LIVO APPS,\n\nIk wil graag kennismaken met LIVO PPWR in een korte demo. Kunnen jullie een moment voorstellen?\n\nBedrijf (optioneel):\nMijn vraag (optioneel):\n",
       "registerTenant": "example-tenant",
       "illustration": "Illustratie"
     },
@@ -741,7 +741,7 @@
       "title": "Begin met je eigen verpakkingsgegevens.",
       "lead": "Kies een abonnement en start in de app. We helpen je bij de eerste inrichting.",
       "cta": "Kies je abonnement",
-      "demo": "Of vraag eerst een demo van 20 minuten aan",
+      "demo": "Of vraag eerst een demo aan",
       "site": "livoapps.software",
       "mail": "hello@livoapps.software"
     }
@@ -821,7 +821,7 @@
     ],
     "price": {
       "title": "Eén product. Je betaalt voor je SKU's, niet voor je gebruikers.",
-      "line": "Geen toeslag per EU-markt of gebruiker. 15% korting bij jaarbetaling. Prijzen exclusief btw. Vragen over functies of landendekking? Mail ons vóór je bestelt.",
+      "line": "Geen toeslag per EU-markt of gebruiker. 15% korting bij jaarbetaling. Prijzen exclusief btw. Vragen? Mail ons.",
       "columns": {
         "plan": "Plan",
         "skus": "SKU's",
@@ -861,7 +861,7 @@
       "title": "Begin met je eigen verpakkingsgegevens.",
       "start": "Kies een abonnement en start in de app. We helpen je bij de eerste inrichting. Je hebt geen apart implementatietraject nodig.",
       "cta": "Kies je abonnement",
-      "demo": "Eerst zien hoe het werkt? Vraag een demo van 20 minuten aan"
+      "demo": "Eerst zien hoe het werkt? Vraag een demo aan"
     },
     "page": {
       "toggleMonthly": "Maandelijks",

@@ -1,5 +1,5 @@
 {
-  "_bron": "ChatGPT-pakket AI_VINDBAARHEID_2026-10-13 (PAGINA_1, PAGINA_2), overgenomen op 14 oktober 2026; correcties uit de claimtoets staan in docs/ai-vindbaarheid/ 29 oktober 2026: published, reviewed en sources per artikel erbij (controledatum = de claimtoets van 14 oktober 2026 in docs/ai-vindbaarheid/; de bron is de verordening op EUR-Lex, per taal). 29 oktober (avond): de EN-metadata van het klantvraagartikel sluit aan op de gemeten zoekopdracht 'product data for packaging' (Search Console, 13 tot 27 oktober 2026, 25 vertoningen); de tekst zelf is ongewijzigd.",
+  "_bron": "ChatGPT-pakket AI_VINDBAARHEID_2026-10-13 (PAGINA_1, PAGINA_2), overgenomen op 14 oktober 2026; correcties uit de claimtoets staan in docs/ai-vindbaarheid/ 29 oktober 2026: published, reviewed en sources per artikel erbij (controledatum = de claimtoets van 14 oktober 2026 in docs/ai-vindbaarheid/; de bron is de verordening op EUR-Lex, per taal). 29 oktober (avond): de EN-metadata van het klantvraagartikel sluit aan op de gemeten zoekopdracht 'product data for packaging' (Search Console, 13 tot 27 oktober 2026, 25 vertoningen); de tekst zelf is ongewijzigd. 29 oktober (avond): de interne sleutel action (overdrachtsmetadata 'Plan een demo') is verwijderd; de vervolgstap staat in kennis.js.",
   "articles": [
     {
       "id": "klantvraag",
@@ -119,7 +119,6 @@
             ]
           }
         ],
-        "action": "Plan een demo van LIVO PPWR. Gebruik in de website de bestaande, door M2 goedgekeurde demoroute en vraag geen echte klantdata voor het voorbeeld.",
         "closing": {
           "raw": "Meer lezen: [Welke verpakkingsgegevens vraag je aan leveranciers?](/nl/kennis/verpakkingsgegevens-leveranciers). Voor de juridische basis: [Verordening (EU) 2025/40](https://eur-lex.europa.eu/eli/reg/2025/40/oj). Deze pagina geeft een praktische werkwijze, geen oordeel dat een specifiek product aan alle eisen voldoet.",
           "parts": [
@@ -237,7 +236,6 @@
             ]
           }
         ],
-        "action": "Book a LIVO PPWR demo. Use the existing M2-approved demo route on the website and do not request real customer data for the example.",
         "closing": {
           "raw": "Read next: [What packaging data should you request from suppliers?](/en/resources/packaging-data-from-suppliers). Legal source: [Regulation (EU) 2025/40](https://eur-lex.europa.eu/eli/reg/2025/40/oj). This page describes a practical workflow and does not assess whether a particular product meets every requirement.",
           "parts": [
@@ -384,7 +382,6 @@
             ]
           }
         ],
-        "action": "Plan een demo van LIVO PPWR. Gebruik de bestaande, door M2 goedgekeurde demoroute en werk met fictieve artikelgegevens.",
         "closing": {
           "raw": "Meer lezen: [Je klant vraagt om verpakkingsdata. Waar begin je?](/nl/kennis/klantvraag-verpakkingsdata). Juridische basis: [Verordening (EU) 2025/40](https://eur-lex.europa.eu/eli/reg/2025/40/oj). Deze checklist is een praktische voorbereiding op een uitvraag, geen juridisch oordeel over een specifiek artikel.",
           "parts": [
@@ -508,7 +505,6 @@
             ]
           }
         ],
-        "action": "Book a LIVO PPWR demo. Use the existing M2-approved demo route and fictional product data.",
         "closing": {
           "raw": "Read next: [A customer asks for packaging data. Where do you start?](/en/resources/customer-packaging-data-request). Legal source: [Regulation (EU) 2025/40](https://eur-lex.europa.eu/eli/reg/2025/40/oj). This checklist helps prepare a request; it is not a legal assessment of a particular product.",
           "parts": [

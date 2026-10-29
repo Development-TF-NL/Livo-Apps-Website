@@ -356,9 +356,9 @@
       "onRequest": "On request",
       "perMonthLong": "per month",
       "countingQ": "Which products count towards my subscription?",
-      "countingA": "For the subscription price, LIVO counts the products you place on the EU market yourself, such as own brands and own imports. Products you resell can be in the register without counting in this price calculation. This is a pricing rule, not an exemption from legal obligations. In the demo we discuss how this works out for your range.",
+      "countingA": "For the subscription price, LIVO counts the products you place on the EU market yourself, such as own brands and own imports. Products you resell can be in the register without counting in this price calculation. This is a pricing rule, not an exemption from legal obligations. Not sure? E-mail us your product range and we work it out with you.",
       "allPlans": "Compare all plans and start directly",
-      "help": "Need help choosing? Book a 20-minute demo"
+      "help": "Need help choosing? Request a demo"
     },
     "faq": {
       "eyebrow": "First things first",
@@ -368,7 +368,7 @@
       "items": [
         [
           "Can I start with my own Excel?",
-          "Yes. LIVO proposes how your columns map to the data in the register. You review and confirm the import. In the demo we show how that works and discuss your current files."
+          "Yes. LIVO proposes how your columns map to the data in the register. You review and confirm the import. If you want to see it first, we show it in a demo with your own files."
         ],
         [
           "Does LIVO automatically e-mail suppliers?",
@@ -388,7 +388,7 @@
         ],
         [
           "I do not know exactly what I need yet. Can I still start?",
-          "Start with the question on your desk now. In a demo we look at the workflow with fictional data and discuss your range, available features and a suitable next step."
+          "Start with Starter and your own data; we look along during your first setup. If you are unsure about your plan, we discuss your product range in a short demo."
         ]
       ]
     },
@@ -425,7 +425,7 @@
         {
           "label": "Help choosing",
           "title": "Not sure which plan fits?",
-          "body": "In 20 minutes we show how LIVO works with fictional data and discuss your product range.",
+          "body": "In a short demo we show how LIVO works and discuss your product range.",
           "cta": "Book a demo",
           "subject": "LIVO PPWR demo"
         },
@@ -585,7 +585,7 @@
       "lead": "The challenge is not collecting packaging data once. It is keeping data, obligations and evidence connected and up to date as products, packaging and markets change.",
       "ctaDemo": "Request a demo",
       "demoSubject": "LIVO PPWR demo",
-      "demoBody": "Hello LIVO APPS,\n\nI would like to explore LIVO PPWR in a 20-minute demo. Could you suggest a time?\n\nCompany (optional):\nMy question (optional):\n",
+      "demoBody": "Hello LIVO APPS,\n\nI would like to get to know LIVO PPWR in a short demo. Could you suggest a time?\n\nCompany (optional):\nMy question (optional):\n",
       "registerTenant": "example-tenant",
       "illustration": "Illustration"
     },
@@ -741,7 +741,7 @@
       "title": "Start with your own packaging data.",
       "lead": "Choose a plan and start in the app. We help you with your first setup.",
       "cta": "Choose your plan",
-      "demo": "Or request a 20-minute demo first",
+      "demo": "Or request a demo first",
       "site": "livoapps.software",
       "mail": "hello@livoapps.software"
     }
@@ -821,7 +821,7 @@
     ],
     "price": {
       "title": "One product. You pay for your SKUs, not your users.",
-      "line": "No surcharge per EU market or user. 15% off with annual billing. Prices exclude VAT. Questions about features or country coverage? E-mail us before you order.",
+      "line": "No surcharge per EU market or user. 15% off with annual billing. Prices exclude VAT. Questions? E-mail us.",
       "columns": {
         "plan": "Plan",
         "skus": "SKUs",
@@ -861,7 +861,7 @@
       "title": "Start with your own packaging data.",
       "start": "Choose a plan and start in the app. We help you with your first setup. No separate implementation project is needed.",
       "cta": "Choose your plan",
-      "demo": "Want to see how it works first? Request a 20-minute demo"
+      "demo": "Want to see how it works first? Request a demo"
     },
     "page": {
       "toggleMonthly": "Monthly",
