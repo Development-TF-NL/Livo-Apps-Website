@@ -21,6 +21,16 @@ Niet gedaan, bewust: geen nieuwe pagina's op onbewezen vraag, geen FAQ-markup, g
 
 Een cloud-routine in Claude Code (claude.ai/code/routines) draait elke maandag om 08:00 Nederlandse tijd (07:00 UTC) met de repo `Development-TF-NL/Livo-Apps-Website`. Zij meet de live site (statuscodes, canonicals, hreflang, metadata, H1, JSON-LD, sitemap, robots, redirects, interne links, afbeeldingsgrootte), leest Search Console als daar een toegang voor is ingericht, vergelijkt met het vorige rapport in `docs/vindbaarheid/` en herstelt alleen technische punten op een branch `seo/<jaar>-<week>` met een PR naar `main`. Teksten wijzigt zij nooit (die staan in de copybron van de product-repo); contentvoorstellen komen met zoekbewijs in het rapport. Poorten, voorwaarden en dependencies blijven buiten haar bereik. De eigenaar beslist over merge en deploy.
 
+### Ingericht op 29 oktober 2026 (avond, via Chrome met de aanmelding van de eigenaar)
+
+| Stap | Stand |
+|---|---|
+| Google Cloud-project | `livo-search-console` aangemaakt (account catelijnejoling@gmail.com, geen organisatie, gratis proefperiode) |
+| Google Search Console API | ingeschakeld in dat project |
+| Serviceaccount | `search-console-reader@livo-search-console.iam.gserviceaccount.com`, zonder projectrollen, nog zonder sleutel |
+| Search Console, Gebruikers en rechten | het serviceaccount is toegevoegd aan de property `livoapps.software` (bedoelde rol Beperkt; zie de controle in de sessie) |
+| Sleutel en omgevingsvariabele | **niet door Claude gedaan**: een sleutel is een wachtwoord. De eigenaar maakt in Google Cloud (IAM en beheer, Serviceaccounts, search-console-reader, tabblad Sleutels) een JSON-sleutel en plakt de inhoud als `GSC_SERVICE_ACCOUNT_JSON` in de cloud-omgeving "Default" op https://claude.ai/code/environments, met `GSC_PROPERTY=sc-domain:livoapps.software` en als setup-opdracht `pip install google-auth google-auth-httplib2`. |
+
 ### Wat de eigenaar moet regelen
 
 1. **Search Console-toegang voor de routine.** De cloud-omgeving heeft geen aanmelding van de eigenaar. Twee opties: een serviceaccount in Google Cloud met leesrechten op de property `sc-domain:livoapps.software` (JSON-sleutel als omgevingsvariabele `GSC_SERVICE_ACCOUNT_JSON` in de cloud-omgeving, met `google-auth` beschikbaar), of een regelmatig vernieuwd OAuth-token als `GSC_ACCESS_TOKEN`. Tot die tijd rapporteert de routine alleen de technische metingen en meldt zij de ontbrekende bron.
