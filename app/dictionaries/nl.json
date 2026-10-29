@@ -50,23 +50,25 @@
       },
       "record": {
         "code": "VH-2001",
-        "name": "Decoratieve vaas",
-        "pill": "2 open punten",
+        "name": "Decorative vase",
+        "pill": "Needs data",
         "rows": [
           {
-            "part": "Omdoos",
-            "value": "Karton · 45 g",
-            "ok": true
+            "part": "Outer box",
+            "value": "Cardboard · 45 g",
+            "status": "Ready",
+            "tone": "success"
           },
           {
-            "part": "Hangtag",
-            "value": "Gewicht ontbreekt",
-            "ok": false
+            "part": "Hang tag",
+            "value": "Weight missing",
+            "status": "Needs data",
+            "tone": "warning"
           }
         ],
-        "link": "Bekijk de volgende stap"
+        "link": "See the next step"
       },
-      "caption": "Productillustratie · fictieve gegevens",
+      "caption": "Productillustratie · fictieve gegevens · de app is Engelstalig",
       "visual": {
         "label": "Illustratie",
         "register": {

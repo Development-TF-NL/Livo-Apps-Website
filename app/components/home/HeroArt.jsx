@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Check, Mail, Package } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
+import StatusPill from '../StatusPill';
 
 // Het herobeeld van het landingspagina-concept (29 oktober 2026): de foto van de vaas met doos en beschermpapier in een kader met
-// één grote ronde hoek, daarover de klantvraag als notitie (licht gedraaid) en de artikelkaart VH-2001 met twee open punten.
+// één grote ronde hoek, daarover de klantvraag als notitie (licht gedraaid) en de artikelkaart VH-2001 zoals in de echte app:
+// Engels, het beeldmerk, de statuspillen Ready en Needs data (correctie eigenaar 29 oktober, avond).
 // Fictieve gegevens; het bijschrift zegt dat. De foto is decoratief voor de lay-out maar draagt een alt-tekst (het is een echt beeld).
 const VASE = '/brand/photo/vaas.png';
 
@@ -22,15 +24,15 @@ export default function HeroArt({ t, lang }) {
       </div>
       <div className="absolute bottom-[18px] left-[34px] right-0 rotate-[1.5deg] overflow-hidden rounded-card border border-frame bg-white shadow-deep md:bottom-5 md:left-[42px] md:-right-2.5">
         <div className="flex items-center gap-2.5 border-b border-line p-3 md:p-4">
-          <span aria-hidden="true" className="grid h-[34px] w-[34px] flex-none place-items-center rounded-control bg-mint text-green-text"><Package size={18} strokeWidth={1.6} /></span>
-          <div><span className="block text-[9px] font-semibold uppercase tracking-[.09em] text-sub">{t.record.code}</span><strong className="block text-[11px] leading-[1.45] md:text-xs">{t.record.name}</strong></div>
-          <span className="ml-auto inline-flex items-center gap-1.5 whitespace-nowrap rounded-[4px] bg-status-warning-bg px-1.5 py-1 text-[8px] font-medium text-status-warning-text md:text-[9px]"><i aria-hidden="true" className="h-[5px] w-[5px] rounded-full bg-current" />{t.record.pill}</span>
+          <img src="/brand/livo-mark.svg" alt="" aria-hidden="true" className="h-6 w-auto flex-none md:h-7" />
+          <div><span className="block text-[9px] uppercase tracking-[.09em] text-sub">{t.record.code}</span><strong className="block text-[12px] font-medium leading-[1.45] text-ink md:text-[13px]">{t.record.name}</strong></div>
+          <StatusPill tone="warning" className="ml-auto !text-[10px]">{t.record.pill}</StatusPill>
         </div>
         {t.record.rows.map((r) => (
-          <div key={r.part} className="flex items-center gap-3 px-4 py-2 text-[10px] md:px-5 md:py-2.5">
-            <span className="w-[75px]">{r.part}</span>
-            <span className={`ml-auto ${r.ok ? 'text-sub' : 'text-amber'}`}>{r.value}</span>
-            {r.ok ? <Check size={14} strokeWidth={1.6} className="text-status-success-dot" aria-hidden="true" /> : <span aria-hidden="true" className="mx-1 h-1.5 w-1.5 rounded-full bg-status-warning-dot" />}
+          <div key={r.part} className="flex items-center gap-3 px-4 py-2 text-[11px] md:px-5 md:py-2.5">
+            <span className="font-medium text-ink">{r.part}</span>
+            <span className={`ml-auto ${r.tone === 'warning' ? 'text-amber' : 'text-sub'}`}>{r.value}</span>
+            <StatusPill tone={r.tone} className="!text-[10px]">{r.status}</StatusPill>
           </div>
         ))}
         <Link href={`/${lang}#werkwijze`} className="mt-1.5 flex items-center justify-between bg-mint px-4 py-2.5 text-[10px] font-semibold text-green-text focus-ring">{t.record.link} <ArrowRight size={15} strokeWidth={1.6} aria-hidden="true" /></Link>

@@ -51,17 +51,19 @@
       "record": {
         "code": "VH-2001",
         "name": "Decorative vase",
-        "pill": "2 open items",
+        "pill": "Needs data",
         "rows": [
           {
             "part": "Outer box",
             "value": "Cardboard · 45 g",
-            "ok": true
+            "status": "Ready",
+            "tone": "success"
           },
           {
             "part": "Hang tag",
             "value": "Weight missing",
-            "ok": false
+            "status": "Needs data",
+            "tone": "warning"
           }
         ],
         "link": "See the next step"
