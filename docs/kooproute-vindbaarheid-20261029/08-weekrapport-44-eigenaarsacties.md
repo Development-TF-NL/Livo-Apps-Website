@@ -8,7 +8,7 @@
 |---|---|---|
 | https://claude.ai/code/routines/trig_01CXK326ngSytJhTKmJTsi3G | De routine met al haar runs. Klik op een run voor het volledige eindantwoord. Runs staan **niet** in de gewone sessielijst van claude.ai/code. | werkt |
 | Pushmelding op je telefoon (Claude-app) | Korte samenvatting direct na elke run. | werkt (beide runs stuurden er een) |
-| Pull request op GitHub, branch `seo/<jaar>-<week>`, met het rapport als beschrijving | De plek waar je mergt en deployt. | **werkt nog niet**: pushen geeft 403, zie actie 3 |
+| Pull request op GitHub, branch `seo/<jaar>-<week>`, met het rapport als beschrijving | De plek waar je mergt en deployt. | werkt sinds run 3: https://github.com/Development-TF-NL/Livo-Apps-Website/pull/3 |
 | `docs/vindbaarheid/<jaar>-<week>.md` op `main` | Het archief, nadat je de PR hebt gemerged. | leeg tot de eerste merge |
 
 Vanaf de volgende run eindigt elk rapport met twee vaste blokken: **Stand** en **Acties voor de eigenaar** (push, merge en deploy; toegang en instellingen; besluiten), met per actie de exacte handeling en de melding "nog open sinds week …" voor wat blijft liggen.
@@ -18,6 +18,7 @@ Vanaf de volgende run eindigt elk rapport met twee vaste blokken: **Stand** en *
 | Run | Tijd (UTC) | Resultaat |
 |---|---|---|
 | cse_01L4oLKPFUeF4V7Pn27qgPWg | 19:38 tot 19:42 | Live site onbereikbaar (netwerkpolicy, 403 op CONNECT). Geen `GSC_*`-variabelen. Lokale build gemeten: alle pagina's 200, unieke title en description, één H1, wederkerige hreflang, 14 interne links 200. Gevonden: canonicals, sitemap en robots op `main` wijzen naar de apex in plaats van www; geen JSON-LD; `box.png` 1,8 MB en `seedling.png` 1,4 MB. Fix lokaal gemaakt, push 403, geen PR. |
+| cse_01L4oLKRtvUYL2ysKeeVbzXV | 20:20 tot 20:23 | Na de GitHub-app en de netwerktoegang (eigenaar, 20:19): live site gemeten (14 pagina's, 27 interne links zonder 404, redirects apex en http naar www en https in orde; op `main` nog apex-canonicals, geen JSON-LD, `/nl/kennis` en `/en/resources` 404, `box.png` 1,8 MB en `seedling.png` 1,4 MB). Search Console: tokenaanvraag gelukt, alle zestien aanroepen 403 omdat de Google Search Console API in project 132315037746 (`livo-search-console`) niet is ingeschakeld. Rapport gepusht op `seo/2026-44`, PR 3 geopend, geen codewijziging. |
 | cse_01L4oLKQA7UMcxLJ2qJRxbrn | 20:08 tot 20:11 | Live site nog steeds onbereikbaar. `GSC_PROPERTY` en `GSC_SERVICE_ACCOUNT_JSON` zijn nu aanwezig (de omgevingsvariabelen staan dus goed), maar de routine deed geen echte tokenaanvraag en meldde Search Console als niet gemeten. Zelfde apex-fout hersteld op een lokale branch, build groen, push 403, geen PR. |
 
 De apex-fout, de ontbrekende JSON-LD en de zware hero-afbeeldingen zijn op de werkbranch `website/kooproute-vindbaarheid-20261029` al opgelost (www-canonicals, Organization-, BreadcrumbList- en Article-JSON-LD, vaasfoto via `next/image`). De routine ziet alleen `main`, en daar staat die branch nog niet op. Zodra de branch gemerged is, vindt de routine deze punten niet meer.
@@ -49,8 +50,9 @@ Prompt van de routine aangescherpt op 29 oktober (avond): Search Console wordt v
 
 ### (b) Toegang en instellingen
 
-3. **GitHub-toegang voor de routine.** Beide runs kregen 403 bij het pushen: de Claude GitHub-app heeft geen toegang tot `Development-TF-NL/Livo-Apps-Website`. Installeer de app op die repo via https://github.com/apps/claude/installations/select_target (kies de organisatie Development-TF-NL, dan "Only select repositories", Livo-Apps-Website). Lukt dat niet, koppel GitHub opnieuw via https://claude.ai/customize/connectors. Zonder deze stap blijft elk rapport alleen in de run staan.
-4. **Netwerktoegang van de cloud-omgeving.** De omgeving "Default" weigert verbindingen naar `www.livoapps.software`. Open https://claude.ai/code, kies bij een nieuwe sessie de omgevingskiezer, dan "Edit cloud environment", en zet bij Network access de hosts `www.livoapps.software`, `livoapps.software`, `oauth2.googleapis.com` en `searchconsole.googleapis.com` bij Allowed domains (vinkje "Allow package managers" aan laten), of kies een ruimer toegangsniveau. Zonder deze stap meet de routine alleen een lokale build en kan zij Search Console niet bereiken.
+3. **GitHub-toegang voor de routine.** Gedaan door de eigenaar op 29 oktober (20:19): run 3 pushte en opende PR 3.
+4. **Netwerktoegang van de cloud-omgeving.** Gedaan door de eigenaar op 29 oktober: run 3 bereikte de live site en Google.
+4a. **Google Search Console API inschakelen.** In project `livo-search-console` (nummer 132315037746) staat de API nog op "Enable"; de inschakeling van eerder op de avond is niet doorgekomen en drie klikken via Chrome op 29 oktober (21:25) veranderden niets. Open https://console.cloud.google.com/apis/library/searchconsole.googleapis.com?project=livo-search-console, klik op **Enable** en wacht tot de knop verandert in "Manage". Controle: op https://console.cloud.google.com/apis/dashboard?project=livo-search-console moet "Google Search Console API" in de lijst staan. Daarna de routine opnieuw starten; de tokenaanvraag werkte al.
 5. **Rol van het serviceaccount.** In Search Console staat `search-console-reader@livo-search-console.iam.gserviceaccount.com` op de property `livoapps.software` nu met de rol Volledig; de bedoelde rol is Beperkt (lezen is genoeg). Search Console, Instellingen, Gebruikers en rechten, de drie puntjes achter het account, Rechten wijzigen.
 6. **Nog open:** Semrush zonder API-eenheden; Zoekwoordplanner België niet gelukt. Handwerk tot er toegang is.
 
