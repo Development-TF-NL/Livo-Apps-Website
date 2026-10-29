@@ -356,7 +356,7 @@
       "onRequest": "On request",
       "perMonthLong": "per month",
       "countingQ": "Which products count towards my subscription?",
-      "countingA": "For the subscription price, LIVO counts the products you place on the EU market yourself, such as your own brands and your own imports. Products you resell can be in the register without being counted towards the price. This is a pricing rule, not an exemption from legal obligations. Not sure? E-mail us your product range and we work it out with you.",
+      "countingA": "For the subscription price, LIVO counts the products you place on the EU market yourself: your own brands and your own imports. Products you only resell, without your own brand, can be in the register without being counted towards the price. In the terms and conditions a product that counts is a Billable SKU: an active article number, calculated as an average over three calendar months. This is a pricing rule, not an exemption from legal obligations. Not sure? E-mail us your product range and we work it out with you.",
       "allPlans": "Compare all plans and start directly",
       "help": "Need help choosing? Request a demo"
     },
@@ -725,7 +725,7 @@
         },
         {
           "title": "Wholesalers and distributors",
-          "body": "For the subscription price, your own brands and your own imports count; what you resell is registered but not counted. Your obligations depend on your role for each product and market. Do you know which of your products that is?"
+          "body": "For the subscription price, your own brands and your own imports count; what you only resell, without your own brand, is registered but not counted. Your obligations depend on your role for each product and market. Do you know which of your products that is?"
         },
         {
           "title": "Logistics and fulfilment",

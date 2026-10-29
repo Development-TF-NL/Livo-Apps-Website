@@ -356,7 +356,7 @@
       "onRequest": "Op aanvraag",
       "perMonthLong": "per maand",
       "countingQ": "Welke producten tellen mee voor mijn abonnement?",
-      "countingA": "Voor de abonnementsprijs telt LIVO de producten die je zelf op de EU-markt brengt, zoals eigen merken en eigen import. Producten die je doorverkoopt kunnen in het register staan zonder mee te tellen in deze prijsberekening. Dit is een prijsregel, geen vrijstelling van wettelijke verplichtingen. Twijfel je? Mail ons je assortiment, dan rekenen we het met je na.",
+      "countingA": "Voor de abonnementsprijs telt LIVO de producten die je zelf op de EU-markt brengt: eigen merken en eigen import. Producten die je alleen doorverkoopt, zonder eigen merk, kunnen in het register staan zonder mee te tellen in deze prijsberekening. In de algemene voorwaarden heet een meetellend product een Betaalbare SKU: een actief artikelnummer, gerekend als gemiddelde over drie kalendermaanden. Dit is een prijsregel, geen vrijstelling van wettelijke verplichtingen. Twijfel je? Mail ons je assortiment, dan rekenen we het met je na.",
       "allPlans": "Alle plannen vergelijken en direct starten",
       "help": "Hulp bij je keuze? Vraag een demo aan"
     },
@@ -725,7 +725,7 @@
         },
         {
           "title": "Groothandel en distributeurs",
-          "body": "Voor de abonnementsprijs tellen je eigen merken en import; wat je doorverkoopt registreer je zonder dat het meetelt. Welke verplichtingen je hebt, hangt af van je rol per product en markt. Weet je welke van je producten dat zijn?"
+          "body": "Voor de abonnementsprijs tellen je eigen merken en import; wat je alleen doorverkoopt, zonder eigen merk, registreer je zonder dat het meetelt. Welke verplichtingen je hebt, hangt af van je rol per product en markt. Weet je welke van je producten dat zijn?"
         },
         {
           "title": "Logistiek en fulfilment",
