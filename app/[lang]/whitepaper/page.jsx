@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     alternates: { canonical: `/${params.lang}/whitepaper`, languages: languageAlternates('/whitepaper') },
-    ...socialMetadata({ title, description, lang: params.lang }),
+    ...socialMetadata({ title, description, lang: params.lang, path: `/${params.lang}/whitepaper` }),
     // Indexeerbaar sinds 17 september 2026: de pagina heeft een aanvraag per e-mail; het formulier blijft achter de poort.
   };
 }

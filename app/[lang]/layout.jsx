@@ -7,7 +7,8 @@ import Nav from '../components/Nav';
 import FocusModality from '../components/FocusModality';
 import { getDictionary } from '../get-dictionary';
 import { i18n } from '../i18n-config';
-import { socialMetadata } from '../seo';
+import JsonLd from '../components/JsonLd';
+import { SITE_URL, organizationJsonLd, socialMetadata } from '../seo';
 
 // Body-font per ontwerpdocument v2 §3.2. Koppen: Satoshi (self-hosted, Fontshare-licentie)
 // — TODO: fontbestanden toevoegen onder app/fonts/ zodra opgehaald; de `font-display`-stack
@@ -31,7 +32,8 @@ const FALLBACK_TITLE = 'LIVO APPS · Software die je werk lichter maakt';
 const FALLBACK_DESCRIPTION = 'Weet welke regels gelden. Bewijs dat je voldoet.';
 
 export const metadata = {
-  metadataBase: new URL('https://livoapps.software'),
+  // De definitieve host is www (29 oktober 2026): de apex geeft een 308 naar www, dus elke absolute URL wijst naar www.
+  metadataBase: new URL(SITE_URL),
   title: FALLBACK_TITLE,
   description: FALLBACK_DESCRIPTION,
   icons: {
@@ -60,6 +62,8 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={lang} className={`${inter.variable} ${satoshi.variable} ${caveat.variable}`}>
       <body className="font-sans text-ink">
+        {/* Organization-JSON-LD op elke pagina: naam, adres, logo, e-mail en LinkedIn staan zichtbaar in de footer. */}
+        <JsonLd data={organizationJsonLd()} />
         <Nav lang={lang} dict={dict.nav} pricingEnabled={process.env.PRICING_PAGE_ENABLED === 'true'} />
         {children}
         {/* De focusrand alleen bij toetsenbordfocus (zie globals.css) */}

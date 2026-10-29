@@ -1,6 +1,8 @@
+import { SITE_URL } from './seo';
+
 export default function robots() {
   return {
     rules: { userAgent: '*', allow: '/' },
-    sitemap: 'https://livoapps.software/sitemap.xml',
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }
