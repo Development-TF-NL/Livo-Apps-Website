@@ -63,7 +63,7 @@ export default function WorkflowDemo({ t }) {
         </div>
         <header className="border-b border-line bg-white px-4 pt-3 md:px-5">
           <div className="flex items-center gap-2 pb-2.5">
-            <img src="/brand/livo-mark-v3.svg" alt="" aria-hidden="true" className="h-5 w-auto md:h-6" />
+            <img src="/brand/livo-mark.svg" alt="" aria-hidden="true" className="h-5 w-auto md:h-6" />
             <span className="font-display text-sm font-bold text-ink md:text-base">LIVO <span className="text-green-text">PPWR</span></span>
             <span className="ml-auto rounded-control border border-line px-2 py-0.5 text-[10px] text-sub">{w.product.meta.split(' · ')[1]}</span>
           </div>
