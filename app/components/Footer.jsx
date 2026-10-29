@@ -1,57 +1,50 @@
+import { ArrowRight } from 'lucide-react';
 import Logo from './Logo';
 import { ARTICLES, ARTICLE_LABELS, articlePath } from '../content/kennis';
 
-// Site-footer: Product en Company met login-link; whitepaperpromotie wacht op review. Voetregel
-// van 15 september ("not legal advice and does not guarantee compliance").
-// dict = home.footer; interne links in de dictionary staan zonder taalprefix.
-// De link Prijzen volgt de poort, net als het menu: open (PRICING_PAGE_ENABLED) naar de prijspagina,
-// dicht naar het prijsblok op de homepage. De poortstand komt uit de omgeving; op de 404 wordt hij meegegeven,
-// omdat de footer daar in de browser draait (FooterForPath).
+// Site-footer op het landingspagina-concept (29 oktober 2026): licht, op papier, met het logo, de tagline en het e-mailadres
+// bovenaan, de drie kolommen (Product, Hulpmiddelen met de kennisingang en de artikelen, Bedrijf met Inloggen) en onderaan de
+// voetregel over juridisch advies naast het copyright. dict = home.footer; interne links staan zonder taalprefix.
+// De link Prijzen volgt de poort: open (PRICING_PAGE_ENABLED) naar de prijspagina, dicht naar het prijsblok op de homepage.
 export default function Footer({ lang, dict, pricingEnabled = process.env.PRICING_PAGE_ENABLED === 'true' }) {
   const columns = [dict.columns.product, dict.columns.resources, dict.columns.company]
     .filter(Boolean)
     .map((column) => ({ ...column, items: column.items.filter(({ href }) => href !== '/whitepaper') }))
-    // Kennisartikelen (14 oktober 2026) onder Hulpmiddelen; de link draagt al de taal en wordt niet vertaald in resolve.
     .map((column) => (column.title === dict.columns.resources?.title ? { ...column, items: [...column.items, ...ARTICLES.map((a) => ({ label: ARTICLE_LABELS[a.id][lang], href: articlePath(a, lang), absolute: true }))] } : column))
     .filter((column) => column.items.length > 0);
   const resolve = (href, absolute) => {
     if (absolute) return href;
     if (href === '#pricing' && pricingEnabled) return `/${lang}/pricing`;
+    if (href === '#pricing') return `/${lang}#prijzen`;
+    if (href === '#how') return `/${lang}#werkwijze`;
     return href.startsWith('/') || href.startsWith('#') ? `/${lang}${href}` : href;
   };
+  const link = 'inline-flex min-h-[44px] items-center rounded text-sm text-ink transition-colors duration-150 hover:text-green-text focus-ring';
   return (
-    <footer className="bg-navy text-white border-t border-white/10 px-6 py-16">
-      <div className="mx-auto max-w-content">
-        <div className="grid gap-12 mb-12 md:grid-cols-3">
-          <div>
-            <div className="flex items-center gap-2 mb-6">
-              <Logo variant="inverse" className="h-12 w-auto" />
-            </div>
-            <p className="text-white/60 text-sm">{dict.tagline}</p>
-          </div>
+    <footer className="border-t border-line bg-paper pb-7 pt-9 text-ink">
+      <div className="mx-auto w-[min(1240px,calc(100%-40px))] md:w-[min(1240px,calc(100%-76px))] xl:w-[min(1240px,calc(100%-104px))]">
+        <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Logo className="h-9 w-auto" />
+          <p className="text-[11px] text-sub">{dict.tagline}</p>
+          <a href="mailto:hello@livoapps.software" className="flex items-center gap-3 text-[11px] font-medium md:ml-auto max-md:w-full">hello@livoapps.software <ArrowRight size={15} strokeWidth={1.6} aria-hidden="true" /></a>
+        </div>
+        <div className="mt-8 grid gap-8 border-t border-line pt-8 md:grid-cols-3">
           {columns.map((col) => (
             <div key={col.title}>
-              <h4 className="mb-2 font-display text-sm font-bold tracking-wide">{col.title}</h4>
-              <ul className="text-sm text-white/60">
+              <h4 className="mb-2 text-[11px] font-bold tracking-[.13em] text-green-text">{col.title}</h4>
+              <ul>
                 {col.items.map(({ label, href, absolute }) => (
-                  <li key={label}>
-                    <a href={resolve(href, absolute)} className="inline-flex min-h-[44px] items-center rounded transition-colors duration-150 hover:text-accent focus-ring" {...(href.startsWith('https://') ? { rel: 'noopener noreferrer' } : {})}>
-                      {label}
-                    </a>
-                  </li>
+                  <li key={label}><a href={resolve(href, absolute)} className={link} {...(href.startsWith('https://') ? { rel: 'noopener noreferrer' } : {})}>{label}</a></li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
-        <p className="text-xs text-white/50 mb-8">{dict.disclaimer}</p>
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-white/60">
-          <p>{dict.copyright}</p>
-          <div className="mt-2 flex max-w-full flex-wrap items-center justify-center gap-x-6 gap-y-2 md:mt-0">
-            {dict.social.map(({ label, href }) => (
-              <a href={href} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center rounded transition-colors duration-150 hover:text-accent focus-ring" key={label}>{label}</a>
-            ))}
-            <a href="mailto:hello@livoapps.software" className="inline-flex min-h-[44px] items-center rounded transition-colors duration-150 hover:text-accent focus-ring">hello@livoapps.software</a>
+        <div className="mt-7 flex flex-col gap-4 border-t border-line pt-5 text-[9px] leading-[1.75] text-sub md:flex-row md:items-start md:justify-between md:gap-8">
+          <p className="max-w-[540px]">{dict.disclaimer}</p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-1">
+            {dict.social.map(({ label, href }) => <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="rounded hover:text-green-text focus-ring">{label}</a>)}
+            <span>{dict.copyright}</span>
           </div>
         </div>
       </div>

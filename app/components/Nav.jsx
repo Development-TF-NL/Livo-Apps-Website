@@ -3,121 +3,85 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { ArrowRight, Menu, X } from 'lucide-react';
 import Logo from './Logo';
 import ProductLoginMenu from './ProductLoginMenu';
-import OrderButton from './OrderButton';
 import { ARTICLES, KENNIS_INDEX } from '../content/kennis';
+import { mailto } from '../mailto';
 
-// Header (kooproute 29 oktober 2026): vier menulinks (Hoe het werkt, Prijzen, Kennis, Over LIVO APPS),
-// taalwissel, Log in (menu) en de knop naar de planselectie op de prijspagina (OrderButton, geen mailto).
-// Geen dode links: Prijzen wijst naar /pricing zodra de poort open is, anders naar het prijsblok op de homepage;
-// Kennis wijst naar de kennisingang van de taal; de productpagina en de whitepaper staan in de footer.
-
-// De focusrand komt van de klasse focus-ring (globals.css); rounded geeft de rand afgeronde hoeken.
+// Kopbalk op het landingspagina-concept (29 oktober 2026): plakkend, papier met vervaging, logo met het label PPWR, de menulinks
+// (Hoe het werkt, Voor wie, Prijzen, Kennis, Vragen) met een groene onderstreping bij hover, Inloggen (menu) en de demoknop
+// (opent de demomail uit ppwr.hero). Prijzen wijst naar de prijspagina zodra de poort open is, anders naar het prijsblok.
 const focusRing = 'focus-ring rounded';
+const languages = [['nl', 'NL'], ['en', 'EN']];
 
-// Volgorde van de taalwissel: de standaardtaal eerst (NL · EN). Het blokje heeft geen overflow-hidden,
-// anders wordt de focusrand afgesneden; de link met focus ligt boven zijn buur. De links zijn 24 px hoog;
-// een onzichtbaar vlak eromheen (after) maakt het klikdoel 44 px.
-const languages = [
-  ['nl', 'NL'],
-  ['en', 'EN'],
-];
-
-export default function Nav({ lang, dict, pricingEnabled = false }) {
+export default function Nav({ lang, dict, demo, pricingEnabled = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname() || `/${lang}`;
-
-  // Kennisartikelen (14 oktober 2026) hebben per taal een eigen pad; de wissel gaat dan naar de tegenhanger.
   const switchPath = (locale) => {
     const article = ARTICLES.find((a) => a.path[lang] === pathname);
     if (article) return article.path[locale];
     if (pathname === KENNIS_INDEX[lang]) return KENNIS_INDEX[locale];
     return `/${locale}${pathname.replace(new RegExp(`^/${lang}(?=/|$)`), '')}`;
   };
-
   const close = () => setIsMenuOpen(false);
-
   const navItems = [
-    { label: dict.how, href: `/${lang}#how` },
-    // Poort open (PRICING_PAGE_ENABLED): naar de prijspagina; dicht: naar het prijsblok op de homepage.
-    { label: dict.pricing, href: pricingEnabled ? `/${lang}/pricing` : `/${lang}#pricing` },
+    { label: dict.how, href: `/${lang}#werkwijze` },
+    { label: dict.forWhom, href: `/${lang}#voor-wie` },
+    { label: dict.pricing, href: pricingEnabled ? `/${lang}/pricing` : `/${lang}#prijzen` },
     { label: dict.kennis, href: KENNIS_INDEX[lang] },
-    { label: dict.about, href: `/${lang}#about` },
+    { label: dict.faq, href: `/${lang}#vragen` },
   ];
-
+  const demoHref = mailto(demo.demoSubject, demo.demoBody);
+  const cta = 'inline-flex min-h-[36px] items-center gap-2.5 rounded-control bg-accent px-3 text-[10px] font-semibold text-btn-text transition-colors duration-150 hover:bg-accent-hover md:min-h-[41px] md:gap-3 md:px-4 md:text-[11px] lg:min-h-[46px] lg:px-5 lg:text-[13px]';
   const langSwitch = (
     <div className="flex items-center rounded-md border border-line text-xs font-semibold" role="group" aria-label={dict.language}>
       {languages.map(([code, label]) => {
         const active = code === lang;
         return (
-          <Link
-            key={code}
-            href={switchPath(code)}
-            hrefLang={code}
-            onClick={close}
-            aria-current={active ? 'true' : undefined}
-            className={`relative px-2.5 py-1 transition-colors duration-150 after:absolute after:inset-x-0 after:-inset-y-2.5 ${focusRing} focus-visible:z-10 ${active ? 'bg-navy text-white' : 'text-sub hover:text-ink'}`}
-          >
-            {label}
-          </Link>
+          <Link key={code} href={switchPath(code)} hrefLang={code} onClick={close} aria-current={active ? 'true' : undefined}
+            className={`relative px-2.5 py-1 transition-colors duration-150 after:absolute after:inset-x-0 after:-inset-y-2.5 ${focusRing} focus-visible:z-10 ${active ? 'bg-navy text-white' : 'text-sub hover:text-ink'}`}>{label}</Link>
         );
       })}
     </div>
   );
-
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-white">
-      <nav className="mx-auto box-content flex h-16 max-w-content items-center justify-between px-6">
-        <Link href={`/${lang}`} aria-label="Livo Apps, home" className={`flex h-11 items-center gap-2 ${focusRing}`}>
-          <Logo className="h-10 w-auto" />
+    <header className="sticky top-0 z-50 border-b border-line/60 bg-paper/95 backdrop-blur-xl">
+      <nav className="mx-auto flex h-[69px] w-[min(1320px,calc(100%-40px))] items-center justify-between gap-4 md:h-[82px] md:w-[min(1320px,calc(100%-60px))] xl:w-[min(1320px,calc(100%-80px))]">
+        <Link href={`/${lang}`} aria-label="LIVO PPWR, home" className={`flex h-11 flex-none items-center gap-4 ${focusRing}`}>
+          <Logo className="h-9 w-auto md:h-10" />
+          <span className="border-l border-frame-line/70 pl-4 text-[11px] font-semibold tracking-[.08em] text-sub max-md:hidden">PPWR</span>
         </Link>
-
-        <ul className="hidden items-center gap-7 lg:flex">
+        <ul className="ml-auto hidden items-center gap-5 lg:flex xl:gap-8">
           {navItems.map((item) => (
             <li key={item.label}>
-              <Link href={item.href} className={`inline-flex h-11 items-center text-sm text-ink transition-colors duration-150 hover:text-accent-dark ${focusRing}`}>
-                {item.label}
-              </Link>
+              <Link href={item.href} className={`relative inline-flex h-11 items-center text-xs font-medium text-ink transition-colors duration-150 after:absolute after:bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:transition-[width] hover:text-green-text hover:after:w-full ${focusRing}`}>{item.label}</Link>
             </li>
           ))}
         </ul>
-
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           {langSwitch}
           <ProductLoginMenu dict={dict} />
-          <OrderButton lang={lang} t={dict.order} pricingEnabled={pricingEnabled} hash="#plans" className={`inline-flex h-11 items-center gap-2 rounded-control bg-accent px-5 text-sm font-semibold text-ink transition-colors duration-150 hover:bg-accent-dark ${focusRing}`} />
+          <a href={demoHref} className={`${cta} ${focusRing}`}>{demo.ctaDemo} <ArrowRight size={16} strokeWidth={1.6} aria-hidden="true" /></a>
         </div>
-
-        <button
-          type="button"
-          className={`inline-flex h-11 w-11 items-center justify-center text-ink lg:hidden ${focusRing}`}
-          onClick={() => setIsMenuOpen((open) => !open)}
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-menu"
-          aria-label={isMenuOpen ? dict.menuClose : dict.menuOpen}
-        >
-          {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="flex items-center gap-3 lg:hidden">
+          <a href={demoHref} className={`${cta} ${focusRing}`}>{demo.ctaDemo} <ArrowRight size={14} strokeWidth={1.6} aria-hidden="true" /></a>
+          <button type="button" className={`inline-flex h-10 w-9 items-center justify-center text-ink ${focusRing}`} onClick={() => setIsMenuOpen((open) => !open)} aria-expanded={isMenuOpen} aria-controls="mobile-menu" aria-label={isMenuOpen ? dict.menuClose : dict.menuOpen}>
+            {isMenuOpen ? <X size={22} strokeWidth={1.6} /> : <Menu size={22} strokeWidth={1.6} />}
+          </button>
+        </div>
       </nav>
-
       {isMenuOpen && (
-        <div id="mobile-menu" className="border-t border-line bg-white px-6 py-4 lg:hidden">
-          <ul className="flex flex-col gap-1">
+        <div id="mobile-menu" className="border-t border-line bg-paper px-6 pb-6 pt-3 lg:hidden">
+          <ul className="flex flex-col">
             {navItems.map((item) => (
-              <li key={item.label}>
-                <Link href={item.href} onClick={close} className={`flex min-h-[44px] items-center text-sm text-ink transition-colors duration-150 hover:text-accent-dark ${focusRing}`}>
-                  {item.label}
-                </Link>
-              </li>
+              <li key={item.label}><Link href={item.href} onClick={close} className={`flex min-h-[44px] items-center text-[15px] text-ink hover:text-green-text ${focusRing}`}>{item.label}</Link></li>
             ))}
           </ul>
-          <div className="mt-4 flex items-start justify-between border-t border-line pt-4">
+          <div className="mt-3 flex items-start justify-between border-t border-line pt-4">
             <ProductLoginMenu dict={dict} mobile />
             {langSwitch}
           </div>
-          <OrderButton lang={lang} t={dict.order} pricingEnabled={pricingEnabled} hash="#plans" onClick={close} className={`mt-4 flex h-12 items-center justify-center gap-2 rounded-control bg-accent px-5 text-sm font-semibold text-ink transition-colors duration-150 hover:bg-accent-dark ${focusRing}`} />
         </div>
       )}
     </header>

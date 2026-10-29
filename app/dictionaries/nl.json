@@ -1,8 +1,10 @@
 {
   "nav": {
     "how": "Hoe het werkt",
+    "forWhom": "Voor wie",
     "pricing": "Prijzen",
     "kennis": "Kennis",
+    "faq": "Vragen",
     "about": "Over LIVO APPS",
     "login": "Inloggen",
     "loginMenuTitle": "Jouw LIVO-apps",
@@ -18,7 +20,7 @@
       "cta": "Kies je abonnement"
     },
     "demo": {
-      "cta": "Vraag een demo aan"
+      "cta": "Plan een demo"
     }
   },
   "home": {
@@ -27,17 +29,45 @@
       "description": "Breng verpakkingsgegevens en bewijs bij elkaar. Zie wat ontbreekt, bereid leveranciersvragen voor en maak een klantbestand. Vanaf €99 per maand."
     },
     "hero": {
-      "eyebrow": "LIVO PPWR",
-      "audience": "Voor importeurs, groothandels en merken in het mkb.",
-      "title": "Stop met verdrinken in de complexe Europese verpakkingsregelgeving!",
-      "titleGreen": "Europese",
-      "lead": "Je klant vraagt om verpakkingsgegevens. LIVO PPWR laat zien welke gegevens en bewijsstukken ontbreken, helpt je gerichte vragen aan leveranciers klaar te zetten en maakt een klantbestand voor je klaar. Jij beoordeelt de antwoorden en kiest wat je deelt.",
-      "ctaPrimary": "Probeer LIVO PPWR een maand",
-      "ctaPlans": "Kies je abonnement",
-      "ctaHow": "Bekijk hoe het werkt",
-      "priceLine": "Vanaf €99 per maand, exclusief btw.",
-      "monthOfferLine": "Bij maandbetaling is de eerste maand betaald. Stop vóór maand twee als het niet past.",
-      "helpLine": "Hulp bij de start is inbegrepen.",
+      "eyebrow": "PPWR-software voor het mkb",
+      "lines": [
+        "Je klant vraagt",
+        "verpakkingsdata."
+      ],
+      "titleGreen": "Jij hebt overzicht.",
+      "lead": "Van losse bestanden naar één plek voor je verpakkingsgegevens, leveranciersvragen en bewijs. LIVO laat zien wat ontbreekt en zet je volgende stap klaar.",
+      "ctaDemo": "Bekijk LIVO in 20 minuten",
+      "ctaHow": "Ontdek de werkwijze",
+      "fine": {
+        "from": "Vanaf",
+        "price": "€99 per maand",
+        "vat": "excl. btw",
+        "impl": "Geen implementatiekosten"
+      },
+      "photoAlt": "Een keramische vaas, kartonnen doos en beschermpapier als voorbeeld van een product met verschillende verpakkingsonderdelen",
+      "note": {
+        "label": "Een vraag van je klant",
+        "text": "“Heb je de verpakkingsgegevens van dit artikel voor ons?”"
+      },
+      "record": {
+        "code": "VH-2001",
+        "name": "Decoratieve vaas",
+        "pill": "2 open punten",
+        "rows": [
+          {
+            "part": "Omdoos",
+            "value": "Karton · 45 g",
+            "ok": true
+          },
+          {
+            "part": "Hangtag",
+            "value": "Gewicht ontbreekt",
+            "ok": false
+          }
+        ],
+        "link": "Bekijk de volgende stap"
+      },
+      "caption": "Productillustratie · fictieve gegevens",
       "visual": {
         "label": "Illustratie",
         "register": {
@@ -79,74 +109,298 @@
         }
       }
     },
-    "example": {
-      "title": "Van klantvraag naar een bruikbaar antwoord.",
-      "intro": "Geen stapel losse bestanden om zelf te ontcijferen. Zie in één productvoorbeeld wat LIVO klaarzet en wat jij beslist.",
+    "strip": [
+      "Start met je eigen Excel",
+      "Vul gegevens aan met je leveranciers",
+      "Jij controleert en bevestigt"
+    ],
+    "problem": {
+      "eyebrow": "Herkenbaar?",
+      "title": "Stop met verdrinken in de complexe Europese verpakkingsregelgeving!",
+      "titleGreen": "verpakkingsregelgeving",
+      "intro": "Eén klantvraag. Het antwoord ligt overal.",
+      "body": "Een gewicht in Excel. Een specificatie in je mailbox. Een leverancier die nog moet reageren. Voor je antwoord kunt geven, moet je eerst alles bij elkaar zoeken.",
+      "muted": "En bij de volgende vraag begint dat werk opnieuw.",
+      "files": [
+        "producten.xlsx",
+        "Re: specificaties",
+        "verpakking_v3.pdf"
+      ]
+    },
+    "workflow": {
+      "eyebrow": "Van klantvraag naar klantbestand",
+      "title": "Zo wordt losse data een werkbare volgende stap.",
+      "aside": "Volg één artikel door LIVO. Klik door het productvoorbeeld.",
       "steps": [
         {
-          "title": "Importeer je bestaande gegevens.",
-          "body": "Je importeert je Excel. LIVO stelt de kolomkoppeling voor; jij bevestigt.",
-          "icon": "excel-import"
+          "title": "Begin met wat je hebt.",
+          "body": "Importeer je Excel. Bekijk welke gegevens er zijn en welke informatie nog ontbreekt."
         },
         {
-          "title": "Zie wat nog ontbreekt.",
-          "body": "LIVO toont wat ontbreekt: het gewicht van een verpakkingsonderdeel en een testrapport.",
-          "icon": "open-punten"
+          "title": "Vraag gericht om aanvulling.",
+          "body": "LIVO bereidt de leveranciersuitvraag voor. Jij verstuurt die en beoordeelt het antwoord."
         },
         {
-          "title": "Stel een gerichte leveranciersvraag op.",
-          "body": "LIVO zet een voorgevulde leveranciersuitvraag klaar. Jij verstuurt die.",
-          "icon": "leveranciersuitvraag"
-        },
-        {
-          "title": "Beoordeel het antwoord.",
-          "body": "De leverancier vult 45 gram in. Jij controleert de reactie. Het rapport is nog aangevraagd.",
-          "icon": "beoordelen"
-        },
-        {
-          "title": "Maak het klantbestand klaar.",
-          "body": "Je exporteert de selectie voor je klant. Het ontbrekende rapport blijft zichtbaar.",
-          "icon": "klantbestand"
+          "title": "Maak je klantbestand klaar.",
+          "body": "Selecteer je artikelen en exporteer de gegevens. Open punten blijven herkenbaar."
         }
       ],
-      "responsibility": "LIVO houdt gegevens en bewijs bij elkaar en maakt het werk overzichtelijk. Je verstuurt leveranciersvragen zelf, controleert reacties en bepaalt wat je met je klant deelt.",
-      "caption": "Fictieve demogegevens. Een aangevraagd rapport is nog geen bewijs.",
-      "cta": "Bekijk LIVO PPWR",
-      "path": {
-        "label": "Illustratie met fictieve gegevens",
-        "product": "VH-2001 Decoratieve vaas · verpakking",
-        "rows": [
+      "window": {
+        "bar": "livo / productvoorbeeld",
+        "live": "Interactief",
+        "footer": "Voorbeeld met fictieve gegevens",
+        "next": "Volgende stap",
+        "again": "Opnieuw bekijken",
+        "product": {
+          "title": "VH-2001 · Decoratieve vaas",
+          "sub": "3 verpakkingsonderdelen · leverancier Noord & Co"
+        },
+        "table": {
+          "head": [
+            "Onderdeel",
+            "Materiaal",
+            "Gewicht",
+            "Bewijs"
+          ],
+          "rows": [
+            [
+              "Omdoos",
+              "Karton",
+              "45 g",
+              "Aanwezig"
+            ],
+            [
+              "Beschermpapier",
+              "Papier",
+              "8 g",
+              "Nog open"
+            ],
+            [
+              "Hangtag",
+              "Karton",
+              "Ontbreekt",
+              "Specificatie"
+            ]
+          ],
+          "filled": "2 g"
+        },
+        "panels": [
           {
-            "title": "Import",
-            "detail": "producten.xlsx · kolomkoppeling door jou bevestigd",
-            "status": "Geïmporteerd",
-            "tone": "success"
+            "crumb": [
+              "Verpakkingsregister",
+              "Artikeloverzicht"
+            ],
+            "title": "Zie wat ontbreekt.",
+            "pill": "2 open punten",
+            "sub": "Je bestand is geïmporteerd. Dit vraagt nog aandacht.",
+            "alertLabel": "Gericht verder:",
+            "alert": "vraag het gewicht van de hangtag en de onderbouwing voor het beschermpapier op.",
+            "action": "Bekijk de leveranciersuitvraag"
           },
           {
-            "title": "Open punten",
-            "detail": "Hangtag: gewicht ontbreekt · testrapport ontbreekt",
-            "status": "2 open punten",
-            "tone": "warning"
+            "crumb": [
+              "Leveranciers",
+              "Uitvraag"
+            ],
+            "title": "Vraag alleen wat nodig is.",
+            "pill": "Voorbereid",
+            "sub": "Een gerichte aanvulling op wat je al weet.",
+            "supplier": {
+              "initials": "NC",
+              "name": "Noord & Co",
+              "sub": "Leverancier · fictief voorbeeld",
+              "pill": "Jij verstuurt",
+              "intro": "Voor VH-2001 zoeken we nog:",
+              "items": [
+                "1. Het gewicht van de kartonnen hangtag",
+                "2. Onderbouwing bij het beschermpapier"
+              ],
+              "note": "De bekende gegevens staan al in de uitvraag."
+            },
+            "reply": {
+              "show": "Bekijk een voorbeeldreactie",
+              "hide": "Verberg de voorbeeldreactie",
+              "label": "Reactie: gewicht hangtag",
+              "value": "2 g",
+              "pill": "Te beoordelen",
+              "note": "De onderbouwing voor het papier is nog in onderzoek."
+            },
+            "alert": "Een portaalreactie wordt eerst door jou beoordeeld en bevestigd."
           },
           {
-            "title": "Leveranciersvraag",
-            "detail": "Voorgevulde uitvraag klaar · jij verstuurt",
-            "status": "Klaar om te versturen",
-            "tone": "info"
-          },
-          {
-            "title": "Beoordelen",
-            "detail": "Antwoord: hangtag 45 g · rapport aangevraagd",
-            "status": "Voorstel",
-            "tone": "info"
-          },
-          {
-            "title": "Klantbestand",
-            "detail": "Selectie voor je klant · Excel · open punt zichtbaar",
-            "status": "Klaargezet",
-            "tone": "success"
+            "crumb": [
+              "Klantselecties",
+              "Export"
+            ],
+            "title": "Een helder klantbestand.",
+            "pill": "Selectie klaar",
+            "sub": "Na jouw beoordeling is het gewicht aangevuld.",
+            "export": {
+              "title": "Verpakkingsdata · VH-2001",
+              "sub": "1 artikel · 3 verpakkingsonderdelen",
+              "pill": "1 punt open"
+            },
+            "alertLabel": "Zichtbaar open:",
+            "alert": "bewijs voor beschermpapier. Bewijsbijlagen deel je afzonderlijk.",
+            "action": "Download voorbeeldbestand"
           }
         ]
+      },
+      "note": "Een ingevuld veld is nog geen gecontroleerd bewijs. Je beoordeelt zelf of de informatie bij het juiste artikel en de juiste verpakking hoort."
+    },
+    "control": {
+      "eyebrow": "Slim voorbereid. Bewust beslist.",
+      "title": "Minder zoekwerk. De regie blijft bij jou.",
+      "body": "LIVO helpt je om het werk te organiseren. Jij houdt controle over de gegevens, de leveranciersreacties en wat je met je klant deelt.",
+      "link": "Bespreek jouw werkwijze",
+      "livo": {
+        "title": "LIVO zet klaar",
+        "items": [
+          "Voorstel voor je Excel-kolommen",
+          "Overzicht van ontbrekende gegevens",
+          "Voorgevulde leveranciersuitvraag",
+          "Gegevens voor je klantselectie"
+        ]
+      },
+      "you": {
+        "title": "Jij beslist",
+        "items": [
+          "Bevestigen wat je importeert",
+          "De uitvraag zelf versturen",
+          "Reacties en bewijs beoordelen",
+          "Bepalen wat je klant ontvangt"
+        ]
+      }
+    },
+    "audience": {
+      "eyebrow": "Voor de mensen die het werk doen",
+      "lines": [
+        "Veel artikelen.",
+        "Een klein team."
+      ],
+      "titleGreen": "Dat vraagt overzicht.",
+      "lead": "Voor bedrijven die verpakte producten verkopen en hun gegevens met leveranciers en klanten moeten afstemmen.",
+      "tabs": [
+        {
+          "tab": "Importeurs",
+          "title": "Je leverancier zit elders. De vraag ligt bij jou.",
+          "body": "Verzamel verpakkingsgegevens bij je leveranciers en houd bij wat nog ontbreekt. Zo kun je klantvragen afhandelen vanuit hetzelfde overzicht.",
+          "scenario": "Van leveranciersinformatie naar een bruikbaar dossier."
+        },
+        {
+          "tab": "Groothandels",
+          "title": "Een breed assortiment. Eén plek voor je gegevens.",
+          "body": "Houd de verpakkingsinformatie van eigen import, eigen merken en doorverkoop bij elkaar. Selecteer vervolgens de artikelen waar je klant om vraagt.",
+          "scenario": "Beantwoord een klantvraag zonder opnieuw te verzamelen."
+        },
+        {
+          "tab": "Eigen merken",
+          "title": "Jouw merk op het product. Grip op de informatie erachter.",
+          "body": "Breng gegevens over verpakking, leveranciers en bewijs samen. Zie welke informatie nog moet worden aangevuld of beoordeeld als er iets verandert.",
+          "scenario": "Bewaar de samenhang tussen product, verpakking en bewijs."
+        }
+      ],
+      "note": "Je wettelijke verplichtingen hangen af van je rol, verpakking en markt. Ook bij doorverkoop kunnen verplichtingen gelden."
+    },
+    "plans": {
+      "eyebrow": "Een heldere start",
+      "title": "Kies op je assortiment. Werk samen met je team.",
+      "lead": "Je abonnement volgt het aantal producten dat meetelt. Geen toeslag per gebruiker. Geen implementatiekosten.",
+      "monthly": "Per maand",
+      "annual": "Per jaar",
+      "annualBadge": "−15%",
+      "perMonth": "/ maand",
+      "billedMonthly": "Maandelijks gefactureerd",
+      "billedAnnually": "{total} per jaar gefactureerd",
+      "contexts": {
+        "Starter": "Een eerste assortiment",
+        "Core": "Meer producten, hetzelfde overzicht",
+        "Growth": "Ruimte voor een groter assortiment"
+      },
+      "featured": "Core",
+      "skuCount": "Tot {n} meetellende producten",
+      "discuss": "Bespreek {plan}",
+      "discussShort": "Bespreken",
+      "noteMonthly": "Alle prijzen exclusief btw. Beschikbare functies en landendekking stemmen we af in de demo.",
+      "noteAnnual": "Alle prijzen exclusief btw en bij jaarbetaling. Beschikbare functies en landendekking bespreken we in de demo.",
+      "more": "Meer dan 2.500 producten?",
+      "moreLink": "Bekijk de grotere plannen",
+      "upTo": "Tot {n} producten",
+      "moreThan": "Meer dan {n} producten",
+      "onRequest": "Op aanvraag",
+      "perMonthLong": "per maand",
+      "countingQ": "Welke producten tellen mee voor mijn abonnement?",
+      "countingA": "Voor de abonnementsprijs telt LIVO de producten die je zelf op de EU-markt brengt, zoals eigen merken en eigen import. Producten die je doorverkoopt kunnen in het register staan zonder mee te tellen in deze prijsberekening. Dit is een prijsregel, geen vrijstelling van wettelijke verplichtingen. In de demo bespreken we hoe dit uitpakt voor jouw assortiment.",
+      "allPlans": "Alle plannen vergelijken en direct starten"
+    },
+    "faq": {
+      "eyebrow": "Eerst even dit",
+      "title": "Goede vragen. Duidelijke antwoorden.",
+      "lead": "Je hoeft je hele proces niet al uitgedacht te hebben om een eerste stap te zetten.",
+      "link": "Stel je vraag in de demo",
+      "items": [
+        [
+          "Kan ik beginnen met mijn eigen Excel?",
+          "Ja. LIVO stelt voor hoe je kolommen op de gegevens in het register aansluiten. Je bekijkt en bevestigt de import. In de demo laten we zien hoe dat werkt en bespreken we je huidige bestanden."
+        ],
+        [
+          "Verstuurt LIVO automatisch e-mails naar leveranciers?",
+          "LIVO bereidt de uitvraag voor; jij verstuurt die vanuit je eigen mailbox. Dat kan met een link naar het leveranciersportaal of met een voorgevuld Excelbestand. Je houdt zelf het contact met je leverancier."
+        ],
+        [
+          "Wat als mijn leverancier nog geen antwoord heeft?",
+          "Dan blijft dat een open punt. LIVO helpt zichtbaar te maken wat nog ontbreekt, zodat je gericht kunt opvolgen en je klant geen zekerheid geeft die er nog niet is."
+        ],
+        [
+          "Zitten bewijsstukken ook in de Excel-export?",
+          "De klantselectie bevat de gegevens. De bewijsdocumenten worden niet als bijlagen in dat Excelbestand opgenomen. Spreek daarom apart af welke documenten je klant nodig heeft en hoe je die deelt."
+        ],
+        [
+          "Voldoe ik met LIVO automatisch aan de PPWR?",
+          "LIVO ondersteunt je werk met gegevens, verplichtingen en bewijs. Je organisatie blijft verantwoordelijk voor de beoordeling en de besluiten. De software geeft geen juridische garantie dat een product aan alle eisen voldoet."
+        ],
+        [
+          "Ik weet nog niet precies wat ik nodig heb. Kan ik wel starten?",
+          "Begin met de vraag die nu op je bureau ligt. In een demo bekijken we de werkwijze met fictieve gegevens en bespreken we je assortiment, beschikbare functies en een passende vervolgstap."
+        ]
+      ]
+    },
+    "knowledge": {
+      "eyebrow": "Liever eerst zelf lezen?",
+      "title": "Begin bij de vraag die je nu hebt.",
+      "items": [
+        {
+          "label": "Klantvragen",
+          "title": "Welke verpakkingsdata moet ik aanleveren?",
+          "id": "klantvraag"
+        },
+        {
+          "label": "Leveranciers",
+          "title": "Welke gegevens vraag ik aan mijn leverancier?",
+          "id": "leveranciers"
+        }
+      ]
+    },
+    "demo": {
+      "eyebrow": "Van herkenning naar een eerste stap",
+      "lines": [
+        "Laat zien waar",
+        "je vastloopt."
+      ],
+      "titleGreen": "Ontdek waar je begint.",
+      "body": "In 20 minuten zie je hoe LIVO werkt, met fictieve artikelgegevens. Daarna bespreken we wat past bij jouw assortiment en je team.",
+      "points": [
+        "Een concrete demo van 20 minuten",
+        "Ruimte voor jouw verpakkingsvraag",
+        "Een aanvraag is geen bestelling"
+      ],
+      "card": {
+        "label": "Kennismaken met LIVO",
+        "title": "Bekijk wat dit voor jouw werk betekent.",
+        "body": "Je aanvraag gaat per e-mail naar hello@livoapps.software. Zet je naam, je bedrijf en je vraag erin; we stellen een moment voor.",
+        "cta": "Vraag mijn demo aan",
+        "note": "Je mailprogramma opent met een voorgevuld bericht. Geen formulier, geen opslag van gegevens op de website.",
+        "mail": "hello@livoapps.software"
       }
     },
     "roles": {
@@ -166,6 +420,15 @@
         }
       ]
     },
+    "about": {
+      "eyebrow": "Software die je werk lichter maakt.",
+      "title": "Over LIVO APPS",
+      "paragraphs": [
+        "Europese regels over verpakkingen, duurzaamheid en ontbossing vragen veel van mkb-bedrijven. Je moet gegevens verzamelen, verplichtingen bijhouden en ingewikkelde wetgeving vertalen naar je eigen producten en processen. Veel kleine teams hebben daar de tijd en specialistische kennis niet voor.",
+        "Tegelijk vragen klanten, leveranciers en producenten elkaar om gegevens en bewijs. Spreadsheets en documenten gaan door de hele keten heen en weer, vaak met de hand. Dat kost veel werk, terwijl lastig te zien is wat klopt en wat nog ontbreekt.",
+        "Daarom zijn we LIVO gestart. We bouwen software die het werk voor mkb-bedrijven lichter maakt. We verwerken kennis van de regels in de app, zodat je ziet welke gegevens nog ontbreken en welke stap volgt. We zijn begonnen met verpakkingen (PPWR) en werken aan een module voor ontbossingsvrije producten (EUDR)."
+      ]
+    },
     "pricing": {
       "eyebrow": "Prijzen",
       "title": "Vanaf €99 per maand. Geen implementatiekosten.",
@@ -174,31 +437,6 @@
       ],
       "ctaAsk": "Vraag naar prijzen",
       "ctaPricing": "Bekijk alle prijzen"
-    },
-    "start": {
-      "eyebrow": "Starten met LIVO PPWR",
-      "title": "Zelf starten, met hulp bij de eerste inrichting.",
-      "hand": "Geen implementatietraject",
-      "steps": [
-        {
-          "title": "Kies je abonnement",
-          "body": "Kies op de prijspagina het plan dat bij je assortiment past. Maandbetaling is de standaard; jaarbetaling en maatwerk bespreek je met ons.",
-          "icon": "zelf-starten"
-        },
-        {
-          "title": "Bestel en ontvang je bevestiging",
-          "body": "Je bevestigt je bestelling en ontvangt een orderbevestiging met plan, termijn en voorwaarden. De eerste beheerder krijgt toegang tot de app.",
-          "icon": "verplichtingen"
-        },
-        {
-          "title": "Hulp bij de eerste inrichting",
-          "body": "We helpen je bij de eerste inrichting met je eigen verpakkingsgegevens. Dat is bij elk abonnement inbegrepen.",
-          "icon": "hulp-bij-start"
-        }
-      ],
-      "note": "Liever eerst zien hoe het werkt?",
-      "customer": "Al klant?",
-      "login": "Inloggen"
     },
     "whitepaper": {
       "eyebrow": "PPWR-hulpmiddel",
@@ -221,20 +459,6 @@
       },
       "rowTitle": "Eerst zelf lezen?",
       "rowBody": "De PPWR-whitepaper helpt je data, leveranciersinput en bewijs organiseren."
-    },
-    "about": {
-      "eyebrow": "Software die je werk lichter maakt.",
-      "title": "Over LIVO APPS",
-      "paragraphs": [
-        "Europese regels over verpakkingen, duurzaamheid en ontbossing vragen veel van mkb-bedrijven. Je moet gegevens verzamelen, verplichtingen bijhouden en ingewikkelde wetgeving vertalen naar je eigen producten en processen. Veel kleine teams hebben daar de tijd en specialistische kennis niet voor.",
-        "Tegelijk vragen klanten, leveranciers en producenten elkaar om gegevens en bewijs. Spreadsheets en documenten gaan door de hele keten heen en weer, vaak met de hand. Dat kost veel werk, terwijl lastig te zien is wat klopt en wat nog ontbreekt.",
-        "Daarom zijn we LIVO gestart. We bouwen software die het werk voor mkb-bedrijven lichter maakt. We verwerken kennis van de regels in de app, zodat je ziet welke gegevens nog ontbreken en welke stap volgt. We zijn begonnen met verpakkingen (PPWR) en werken aan een module voor ontbossingsvrije producten (EUDR)."
-      ]
-    },
-    "finalCta": {
-      "title": "Begin met je eigen verpakkingsgegevens.",
-      "lead": "Kies een abonnement en start in de app. We helpen je bij de eerste inrichting. Je hebt geen apart implementatietraject nodig.",
-      "cta": "Kies je abonnement"
     },
     "footer": {
       "tagline": "Software die je werk lichter maakt.",

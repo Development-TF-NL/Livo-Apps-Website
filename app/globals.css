@@ -4,29 +4,31 @@
 
 /* Brand tokens (ontwerpdocument v2 §3.1) — één bron, gespiegeld in tailwind.config.js. */
 :root {
-  --bg: #EEF2F3;
+  /* Palet landingspagina-concept (29 oktober 2026); gespiegeld in tailwind.config.js. */
+  --bg: #f0f4ea; --paper: #f8faf6;
   --surface: #FFFFFF;
-  --ink: #081D33;
-  --sub: #5B6B72;
-  --line: #E4E8EA;
-  --navy: #081D33;
-  --accent: #7AC143;
-  --accent-dark: #69AD36;
-  /* Huisstijl v2 (besluit 17 september 2026) */
-  --livo-mint: #EAF7E4; --livo-green-heading: #569A28; --livo-green-text: #2F7D2A; --livo-ink-blue: #2F5FB3;
-  --frame: #C9D3DA; --frame-bar: #F6F8F9; --frame-dot: #D5DDE3; --frame-line: #B9C6CE;
-  --file-excel: #1D6F42; --file-pdf: #B3261E; --file-mail: #2F5FB3; --file-folder: #B7791F;
-  --status-success-text: #3F6B16; --status-success-bg: #EAF6E7; --status-success-dot: #3FAE3B;
-  --status-warning-text: #854F0B; --status-warning-bg: #FEF3C7; --status-warning-dot: #D97706;
+  --ink: #102f35;
+  --sub: #62706b;
+  --line: #dce4da;
+  --navy: #173b32;
+  --accent: #88c842;
+  --accent-dark: #6b914e; --accent-hover: #9ad957;
+  --livo-mint: #eaf2e1; --livo-green-heading: #54852c; --livo-green-text: #54852c; --livo-ink-blue: #54852c; --amber: #a76821;
+  --frame: #dfe6d7; --frame-bar: #f1f4ef; --frame-dot: #ccd5c7; --frame-line: #b9c6ce;
+  --file-excel: #1D6F42; --file-pdf: #B3261E; --file-mail: #54852c; --file-folder: #B7791F;
+  --status-success-text: #4f7f2c; --status-success-bg: #eaf3e0; --status-success-dot: #5f8d36;
+  --status-warning-text: #98601e; --status-warning-bg: #fff1dc; --status-warning-dot: #d59a4c;
   --status-risk-text: #991B1B; --status-risk-bg: #FBE4E4; --status-risk-dot: #C84B4B;
-  --status-info-text: #3567B7; --status-info-bg: #E8EFF8; --status-info-dot: #3567B7;
-  --radius-control: 10px; --radius-card: 16px; --radius-hero: 22px;
-  --shadow-soft: 0 8px 24px rgba(8, 29, 51, 0.08);
-  --focus-ring: 0 0 0 2px #FFFFFF, 0 0 0 4px #081D33;
+  --status-info-text: #66766a; --status-info-bg: #f1f3ef; --status-info-dot: #66766a;
+  --radius-control: 7px; --radius-card: 12px; --radius-hero: 18px;
+  --shadow-soft: 0 9px 35px rgba(21, 51, 37, 0.05);
+  --focus-ring: 0 0 0 2px #FFFFFF, 0 0 0 5px #5a8c30;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+body { background: var(--paper); }
+summary::-webkit-details-marker { display: none; }
 
 /* Focusrand (huisstijl v2 §4): 2 px navy ring op 2 px afstand, alleen bij toetsenbordnavigatie (:focus-visible).
    De enige uitzondering op plat. Op een donker vlak is de witte binnenring de zichtbare rand. De transparante
@@ -45,3 +47,5 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
+
+@keyframes panel-in { from { opacity: .45; transform: translateY(5px); } to { opacity: 1; transform: none; } }

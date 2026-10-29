@@ -1,8 +1,10 @@
 {
   "nav": {
     "how": "How it works",
+    "forWhom": "For whom",
     "pricing": "Pricing",
     "kennis": "Resources",
+    "faq": "Questions",
     "about": "About LIVO APPS",
     "login": "Log in",
     "loginMenuTitle": "Your LIVO apps",
@@ -18,7 +20,7 @@
       "cta": "Choose your plan"
     },
     "demo": {
-      "cta": "Request a demo"
+      "cta": "Book a demo"
     }
   },
   "home": {
@@ -27,17 +29,45 @@
       "description": "Keep packaging data and evidence together. See what is missing, prepare supplier requests and create a customer file. From €99 per month."
     },
     "hero": {
-      "eyebrow": "LIVO PPWR",
-      "audience": "For importers, wholesalers and brands in small and medium-sized businesses.",
-      "title": "Stop drowning in complex European packaging rules!",
-      "titleGreen": "European",
-      "lead": "Your customer asks for packaging data. LIVO PPWR shows which data and evidence are missing, helps prepare focused supplier questions and prepares a customer file. You review the answers and choose what to share.",
-      "ctaPrimary": "Try LIVO PPWR for a month",
-      "ctaPlans": "Choose your plan",
-      "ctaHow": "See how it works",
-      "priceLine": "From €99 per month, excluding VAT.",
-      "monthOfferLine": "With monthly billing, the first month is paid. Stop before month two if it is not right for you.",
-      "helpLine": "Help with your first setup is included.",
+      "eyebrow": "PPWR software for SMEs",
+      "lines": [
+        "Your customer asks for",
+        "packaging data."
+      ],
+      "titleGreen": "You have the overview.",
+      "lead": "From loose files to one place for your packaging data, supplier questions and evidence. LIVO shows what is missing and prepares your next step.",
+      "ctaDemo": "See LIVO in 20 minutes",
+      "ctaHow": "Discover the workflow",
+      "fine": {
+        "from": "From",
+        "price": "€99 per month",
+        "vat": "excl. VAT",
+        "impl": "No implementation fee"
+      },
+      "photoAlt": "A ceramic vase, a cardboard box and protective paper as an example of a product with several packaging components",
+      "note": {
+        "label": "A question from your customer",
+        "text": "“Do you have the packaging data for this item for us?”"
+      },
+      "record": {
+        "code": "VH-2001",
+        "name": "Decorative vase",
+        "pill": "2 open items",
+        "rows": [
+          {
+            "part": "Outer box",
+            "value": "Cardboard · 45 g",
+            "ok": true
+          },
+          {
+            "part": "Hang tag",
+            "value": "Weight missing",
+            "ok": false
+          }
+        ],
+        "link": "See the next step"
+      },
+      "caption": "Product illustration · fictional data",
       "visual": {
         "label": "Illustration",
         "register": {
@@ -79,74 +109,298 @@
         }
       }
     },
-    "example": {
-      "title": "From customer question to a useful answer.",
-      "intro": "No pile of loose files to decipher yourself. See in one product example what LIVO prepares and what you decide.",
+    "strip": [
+      "Start with your own Excel",
+      "Complete data with your suppliers",
+      "You check and confirm"
+    ],
+    "problem": {
+      "eyebrow": "Sound familiar?",
+      "title": "Stop drowning in complex European packaging rules!",
+      "titleGreen": "packaging rules",
+      "intro": "One customer question. The answer is everywhere.",
+      "body": "A weight in Excel. A specification in your mailbox. A supplier who still has to respond. Before you can answer, you first have to gather everything.",
+      "muted": "And with the next question, that work starts again.",
+      "files": [
+        "products.xlsx",
+        "Re: specifications",
+        "packaging_v3.pdf"
+      ]
+    },
+    "workflow": {
+      "eyebrow": "From customer question to customer file",
+      "title": "This is how loose data becomes a workable next step.",
+      "aside": "Follow one item through LIVO. Click through the product example.",
       "steps": [
         {
-          "title": "Import your existing data.",
-          "body": "Import your Excel file. LIVO proposes the column mapping; you confirm it.",
-          "icon": "excel-import"
+          "title": "Start with what you have.",
+          "body": "Import your Excel. See which data is there and which information is still missing."
         },
         {
-          "title": "See what is missing.",
-          "body": "LIVO shows what is missing: the weight of a packaging part and a test report.",
-          "icon": "open-punten"
+          "title": "Ask specifically for what is missing.",
+          "body": "LIVO prepares the supplier request. You send it and review the answer."
         },
         {
-          "title": "Prepare a focused supplier request.",
-          "body": "LIVO prepares a prefilled supplier request. You send it.",
-          "icon": "leveranciersuitvraag"
-        },
-        {
-          "title": "Review the response.",
-          "body": "The supplier adds 45 grams. You review the response. The report is still requested.",
-          "icon": "beoordelen"
-        },
-        {
-          "title": "Prepare the customer file.",
-          "body": "Export the selection for your customer. The missing report remains visible.",
-          "icon": "klantbestand"
+          "title": "Prepare your customer file.",
+          "body": "Select your items and export the data. Open items remain recognisable."
         }
       ],
-      "responsibility": "LIVO keeps data and evidence together and makes the work manageable. You send supplier requests yourself, check responses and decide what you share with your customer.",
-      "caption": "Fictional demo data. A requested report is not evidence on file.",
-      "cta": "Explore LIVO PPWR",
-      "path": {
-        "label": "Illustration with fictional data",
-        "product": "VH-2001 Decorative vase · packaging",
-        "rows": [
+      "window": {
+        "bar": "livo / product example",
+        "live": "Interactive",
+        "footer": "Example with fictional data",
+        "next": "Next step",
+        "again": "View again",
+        "product": {
+          "title": "VH-2001 · Decorative vase",
+          "sub": "3 packaging components · supplier Noord & Co"
+        },
+        "table": {
+          "head": [
+            "Component",
+            "Material",
+            "Weight",
+            "Evidence"
+          ],
+          "rows": [
+            [
+              "Outer box",
+              "Cardboard",
+              "45 g",
+              "Present"
+            ],
+            [
+              "Protective paper",
+              "Paper",
+              "8 g",
+              "Still open"
+            ],
+            [
+              "Hang tag",
+              "Cardboard",
+              "Missing",
+              "Specification"
+            ]
+          ],
+          "filled": "2 g"
+        },
+        "panels": [
           {
-            "title": "Import",
-            "detail": "products.xlsx · column mapping confirmed by you",
-            "status": "Imported",
-            "tone": "success"
+            "crumb": [
+              "Packaging register",
+              "Item overview"
+            ],
+            "title": "See what is missing.",
+            "pill": "2 open items",
+            "sub": "Your file has been imported. This still needs attention.",
+            "alertLabel": "Next, specifically:",
+            "alert": "request the weight of the hang tag and the substantiation for the protective paper.",
+            "action": "See the supplier request"
           },
           {
-            "title": "Open items",
-            "detail": "Hang tag: weight missing · test report missing",
-            "status": "2 open items",
-            "tone": "warning"
+            "crumb": [
+              "Suppliers",
+              "Request"
+            ],
+            "title": "Ask only what is needed.",
+            "pill": "Prepared",
+            "sub": "A focused addition to what you already know.",
+            "supplier": {
+              "initials": "NC",
+              "name": "Noord & Co",
+              "sub": "Supplier · fictional example",
+              "pill": "You send it",
+              "intro": "For VH-2001 we still need:",
+              "items": [
+                "1. The weight of the cardboard hang tag",
+                "2. Substantiation for the protective paper"
+              ],
+              "note": "The known data is already in the request."
+            },
+            "reply": {
+              "show": "See an example response",
+              "hide": "Hide the example response",
+              "label": "Response: hang tag weight",
+              "value": "2 g",
+              "pill": "To review",
+              "note": "The substantiation for the paper is still being looked into."
+            },
+            "alert": "A portal response is first reviewed and confirmed by you."
           },
           {
-            "title": "Supplier request",
-            "detail": "Prefilled request ready · you send it",
-            "status": "Ready to send",
-            "tone": "info"
-          },
-          {
-            "title": "Review",
-            "detail": "Answer: hang tag 45 g · report requested",
-            "status": "Proposal",
-            "tone": "info"
-          },
-          {
-            "title": "Customer file",
-            "detail": "Selection for your customer · Excel · open item visible",
-            "status": "Prepared",
-            "tone": "success"
+            "crumb": [
+              "Customer selections",
+              "Export"
+            ],
+            "title": "A clear customer file.",
+            "pill": "Selection ready",
+            "sub": "After your review, the weight has been added.",
+            "export": {
+              "title": "Packaging data · VH-2001",
+              "sub": "1 item · 3 packaging components",
+              "pill": "1 item open"
+            },
+            "alertLabel": "Visibly open:",
+            "alert": "evidence for the protective paper. Evidence attachments are shared separately.",
+            "action": "Download example file"
           }
         ]
+      },
+      "note": "A filled-in field is not yet verified evidence. You assess yourself whether the information belongs to the right item and the right packaging."
+    },
+    "control": {
+      "eyebrow": "Smartly prepared. Consciously decided.",
+      "title": "Less searching. You stay in charge.",
+      "body": "LIVO helps you organise the work. You keep control over the data, the supplier responses and what you share with your customer.",
+      "link": "Discuss your workflow",
+      "livo": {
+        "title": "LIVO prepares",
+        "items": [
+          "A proposal for your Excel columns",
+          "An overview of missing data",
+          "A prefilled supplier request",
+          "Data for your customer selection"
+        ]
+      },
+      "you": {
+        "title": "You decide",
+        "items": [
+          "Confirm what you import",
+          "Send the request yourself",
+          "Review responses and evidence",
+          "Decide what your customer receives"
+        ]
+      }
+    },
+    "audience": {
+      "eyebrow": "For the people who do the work",
+      "lines": [
+        "Many items.",
+        "A small team."
+      ],
+      "titleGreen": "That calls for overview.",
+      "lead": "For businesses that sell packaged products and need to align their data with suppliers and customers.",
+      "tabs": [
+        {
+          "tab": "Importers",
+          "title": "Your supplier is elsewhere. The question lands with you.",
+          "body": "Collect packaging data from your suppliers and keep track of what is still missing. That way you can handle customer questions from the same overview.",
+          "scenario": "From supplier information to a usable file."
+        },
+        {
+          "tab": "Wholesalers",
+          "title": "A wide range. One place for your data.",
+          "body": "Keep the packaging information of your own imports, own brands and resale together. Then select the items your customer asks about.",
+          "scenario": "Answer a customer question without collecting again."
+        },
+        {
+          "tab": "Own brands",
+          "title": "Your brand on the product. A grip on the information behind it.",
+          "body": "Bring data on packaging, suppliers and evidence together. See which information still needs to be added or reviewed when something changes.",
+          "scenario": "Keep the link between product, packaging and evidence."
+        }
+      ],
+      "note": "Your legal obligations depend on your role, packaging and market. Obligations can also apply when you resell."
+    },
+    "plans": {
+      "eyebrow": "A clear start",
+      "title": "Choose by your product range. Work together with your team.",
+      "lead": "Your subscription follows the number of products that count. No surcharge per user. No implementation fee.",
+      "monthly": "Monthly",
+      "annual": "Annually",
+      "annualBadge": "−15%",
+      "perMonth": "/ month",
+      "billedMonthly": "Billed monthly",
+      "billedAnnually": "{total} billed per year",
+      "contexts": {
+        "Starter": "A first product range",
+        "Core": "More products, the same overview",
+        "Growth": "Room for a larger range"
+      },
+      "featured": "Core",
+      "skuCount": "Up to {n} counting products",
+      "discuss": "Discuss {plan}",
+      "discussShort": "Discuss",
+      "noteMonthly": "All prices exclude VAT. We align available features and country coverage in the demo.",
+      "noteAnnual": "All prices exclude VAT and apply with annual billing. We discuss available features and country coverage in the demo.",
+      "more": "More than 2,500 products?",
+      "moreLink": "See the larger plans",
+      "upTo": "Up to {n} products",
+      "moreThan": "More than {n} products",
+      "onRequest": "On request",
+      "perMonthLong": "per month",
+      "countingQ": "Which products count towards my subscription?",
+      "countingA": "For the subscription price, LIVO counts the products you place on the EU market yourself, such as own brands and own imports. Products you resell can be in the register without counting in this price calculation. This is a pricing rule, not an exemption from legal obligations. In the demo we discuss how this works out for your range.",
+      "allPlans": "Compare all plans and start directly"
+    },
+    "faq": {
+      "eyebrow": "First things first",
+      "title": "Good questions. Clear answers.",
+      "lead": "You do not need to have your whole process worked out to take a first step.",
+      "link": "Ask your question in the demo",
+      "items": [
+        [
+          "Can I start with my own Excel?",
+          "Yes. LIVO proposes how your columns map to the data in the register. You review and confirm the import. In the demo we show how that works and discuss your current files."
+        ],
+        [
+          "Does LIVO automatically e-mail suppliers?",
+          "LIVO prepares the request; you send it from your own mailbox. That can be a link to the supplier portal or a prefilled Excel file. You keep the contact with your supplier yourself."
+        ],
+        [
+          "What if my supplier has not answered yet?",
+          "Then that remains an open item. LIVO helps make visible what is still missing, so you can follow up specifically and do not give your customer certainty that is not there yet."
+        ],
+        [
+          "Are evidence documents included in the Excel export?",
+          "The customer selection contains the data. The evidence documents are not included as attachments in that Excel file. So agree separately which documents your customer needs and how you share them."
+        ],
+        [
+          "Do I automatically meet the PPWR with LIVO?",
+          "LIVO supports your work with data, obligations and evidence. Your organisation remains responsible for the assessment and the decisions. The software gives no legal guarantee that a product meets every requirement."
+        ],
+        [
+          "I do not know exactly what I need yet. Can I still start?",
+          "Start with the question on your desk now. In a demo we look at the workflow with fictional data and discuss your range, available features and a suitable next step."
+        ]
+      ]
+    },
+    "knowledge": {
+      "eyebrow": "Prefer to read first?",
+      "title": "Start with the question you have now.",
+      "items": [
+        {
+          "label": "Customer questions",
+          "title": "Which packaging data do I need to provide?",
+          "id": "klantvraag"
+        },
+        {
+          "label": "Suppliers",
+          "title": "Which data do I ask my supplier for?",
+          "id": "leveranciers"
+        }
+      ]
+    },
+    "demo": {
+      "eyebrow": "From recognition to a first step",
+      "lines": [
+        "Show where",
+        "you get stuck."
+      ],
+      "titleGreen": "Discover where you start.",
+      "body": "In 20 minutes you see how LIVO works, with fictional item data. Then we discuss what fits your range and your team.",
+      "points": [
+        "A concrete 20-minute demo",
+        "Room for your packaging question",
+        "A request is not an order"
+      ],
+      "card": {
+        "label": "Get to know LIVO",
+        "title": "See what this means for your work.",
+        "body": "Your request goes by e-mail to hello@livoapps.software. Include your name, your company and your question; we propose a time.",
+        "cta": "Request my demo",
+        "note": "Your mail program opens with a prefilled message. No form, no data stored on the website.",
+        "mail": "hello@livoapps.software"
       }
     },
     "roles": {
@@ -166,6 +420,15 @@
         }
       ]
     },
+    "about": {
+      "eyebrow": "Software that lightens the workflow.",
+      "title": "About LIVO APPS",
+      "paragraphs": [
+        "European rules on packaging, sustainability and deforestation ask a lot of SMEs. You have to collect data, keep track of obligations and translate complex legislation into your own products and processes. Many small teams do not have the time or the specialist knowledge for that.",
+        "At the same time, customers, suppliers and producers ask each other for data and evidence. Spreadsheets and documents travel back and forth through the whole chain, often by hand. That takes a lot of work, while it is hard to see what is correct and what is still missing.",
+        "That is why we started LIVO. We build software that makes the work lighter for SMEs. We build knowledge of the rules into the app, so you can see which data is still missing and what the next step is. We started with packaging (PPWR) and are working on a module for deforestation-free products (EUDR)."
+      ]
+    },
     "pricing": {
       "eyebrow": "Pricing",
       "title": "From €99 per month. No implementation fee.",
@@ -174,31 +437,6 @@
       ],
       "ctaAsk": "Ask about pricing",
       "ctaPricing": "View all prices"
-    },
-    "start": {
-      "eyebrow": "Start with LIVO PPWR",
-      "title": "Start yourself, with help for your first setup.",
-      "hand": "No implementation project",
-      "steps": [
-        {
-          "title": "Choose your plan",
-          "body": "On the pricing page, choose the plan that fits your product range. Monthly billing is the default; annual billing and custom plans are discussed with us.",
-          "icon": "zelf-starten"
-        },
-        {
-          "title": "Order and receive your confirmation",
-          "body": "You confirm your order and receive an order confirmation with plan, term and terms and conditions. The first administrator gets access to the app.",
-          "icon": "verplichtingen"
-        },
-        {
-          "title": "Help with your first setup",
-          "body": "We help you with your first setup using your own packaging data. This is included in every plan.",
-          "icon": "hulp-bij-start"
-        }
-      ],
-      "note": "Prefer to see how it works first?",
-      "customer": "Already a customer?",
-      "login": "Log in"
     },
     "whitepaper": {
       "eyebrow": "PPWR resource",
@@ -221,20 +459,6 @@
       },
       "rowTitle": "Want to read first?",
       "rowBody": "The PPWR whitepaper helps you organise data, supplier input and evidence."
-    },
-    "about": {
-      "eyebrow": "Software that lightens the workflow.",
-      "title": "About LIVO APPS",
-      "paragraphs": [
-        "European rules on packaging, sustainability and deforestation ask a lot of SMEs. You have to collect data, keep track of obligations and translate complex legislation into your own products and processes. Many small teams do not have the time or the specialist knowledge for that.",
-        "At the same time, customers, suppliers and producers ask each other for data and evidence. Spreadsheets and documents travel back and forth through the whole chain, often by hand. That takes a lot of work, while it is hard to see what is correct and what is still missing.",
-        "That is why we started LIVO. We build software that makes the work lighter for SMEs. We build knowledge of the rules into the app, so you can see which data is still missing and what the next step is. We started with packaging (PPWR) and are working on a module for deforestation-free products (EUDR)."
-      ]
-    },
-    "finalCta": {
-      "title": "Start with your own packaging data.",
-      "lead": "Choose a plan and start in the app. We help you with your first setup. No separate implementation project is needed.",
-      "cta": "Choose your plan"
     },
     "footer": {
       "tagline": "Software that lightens the workflow.",
