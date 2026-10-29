@@ -4,7 +4,7 @@
     "forWhom": "Voor wie",
     "pricing": "Prijzen",
     "kennis": "Kennis",
-    "faq": "Vragen",
+    "help": "Hulp",
     "about": "Over LIVO APPS",
     "login": "Inloggen",
     "loginMenuTitle": "Jouw LIVO-apps",
@@ -36,7 +36,6 @@
       ],
       "titleGreen": "Jij hebt overzicht.",
       "lead": "Van losse bestanden naar één plek voor je verpakkingsgegevens, leveranciersvragen en bewijs. LIVO laat zien wat ontbreekt en zet je volgende stap klaar.",
-      "ctaDemo": "Bekijk LIVO in 20 minuten",
       "ctaHow": "Ontdek de werkwijze",
       "fine": {
         "from": "Vanaf",
@@ -107,7 +106,8 @@
             }
           ]
         }
-      }
+      },
+      "ctaPrimary": "Kies je abonnement"
     },
     "strip": [
       "Start met je eigen Excel",
@@ -252,7 +252,7 @@
       "eyebrow": "Slim voorbereid. Bewust beslist.",
       "title": "Minder zoekwerk. De regie blijft bij jou.",
       "body": "LIVO helpt je om het werk te organiseren. Jij houdt controle over de gegevens, de leveranciersreacties en wat je met je klant deelt.",
-      "link": "Bespreek jouw werkwijze",
+      "link": "Hulp bij jouw werkwijze",
       "livo": {
         "title": "LIVO zet klaar",
         "items": [
@@ -319,8 +319,8 @@
       },
       "featured": "Core",
       "skuCount": "Tot {n} meetellende producten",
-      "discuss": "Bespreek {plan}",
-      "discussShort": "Bespreken",
+      "discuss": "Start met {plan}",
+      "discussShort": "Starten",
       "noteMonthly": "Alle prijzen exclusief btw. Beschikbare functies en landendekking stemmen we af in de demo.",
       "noteAnnual": "Alle prijzen exclusief btw en bij jaarbetaling. Beschikbare functies en landendekking bespreken we in de demo.",
       "more": "Meer dan 2.500 producten?",
@@ -331,13 +331,14 @@
       "perMonthLong": "per maand",
       "countingQ": "Welke producten tellen mee voor mijn abonnement?",
       "countingA": "Voor de abonnementsprijs telt LIVO de producten die je zelf op de EU-markt brengt, zoals eigen merken en eigen import. Producten die je doorverkoopt kunnen in het register staan zonder mee te tellen in deze prijsberekening. Dit is een prijsregel, geen vrijstelling van wettelijke verplichtingen. In de demo bespreken we hoe dit uitpakt voor jouw assortiment.",
-      "allPlans": "Alle plannen vergelijken en direct starten"
+      "allPlans": "Alle plannen vergelijken en direct starten",
+      "help": "Hulp bij je keuze? Plan een demo van 20 minuten"
     },
     "faq": {
       "eyebrow": "Eerst even dit",
       "title": "Goede vragen. Duidelijke antwoorden.",
       "lead": "Je hoeft je hele proces niet al uitgedacht te hebben om een eerste stap te zetten.",
-      "link": "Stel je vraag in de demo",
+      "link": "Stel je vraag",
       "items": [
         [
           "Kan ik beginnen met mijn eigen Excel?",
@@ -381,27 +382,45 @@
         }
       ]
     },
-    "demo": {
-      "eyebrow": "Van herkenning naar een eerste stap",
+    "help": {
+      "eyebrow": "Zelf aan de slag, hulp als je wilt",
       "lines": [
-        "Laat zien waar",
-        "je vastloopt."
+        "Zelfstandig starten.",
+        "Hulp op"
       ],
-      "titleGreen": "Ontdek waar je begint.",
-      "body": "In 20 minuten zie je hoe LIVO werkt, met fictieve artikelgegevens. Daarna bespreken we wat past bij jouw assortiment en je team.",
+      "titleGreen": "elk moment.",
+      "body": "Je kiest een plan, bestelt en begint met je eigen gegevens. Niemand belt je na. Heb je hulp nodig, dan is die er: bij je keuze, bij de inrichting en bij vragen.",
       "points": [
-        "Een concrete demo van 20 minuten",
-        "Ruimte voor jouw verpakkingsvraag",
-        "Een aanvraag is geen bestelling"
+        "Zelf zien, kopen en starten",
+        "Hulp bij de eerste inrichting is inbegrepen",
+        "Een demo kan, maar hoeft niet"
       ],
-      "card": {
-        "label": "Kennismaken met LIVO",
-        "title": "Bekijk wat dit voor jouw werk betekent.",
-        "body": "Je aanvraag gaat per e-mail naar hello@livoapps.software. Zet je naam, je bedrijf en je vraag erin; we stellen een moment voor.",
-        "cta": "Vraag mijn demo aan",
-        "note": "Je mailprogramma opent met een voorgevuld bericht. Geen formulier, geen opslag van gegevens op de website.",
-        "mail": "hello@livoapps.software"
-      }
+      "cards": [
+        {
+          "label": "Hulp bij je keuze",
+          "title": "Twijfel je welk plan past?",
+          "body": "In 20 minuten laten we met fictieve gegevens zien hoe LIVO werkt en bespreken we je assortiment.",
+          "cta": "Plan een demo",
+          "subject": "LIVO PPWR demo"
+        },
+        {
+          "label": "Hulp bij de inrichting",
+          "title": "Samen je eerste gegevens erin.",
+          "body": "Bij elk abonnement helpen we je bij de eerste inrichting met je eigen verpakkingsgegevens. Geen implementatietraject.",
+          "cta": "Vraag hulp bij de start",
+          "subject": "LIVO PPWR hulp bij de start"
+        },
+        {
+          "label": "Hulp bij vragen",
+          "title": "Een vraag tussendoor?",
+          "body": "Mail ons. Je krijgt antwoord van iemand die de software kent. Veel vragen staan ook hierboven.",
+          "cta": "Stel je vraag",
+          "subject": "LIVO PPWR vraag",
+          "faqLink": "Bekijk de vragen"
+        }
+      ],
+      "note": "Hulp vragen is vrijblijvend. We nemen alleen contact op als jij daarom vraagt.",
+      "mail": "hello@livoapps.software"
     },
     "roles": {
       "title": "Wat neemt LIVO over?",

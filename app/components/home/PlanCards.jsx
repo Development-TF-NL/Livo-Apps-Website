@@ -6,8 +6,8 @@ import { ArrowRight, ChevronDown, Plus } from 'lucide-react';
 import { btnPrimary, btnSecondary, textLink } from '../ui';
 
 // De prijskaarten van het concept (29 oktober 2026): schakelaar maand/jaar, drie kaarten (Starter, Core uitgelicht, Growth),
-// de grotere plannen ingeklapt, de telregel ingeklapt. "Bespreek {plan}" opent de demomail met het plan erbij (het concept
-// vult het plan in zijn conceptformulier in); de regel eronder linkt naar de prijspagina met alle plannen en de kooproute.
+// de grotere plannen ingeklapt, de telregel ingeklapt. "Start met {plan}" gaat naar de planselectie op de prijspagina (besluit eigenaar
+// 29 oktober avond: planselectie voorop); de demo staat als tekstlink bij de hulp bij je keuze (demomail met het plan erbij).
 // Bedragen en ladder uit copy/pricing.json (dict.pricing.ladder); teksten uit home.plans.
 const num = (n, lang) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, lang === 'nl' ? '.' : ',');
 const fill = (s, v) => s.replace('{plan}', v).replace('{n}', v).replace('{total}', v);
@@ -35,7 +35,7 @@ export default function PlanCards({ t, ladder, lang, demoHref, pricingHref }) {
               <p className="mt-2 text-[10px] text-sub md:text-[11px] max-sm:col-start-1 max-sm:row-start-3">{fill(t.skuCount, num(p.limit, lang))}</p>
               <p className="mt-6 flex items-baseline gap-1.5 whitespace-nowrap max-sm:col-start-2 max-sm:row-span-2 max-sm:row-start-2 max-sm:mt-0 max-sm:flex-col max-sm:items-end max-sm:gap-0.5 max-sm:self-center"><span className="font-display text-[39px] leading-none tracking-heading md:text-[47px]">{price(p)}</span><small className="text-[10px] text-sub md:text-[11px]">{t.perMonth}</small></p>
               <p className="mt-2.5 min-h-[15px] text-[9px] text-sub max-sm:col-span-2 max-sm:mt-4">{annual ? fill(t.billedAnnually, `€${num(p.annualTotal, lang)}`) : t.billedMonthly}</p>
-              <a href={`${demoHref}${encodeURIComponent(`\nPlan: ${p.name}\n`)}`} className={`${featured ? btnPrimary : btnSecondary} mt-5 flex w-full text-[11px] max-sm:col-span-2 max-sm:min-h-[44px] max-sm:text-xs`}>{fill(t.discuss, p.name)} <ArrowRight size={18} strokeWidth={1.6} aria-hidden="true" /></a>
+              <Link href={pricingHref} className={`${featured ? btnPrimary : btnSecondary} mt-5 flex w-full text-[11px] max-sm:col-span-2 max-sm:min-h-[44px] max-sm:text-xs`}>{fill(t.discuss, p.name)} <ArrowRight size={18} strokeWidth={1.6} aria-hidden="true" /></Link>
             </article>
           );
         })}
@@ -52,7 +52,7 @@ export default function PlanCards({ t, ladder, lang, demoHref, pricingHref }) {
                 <span>{p ? fill(t.upTo, num(p.limit, lang)) : fill(t.moreThan, num(ladder.custom.moreThan, lang))}</span>
                 <span className="max-sm:hidden">{p ? price(p) : t.onRequest}</span>
                 <span className="max-sm:hidden">{p ? t.perMonthLong : ''}</span>
-                <a href={`${demoHref}${encodeURIComponent(`\nPlan: ${name}\n`)}`} className="flex items-center justify-end gap-2 text-green-text focus-ring">{t.discussShort} <ArrowRight size={15} strokeWidth={1.6} aria-hidden="true" /></a>
+                <Link href={pricingHref} className="flex items-center justify-end gap-2 text-green-text focus-ring">{t.discussShort} <ArrowRight size={15} strokeWidth={1.6} aria-hidden="true" /></Link>
               </p>
             );
           })}
@@ -62,7 +62,7 @@ export default function PlanCards({ t, ladder, lang, demoHref, pricingHref }) {
         <summary className="flex cursor-pointer list-none items-center justify-between gap-5 py-2 text-[10px] text-sub md:text-[11px]">{t.countingQ} <Plus size={14} strokeWidth={1.6} aria-hidden="true" className="flex-none transition-transform group-open:rotate-45" /></summary>
         <p className="max-w-[850px] py-2 pr-1 text-[10px] leading-[1.85] text-sub md:pr-6 md:text-[11px]">{t.countingA}</p>
       </details>
-      <p className="mt-6 text-center"><Link href={pricingHref} className={`${textLink} text-green-text`}>{t.allPlans} <ArrowRight size={18} strokeWidth={1.6} aria-hidden="true" /></Link></p>
+      <p className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-1 text-center"><Link href={pricingHref} className={`${textLink} text-green-text`}>{t.allPlans} <ArrowRight size={18} strokeWidth={1.6} aria-hidden="true" /></Link><a href={demoHref} className={`${textLink} text-xs`}>{t.help}</a></p>
     </div>
   );
 }

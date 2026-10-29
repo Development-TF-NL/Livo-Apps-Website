@@ -64,7 +64,7 @@ export default async function RootLayout({ children, params }) {
       <body className="bg-paper font-sans text-ink">
         {/* Organization-JSON-LD op elke pagina: naam, adres, logo, e-mail en LinkedIn staan zichtbaar in de footer. */}
         <JsonLd data={organizationJsonLd()} />
-        <Nav lang={lang} dict={dict.nav} demo={{ ...dict.ppwr.hero, ctaDemo: dict.nav.demo.cta }} pricingEnabled={process.env.PRICING_PAGE_ENABLED === 'true'} />
+        <Nav lang={lang} dict={dict.nav} pricingEnabled={process.env.PRICING_PAGE_ENABLED === 'true'} />
         {children}
         {/* De focusrand alleen bij toetsenbordfocus (zie globals.css) */}
         <FocusModality />

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Check, Clock, FileText, Info, Mail, Package, Play, ShieldCheck, Users } from 'lucide-react';
+import { ArrowRight, Check, FileText, Info, LifeBuoy, Mail, Play, ShieldCheck, Users, Wrench } from 'lucide-react';
 import { getDictionary } from '../get-dictionary';
 import { mailto } from '../mailto';
 import { languageAlternates, socialMetadata } from '../seo';
@@ -10,15 +10,16 @@ import WorkflowDemo from '../components/home/WorkflowDemo';
 import AudienceTabs from '../components/home/AudienceTabs';
 import PlanCards from '../components/home/PlanCards';
 import Faq from '../components/home/Faq';
-import { Section, Eyebrow, GreenTitle, container, h1, h2, lead, btnLarge, btnPrimary, textLink } from '../components/ui';
+import { Section, Eyebrow, GreenTitle, container, h1, h2, btnLarge, btnPrimary, btnSecondary, textLink } from '../components/ui';
 
 // Homepage op het landingspagina-concept (keuze eigenaar 29 oktober 2026, LIVO_Landingspagina.html): hero met de vaasfoto, de
 // klantvraag en de artikelkaart; de basisstrip; Herkenbaar? (met de kop van de eigenaar over verdrinken in de regelgeving);
 // de werkwijze als interactief productvoorbeeld op donkergroen (#werkwijze); LIVO zet klaar tegenover Jij beslist; voor wie als tabs
 // (#voor-wie); de prijskaarten (#prijzen); de vragen (#vragen); de kennisingang; Over LIVO APPS (#about, de goedgekeurde tekst van M2);
-// het demoblok op donkergroen (#demo) met de demomail in plaats van het conceptformulier (dat verstuurde niets). Alle tekst uit de
+// het hulpblok op donkergroen (#hulp; besluit eigenaar 29 oktober avond: planselectie voorop, demo mogelijk maar niet verplicht, hulp op elk
+// moment bij keuze, inrichting en vragen) in plaats van het demoformulier van het concept (dat verstuurde niets). Alle tekst uit de
 // dictionaries (bron: docs/marketing/website/copy/home.json, nav.json, ppwr.json en pricing.json in de product-repo).
-const icons = { strip: [FileText, Users, ShieldCheck], demo: [Clock, Package, Check] };
+const icons = { strip: [FileText, Users, ShieldCheck], help: [LifeBuoy, Wrench, Mail] };
 const ic = { strokeWidth: 1.6, 'aria-hidden': true };
 
 export async function generateMetadata({ params }) {
@@ -49,7 +50,7 @@ export default async function HomePage({ params }) {
             <h1 lang={lang} className={`${h1} lg:whitespace-nowrap`}><Lines lines={t.hero.lines} green={t.hero.titleGreen} /></h1>
             <p className={`mt-6 max-w-[480px] text-sm leading-[1.8] text-sub md:text-base md:leading-[1.75]`}>{t.hero.lead}</p>
             <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-4 max-[370px]:flex-col max-[370px]:items-start">
-              <a href={`/${lang}#demo`} className={btnLarge}>{t.hero.ctaDemo} <ArrowRight size={18} {...ic} /></a>
+              <Link href={pricingHref} className={btnLarge}>{t.hero.ctaPrimary} <ArrowRight size={18} {...ic} /></Link>
               <Link href={`/${lang}#werkwijze`} className="inline-flex min-h-[44px] items-center gap-2.5 text-xs font-semibold text-ink hover:text-green-text focus-ring rounded"><span className="grid h-[29px] w-[29px] place-items-center rounded-full border border-frame-line/80"><Play size={14} strokeWidth={1.4} aria-hidden="true" /></span>{t.hero.ctaHow}</Link>
             </div>
             <p className="mt-5 text-[9px] text-sub md:text-[10.5px]">{t.hero.fine.from} <strong className="font-semibold text-ink">{t.hero.fine.price}</strong>, {t.hero.fine.vat} <span className="px-1.5">·</span> {t.hero.fine.impl}</p>
@@ -97,7 +98,7 @@ export default async function HomePage({ params }) {
               <Eyebrow className="md:max-lg:col-span-2">{t.control.eyebrow}</Eyebrow>
               <h2 className={`${h2} md:max-lg:row-span-2 md:max-lg:text-[40px]`}>{t.control.title}</h2>
               <p className="mt-5 max-w-[430px] text-sm leading-[1.85] text-sub lg:max-w-[360px] md:max-lg:mt-0">{t.control.body}</p>
-              <a href={`/${lang}#demo`} className={`${textLink} mt-5 text-green-text lg:mt-7`}>{t.control.link} <ArrowRight size={20} {...ic} /></a>
+              <a href={`/${lang}#hulp`} className={`${textLink} mt-5 text-green-text lg:mt-7`}>{t.control.link} <ArrowRight size={20} {...ic} /></a>
             </div>
             <div className="grid overflow-hidden rounded-card border border-frame sm:grid-cols-2">
               {[[t.control.livo, 'bg-mint', null], [t.control.you, 'bg-white max-sm:border-t max-sm:border-line', ShieldCheck]].map(([col, bg, I]) => (
@@ -132,7 +133,7 @@ export default async function HomePage({ params }) {
             <h2 className={`${h2} mx-auto max-w-3xl md:text-[41px] lg:text-[48px]`}>{t.plans.title}</h2>
             <p className="mx-auto mt-5 max-w-2xl text-xs leading-[1.85] text-sub md:text-sm">{t.plans.lead}</p>
           </div>
-          <PlanCards t={t.plans} ladder={dict.pricing.ladder} lang={lang} demoHref={`${demoHref}`} pricingHref={pricingHref} />
+          <PlanCards t={t.plans} ladder={dict.pricing.ladder} lang={lang} demoHref={demoHref} pricingHref={pricingHref} />
         </Section>
 
         {/* Vragen */}
@@ -142,7 +143,7 @@ export default async function HomePage({ params }) {
               <Eyebrow>{t.faq.eyebrow}</Eyebrow>
               <h2 className={`${h2} md:text-[34px] lg:text-[42px]`}>{t.faq.title}</h2>
               <p className="mt-5 max-w-[380px] text-[13px] leading-[1.8] text-sub md:text-sm">{t.faq.lead}</p>
-              <a href={`/${lang}#demo`} className={`${textLink} mt-5 text-xs text-green-text lg:mt-7`}>{t.faq.link} <ArrowRight size={20} {...ic} /></a>
+              <a href={`/${lang}#hulp`} className={`${textLink} mt-5 text-xs text-green-text lg:mt-7`}>{t.faq.link} <ArrowRight size={20} {...ic} /></a>
             </div>
             <Faq items={t.faq.items} />
           </div>
@@ -170,22 +171,33 @@ export default async function HomePage({ params }) {
           <div className="mt-5 max-w-3xl space-y-4 text-sm leading-[1.85] text-ink md:text-base">{t.about.paragraphs.map((p) => <p key={p.slice(0, 40)}>{p}</p>)}</div>
         </Section>
 
-        {/* Demo op donkergroen: kop met de groene regels, de drie punten en de kaart met de demomail (geen formulier) */}
-        <section id="demo" className="scroll-mt-20 bg-navy py-14 text-on-dark md:py-[70px] lg:py-[90px]">
-          <div className={`${container} grid items-start gap-9 md:grid-cols-[.85fr_1fr] md:gap-10 lg:grid-cols-[1fr_.9fr] lg:gap-[110px]`}>
-            <div className="lg:pt-4">
-              <Eyebrow className="text-on-dark-accent">{t.demo.eyebrow}</Eyebrow>
-              <h2 className={`${h2Dark} text-[40px] md:text-[46px] lg:text-[58px] lg:leading-[1.06]`}><Lines lines={t.demo.lines} green={t.demo.titleGreen} className="text-white" /></h2>
-              <p className="mt-6 max-w-[400px] text-sm leading-[1.9] text-on-dark-sub lg:max-w-[350px]">{t.demo.body}</p>
-              <ul className="mt-6 grid gap-3.5 md:mt-7">{t.demo.points.map((pt, i) => { const I = icons.demo[i]; return <li key={pt} className="flex items-center gap-3 text-xs text-on-dark"><I size={16} {...ic} className="text-on-dark-accent" />{pt}</li>; })}</ul>
+        {/* Hulp op donkergroen (#hulp): zelfstandig starten, hulp op elk moment; drie kaarten (keuze, inrichting, vragen), elk met een mail */}
+        <section id="hulp" className="scroll-mt-20 bg-navy py-14 text-on-dark md:py-[70px] lg:py-[90px]">
+          <div className={container}>
+            <div className="grid items-start gap-9 md:grid-cols-[.9fr_1fr] md:gap-10 lg:gap-[90px]">
+              <div>
+                <Eyebrow className="text-on-dark-accent">{t.help.eyebrow}</Eyebrow>
+                <h2 className={`${h2Dark} text-[40px] md:text-[46px] lg:text-[54px] lg:leading-[1.06]`}><Lines lines={t.help.lines} green={t.help.titleGreen} className="text-white" /></h2>
+              </div>
+              <div className="md:pt-9">
+                <p className="max-w-[460px] text-sm leading-[1.9] text-on-dark-sub">{t.help.body}</p>
+                <ul className="mt-6 grid gap-3.5">{t.help.points.map((pt) => <li key={pt} className="flex items-center gap-3 text-xs text-on-dark"><Check size={16} {...ic} className="text-on-dark-accent" />{pt}</li>)}</ul>
+              </div>
             </div>
-            <div className="rounded-card bg-white p-6 text-ink md:p-7 lg:p-8">
-              <span className="block text-[9px] font-semibold uppercase tracking-[.09em] text-green-text">{t.demo.card.label}</span>
-              <h3 className="mt-3 font-display text-[25px] font-bold leading-[1.15] tracking-[-.035em] md:text-[28px]">{t.demo.card.title}</h3>
-              <p className="mt-5 text-sm leading-[1.85] text-sub">{t.demo.card.body}</p>
-              <a href={demoHref} className={`${btnPrimary} mt-6 flex w-full min-h-[47px] text-[13px]`}><Mail size={18} {...ic} />{t.demo.card.cta} <ArrowRight size={18} {...ic} /></a>
-              <p className="mt-3 text-center text-[9px] leading-[1.7] text-sub">{t.demo.card.note}</p>
+            <div className="mt-10 grid gap-4 md:grid-cols-3 md:gap-[18px]">
+              {t.help.cards.map((c, i) => { const I = icons.help[i]; return (
+                <div key={c.label} className="flex flex-col rounded-card bg-white p-6 text-ink md:p-7">
+                  <span className="flex items-center gap-2.5 text-[9px] font-semibold uppercase tracking-[.09em] text-green-text"><I size={16} {...ic} className="text-accent-dark" />{c.label}</span>
+                  <h3 className="mt-3 font-display text-[23px] font-bold leading-[1.15] tracking-[-.035em]">{c.title}</h3>
+                  <p className="mt-3 text-[13px] leading-[1.8] text-sub">{c.body}</p>
+                  <div className="mt-auto pt-5">
+                    <a href={mailto(c.subject, i === 0 ? demo.demoBody : undefined)} className={`${i === 0 ? btnPrimary : btnSecondary} flex w-full text-xs`}><Mail size={16} {...ic} />{c.cta}</a>
+                    {c.faqLink && <a href={`/${lang}#vragen`} className={`${textLink} mt-2 min-h-0 text-xs text-green-text`}>{c.faqLink} <ArrowRight size={15} {...ic} /></a>}
+                  </div>
+                </div>
+              ); })}
             </div>
+            <p className="mt-6 text-center text-[10px] leading-[1.7] text-on-dark-sub">{t.help.note} <a href={`mailto:${t.help.mail}`} className="underline hover:text-white focus-ring rounded">{t.help.mail}</a></p>
           </div>
         </section>
       </main>

@@ -7,15 +7,14 @@ import { ArrowRight, Menu, X } from 'lucide-react';
 import Logo from './Logo';
 import ProductLoginMenu from './ProductLoginMenu';
 import { ARTICLES, KENNIS_INDEX } from '../content/kennis';
-import { mailto } from '../mailto';
 
 // Kopbalk op het landingspagina-concept (29 oktober 2026): plakkend, papier met vervaging, logo met het label PPWR, de menulinks
-// (Hoe het werkt, Voor wie, Prijzen, Kennis, Vragen) met een groene onderstreping bij hover, Inloggen (menu) en de demoknop
-// (opent de demomail uit ppwr.hero). Prijzen wijst naar de prijspagina zodra de poort open is, anders naar het prijsblok.
+// (Hoe het werkt, Voor wie, Prijzen, Kennis, Hulp) met een groene onderstreping bij hover, Inloggen (menu) en de knop naar de
+// planselectie (nav.order.cta; besluit eigenaar 29 oktober avond). Prijzen wijst naar de prijspagina zodra de poort open is, anders naar het prijsblok.
 const focusRing = 'focus-ring rounded';
 const languages = [['nl', 'NL'], ['en', 'EN']];
 
-export default function Nav({ lang, dict, demo, pricingEnabled = false }) {
+export default function Nav({ lang, dict, pricingEnabled = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname() || `/${lang}`;
   const switchPath = (locale) => {
@@ -30,9 +29,9 @@ export default function Nav({ lang, dict, demo, pricingEnabled = false }) {
     { label: dict.forWhom, href: `/${lang}#voor-wie` },
     { label: dict.pricing, href: pricingEnabled ? `/${lang}/pricing` : `/${lang}#prijzen` },
     { label: dict.kennis, href: KENNIS_INDEX[lang] },
-    { label: dict.faq, href: `/${lang}#vragen` },
+    { label: dict.help, href: `/${lang}#hulp` },
   ];
-  const demoHref = mailto(demo.demoSubject, demo.demoBody);
+  const ctaHref = pricingEnabled ? `/${lang}/pricing#plans` : `/${lang}#prijzen`;
   const cta = 'inline-flex min-h-[36px] items-center gap-2.5 rounded-control bg-accent px-3 text-[10px] font-semibold text-btn-text transition-colors duration-150 hover:bg-accent-hover md:min-h-[41px] md:gap-3 md:px-4 md:text-[11px] lg:min-h-[46px] lg:px-5 lg:text-[13px]';
   const langSwitch = (
     <div className="flex items-center rounded-md border border-line text-xs font-semibold" role="group" aria-label={dict.language}>
@@ -62,10 +61,10 @@ export default function Nav({ lang, dict, demo, pricingEnabled = false }) {
         <div className="hidden items-center gap-5 lg:flex">
           {langSwitch}
           <ProductLoginMenu dict={dict} />
-          <a href={demoHref} className={`${cta} ${focusRing}`}>{demo.ctaDemo} <ArrowRight size={16} strokeWidth={1.6} aria-hidden="true" /></a>
+          <Link href={ctaHref} className={`${cta} ${focusRing}`}>{dict.order.cta} <ArrowRight size={16} strokeWidth={1.6} aria-hidden="true" /></Link>
         </div>
         <div className="flex items-center gap-3 lg:hidden">
-          <a href={demoHref} className={`${cta} ${focusRing}`}>{demo.ctaDemo} <ArrowRight size={14} strokeWidth={1.6} aria-hidden="true" /></a>
+          <Link href={ctaHref} onClick={close} className={`${cta} ${focusRing}`}>{dict.order.cta} <ArrowRight size={14} strokeWidth={1.6} aria-hidden="true" /></Link>
           <button type="button" className={`inline-flex h-10 w-9 items-center justify-center text-ink ${focusRing}`} onClick={() => setIsMenuOpen((open) => !open)} aria-expanded={isMenuOpen} aria-controls="mobile-menu" aria-label={isMenuOpen ? dict.menuClose : dict.menuOpen}>
             {isMenuOpen ? <X size={22} strokeWidth={1.6} /> : <Menu size={22} strokeWidth={1.6} />}
           </button>

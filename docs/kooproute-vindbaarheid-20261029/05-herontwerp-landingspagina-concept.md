@@ -18,7 +18,7 @@
 1. **"Stop met verdrinken …"** staat als kop van de sectie Herkenbaar? (met het groene woord "verpakkingsregelgeving"); de oude kop "Eén klantvraag. Het antwoord ligt overal." is de vette eerste regel van die sectie. Alternatieven: als kop van Voor wie, of van het demoblok.
 2. **Demoformulier**: het concept zegt zelf dat niets wordt verstuurd. Het demoblok heeft dezelfde kaart en knop, maar de knop opent de demomail (onderwerp "LIVO PPWR demo", voorgevulde tekst uit `ppwr.hero`). Een echt formulier vraagt verzending met bevestiging, opslag (Attio) en de websiteprivacyverklaring; die staan nog achter de poort.
 3. **FAQ-vraag** "Ben ik met LIVO automatisch PPWR-compliant?" is "Voldoe ik met LIVO automatisch aan de PPWR?": de sitebrede woordtoets (werkafspraak regel 6) staat "compliant" niet toe. Het antwoord is ongewijzigd.
-4. **Prijskaarten**: "Bespreek {plan}" opent de demomail met het plan erbij (het concept vulde het plan in zijn formulier in). Daaronder staat één regel "Alle plannen vergelijken en direct starten" naar de prijspagina, waar de kooproute uit de eerste ronde (bestelknoppen achter `SELF_SERVICE_ORDER_ENABLED`, maandactie achter `MONTH_OFFER_ENABLED`) ongewijzigd staat. De brief van de ochtend gaf de kooproute voorrang boven de demo; het concept zet de demo voorop. De eigenaar kiest welke knop op de homepage primair is.
+4. **Planselectie voorop (besluit eigenaar, 29 oktober avond):** de hero, de kopbalk en de prijskaarten ("Start met {plan}") gaan naar de planselectie op de prijspagina, waar de kooproute uit de eerste ronde staat (bestelknoppen achter `SELF_SERVICE_ORDER_ENABLED`, maandactie achter `MONTH_OFFER_ENABLED`). De demo blijft mogelijk maar is geen verplichte stap: als tekstlink onder de prijskaarten en als eerste kaart van het hulpblok. Het demoblok van het concept is het hulpblok (#hulp): zelfstandig starten, hulp op elk moment, drie kaarten (hulp bij je keuze, hulp bij de inrichting, hulp bij vragen), elk per e-mail, met de regel dat LIVO alleen contact opneemt als de bezoeker daarom vraagt. Het menu-item Vragen is Hulp; de vragen (#vragen) blijven en zijn vanuit het hulpblok gelinkt.
 5. **Over LIVO APPS** staat niet in het concept maar blijft (goedgekeurde tekst, menu-link in de footer).
 6. **Statuslabels in het productvenster** ("Aanwezig", "Nog open", "Specificatie", "Voorbereid", "Selectie klaar", "Te beoordelen") komen uit het concept en zijn geen productstatussen; het venster is gelabeld als fictief voorbeeld.
 
@@ -36,7 +36,7 @@
 ## 4. Open punten
 
 1. Huisstijlbesluit over het palet (v2.2) en de tokens in de app en de flyer; de brand bible v2.1 is hiermee niet meer de bron voor de website.
-2. Keuze primaire knop op de homepage: demo (concept) of planselectie (brief).
+2. De teksten van het hulpblok (Claude, op het besluit van de eigenaar) ter review.
 3. Demoformulier met verzending en bevestiging (apart spoor, met privacyverklaring).
 4. De vaasfoto is 2 MB; `next/image` levert op Vercel geoptimaliseerde varianten, lokaal zonder optimalisatie. Een lichter bronbestand (WebP, ≤ 400 KB) is wenselijk vóór publicatie.
 5. Engelse vertaling van de concepttekst ter review.

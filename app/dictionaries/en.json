@@ -4,7 +4,7 @@
     "forWhom": "For whom",
     "pricing": "Pricing",
     "kennis": "Resources",
-    "faq": "Questions",
+    "help": "Help",
     "about": "About LIVO APPS",
     "login": "Log in",
     "loginMenuTitle": "Your LIVO apps",
@@ -36,7 +36,6 @@
       ],
       "titleGreen": "You have the overview.",
       "lead": "From loose files to one place for your packaging data, supplier questions and evidence. LIVO shows what is missing and prepares your next step.",
-      "ctaDemo": "See LIVO in 20 minutes",
       "ctaHow": "Discover the workflow",
       "fine": {
         "from": "From",
@@ -107,7 +106,8 @@
             }
           ]
         }
-      }
+      },
+      "ctaPrimary": "Choose your plan"
     },
     "strip": [
       "Start with your own Excel",
@@ -252,7 +252,7 @@
       "eyebrow": "Smartly prepared. Consciously decided.",
       "title": "Less searching. You stay in charge.",
       "body": "LIVO helps you organise the work. You keep control over the data, the supplier responses and what you share with your customer.",
-      "link": "Discuss your workflow",
+      "link": "Help with your workflow",
       "livo": {
         "title": "LIVO prepares",
         "items": [
@@ -319,8 +319,8 @@
       },
       "featured": "Core",
       "skuCount": "Up to {n} counting products",
-      "discuss": "Discuss {plan}",
-      "discussShort": "Discuss",
+      "discuss": "Start with {plan}",
+      "discussShort": "Start",
       "noteMonthly": "All prices exclude VAT. We align available features and country coverage in the demo.",
       "noteAnnual": "All prices exclude VAT and apply with annual billing. We discuss available features and country coverage in the demo.",
       "more": "More than 2,500 products?",
@@ -331,13 +331,14 @@
       "perMonthLong": "per month",
       "countingQ": "Which products count towards my subscription?",
       "countingA": "For the subscription price, LIVO counts the products you place on the EU market yourself, such as own brands and own imports. Products you resell can be in the register without counting in this price calculation. This is a pricing rule, not an exemption from legal obligations. In the demo we discuss how this works out for your range.",
-      "allPlans": "Compare all plans and start directly"
+      "allPlans": "Compare all plans and start directly",
+      "help": "Need help choosing? Book a 20-minute demo"
     },
     "faq": {
       "eyebrow": "First things first",
       "title": "Good questions. Clear answers.",
       "lead": "You do not need to have your whole process worked out to take a first step.",
-      "link": "Ask your question in the demo",
+      "link": "Ask your question",
       "items": [
         [
           "Can I start with my own Excel?",
@@ -381,27 +382,45 @@
         }
       ]
     },
-    "demo": {
-      "eyebrow": "From recognition to a first step",
+    "help": {
+      "eyebrow": "Get started yourself, help when you want it",
       "lines": [
-        "Show where",
-        "you get stuck."
+        "Start on your own.",
+        "Help at"
       ],
-      "titleGreen": "Discover where you start.",
-      "body": "In 20 minutes you see how LIVO works, with fictional item data. Then we discuss what fits your range and your team.",
+      "titleGreen": "any moment.",
+      "body": "You choose a plan, order and start with your own data. Nobody calls you afterwards. If you need help, it is there: with your choice, with the setup and with questions.",
       "points": [
-        "A concrete 20-minute demo",
-        "Room for your packaging question",
-        "A request is not an order"
+        "See, buy and start yourself",
+        "Help with your first setup is included",
+        "A demo is possible, not required"
       ],
-      "card": {
-        "label": "Get to know LIVO",
-        "title": "See what this means for your work.",
-        "body": "Your request goes by e-mail to hello@livoapps.software. Include your name, your company and your question; we propose a time.",
-        "cta": "Request my demo",
-        "note": "Your mail program opens with a prefilled message. No form, no data stored on the website.",
-        "mail": "hello@livoapps.software"
-      }
+      "cards": [
+        {
+          "label": "Help choosing",
+          "title": "Not sure which plan fits?",
+          "body": "In 20 minutes we show how LIVO works with fictional data and discuss your product range.",
+          "cta": "Book a demo",
+          "subject": "LIVO PPWR demo"
+        },
+        {
+          "label": "Help with setup",
+          "title": "Your first data in, together.",
+          "body": "With every plan we help you with the first setup using your own packaging data. No implementation project.",
+          "cta": "Ask for help with your start",
+          "subject": "LIVO PPWR help with the start"
+        },
+        {
+          "label": "Help with questions",
+          "title": "A question in between?",
+          "body": "E-mail us. You get an answer from someone who knows the software. Many questions are also answered above.",
+          "cta": "Ask your question",
+          "subject": "LIVO PPWR question",
+          "faqLink": "See the questions"
+        }
+      ],
+      "note": "Asking for help is without obligation. We only get in touch when you ask us to.",
+      "mail": "hello@livoapps.software"
     },
     "roles": {
       "title": "What does LIVO take on?",
