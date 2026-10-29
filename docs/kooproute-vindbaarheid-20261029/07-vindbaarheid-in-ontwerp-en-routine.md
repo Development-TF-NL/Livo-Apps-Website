@@ -31,10 +31,14 @@ Een cloud-routine in Claude Code (claude.ai/code/routines) draait elke maandag o
 | Search Console, Gebruikers en rechten | het serviceaccount is toegevoegd aan de property `livoapps.software` (bedoelde rol Beperkt; zie de controle in de sessie) |
 | Sleutel en omgevingsvariabele | **niet door Claude gedaan**: een sleutel is een wachtwoord. De eigenaar maakt in Google Cloud (IAM en beheer, Serviceaccounts, search-console-reader, tabblad Sleutels) een JSON-sleutel en plakt de inhoud als `GSC_SERVICE_ACCOUNT_JSON` in de cloud-omgeving "Default" op https://claude.ai/code/environments, met `GSC_PROPERTY=sc-domain:livoapps.software` en als setup-opdracht `pip install google-auth google-auth-httplib2`. |
 
+### Eerste runs en waar de resultaten staan (29 oktober 2026, avond)
+
+De routine draaide twee keer handmatig (19:38 en 20:08 UTC). Beide runs konden de live site niet bereiken (netwerkpolicy van de omgeving) en niet pushen (de Claude GitHub-app heeft geen toegang tot de repo, 403). De tweede run zag `GSC_PROPERTY` en `GSC_SERVICE_ACCOUNT_JSON` wel staan, maar riep de API nog niet aan. De prompt is daarna aangescherpt: echte tokenaanvraag met het serviceaccount, herkenning van de proxyblokkade, rapport plus diff in het eindantwoord als pushen faalt, en twee vaste slotblokken (Stand, Acties voor de eigenaar). Resultaten staan per run onder https://claude.ai/code/routines/trig_01CXK326ngSytJhTKmJTsi3G (niet in de gewone sessielijst), als pushmelding op de telefoon, en zodra pushen werkt als PR op branch `seo/<jaar>-<week>` en na merge in `docs/vindbaarheid/`. Het weekrapport 44 met de eigenaarsacties staat in `docs/vindbaarheid/2026-44.md`.
+
 ### Wat de eigenaar moet regelen
 
 1. **Search Console-toegang voor de routine.** De cloud-omgeving heeft geen aanmelding van de eigenaar. Twee opties: een serviceaccount in Google Cloud met leesrechten op de property `sc-domain:livoapps.software` (JSON-sleutel als omgevingsvariabele `GSC_SERVICE_ACCOUNT_JSON` in de cloud-omgeving, met `google-auth` beschikbaar), of een regelmatig vernieuwd OAuth-token als `GSC_ACCESS_TOKEN`. Tot die tijd rapporteert de routine alleen de technische metingen en meldt zij de ontbrekende bron.
-2. **Pushrechten.** De routine opent PR's op een eigen branch; zij merget nooit. Als de omgeving geen push toestaat, levert zij het rapport als eindantwoord in de run.
+2. **Pushrechten.** De routine opent PR's op een eigen branch; zij merget nooit. Pushen werkt pas als de Claude GitHub-app op de repo is geïnstalleerd (https://github.com/apps/claude/installations/select_target); tot die tijd levert zij het rapport met diff als eindantwoord in de run. Daarnaast moet de netwerktoegang van de cloud-omgeving `www.livoapps.software`, `livoapps.software`, `oauth2.googleapis.com` en `searchconsole.googleapis.com` toestaan.
 3. **Semrush** (API-eenheden) en **Zoekwoordplanner België** blijven handwerk tot er toegang is.
 4. Het vorige rapport leeft in `docs/vindbaarheid/` zodra de eerste PR gemerged is; daarvoor vergelijkt de routine met de cijfers van 29 oktober uit haar opdracht.
 
