@@ -128,8 +128,8 @@
       ]
     },
     "workflow": {
-      "eyebrow": "From customer question to customer file",
-      "title": "This is how loose data becomes a workable next step.",
+      "eyebrow": "In three steps",
+      "title": "From loose data to a completed product passport.",
       "aside": "Follow one item through LIVO. Click through the product example.",
       "steps": [
         {
@@ -141,110 +141,131 @@
           "body": "LIVO prepares the supplier request. You send it and review the answer."
         },
         {
-          "title": "Prepare your customer file.",
-          "body": "Select your items and export the data. Open items remain recognisable."
+          "title": "Complete your product passport.",
+          "body": "Check the added data, complete the file per item and export what your customer needs. Open items remain visible."
         }
       ],
       "window": {
-        "bar": "livo / product example",
-        "live": "Interactive",
-        "footer": "Example with fictional data",
-        "next": "Next step",
-        "again": "View again",
+        "bar": "ppwr.livoapps.software",
+        "nav": [
+          "Overview",
+          "Obligations",
+          "Register",
+          "Suppliers",
+          "Passports"
+        ],
+        "active": [
+          2,
+          3,
+          4
+        ],
         "product": {
-          "title": "VH-2001 · Decorative vase",
-          "sub": "3 packaging components · supplier Noord & Co"
-        },
-        "table": {
-          "head": [
-            "Component",
-            "Material",
-            "Weight",
-            "Evidence"
-          ],
-          "rows": [
-            [
-              "Outer box",
-              "Cardboard",
-              "45 g",
-              "Present"
-            ],
-            [
-              "Protective paper",
-              "Paper",
-              "8 g",
-              "Still open"
-            ],
-            [
-              "Hang tag",
-              "Cardboard",
-              "Missing",
-              "Specification"
-            ]
-          ],
-          "filled": "2 g"
+          "code": "VH-2001",
+          "name": "Decorative vase",
+          "meta": "3 packaging components · supplier Noord & Co"
         },
         "panels": [
           {
-            "crumb": [
-              "Packaging register",
-              "Item overview"
-            ],
-            "title": "See what is missing.",
-            "pill": "2 open items",
-            "sub": "Your file has been imported. This still needs attention.",
-            "alertLabel": "Next, specifically:",
-            "alert": "request the weight of the hang tag and the substantiation for the protective paper.",
-            "action": "See the supplier request"
+            "title": "Packaging register",
+            "meta": "1 unit",
+            "pill": "Needs data",
+            "tone": "warning",
+            "sub": "Imported from products.xlsx. 2 fields still need data.",
+            "table": {
+              "head": [
+                "Component",
+                "Material",
+                "Weight",
+                "Evidence"
+              ],
+              "rows": [
+                [
+                  "Outer box",
+                  "Cardboard",
+                  "45 g",
+                  "Ready",
+                  "success"
+                ],
+                [
+                  "Protective paper",
+                  "Paper",
+                  "8 g",
+                  "Open",
+                  "info"
+                ],
+                [
+                  "Hang tag",
+                  "Cardboard",
+                  "Missing",
+                  "Needs data",
+                  "warning"
+                ]
+              ]
+            },
+            "alert": "Ask the supplier for the hang tag weight and the evidence for the protective paper.",
+            "action": "Ask supplier"
           },
           {
-            "crumb": [
-              "Suppliers",
-              "Request"
-            ],
-            "title": "Ask only what is needed.",
+            "title": "Suppliers",
+            "meta": "1 request",
             "pill": "Prepared",
-            "sub": "A focused addition to what you already know.",
-            "supplier": {
-              "initials": "NC",
-              "name": "Noord & Co",
-              "sub": "Supplier · fictional example",
-              "pill": "You send it",
-              "intro": "For VH-2001 we still need:",
+            "tone": "info",
+            "sub": "A prefilled request. You send the link from your own mailbox.",
+            "request": {
+              "supplier": "Noord & Co",
+              "label": "Supplier request · VH-2001",
               "items": [
-                "1. The weight of the cardboard hang tag",
-                "2. Substantiation for the protective paper"
+                "Hang tag · weight",
+                "Protective paper · evidence"
               ],
-              "note": "The known data is already in the request."
+              "note": "Known values are prefilled. The supplier only fills the gaps."
             },
             "reply": {
-              "show": "See an example response",
-              "hide": "Hide the example response",
-              "label": "Response: hang tag weight",
+              "show": "Show submitted data",
+              "hide": "Hide submitted data",
+              "title": "Review submitted data",
+              "row": "Hang tag · weight",
               "value": "2 g",
-              "pill": "To review",
-              "note": "The substantiation for the paper is still being looked into."
+              "pill": "Open",
+              "approve": "Approve",
+              "note": "Evidence for the protective paper is still outstanding."
             },
-            "alert": "A portal response is first reviewed and confirmed by you."
+            "alert": "Submitted data is a proposal until you approve it. Nothing overwrites what you had."
           },
           {
-            "crumb": [
-              "Customer selections",
-              "Export"
+            "title": "Product passports",
+            "meta": "1 passport",
+            "pill": "Data ready",
+            "tone": "success",
+            "sub": "After your review the hang tag weight is recorded.",
+            "rows": [
+              [
+                "Packaging data",
+                "Ready",
+                "success"
+              ],
+              [
+                "Evidence",
+                "Open",
+                "info"
+              ],
+              [
+                "Declaration",
+                "No declaration recorded",
+                "quiet"
+              ]
             ],
-            "title": "A clear customer file.",
-            "pill": "Selection ready",
-            "sub": "After your review, the weight has been added.",
             "export": {
-              "title": "Packaging data · VH-2001",
-              "sub": "1 item · 3 packaging components",
-              "pill": "1 item open"
+              "title": "Customer file · VH-2001",
+              "sub": "Excel · 1 item · 3 components"
             },
-            "alertLabel": "Visibly open:",
-            "alert": "evidence for the protective paper. Evidence attachments are shared separately.",
-            "action": "Download example file"
+            "action": "Export customer file",
+            "alert": "Open items stay visible in the export. Evidence attachments are shared separately."
           }
-        ]
+        ],
+        "footer": "Example with fictional data",
+        "next": "Next step",
+        "again": "View again"
       },
       "note": "A filled-in field is not yet verified evidence. You assess yourself whether the information belongs to the right item and the right packaging."
     },
@@ -389,7 +410,7 @@
         "Help at"
       ],
       "titleGreen": "any moment.",
-      "body": "You choose a plan, order and start with your own data. Nobody calls you afterwards. If you need help, it is there: with your choice, with the setup and with questions.",
+      "body": "You choose a plan, order and start with your own data. Start on your own, with help at any moment you want. Prefer to see it first? Book a demo.",
       "points": [
         "See, buy and start yourself",
         "Help with your first setup is included",
@@ -413,13 +434,13 @@
         {
           "label": "Help with questions",
           "title": "A question in between?",
-          "body": "E-mail us. You get an answer from someone who knows the software. Many questions are also answered above.",
+          "body": "E-mail us. You get an answer from someone who knows the software. Frequently asked questions are also answered above.",
           "cta": "Ask your question",
           "subject": "LIVO PPWR question",
           "faqLink": "See the questions"
         }
       ],
-      "note": "Asking for help is without obligation. We only get in touch when you ask us to.",
+      "note": "Asking for help is without obligation.",
       "mail": "hello@livoapps.software"
     },
     "roles": {

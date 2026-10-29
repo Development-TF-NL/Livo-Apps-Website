@@ -128,8 +128,8 @@
       ]
     },
     "workflow": {
-      "eyebrow": "Van klantvraag naar klantbestand",
-      "title": "Zo wordt losse data een werkbare volgende stap.",
+      "eyebrow": "In drie stappen",
+      "title": "Van losse data naar een afgerond productpaspoort.",
       "aside": "Volg één artikel door LIVO. Klik door het productvoorbeeld.",
       "steps": [
         {
@@ -141,110 +141,131 @@
           "body": "LIVO bereidt de leveranciersuitvraag voor. Jij verstuurt die en beoordeelt het antwoord."
         },
         {
-          "title": "Maak je klantbestand klaar.",
-          "body": "Selecteer je artikelen en exporteer de gegevens. Open punten blijven herkenbaar."
+          "title": "Rond je productpaspoort af.",
+          "body": "Controleer de aangevulde gegevens, rond het dossier per artikel af en exporteer wat je klant nodig heeft. Open punten blijven zichtbaar."
         }
       ],
       "window": {
-        "bar": "livo / productvoorbeeld",
-        "live": "Interactief",
-        "footer": "Voorbeeld met fictieve gegevens",
-        "next": "Volgende stap",
-        "again": "Opnieuw bekijken",
+        "bar": "ppwr.livoapps.software",
+        "nav": [
+          "Overview",
+          "Obligations",
+          "Register",
+          "Suppliers",
+          "Passports"
+        ],
+        "active": [
+          2,
+          3,
+          4
+        ],
         "product": {
-          "title": "VH-2001 · Decoratieve vaas",
-          "sub": "3 verpakkingsonderdelen · leverancier Noord & Co"
-        },
-        "table": {
-          "head": [
-            "Onderdeel",
-            "Materiaal",
-            "Gewicht",
-            "Bewijs"
-          ],
-          "rows": [
-            [
-              "Omdoos",
-              "Karton",
-              "45 g",
-              "Aanwezig"
-            ],
-            [
-              "Beschermpapier",
-              "Papier",
-              "8 g",
-              "Nog open"
-            ],
-            [
-              "Hangtag",
-              "Karton",
-              "Ontbreekt",
-              "Specificatie"
-            ]
-          ],
-          "filled": "2 g"
+          "code": "VH-2001",
+          "name": "Decorative vase",
+          "meta": "3 packaging components · supplier Noord & Co"
         },
         "panels": [
           {
-            "crumb": [
-              "Verpakkingsregister",
-              "Artikeloverzicht"
-            ],
-            "title": "Zie wat ontbreekt.",
-            "pill": "2 open punten",
-            "sub": "Je bestand is geïmporteerd. Dit vraagt nog aandacht.",
-            "alertLabel": "Gericht verder:",
-            "alert": "vraag het gewicht van de hangtag en de onderbouwing voor het beschermpapier op.",
-            "action": "Bekijk de leveranciersuitvraag"
+            "title": "Packaging register",
+            "meta": "1 unit",
+            "pill": "Needs data",
+            "tone": "warning",
+            "sub": "Imported from products.xlsx. 2 fields still need data.",
+            "table": {
+              "head": [
+                "Component",
+                "Material",
+                "Weight",
+                "Evidence"
+              ],
+              "rows": [
+                [
+                  "Outer box",
+                  "Cardboard",
+                  "45 g",
+                  "Ready",
+                  "success"
+                ],
+                [
+                  "Protective paper",
+                  "Paper",
+                  "8 g",
+                  "Open",
+                  "info"
+                ],
+                [
+                  "Hang tag",
+                  "Cardboard",
+                  "Missing",
+                  "Needs data",
+                  "warning"
+                ]
+              ]
+            },
+            "alert": "Ask the supplier for the hang tag weight and the evidence for the protective paper.",
+            "action": "Ask supplier"
           },
           {
-            "crumb": [
-              "Leveranciers",
-              "Uitvraag"
-            ],
-            "title": "Vraag alleen wat nodig is.",
-            "pill": "Voorbereid",
-            "sub": "Een gerichte aanvulling op wat je al weet.",
-            "supplier": {
-              "initials": "NC",
-              "name": "Noord & Co",
-              "sub": "Leverancier · fictief voorbeeld",
-              "pill": "Jij verstuurt",
-              "intro": "Voor VH-2001 zoeken we nog:",
+            "title": "Suppliers",
+            "meta": "1 request",
+            "pill": "Prepared",
+            "tone": "info",
+            "sub": "A prefilled request. You send the link from your own mailbox.",
+            "request": {
+              "supplier": "Noord & Co",
+              "label": "Supplier request · VH-2001",
               "items": [
-                "1. Het gewicht van de kartonnen hangtag",
-                "2. Onderbouwing bij het beschermpapier"
+                "Hang tag · weight",
+                "Protective paper · evidence"
               ],
-              "note": "De bekende gegevens staan al in de uitvraag."
+              "note": "Known values are prefilled. The supplier only fills the gaps."
             },
             "reply": {
-              "show": "Bekijk een voorbeeldreactie",
-              "hide": "Verberg de voorbeeldreactie",
-              "label": "Reactie: gewicht hangtag",
+              "show": "Show submitted data",
+              "hide": "Hide submitted data",
+              "title": "Review submitted data",
+              "row": "Hang tag · weight",
               "value": "2 g",
-              "pill": "Te beoordelen",
-              "note": "De onderbouwing voor het papier is nog in onderzoek."
+              "pill": "Open",
+              "approve": "Approve",
+              "note": "Evidence for the protective paper is still outstanding."
             },
-            "alert": "Een portaalreactie wordt eerst door jou beoordeeld en bevestigd."
+            "alert": "Submitted data is a proposal until you approve it. Nothing overwrites what you had."
           },
           {
-            "crumb": [
-              "Klantselecties",
-              "Export"
+            "title": "Product passports",
+            "meta": "1 passport",
+            "pill": "Data ready",
+            "tone": "success",
+            "sub": "After your review the hang tag weight is recorded.",
+            "rows": [
+              [
+                "Packaging data",
+                "Ready",
+                "success"
+              ],
+              [
+                "Evidence",
+                "Open",
+                "info"
+              ],
+              [
+                "Declaration",
+                "No declaration recorded",
+                "quiet"
+              ]
             ],
-            "title": "Een helder klantbestand.",
-            "pill": "Selectie klaar",
-            "sub": "Na jouw beoordeling is het gewicht aangevuld.",
             "export": {
-              "title": "Verpakkingsdata · VH-2001",
-              "sub": "1 artikel · 3 verpakkingsonderdelen",
-              "pill": "1 punt open"
+              "title": "Customer file · VH-2001",
+              "sub": "Excel · 1 item · 3 components"
             },
-            "alertLabel": "Zichtbaar open:",
-            "alert": "bewijs voor beschermpapier. Bewijsbijlagen deel je afzonderlijk.",
-            "action": "Download voorbeeldbestand"
+            "action": "Export customer file",
+            "alert": "Open items stay visible in the export. Evidence attachments are shared separately."
           }
-        ]
+        ],
+        "footer": "Voorbeeld met fictieve gegevens · de app is Engelstalig",
+        "next": "Volgende stap",
+        "again": "Opnieuw bekijken"
       },
       "note": "Een ingevuld veld is nog geen gecontroleerd bewijs. Je beoordeelt zelf of de informatie bij het juiste artikel en de juiste verpakking hoort."
     },
@@ -389,7 +410,7 @@
         "Hulp op"
       ],
       "titleGreen": "elk moment.",
-      "body": "Je kiest een plan, bestelt en begint met je eigen gegevens. Niemand belt je na. Heb je hulp nodig, dan is die er: bij je keuze, bij de inrichting en bij vragen.",
+      "body": "Je kiest een plan, bestelt en begint met je eigen gegevens. Zelfstandig starten, en hulp op elk gewenst moment. Wil je het eerst zien? Boek dan een demo.",
       "points": [
         "Zelf zien, kopen en starten",
         "Hulp bij de eerste inrichting is inbegrepen",
@@ -413,13 +434,13 @@
         {
           "label": "Hulp bij vragen",
           "title": "Een vraag tussendoor?",
-          "body": "Mail ons. Je krijgt antwoord van iemand die de software kent. Veel vragen staan ook hierboven.",
+          "body": "Mail ons. Je krijgt antwoord van iemand die de software kent. Veelgestelde vragen staan ook hierboven.",
           "cta": "Stel je vraag",
           "subject": "LIVO PPWR vraag",
           "faqLink": "Bekijk de vragen"
         }
       ],
-      "note": "Hulp vragen is vrijblijvend. We nemen alleen contact op als jij daarom vraagt.",
+      "note": "Hulp vragen is vrijblijvend.",
       "mail": "hello@livoapps.software"
     },
     "roles": {

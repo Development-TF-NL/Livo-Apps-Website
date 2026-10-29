@@ -1,63 +1,41 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight, Download, FileText, Info, LayoutGrid, Package, ShieldCheck, Users } from 'lucide-react';
+import { ArrowRight, Check, Download, FileText, Info, Send } from 'lucide-react';
+import StatusPill from '../StatusPill';
 
-// De interactieve werkwijze van het concept (29 oktober 2026): drie stappen als tabs naast een productvenster met fictieve
-// gegevens (VH-2001). Stap 1 toont het artikel met open punten, stap 2 de leveranciersuitvraag met een voorbeeldreactie,
-// stap 3 het klantbestand met de download van een fictief CSV-bestand. Alle tekst uit de dictionary (home.workflow).
-const pill = { amber: 'bg-status-warning-bg text-status-warning-text', green: 'bg-status-success-bg text-status-success-text', gray: 'bg-status-info-bg text-status-info-text' };
-const Pill = ({ tone = 'gray', dot = false, children, className = '' }) => (
-  <span className={`inline-flex items-center gap-1.5 whitespace-nowrap rounded-[4px] px-1.5 py-[3px] text-[8px] font-medium leading-normal md:text-[9px] ${pill[tone]} ${className}`}>{dot && <i aria-hidden="true" className="h-[5px] w-[5px] rounded-full bg-current" />}{children}</span>
+// De werkwijze als interactief productvenster (concept 29 oktober 2026; correctie eigenaar: de echte app-interface). Het venster
+// volgt de app: witte topbalk met het beeldmerk en "LIVO PPWR", de hoofdnavigatie Overview · Obligations | Register · Suppliers |
+// Passports met de mint actieve tab, canvas als achtergrond, witte kaarten, statuspillen met de statussen die in het product bestaan
+// (Ready, Needs data, Missing, Open). De app is Engelstalig; het venster is dat in beide talen. Fictieve gegevens (VH-2001).
+// Drie stappen: Register (open punten), Suppliers (uitvraag en voorgestelde gegevens ter beoordeling), Passports (afgerond dossier, export).
+const ic = { size: 14, strokeWidth: 1.6, 'aria-hidden': true };
+const Btn = ({ children, onClick, icon: I = ArrowRight, primary = false }) => (
+  <button type="button" onClick={onClick} className={`mt-3 inline-flex min-h-[32px] items-center gap-2 rounded-control px-3 text-[11px] font-medium focus-ring ${primary ? 'bg-accent text-btn-text hover:bg-accent-hover' : 'border border-line bg-white text-ink hover:bg-canvas'}`}>{children} <I {...ic} /></button>
 );
-const icon = { size: 13, strokeWidth: 1.6, 'aria-hidden': true };
-
-function Table({ t, filled }) {
-  const tones = ['green', 'amber', 'gray'];
-  return (
-    <table className="mt-2.5 w-full border-collapse text-[9px] leading-[1.7] md:text-[10px]">
-      <thead><tr>{t.head.map((h) => <th key={h} className="whitespace-nowrap border-b border-line px-1 py-1.5 text-left text-[7px] font-semibold uppercase tracking-[.06em] text-sub">{h}</th>)}</tr></thead>
-      <tbody>
-        {t.rows.map((r, i) => (
-          <tr key={r[0]}>
-            <td className="border-b border-line px-1 py-2.5 font-medium">{r[0]}</td>
-            <td className="border-b border-line px-1 py-2.5">{r[1]}</td>
-            <td className="border-b border-line px-1 py-2.5">{i === 2 ? (filled ? t.filled : <span className="text-[8px] text-amber">{r[2]}</span>) : r[2]}</td>
-            <td className="border-b border-line px-1 py-2.5"><Pill tone={tones[i]}>{r[3]}</Pill></td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
-}
-
-const Alert = ({ icon: I = Info, label, text }) => (
-  <div className="mt-4 flex items-start gap-2 rounded-[5px] border border-status-warning-bg bg-[color:var(--status-warning-bg)]/60 px-2.5 py-2 text-[8px] leading-[1.8] text-status-warning-text md:text-[9px]">
-    <I size={13} strokeWidth={1.6} aria-hidden="true" className="mt-0.5 flex-none" /><span>{label && <strong className="font-semibold">{label} </strong>}{text}</span>
-  </div>
+const Notice = ({ text, icon: I = Info }) => (
+  <p className="mt-4 flex items-start gap-2 rounded-control border border-line bg-canvas px-3 py-2 text-[11px] leading-[1.7] text-sub"><I {...ic} className="mt-0.5 flex-none text-accent-dark" />{text}</p>
 );
-const Mini = ({ children, onClick, icon: I = ArrowRight }) => (
-  <button type="button" onClick={onClick} className="mt-3 inline-flex items-center gap-2 rounded-[4px] bg-mint px-2.5 py-2 text-[9px] font-semibold text-green-text hover:bg-status-success-bg focus-ring md:text-[10px]">{children} <I {...icon} /></button>
-);
+const Row = ({ label, children }) => <div className="flex items-center justify-between gap-3 border-b border-line py-2 text-xs last:border-b-0"><span className="text-ink">{label}</span>{children}</div>;
 
-function downloadCsv(t) {
-  const rows = t.table.rows.map((r, i) => [t.product.title.split(' · ')[0], r[0], r[1], i === 2 ? t.table.filled.replace(/\D/g, '') : r[2].replace(/\D/g, ''), r[3]].join(';'));
-  const csv = `﻿${t.footer};\r\n${t.table.head.join(';')}\r\n${rows.join('\r\n')}\r\n`;
+function downloadCsv(w) {
+  const rows = w.panels[0].table.rows.map((r) => [w.product.code, r[0], r[1], r[2] === 'Missing' ? w.panels[1].reply.value : r[2], r[3]].join(';'));
+  const csv = `﻿${w.footer};\r\n${w.panels[0].table.head.join(';')}\r\n${rows.join('\r\n')}\r\n`;
   const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8;' }));
-  const a = document.createElement('a'); a.href = url; a.download = 'LIVO_fictief_klantbestand_VH-2001.csv'; document.body.append(a); a.click(); a.remove();
+  const a = document.createElement('a'); a.href = url; a.download = 'LIVO_example_customer_file_VH-2001.csv'; document.body.append(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 export default function WorkflowDemo({ t }) {
   const [step, setStep] = useState(0);
   const [reply, setReply] = useState(false);
+  const [approved, setApproved] = useState(false);
   const w = t.window; const p = w.panels[step];
-  const go = (n) => { setStep(n); setReply(false); };
+  const go = (n) => { setStep(n); setReply(false); setApproved(false); };
   const onKey = (e, i) => {
     let n; if (['ArrowDown', 'ArrowRight'].includes(e.key)) n = (i + 1) % 3; if (['ArrowUp', 'ArrowLeft'].includes(e.key)) n = (i + 2) % 3; if (e.key === 'Home') n = 0; if (e.key === 'End') n = 2;
     if (n !== undefined) { e.preventDefault(); go(n); document.getElementById(`step-${n}`)?.focus(); }
   };
-  const product = <div className="mt-3.5 flex items-center gap-2.5 border-b border-line py-3.5"><Package size={24} strokeWidth={1.6} aria-hidden="true" className="text-accent-dark" /><div><strong className="block text-[10px] font-semibold md:text-xs">{w.product.title}</strong><small className="text-[8px] text-sub md:text-[9px]">{w.product.sub}</small></div></div>;
   return (
     <div className="grid items-center gap-6 lg:grid-cols-[.72fr_1fr] lg:gap-16">
       <div role="tablist" aria-orientation="vertical" className="grid gap-2 max-lg:grid-cols-3 max-lg:gap-5 max-sm:gap-2">
@@ -76,46 +54,84 @@ export default function WorkflowDemo({ t }) {
           );
         })}
       </div>
-      <div className="mx-auto w-full min-w-0 max-w-[690px] overflow-hidden rounded-card border border-white/15 bg-white text-ink shadow-deep lg:max-w-none">
-        <div className="relative flex h-[35px] items-center justify-center gap-4 border-b border-line bg-frame-bar px-3 text-[8px] text-sub max-sm:justify-start max-sm:pl-12">
-          <span aria-hidden="true" className="absolute left-3 flex gap-1"><i className="h-[5px] w-[5px] rounded-full bg-frame-dot" /><i className="h-[5px] w-[5px] rounded-full bg-frame-dot" /><i className="h-[5px] w-[5px] rounded-full bg-frame-dot" /></span>
-          <span>{w.bar}</span>
-          <span className="absolute right-3 flex items-center gap-1 text-green-text"><i aria-hidden="true" className="h-1 w-1 rounded-full bg-accent" /> {w.live}</span>
+
+      {/* Het venster: adresbalk, dan de app-shell zoals in het product */}
+      <div className="mx-auto w-full min-w-0 max-w-[690px] overflow-hidden rounded-card border border-white/15 bg-canvas text-ink shadow-deep lg:max-w-none">
+        <div className="relative flex h-[32px] items-center justify-center border-b border-line bg-frame-bar px-3 text-[10px] text-sub">
+          <span aria-hidden="true" className="absolute left-3 flex gap-1"><i className="h-[6px] w-[6px] rounded-full bg-frame-dot" /><i className="h-[6px] w-[6px] rounded-full bg-frame-dot" /><i className="h-[6px] w-[6px] rounded-full bg-frame-dot" /></span>
+          <span className="rounded-[4px] bg-white px-3 py-0.5">{w.bar}</span>
         </div>
-        <div className="flex min-h-[344px]">
-          <aside aria-hidden="true" className="flex w-9 flex-none flex-col items-center gap-6 border-r border-line bg-paper px-2 pt-4 text-sub md:w-12 md:px-2.5">
-            <span className="font-display text-lg leading-none text-ink md:text-[21px]">L<span className="text-accent">•</span></span>
-            <LayoutGrid size={16} strokeWidth={1.6} /><span className="rounded-sm bg-mint p-1.5 text-green-text"><Package size={16} strokeWidth={1.6} /></span><Users size={16} strokeWidth={1.6} /><FileText size={16} strokeWidth={1.6} />
-          </aside>
-          <div id="workflow-panel" role="tabpanel" aria-labelledby={`step-${step}`} tabIndex={0} key={step} className="min-w-0 flex-1 animate-[panel-in_.3s_ease] px-3 pb-5 pt-5 md:px-6 md:pt-6 lg:px-6">
-            <div className="flex gap-2 text-[8px] text-sub md:text-[10px]">{p.crumb[0]} <span>/</span> {p.crumb[1]}</div>
-            <div className="mt-3 flex items-center justify-between gap-2.5"><h3 className="font-display text-lg font-bold tracking-[-.03em] md:text-[20px] lg:text-[20px]">{p.title}</h3><Pill tone={step === 0 ? 'amber' : 'green'} dot={step === 0}>{p.pill}</Pill></div>
-            <p className="mt-1.5 text-[9px] text-sub md:text-[10px]">{p.sub}</p>
-            {step === 0 && <>{product}<Table t={w.table} /><Alert label={p.alertLabel} text={p.alert} /><Mini onClick={() => go(1)}>{p.action}</Mini></>}
+        <header className="border-b border-line bg-white px-4 pt-3 md:px-5">
+          <div className="flex items-center gap-2 pb-2.5">
+            <img src="/brand/livo-mark-v3.svg" alt="" aria-hidden="true" className="h-5 w-auto md:h-6" />
+            <span className="font-display text-sm font-bold text-ink md:text-base">LIVO <span className="text-green-text">PPWR</span></span>
+            <span className="ml-auto rounded-control border border-line px-2 py-0.5 text-[10px] text-sub">{w.product.meta.split(' · ')[1]}</span>
+          </div>
+          <nav aria-hidden="true" className="flex flex-wrap items-center gap-1 pb-2">
+            {w.nav.map((label, i) => (
+              <span key={label} className="flex items-center">
+                {(i === 2 || i === 4) && <span className="mx-1.5 h-[14px] w-px bg-line" />}
+                <span className={`rounded-control px-2 py-1 text-[11px] md:px-2.5 md:text-xs ${i === w.active[step] ? 'bg-mint font-semibold text-green-text' : 'text-sub'}`}>{label}</span>
+              </span>
+            ))}
+          </nav>
+        </header>
+        <div id="workflow-panel" role="tabpanel" aria-labelledby={`step-${step}`} tabIndex={0} key={step} className="min-h-[330px] animate-[panel-in_.3s_ease] p-3 md:p-5">
+          <div className="flex items-baseline justify-between gap-3">
+            <h3 className="font-display text-lg font-medium tracking-[-.02em] text-ink md:text-xl">{p.title}</h3>
+            <span className="text-[11px] text-sub">{p.meta}</span>
+          </div>
+          <div className="mt-3 rounded-card border border-line bg-white p-3 md:p-4">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line pb-3">
+              <div><span className="block text-[10px] uppercase tracking-[.08em] text-sub">{w.product.code}</span><strong className="block text-sm font-medium">{w.product.name}</strong></div>
+              <StatusPill tone={step === 2 && approved ? 'success' : p.tone}>{p.pill}</StatusPill>
+            </div>
+            <p className="mt-2.5 text-[11px] text-sub">{p.sub}</p>
+
+            {step === 0 && (
+              <>
+                <table className="mt-2 w-full border-collapse text-[11px] md:text-xs">
+                  <thead><tr>{p.table.head.map((h) => <th key={h} className="border-b border-line py-1.5 pr-2 text-left text-[10px] font-medium uppercase tracking-wide text-sub">{h}</th>)}</tr></thead>
+                  <tbody>{p.table.rows.map((r) => (
+                    <tr key={r[0]}><td className="border-b border-line py-2 pr-2 font-medium">{r[0]}</td><td className="border-b border-line py-2 pr-2">{r[1]}</td><td className={`border-b border-line py-2 pr-2 ${r[2] === 'Missing' ? 'text-amber' : ''}`}>{r[2]}</td><td className="border-b border-line py-2"><StatusPill tone={r[4]}>{r[3]}</StatusPill></td></tr>
+                  ))}</tbody>
+                </table>
+                <Notice text={p.alert} />
+                <Btn onClick={() => go(1)} icon={Send} primary>{p.action}</Btn>
+              </>
+            )}
             {step === 1 && (
               <>
-                <div className="mt-4 rounded-control border border-frame p-3">
-                  <header className="flex items-center gap-2 border-b border-line pb-2.5"><span className="grid h-[26px] w-[26px] place-items-center rounded-full bg-mint text-[9px] font-semibold text-green-text">{p.supplier.initials}</span><div><strong className="block text-[10px] md:text-[11px]">{p.supplier.name}</strong><small className="text-[8px] text-sub md:text-[9px]">{p.supplier.sub}</small></div><Pill className="ml-auto">{p.supplier.pill}</Pill></header>
-                  <div className="pt-3 text-[9px] leading-[1.8] md:text-[11px]">{p.supplier.intro}{p.supplier.items.map((it) => <strong key={it} className="block">{it}</strong>)}<span className="mt-1.5 block text-[8px] text-sub md:text-[9px]">{p.supplier.note}</span></div>
-                  {reply && <><div className="mt-3.5 flex items-center justify-between gap-2 rounded-[4px] bg-mint px-2.5 py-2 text-[9px]"><span>{p.reply.label}</span><strong className="text-[13px] text-green-text">{p.reply.value}</strong><Pill tone="amber">{p.reply.pill}</Pill></div><p className="mt-1.5 text-[9px] text-sub">{p.reply.note}</p></>}
+                <div className="mt-3 rounded-control border border-line p-3">
+                  <div className="flex items-center justify-between gap-2"><strong className="text-xs font-medium">{p.request.supplier}</strong><span className="text-[10px] text-sub">{p.request.label}</span></div>
+                  {p.request.items.map((it) => <Row key={it} label={it}><StatusPill tone="warning">Needs data</StatusPill></Row>)}
+                  <p className="mt-2 text-[10px] text-sub">{p.request.note}</p>
                 </div>
-                <Mini onClick={() => setReply((v) => !v)}>{reply ? p.reply.hide : p.reply.show}</Mini>
-                <Alert icon={ShieldCheck} text={p.alert} />
+                {reply && (
+                  <div className="mt-3 rounded-control border border-line bg-canvas p-3">
+                    <div className="flex items-center justify-between gap-2"><strong className="text-xs font-medium">{p.reply.title}</strong><span className="text-[10px] text-sub">{p.request.supplier}</span></div>
+                    <Row label={p.reply.row}><span className="flex items-center gap-2"><strong className="text-sm">{p.reply.value}</strong>{approved ? <StatusPill tone="success">Ready</StatusPill> : <StatusPill tone="info">{p.reply.pill}</StatusPill>}</span></Row>
+                    <p className="mt-2 text-[10px] text-sub">{p.reply.note}</p>
+                    {!approved && <Btn onClick={() => setApproved(true)} icon={Check} primary>{p.reply.approve}</Btn>}
+                  </div>
+                )}
+                <Btn onClick={() => setReply((v) => !v)} icon={reply ? Check : ArrowRight}>{reply ? p.reply.hide : p.reply.show}</Btn>
+                <Notice text={p.alert} />
               </>
             )}
             {step === 2 && (
               <>
-                <div className="mt-4 flex items-center gap-2.5 rounded-control bg-mint p-3"><FileText size={28} strokeWidth={1.6} aria-hidden="true" className="text-accent-dark" /><div><strong className="block text-[10px]">{p.export.title}</strong><small className="text-[8px] text-sub">{p.export.sub}</small></div><Pill tone="amber" className="ml-auto">{p.export.pill}</Pill></div>
-                <Table t={w.table} filled />
-                <Alert label={p.alertLabel} text={p.alert} />
-                <Mini onClick={() => downloadCsv(w)} icon={Download}>{p.action}</Mini>
+                <div className="mt-1">{p.rows.map((r) => <Row key={r[0]} label={r[0]}><StatusPill tone={r[2]}>{r[1]}</StatusPill></Row>)}</div>
+                <div className="mt-3 flex items-center gap-2.5 rounded-control bg-mint p-3"><FileText size={22} strokeWidth={1.6} aria-hidden="true" className="text-accent-dark" /><div><strong className="block text-xs font-medium">{p.export.title}</strong><span className="text-[10px] text-sub">{p.export.sub}</span></div></div>
+                <Notice text={p.alert} />
+                <Btn onClick={() => downloadCsv(w)} icon={Download} primary>{p.action}</Btn>
               </>
             )}
           </div>
         </div>
-        <div className="flex h-[46px] items-center justify-between gap-2.5 border-t border-line px-3 text-[8px] text-sub md:px-5">
+        <div className="flex h-[42px] items-center justify-between gap-2.5 border-t border-line bg-white px-3 text-[10px] text-sub md:px-5">
           <span>{w.footer}</span>
-          <button type="button" onClick={() => go((step + 1) % 3)} className="flex items-center gap-2 py-2 text-[9px] font-semibold text-green-text focus-ring">{step === 2 ? w.again : w.next} <ArrowRight {...icon} /></button>
+          <button type="button" onClick={() => go((step + 1) % 3)} className="flex items-center gap-2 py-2 text-[11px] font-semibold text-green-text focus-ring">{step === 2 ? w.again : w.next} <ArrowRight {...ic} /></button>
         </div>
       </div>
     </div>

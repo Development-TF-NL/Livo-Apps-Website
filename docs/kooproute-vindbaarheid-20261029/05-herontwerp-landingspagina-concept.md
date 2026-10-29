@@ -41,4 +41,34 @@
 4. De vaasfoto is 2 MB; `next/image` levert op Vercel geoptimaliseerde varianten, lokaal zonder optimalisatie. Een lichter bronbestand (WebP, ≤ 400 KB) is wenselijk vóór publicatie.
 5. Engelse vertaling van de concepttekst ter review.
 
+## 5. Correcties na de review van de eigenaar (29 oktober, avond)
+
+| Punt | Uitkomst |
+|---|---|
+| Lettertype viel terug op Times | Oorzaak: de CSS van een eerdere build en de HTML droegen verschillende hashes voor de Inter-variabele (een build terwijl de server uit dezelfde `.next` draaide). Opgelost met een schone build; gecontroleerd: `--font-inter`, `--font-satoshi` en `--font-caveat` kloppen met de klassen op `<html>`. Satoshi (koppen) en Inter (tekst) zijn weer de huisstijlletters. |
+| Productvenster als de echte app | Het venster volgt de app-shell uit de productcode (`src/app/dashboard/layout.tsx`, `MainNav.tsx`): witte topbalk met het beeldmerk en "LIVO PPWR", de navigatie Overview · Obligations \| Register · Suppliers \| Passports met de mint actieve tab, canvas, witte kaarten, statuspillen met alleen bestaande statussen (Ready, Needs data, Missing, Open). Engels in beide talen, zoals de app. Drie schermen: Packaging register, Suppliers (uitvraag en "Review submitted data" met Approve), Product passports met de export. Fictieve gegevens, zo gelabeld. |
+| Kop en stap 3 van de werkwijze | "Van losse data naar een afgerond productpaspoort." (eyebrow "In drie stappen"); stap 3 "Rond je productpaspoort af." |
+| Hulpblok | Geen belofte "niemand belt je na"; nu: "Zelfstandig starten, en hulp op elk gewenst moment. Wil je het eerst zien? Boek dan een demo." en "Veelgestelde vragen staan ook hierboven." |
+
+### Contrast (WCAG 2.2 AA, richtlijn §9) en de groentinten
+
+Gemeten met de relatieve luminantie uit WCAG; eis 4,5 voor gewone tekst, 3,0 voor grote tekst en niet-tekstelementen.
+
+| Combinatie | Vóór | Na | Oordeel |
+|---|---|---|---|
+| Tekst (ink) op papier / kaart / mint | 13,5 / 14,2 / 12,4 | gelijk | AA |
+| Ondersteunende tekst (sub) op papier / kaart / canvas | 4,9 / 5,2 / 4,7 | gelijk | AA |
+| Links en eyebrows (green-text) op papier / kaart / mint | 4,2 / 4,4 / 3,8 (bladgroen `#54852c`) | 5,3 / 5,6 / 4,9 (`#497326`) | hersteld |
+| Groen deel van een grote kop (green-heading `#54852c`) | 4,2 | gelijk | AA voor grote tekst |
+| Knoptekst `#142e22` op de groene knop | 7,2 (`#88c842`) | 6,6 (`#7AC143`), hover 7,6 | AA |
+| Tekst en subtekst op donkergroen | 11,4 / 7,5 | gelijk | AA |
+| Groene kopregel op donkergroen | 8,1 | 7,7 (`#aadb84`) | AA |
+| Statuspil Ready | 4,2 | 5,5 (`#3f6b16`) | hersteld |
+| Statuspil Needs data | 4,7 | gelijk | AA |
+| Statuspil Open | 4,3 | 5,5 (`#55665a`) | hersteld |
+| Iconen in groen naast tekst (`#6b914e`, niet-tekst) | 3,5 | gelijk | AA |
+| Knopvlak t.o.v. achtergrond (niet-tekst) | 2,0 | 1,9 | de knop wordt herkend aan zijn tekst (6,6), geen eis op de rand |
+
+Groentinten: het conceptgroen `#88c842` (tint 89°) week af van het lime van het beeldmerk `#7AC143` (tint 94°); onderlinge verhouding 1,09, dus zichtbaar verschillend naast het logo in de kopbalk. De knop- en accentkleur is daarom het logo-lime; hover `#8ccc5c`, de iconkleur `#6b914e`, het bladgroen `#54852c` en de linkkleur `#497326` liggen alle op tint 93 tot 94°. Het donkergroen `#173b32` (tint 165°) is bewust koeler, zoals in het concept.
+
 *Dit document beschrijft bouw- en werkwijze-afspraken en is geen juridisch advies.*
