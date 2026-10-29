@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Check, FileText, Info, LifeBuoy, Mail, Play, ShieldCheck, Users, Wrench } from 'lucide-react';
+import { ArrowRight, Check, FileText, Info, LifeBuoy, Mail, Play, Search, ShieldCheck, Users, Wrench } from 'lucide-react';
 import { getDictionary } from '../get-dictionary';
 import { mailto } from '../mailto';
 import { languageAlternates, socialMetadata } from '../seo';
@@ -47,13 +47,13 @@ export default async function HomePage({ params }) {
         <div className={`${container} grid items-center gap-9 pb-10 pt-10 lg:min-h-[690px] lg:grid-cols-[1.04fr_1fr] lg:gap-10 lg:pb-[72px] lg:pt-[70px]`}>
           <div className="relative z-[2]">
             <Eyebrow dot>{t.hero.eyebrow}</Eyebrow>
-            <h1 lang={lang} className={`${h1} lg:whitespace-nowrap`}><Lines lines={t.hero.lines} green={t.hero.titleGreen} /></h1>
+            <h1 lang={lang} className={h1}><Lines lines={t.hero.lines} green={t.hero.titleGreen} /></h1>
             <p className={`mt-6 max-w-[480px] text-sm leading-[1.8] text-sub md:text-base md:leading-[1.75]`}>{t.hero.lead}</p>
             <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-4 max-[370px]:flex-col max-[370px]:items-start">
               <Link href={pricingHref} className={btnLarge}>{t.hero.ctaPrimary} <ArrowRight size={18} {...ic} /></Link>
               <Link href={`/${lang}#werkwijze`} className="inline-flex min-h-[44px] items-center gap-2.5 text-xs font-semibold text-ink hover:text-green-text focus-ring rounded"><span className="grid h-[29px] w-[29px] place-items-center rounded-full border border-frame-line/80"><Play size={14} strokeWidth={1.4} aria-hidden="true" /></span>{t.hero.ctaHow}</Link>
             </div>
-            <p className="mt-5 text-[9px] text-sub md:text-[10.5px]">{t.hero.fine.from} <strong className="font-semibold text-ink">{t.hero.fine.price}</strong>, {t.hero.fine.vat} <span className="px-1.5">·</span> {t.hero.fine.impl}</p>
+            <p className="mt-5 text-[11px] font-medium text-sub md:text-xs">{t.hero.support}</p>
           </div>
           <HeroArt t={t.hero} lang={lang} />
         </div>
@@ -91,25 +91,25 @@ export default async function HomePage({ params }) {
           </div>
         </section>
 
-        {/* LIVO zet klaar tegenover Jij beslist */}
+        {/* Het onderscheid in drie kolommen: wat LIVO signaleert, wat LIVO voorbereidt, wat jij deelt, beoordeelt en bevestigt; geen beloften over mailen, bewijs of verantwoordelijkheid */}
         <Section>
-          <div className="grid items-center gap-7 md:gap-10 lg:grid-cols-[.82fr_1fr] lg:gap-[85px]">
-            <div className="md:max-lg:grid md:max-lg:grid-cols-2 md:max-lg:gap-x-10">
-              <Eyebrow className="md:max-lg:col-span-2">{t.control.eyebrow}</Eyebrow>
-              <h2 className={`${h2} md:max-lg:row-span-2 md:max-lg:text-[40px]`}>{t.control.title}</h2>
-              <p className="mt-5 max-w-[430px] text-sm leading-[1.85] text-sub lg:max-w-[360px] md:max-lg:mt-0">{t.control.body}</p>
+          <div className="grid gap-6 lg:grid-cols-[.8fr_1.2fr] lg:gap-16">
+            <div>
+              <Eyebrow>{t.control.eyebrow}</Eyebrow>
+              <h2 className={`${h2} md:text-[40px]`}>{t.control.title}</h2>
+              <p className="mt-5 max-w-[430px] text-sm leading-[1.85] text-sub">{t.control.body}</p>
               <a href={`/${lang}#hulp`} className={`${textLink} mt-5 text-green-text lg:mt-7`}>{t.control.link} <ArrowRight size={20} {...ic} /></a>
             </div>
-            <div className="grid overflow-hidden rounded-card border border-frame sm:grid-cols-2">
-              {[[t.control.livo, 'bg-mint', null], [t.control.you, 'bg-white max-sm:border-t max-sm:border-line', ShieldCheck]].map(([col, bg, I]) => (
-                <div key={col.title} className={`p-6 md:p-7 ${bg}`}>
-                  <div className="mb-5 flex items-center gap-2.5 md:mb-6">
-                    {I ? <I size={20} {...ic} className="text-accent-dark" /> : <img src="/brand/livo-mark.svg" alt="" aria-hidden="true" className="h-6 w-auto" />}
-                    <h3 className="font-display text-[20px] font-bold tracking-[-.025em] md:text-[17px] lg:text-[20px]">{col.title}</h3>
+            <div>
+              <div className="grid overflow-hidden rounded-card border border-frame md:grid-cols-3">
+                {t.control.columns.map((col, i) => { const I = [Search, Wrench, ShieldCheck][i]; return (
+                  <div key={col.title} className={`p-5 md:p-6 ${i === 1 ? 'bg-mint' : 'bg-white'} ${i > 0 ? 'max-md:border-t max-md:border-line' : ''}`}>
+                    <div className="mb-4 flex items-center gap-2.5"><I size={18} {...ic} className="flex-none text-accent-dark" /><h3 className="font-display text-[17px] font-bold leading-tight tracking-[-.025em]">{col.title}</h3></div>
+                    <ul>{col.items.map((it) => <li key={it} className="mb-3 flex items-start gap-2.5 text-xs leading-[1.7] last:mb-0"><Check size={13} {...ic} className="mt-[3px] flex-none text-accent-dark" />{it}</li>)}</ul>
                   </div>
-                  <ul>{col.items.map((it) => <li key={it} className="mb-3 flex items-start gap-2.5 text-xs leading-[1.7] last:mb-0 md:mb-4"><Check size={13} {...ic} className="mt-[3px] flex-none text-accent-dark" />{it}</li>)}</ul>
-                </div>
-              ))}
+                ); })}
+              </div>
+              <p className="mt-3 flex items-start gap-2 text-[11px] leading-[1.7] text-sub"><Info size={14} {...ic} className="mt-0.5 flex-none" />{t.control.note}</p>
             </div>
           </div>
         </Section>

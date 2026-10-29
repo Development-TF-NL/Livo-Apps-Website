@@ -1,5 +1,5 @@
 {
-  "_bron": "ChatGPT-pakket AI_VINDBAARHEID_2026-10-13 (PAGINA_1, PAGINA_2), overgenomen op 14 oktober 2026; correcties uit de claimtoets staan in docs/ai-vindbaarheid/ 29 oktober 2026: published, reviewed en sources per artikel erbij (controledatum = de claimtoets van 14 oktober 2026 in docs/ai-vindbaarheid/; de bron is de verordening op EUR-Lex, per taal).",
+  "_bron": "ChatGPT-pakket AI_VINDBAARHEID_2026-10-13 (PAGINA_1, PAGINA_2), overgenomen op 14 oktober 2026; correcties uit de claimtoets staan in docs/ai-vindbaarheid/ 29 oktober 2026: published, reviewed en sources per artikel erbij (controledatum = de claimtoets van 14 oktober 2026 in docs/ai-vindbaarheid/; de bron is de verordening op EUR-Lex, per taal). 29 oktober (avond): de EN-metadata van het klantvraagartikel sluit aan op de gemeten zoekopdracht 'product data for packaging' (Search Console, 13 tot 27 oktober 2026, 25 vertoningen); de tekst zelf is ongewijzigd.",
   "articles": [
     {
       "id": "klantvraag",
@@ -143,8 +143,8 @@
       },
       "en": {
         "meta": {
-          "title": "Customer asking for packaging data? Prepare a clear answer | LIVO PPWR",
-          "description": "A customer wants packaging data and evidence by product. See what to collect, what to check and how to prepare an answer you can explain."
+          "title": "Product data for packaging: how to answer a customer request | LIVO PPWR",
+          "description": "A customer asks for product data for packaging and evidence by item. See what to collect, what to check and how to prepare an answer you can explain."
         },
         "h1": "A customer asks for packaging data. Where do you start?",
         "intro": [

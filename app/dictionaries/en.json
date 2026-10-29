@@ -29,20 +29,15 @@
       "description": "Keep packaging data and evidence together. See what is missing, prepare supplier requests and create a customer file. From €99 per month."
     },
     "hero": {
-      "eyebrow": "PPWR software for SMEs",
+      "eyebrow": "For importers, wholesalers and brands",
       "lines": [
-        "Your customer asks for",
-        "packaging data."
+        "Your PPWR expert."
       ],
-      "titleGreen": "You have the overview.",
-      "lead": "From loose files to one place for your packaging data, supplier questions and evidence. LIVO shows what is missing and prepares your next step.",
+      "titleGreen": "Built for SMEs.",
+      "lead": "Which rules apply to your products? Which data is missing? What do you need to do now? LIVO PPWR makes it clear and prepares the work. So your team does not have to work everything out itself.",
+      "ctaPrimary": "Choose your plan",
       "ctaHow": "Discover the workflow",
-      "fine": {
-        "from": "From",
-        "price": "€99 per month",
-        "vat": "excl. VAT",
-        "impl": "No implementation fee"
-      },
+      "support": "From €99 per month. No implementation fee. Personal help with your start included.",
       "photoAlt": "A ceramic vase, a cardboard box and protective paper as an example of a product with several packaging components",
       "note": {
         "label": "A question from your customer",
@@ -108,8 +103,7 @@
             }
           ]
         }
-      },
-      "ctaPrimary": "Choose your plan"
+      }
     },
     "strip": [
       "Start with your own Excel",
@@ -272,28 +266,37 @@
       "note": "A filled-in field is not yet verified evidence. You assess yourself whether the information belongs to the right item and the right packaging."
     },
     "control": {
-      "eyebrow": "Smartly prepared. Consciously decided.",
-      "title": "Less searching. You stay in charge.",
-      "body": "LIVO helps you organise the work. You keep control over the data, the supplier responses and what you share with your customer.",
+      "eyebrow": "What LIVO does and what you do",
+      "title": "Built for a small team without its own compliance department.",
+      "body": "From applicable rules to concrete work. You see which data is missing and how to continue; the review and confirmation stay with you.",
       "link": "Help with your workflow",
-      "livo": {
-        "title": "LIVO prepares",
-        "items": [
-          "A proposal for your Excel columns",
-          "An overview of missing data",
-          "A prefilled supplier request",
-          "Data for your customer selection"
-        ]
-      },
-      "you": {
-        "title": "You decide",
-        "items": [
-          "Confirm what you import",
-          "Send the request yourself",
-          "Review responses and evidence",
-          "Decide what your customer receives"
-        ]
-      }
+      "columns": [
+        {
+          "title": "LIVO flags",
+          "items": [
+            "Which rules apply per product and market",
+            "Which data and evidence are missing",
+            "What the next step is"
+          ]
+        },
+        {
+          "title": "LIVO prepares",
+          "items": [
+            "A focused supplier request through a secure link, with no separate account for the supplier",
+            "A customer selection and an export per customer",
+            "The file per item, with open items visible"
+          ]
+        },
+        {
+          "title": "You share, review and confirm",
+          "items": [
+            "You send the request from your own mailbox",
+            "You review responses and evidence before they enter the register",
+            "You decide what you share with your customer"
+          ]
+        }
+      ],
+      "note": "LIVO does not e-mail your suppliers itself, does not create missing evidence and does not take over legal responsibility."
     },
     "audience": {
       "eyebrow": "For the people who do the work",
@@ -328,7 +331,7 @@
     "plans": {
       "eyebrow": "A clear start",
       "title": "Choose by your product range. Work together with your team.",
-      "lead": "Your subscription follows the number of products that count. No surcharge per user. No implementation fee.",
+      "lead": "Your subscription follows the number of products that count. No surcharge per user. No implementation fee. Personal help with your start included.",
       "monthly": "Monthly",
       "annual": "Annually",
       "annualBadge": "−15%",
@@ -566,7 +569,7 @@
   "ppwr": {
     "meta": {
       "title": "PPWR software for importers and wholesalers · LIVO",
-      "description": "See how LIVO PPWR supports imports, missing data, supplier requests and customer files through one practical product example."
+      "description": "Packaging data software for small teams: see how LIVO PPWR supports imports, missing data, supplier requests and customer files through one practical product example."
     },
     "breadcrumb": [
       "LIVO APPS",

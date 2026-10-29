@@ -29,20 +29,15 @@
       "description": "Breng verpakkingsgegevens en bewijs bij elkaar. Zie wat ontbreekt, bereid leveranciersvragen voor en maak een klantbestand. Vanaf €99 per maand."
     },
     "hero": {
-      "eyebrow": "PPWR-software voor het mkb",
+      "eyebrow": "Voor importeurs, groothandels en merken",
       "lines": [
-        "Je klant vraagt",
-        "verpakkingsdata."
+        "Jouw PPWR-expert."
       ],
-      "titleGreen": "Jij hebt overzicht.",
-      "lead": "Van losse bestanden naar één plek voor je verpakkingsgegevens, leveranciersvragen en bewijs. LIVO laat zien wat ontbreekt en zet je volgende stap klaar.",
+      "titleGreen": "Gemaakt voor het mkb.",
+      "lead": "Welke regels gelden voor jouw producten? Welke gegevens ontbreken? Wat moet je nu doen? LIVO PPWR maakt het duidelijk en zet het werk klaar. Zo hoeft jouw team niet alles zelf uit te zoeken.",
+      "ctaPrimary": "Kies je abonnement",
       "ctaHow": "Ontdek de werkwijze",
-      "fine": {
-        "from": "Vanaf",
-        "price": "€99 per maand",
-        "vat": "excl. btw",
-        "impl": "Geen implementatiekosten"
-      },
+      "support": "Vanaf €99 per maand. Geen implementatiekosten. Persoonlijke hulp bij de start inbegrepen.",
       "photoAlt": "Een keramische vaas, kartonnen doos en beschermpapier als voorbeeld van een product met verschillende verpakkingsonderdelen",
       "note": {
         "label": "Een vraag van je klant",
@@ -108,8 +103,7 @@
             }
           ]
         }
-      },
-      "ctaPrimary": "Kies je abonnement"
+      }
     },
     "strip": [
       "Start met je eigen Excel",
@@ -272,28 +266,37 @@
       "note": "Een ingevuld veld is nog geen gecontroleerd bewijs. Je beoordeelt zelf of de informatie bij het juiste artikel en de juiste verpakking hoort."
     },
     "control": {
-      "eyebrow": "Slim voorbereid. Bewust beslist.",
-      "title": "Minder zoekwerk. De regie blijft bij jou.",
-      "body": "LIVO helpt je om het werk te organiseren. Jij houdt controle over de gegevens, de leveranciersreacties en wat je met je klant deelt.",
+      "eyebrow": "Wat LIVO doet en wat jij doet",
+      "title": "Gemaakt voor een klein team zonder eigen complianceafdeling.",
+      "body": "Van toepasselijke regels naar concrete werkzaamheden. Je ziet welke gegevens ontbreken en hoe je verdergaat; de beoordeling en bevestiging blijven bij jou.",
       "link": "Hulp bij jouw werkwijze",
-      "livo": {
-        "title": "LIVO zet klaar",
-        "items": [
-          "Voorstel voor je Excel-kolommen",
-          "Overzicht van ontbrekende gegevens",
-          "Voorgevulde leveranciersuitvraag",
-          "Gegevens voor je klantselectie"
-        ]
-      },
-      "you": {
-        "title": "Jij beslist",
-        "items": [
-          "Bevestigen wat je importeert",
-          "De uitvraag zelf versturen",
-          "Reacties en bewijs beoordelen",
-          "Bepalen wat je klant ontvangt"
-        ]
-      }
+      "columns": [
+        {
+          "title": "LIVO signaleert",
+          "items": [
+            "Welke regels gelden per product en markt",
+            "Welke gegevens en bewijsstukken ontbreken",
+            "Wat de volgende stap is"
+          ]
+        },
+        {
+          "title": "LIVO bereidt voor",
+          "items": [
+            "Een gerichte leveranciersuitvraag via een beveiligde link, zonder apart account voor de leverancier",
+            "Een klantselectie en export per klant",
+            "Het dossier per artikel, met open punten zichtbaar"
+          ]
+        },
+        {
+          "title": "Jij deelt, beoordeelt en bevestigt",
+          "items": [
+            "Jij verstuurt de uitvraag vanuit je eigen mailbox",
+            "Jij beoordeelt reacties en bewijs voordat ze in het register komen",
+            "Jij bepaalt wat je met je klant deelt"
+          ]
+        }
+      ],
+      "note": "LIVO mailt je leveranciers niet zelf, maakt geen ontbrekend bewijs aan en neemt geen juridische verantwoordelijkheid over."
     },
     "audience": {
       "eyebrow": "Voor de mensen die het werk doen",
@@ -328,7 +331,7 @@
     "plans": {
       "eyebrow": "Een heldere start",
       "title": "Kies op je assortiment. Werk samen met je team.",
-      "lead": "Je abonnement volgt het aantal producten dat meetelt. Geen toeslag per gebruiker. Geen implementatiekosten.",
+      "lead": "Je abonnement volgt het aantal producten dat meetelt. Geen toeslag per gebruiker. Geen implementatiekosten. Persoonlijke hulp bij de start inbegrepen.",
       "monthly": "Per maand",
       "annual": "Per jaar",
       "annualBadge": "−15%",
