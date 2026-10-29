@@ -104,7 +104,7 @@ export default async function HomePage({ params }) {
               {[[t.control.livo, 'bg-mint', null], [t.control.you, 'bg-white max-sm:border-t max-sm:border-line', ShieldCheck]].map(([col, bg, I]) => (
                 <div key={col.title} className={`p-6 md:p-7 ${bg}`}>
                   <div className="mb-5 flex items-center gap-2.5 md:mb-6">
-                    {I ? <I size={20} {...ic} className="text-accent-dark" /> : <span aria-hidden="true" className="grid h-6 w-6 place-items-center rounded-[5px] bg-accent-dark font-display text-base text-white">L</span>}
+                    {I ? <I size={20} {...ic} className="text-accent-dark" /> : <img src="/brand/livo-mark.svg" alt="" aria-hidden="true" className="h-6 w-auto" />}
                     <h3 className="font-display text-[20px] font-bold tracking-[-.025em] md:text-[17px] lg:text-[20px]">{col.title}</h3>
                   </div>
                   <ul>{col.items.map((it) => <li key={it} className="mb-3 flex items-start gap-2.5 text-xs leading-[1.7] last:mb-0 md:mb-4"><Check size={13} {...ic} className="mt-[3px] flex-none text-accent-dark" />{it}</li>)}</ul>
