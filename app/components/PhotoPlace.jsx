@@ -2,11 +2,14 @@
 // (randaccent, decoratief, lege alt). Zonder beeld verdwijnt de plek uit de lay-out: op productie wordt er niets
 // gerenderd (geen lege ruimte, geen gestreept vlak). Alleen in ontwikkelmodus is de ingetekende plek met opschrift
 // zichtbaar, gemarkeerd met data-placeholder zodat de woordtoets hem vangt. Nooit achter tekst, één per sectie.
+import Image from 'next/image';
+
 const DEV = process.env.NODE_ENV !== 'production';
 
 export default function PhotoPlace({ label, src, className = '', imgClassName = '' }) {
   if (src) {
-    return <img src={src} alt="" aria-hidden="true" className={`pointer-events-none select-none ${imgClassName}`} />;
+    // next/image levert een kleine variant (sizes 256px) in plaats van het bronbestand van 1,7 MB.
+    return <Image src={src} alt="" aria-hidden="true" width={1254} height={1254} sizes="256px" className={`pointer-events-none select-none ${imgClassName}`} />;
   }
   if (!DEV) return null;
   return (
